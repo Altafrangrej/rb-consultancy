@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RB Consultancy | Claim Facilitation & Dispute Resolution</title>
+  <meta name="description" content="Independent insurance claim facilitation, rejected claims recovery, IRDAI appeals, and MSME resolution led by Altaf Rangrej in Jalgaon, Maharashtra.">
+  <meta name="theme-color" content="#0B2F4A">
+
+  <!-- Professional Devanagari (Marathi) & English Typography from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0B2F4A;
+      --navy-light: #123F5E;
+      --gold: #D4A017;
+      --gold-light: #F5E7B8;
+      --green: #25D366;
+      --dark-green: #106634;
+      --white: #FFFFFF;
+      --light: #F4F8FB;
+      --section-alt: #EBF2F8;
+      --text: #263746;
+      --muted: #556677;
+      --line: #D0DCE6;
+      --shadow: 0 14px 40px rgba(11,47,74,0.09);
+      --radius: 14px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.65;
+    }
+    
+    .marathi-text {
+      font-family: 'Hind', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    section { scroll-margin-top: 88px; }
+
+    .wrap { width: min(calc(100% - 36px), var(--max)); margin: auto; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--gold); font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.12em; font-size: 12px; margin-bottom: 12px;
+    }
+    .eyebrow:before { content: ""; width: 28px; height: 2px; background: var(--gold); }
+    
+    h1, h2, h3 { color: var(--navy); margin: 0; line-height: 1.15; }
+    h1 { font-size: clamp(26px, 3.8vw, 42px); letter-spacing: -0.035em; }
+    h2 { font-size: clamp(24px, 3.2vw, 38px); letter-spacing: -0.025em; }
+    p { margin: 0; color: var(--muted); }
+
+    /* Header & Vector-Style Logo Component */
+    .header {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    
+    .brand-logo-vector {
+      display: flex; align-items: center; gap: 12px; text-decoration: none; background: #ffffff;
+    }
+    .logo-circle {
+      width: 44px; height: 44px; border-radius: 50%; background: var(--navy);
+      display: flex; align-items: center; justify-content: center; position: relative; flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(11,47,74,0.2);
+    }
+    .logo-circle-text {
+      color: #ffffff; font-weight: 800; font-size: 18px; letter-spacing: -0.5px; font-family: 'Poppins', sans-serif;
+    }
+    .logo-checkmark {
+      position: absolute; top: 2px; right: 2px; width: 14px; height: 14px;
+      display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 10px; font-weight: 900;
+    }
+    .logo-texts {
+      display: flex; flex-direction: column; justify-content: center; line-height: 1.2;
+    }
+    .logo-line-1 {
+      color: var(--navy); font-weight: 800; font-size: 15px; letter-spacing: 0.08em; font-family: 'Poppins', sans-serif;
+    }
+    .logo-line-2 {
+      color: var(--dark-green); font-weight: 600; font-size: 11.5px; display: flex; align-items: center; gap: 6px; margin-top: 2px; font-family: 'Poppins', sans-serif;
+    }
+    .logo-line-2 .pipe {
+      color: var(--dark-green); font-weight: 400; opacity: 0.8;
+    }
+
+    /* Large Hero Vector Logo Style */
+    .hero-logo-large {
+      display: inline-flex; align-items: center; gap: 16px; background: #ffffff; padding: 14px 22px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-bottom: 18px; border: 2px solid var(--gold);
+    }
+    .hero-logo-large .logo-circle {
+      width: 54px; height: 54px;
+    }
+    .hero-logo-large .logo-circle-text {
+      font-size: 22px;
+    }
+    .hero-logo-large .logo-checkmark {
+      top: 3px; right: 3px; font-size: 12px;
+    }
+    .hero-logo-large .logo-line-1 {
+      font-size: 18px;
+    }
+    .hero-logo-large .logo-line-2 {
+      font-size: 13px; gap: 8px;
+    }
+
+    /* Professional Avatar Styling */
+    .consultant-avatar {
+      width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), #B3860C);
+      color: var(--navy); display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 900;
+      margin: 0 auto 14px auto; box-shadow: 0 8px 20px rgba(0,0,0,0.2); border: 3px solid rgba(255,255,255,0.2);
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a { font-size: 14px; font-weight: 700; color: #425466; transition: 0.2s; }
+    .nav-links a:hover { color: var(--navy); }
+    
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      border: 0; border-radius: 11px; padding: 12px 18px; text-decoration: none;
+      font-weight: 800; cursor: pointer; transition: 0.2s; white-space: nowrap;
+    }
+    .btn-dark { background: var(--navy); color: #fff; }
+    .btn-whatsapp { background: var(--green); color: #063b1c; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(11,47,74,0.2); }
+
+    /* Hero */
+    .hero {
+      padding: 70px 0 50px;
+      background: radial-gradient(circle at 84% 20%, rgba(212,160,23,0.12), transparent 25%), linear-gradient(180deg, #F8FAFC 0%, #EDF4FA 100%);
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; }
+    .hero-lead { font-size: 17px; max-width: 600px; margin: 20px 0 25px; color: #536577; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    
+    .trust-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+    .trust-pill {
+      display: flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--line);
+      padding: 8px 14px; border-radius: 999px; font-size: 12px; font-weight: 800; color: #425466;
+      box-shadow: 0 5px 15px rgba(15,23,42,0.04);
+    }
+    .trust-pill b { color: var(--navy); }
+
+    .hero-panel {
+      background: var(--navy); border-radius: 22px; padding: 30px; color: #fff;
+      box-shadow: 0 24px 60px rgba(11,47,74,0.18); text-align: center;
+    }
+    .hero-panel p { color: #B8C8D5; font-size: 13px; margin-top: 10px; }
+
+    /* Sections */
+    .section { padding: 80px 0; }
+    .section-alt { background: var(--section-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .section-light { background: var(--light); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .section-head { max-width: 750px; margin-bottom: 40px; }
+    .section-head p { margin-top: 12px; font-size: 15px; }
+
+    /* 9 Distinct Service Cards Layout */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .service-card {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px;
+      box-shadow: var(--shadow); transition: transform 0.25s, box-shadow 0.25s; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 45px rgba(11,47,74,0.12); border-color: var(--gold); }
+    .service-num { font-size: 13px; font-weight: 900; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .service-card h3 { font-size: 18px; margin-bottom: 12px; }
+    .service-card p.eng { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+    .service-card p.mar { font-size: 14px; color: var(--navy); font-weight: 600; border-top: 1px dashed var(--line); padding-top: 12px; background: #FFFDF4; padding: 12px; border-radius: 8px; }
+
+    /* Info Sections */
+    .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .info-box { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); }
+    .info-box h3 { font-size: 20px; margin-bottom: 15px; color: var(--navy); }
+    .info-box p { font-size: 14px; margin-bottom: 12px; }
+    .info-box p.mar { color: var(--navy); font-weight: 600; font-size: 15px; }
+
+    /* Success Stories Grid */
+    .success-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .success-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); border-left: 4px solid var(--green); }
+    .success-card h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
+    .success-card p { font-size: 13px; }
+
+    /* Checklist Grid */
+    .checklist-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .checklist-box { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+    .checklist-box h3 { font-size: 17px; color: var(--navy); margin-bottom: 10px; }
+    .checklist-box ul { padding-left: 18px; margin: 0; font-size: 13.5px; color: var(--muted); display: grid; gap: 6px; }
+
+    /* Pricing Section */
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .pricing-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); border-top: 4px solid var(--gold); }
+    .pricing-card h3 { font-size: 17px; margin-bottom: 10px; color: var(--navy); }
+    .pricing-fee { font-size: 20px; font-weight: 900; color: var(--navy); margin-bottom: 10px; }
+    .pricing-card p { font-size: 13px; }
+
+    /* Highlighted Disclaimer Box */
+    .disclaimer-box {
+      background: linear-gradient(135deg, #FFF9E6 0%, #FFF3CD 100%);
+      border: 2px solid var(--gold);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-top: 40px;
+      box-shadow: 0 10px 30px rgba(212,160,23,0.15);
+    }
+    .disclaimer-box h4 {
+      color: #856404;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0 0 8px 0;
+    }
+    .disclaimer-box p {
+      color: #533F04;
+      font-size: 13.5px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    /* Contact & Footer */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+    .contact-card, .form-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 30px; box-shadow: var(--shadow); }
+    .contact-list { display: grid; gap: 15px; margin: 20px 0; }
+    .contact-item strong { display: block; color: var(--navy); font-size: 13px; }
+    .contact-item span, .contact-item a { font-size: 13px; color: var(--muted); }
+    
+    .field { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 12px; outline: 0; background: #fff; margin-top: 10px; }
+    textarea.field { min-height: 90px; resize: vertical; }
+
+    footer { background: #071F31; color: #B9C8D4; padding: 50px 0 25px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; margin-bottom: 30px; }
+    .footer-links h4 { color: #fff; font-size: 14px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .footer-links ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+    .footer-links a { font-size: 13px; color: #94A3B8; transition: 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 12px; }
+
+    @media(max-width: 900px) {
+      .services-grid, .info-grid, .success-grid, .checklist-grid, .pricing-grid, .hero-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Vector-Style Custom Logo -->
+  <header class="header">
+    <div class="wrap nav">
+      <a class="brand-logo-vector" href="#home">
+        <div class="logo-circle">
+          <span class="logo-circle-text">RB</span>
+          <span class="logo-checkmark">✓</span>
+        </div>
+        <div class="logo-texts">
+          <span class="logo-line-1">RB CONSULTANCY</span>
+          <span class="logo-line-2">Clear Claim <span class="pipe">|</span> Secure Cash Flow</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">All 9 Services</a>
+        <a href="#success">Success Stories</a>
+        <a href="#pricing">Fee Structure</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20I%20need%20help%20with%20my%20claim." target="_blank">Chat on WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Professional Independent Facilitator</div>
+          <h1>The Most Trusted Insurance Claim Recovery and Facilitator.<br><span class="marathi-text" style="font-size: 0.85em; color: var(--navy); display: block; margin-top: 10px; font-weight: 700; line-height: 1.4;">सर्वात विश्वासू इन्शुरन्स क्लेम रिकव्हरी आणि फॅसिलिटेटर.</span></h1>
+          <p class="hero-lead">We bridge the gap between policyholders, companies, insurance carriers, and TPAs. Protecting your financial interests with 15+ years of industry experience.</p>
+          
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="tel:+919325564770">Call Principal Consultant</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20I%20need%20help%20with%20my%20claim." target="_blank">Chat on WhatsApp</a>
+          </div>
+
+          <div class="trust-row">
+            <div class="trust-pill">✓ <b>15+ Years</b> Experience</div>
+            <div class="trust-pill">✓ <b>Udyam</b> Registered</div>
+            <div class="trust-pill">★ Founder: <b>Altaf Rangrej</b></div>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <!-- Professional Consultant Avatar -->
+          <div class="consultant-avatar">AR</div>
+          <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 800; margin-top: 10px;">Leadership & Background</div>
+          <h2 style="color: #fff; font-size: 22px; margin: 8px 0 10px;">Headed by Altaf Rangrej</h2>
+          <p>Founder and Principal Consultant with over 15+ years of industry experience, operating as an independent claims facilitation firm located in Jalgaon, Maharashtra.</p>
+          <p class="marathi-text" style="margin-top: 10px; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 10px; font-style: italic; font-size: 12px; color: #E2E8F0;">आरबी कन्सल्टन्सीचे संस्थापक आणि मुख्य सल्लागार अल्ताफ रंगरेज असून, त्यांच्याकडे १५ वर्षांपेक्षा जास्त मोठा अनुभव आहे.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Mandate Section -->
+    <section class="section section-light" id="vision">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Executive Vision & Mandate</div>
+          <h2>Our Core Philosophy & Strategic Objectives</h2>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-box">
+            <h3>Our Strategic Vision</h3>
+            <p>To build an uncompromised standard of trust, transparency, and excellence in insurance claims and financial recovery, helping clients navigate complex rules without delays or unfair treatment.</p>
+            <p class="mar marathi-text">इन्शुरन्सचे क्लेम आणि अडकलेले पैसे मिळवून देताना पूर्ण विश्वास, पारदर्शकता आणि उत्तम सेवा देणे हा आमचा उद्देश आहे, जेणेकरून ग्राहकांना कोणत्याही त्रासाशिवाय आणि विलंबाशिवाय न्याय मिळू शकेल.</p>
+          </div>
+
+          <div class="info-box">
+            <h3>Our Core Mandate</h3>
+            <p>We bridge the gap between policyholders, companies, insurance carriers, and TPAs. By organizing documents and following strict regulations, we protect our clients' financial interests at every step.</p>
+            <p class="mar marathi-text">आम्ही सर्वसामान्य ग्राहक, कंपन्या, इन्शुरन्स कंपन्या आणि टीपीए (TPA) यांच्यामधील दुवा बनून काम करतो. कागदपत्रांची अचूक जुळवाजुळव करून आणि नियमांच्या आधारे योग्य पाठपुरावा करून, क्लेमच्या प्रक्रियेत आम्ही ग्राहकांच्या पैशांचे रक्षण करतो.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL 9 SERVICES SECTION -->
+    <section class="section section-alt" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Comprehensive Service Portfolio</div>
+          <h2>All 9 Specialized Consultancy Services</h2>
+          <p>Detailed bilingual breakdown of our complete suite of claim facilitation, recovery, and dispute resolution solutions.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div>
+              <div class="service-num">Service 01</div>
+              <h3>Fresh Claim Submissions</h3>
+              <p class="eng">Complete initial documentation, medical file arrangement, and filing support for smooth processing from day one.</p>
+            </div>
+            <p class="mar marathi-text">पहिल्या दिवसापासून क्लेमची प्रक्रिया सोपी आणि चुकांशिवाय व्हावी यासाठी कागदपत्रे गोळा करणे, मेडिकल फाईल तयार करणे आणि कंपनीकडे अर्ज दाखल करण्यात मदत करणे.</p>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">Service 02</div>
+              <h3>Rejected Claims Recovery</h3>
+              <p class="eng">Thorough reviews of rejection letters to identify wrong denials and file strategic appeals to overturn them.</p>
+            </div>
+            <p class="mar marathi-text">इन्शुरन्स कंपनीने नाकारलेल्या क्लेमच्या पत्राची सखोल तपासणी करणे, चुकीच्या कारणांचा शोध घेणे आणि चुकीचा नकार बदलवून क्लेम मंजूर करून घेण्यासाठी योग्य अर्ज करणे.</p>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">Service 03</div>
+              <h3>Queries Management</h3>
+              <p class="eng">Quick and professional handling of document queries raised by insurance companies or TPAs to avoid delays.</p>
+            </div>
+            <p class="mar marathi-text">इन्शुरन्स कंपन्या किंवा टीपीए (TPA) यांनी कागदपत्रांबद्दल विचारलेल्या प्रश्नांना व शंकांना वेगाने आणि अचूकपणे उत्तरे देणे, जेणेकरून काम थांबणार नाही.</p>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">Service 04</div>
+              <h3>Reconsideration Or Grievance</h3>
+              <p class="eng">Formal escalation steps to challenge low settlement amounts or long delays.</p>
+            </div>
+            <p class="mar marathi-text">कमी रक्कम मंजूर झाल्याविरुद्ध किंवा निर्णय देण्यास उशीर होत असल्यास कायदेशीर मार्गाने योग्य ती दाद मागणे.</p>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">Service 05</div>
+              <h3>IRDAI & Ombudsman Appeals</h3>
+              <p class="eng">Expert dossier preparation and formal representation before higher authorities and the Insurance Ombudsman.</p>
+            </div>
+            <p class="mar marathi-text">उच्च अधिकारी किंवा इन्शुरन्स लोकपाल (Ombudsman) यांच्याकडे केसची फाईल (Dossier) तयार करून योग्य प्रकारे बाजू मांडणे आणि न्याय मिळवून देणे.</p>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">Service 06</div>
+              <h3>TPA/IC Issues Resolutions</h3>
+              <p class="eng">Direct follow-up and communication management to clear administrative obstacles with carriers and TPAs.</p>
+            </div>
+            <p class="mar marathi-text">इन्शुरन्स कंपन्या आणि टीपीए सोबतचे वाद सोडवण्यासाठी थेट संपर्क साधणे आणि सातत्याने पाठपुरावा करणे.</p>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">Service 07</div>
+              <h3>Deadlock Recoveries & Claims Audits</h3>
+              <p class="eng">In-depth case assessments to unlock frozen, stalled, or abandoned financial settlements.</p>
+            </div>
+            <p class="mar marathi-text">रखडलेले किंवा बंद पडलेले पैसे बाहेर काढण्यासाठी केस फायलीची कसून तांत्रिक तपासणी (Audit) करणे.</p>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">Service 08</div>
+              <h3>End-To-End Cashless Management</h3>
+              <p class="eng">Support for hospitalizations, pre-authorizations, treatment tracking, and discharge clearances.</p>
+            </div>
+            <p class="mar marathi-text">हॉस्पिटलमध्ये दाखल होण्यापासून ते पूर्व-परवानगी, उपचारांवर लक्ष ठेवणे आणि डिस्चार्ज मिळेपर्यंत संपूर्ण मार्गदर्शन करणे.</p>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="service-num">Service 09</div>
+              <h3>MSME Samadhan Filings</h3>
+              <p class="eng">Statutory recovery and micro-enterprise support using the MSMED Act for commercial payment disputes.</p>
+            </div>
+            <p class="mar marathi-text">व्यावसायिक पैसे मिळण्यात उशीर होत असल्यास एमएसएमई कायद्यानुसार (MSMED Act) समाधान पोर्टलवर कायदेशीर अर्ज करणे.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories / Case Highlights Section -->
+    <section class="section section-light" id="success">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Track Record & Case Highlights</div>
+          <h2>Proven Success in Claim Recovery</h2>
+          <p>Highlighting our commitment to overcoming obstacles and recovering rightful client settlements.</p>
+        </div>
+
+        <div class="success-grid">
+          <div class="success-card">
+            <h3>Rejected Claim Overturned</h3>
+            <p>Successfully challenged unjustified claim repudiation letters using IRDAI 2024 policyholder regulations and secured full settlements.</p>
+          </div>
+          <div class="success-card">
+            <h3>Ombudsman Escalation</h3>
+            <p>Prepared structured dossiers that successfully represented clients before higher authorities to resolve prolonged settlement deadlocks.</p>
+          </div>
+          <div class="success-card">
+            <h3>MSME Payment Recovery</h3>
+            <p>Facilitated statutory recovery processes and statutory notices under the MSMED Act for commercial payment disputes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Document Checklist Section -->
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Client Resources</div>
+          <h2>Essential Document Checklists</h2>
+          <p>Quick reference guides to prepare your files for smooth processing.</p>
+        </div>
+
+        <div class="checklist-grid">
+          <div class="checklist-box">
+            <h3>Health / Life Claim Checklist</h3>
+            <ul>
+              <li>Original policy document and premium receipts</li>
+              <li>Discharge summary and final hospital bill</li>
+              <li>Diagnostic reports, prescriptions, and pharmacy bills</li>
+              <li>KYC documents (PAN, Aadhaar/ID) and canceled cheque</li>
+            </ul>
+          </div>
+          <div class="checklist-box">
+            <h3>MSME / Recovery Checklist</h3>
+            <ul>
+              <li>Udyam registration certificate</li>
+              <li>Commercial invoices and delivery challans</li>
+              <li>Ledger statements and communication records regarding delays</li>
+              <li>Formal demand notices or purchase orders</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transparent Fee Structure Section -->
+    <section class="section section-light" id="pricing">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Transparent Pricing Tiers</div>
+          <h2>Our Professional Fee Structure</h2>
+          <p>Clear, straightforward service fees structured for maximum client value.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Fresh & Reconsideration Claims</h3>
+            <div class="pricing-fee">₹3,000 + 10% Success Fee</div>
+            <p>Plus stationery charges at ₹2 per page single-sided. Standard filing and follow-up support.</p>
+          </div>
+          <div class="pricing-card">
+            <h3>Ombudsman Filings</h3>
+            <div class="pricing-fee">₹3,000 + 12% Success Fee</div>
+            <p>Comprehensive dossier preparation and formal representation before higher authorities.</p>
+          </div>
+          <div class="pricing-card">
+            <h3>Recovery & MSME Filings</h3>
+            <div class="pricing-fee">As per Case Profile</div>
+            <p>Dedicated commercial dispute resolution and MSME Samadhan portal support structured according to the case profile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regulatory Governance & Commitments -->
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Regulatory & Governance</div>
+          <h2>Regulatory Alignment & Professional Commitments</h2>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-box">
+            <h3>Statutory Adherence & Frameworks</h3>
+            <p>Our work strictly follows established legal frameworks, including the IRDAI Protection of Policyholders' Interests regulations.</p>
+            <p class="mar marathi-text">आमचे काम पूर्णपणे कायदेशीर चौकटीत आणि इन्शुरन्स रेग्युलेटर (IRDAI) च्या पॉलिसीधारक हितरक्षण नियमांनुसार चालते.</p>
+          </div>
+
+          <div class="info-box">
+            <h3>Consumer Empowerment & Compliance</h3>
+            <p>We use structured timelines, transparent grievance handling, and formal escalation channels to fully defend policyholder rights and ensure fair compensation.</p>
+            <p class="mar marathi-text">ग्राहकांच्या अधिकारांचे रक्षण करण्यासाठी आणि त्यांना कायदेशीररीत्या योग्य भरपाई मिळवून देण्यासाठी आम्ही ठरवलेल्या मुदतीत आणि पारदर्शक पद्धतीने तक्रार निवारणाचे काम करतो.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Official Contact Directory</div>
+          <h2>Connect with RB Consultancy</h2>
+          <p>Registered office and direct communication channels.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Directory Details</h3>
+            <div class="contact-list">
+              <div class="contact-item">
+                <strong>Registered Office Address / पत्ता:</strong>
+                <span>201, Taimur Height, Dr. Iqbal Colony, Mehrun, Jalgaon, Maharashtra, India.<br><span class="marathi-text">२०१, तैमूर हाईट, डॉ. इक्बाल कॉलनी, मेहरूण, जळगाव, महाराष्ट्र, भारत.</span></span>
+              </div>
+              <div class="contact-item">
+                <strong>Udyam Registration / उद्यम नोंदणी:</strong>
+                <span>UDYAM-MH-14-0183662</span>
+              </div>
+              <div class="contact-item">
+                <strong>Official Contact Number / संपर्क क्रमांक:</strong>
+                <a href="tel:+919325564770">+91 9325564770</a>
+              </div>
+              <div class="contact-item">
+                <strong>Official Correspondence Email / ई-मेल:</strong>
+                <a href="mailto:rbconsultancyjalgaon@gmail.com">rbconsultancyjalgaon@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h3>Send Direct Inquiry</h3>
+            <p style="font-size: 12px; margin-top: 4px;">Connect instantly using WhatsApp or direct email.</p>
+            <input class="field" id="clientName" type="text" placeholder="Your Name">
+            <input class="field" id="clientPhone" type="tel" placeholder="Mobile Number">
+            <textarea class="field" id="clientReq" placeholder="Describe your claim requirement..."></textarea>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px;">
+              <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20I%20need%20help%20with%20my%20claim." target="_blank" style="text-align: center;">Chat on WhatsApp</a>
+              <a class="btn btn-dark" href="mailto:rbconsultancyjalgaon@gmail.com" style="text-align: center;">Send Email</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlighted Disclaimer Box -->
+        <div class="disclaimer-box">
+          <h4>Important Legal Disclaimer</h4>
+          <p>RB Consultancy is a Facilitator Only. The liabilities of documents and any other legal or financial liabilities rest solely on the client and the document issuing authorities.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with Quick Links -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <strong style="font-size: 16px; color: #fff;">RB Consultancy</strong>
+          <p style="margin-top: 8px; font-size: 13px;">Official Email: <a href="mailto:rbconsultancyjalgaon@gmail.com">rbconsultancyjalgaon@gmail.com</a> | Contact: +91 9325564770</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">All 9 Services</a></li>
+            <li><a href="#vision">Executive Vision</a></li>
+            <li><a href="#pricing">Fee Structure</a></li>
+            <li><a href="#contact">Contact Directory</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Direct Connect</h4>
+          <ul>
+            <li><a href="tel:+919325564770">Call: +91 9325564770</a></li>
+            <li><a href="mailto:rbconsultancyjalgaon@gmail.com">rbconsultancyjalgaon@gmail.com</a></li>
+            <li><a href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20I%20need%20help%20with%20my%20claim." target="_blank">WhatsApp Chat</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 RB Consultancy | Founder & Principal Consultant: Altaf Rangrej | Udyam: UDYAM-MH-14-0183662</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
