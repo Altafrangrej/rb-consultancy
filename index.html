@@ -190,11 +190,13 @@
     .success-card h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
     .success-card p { font-size: 13px; }
 
-    /* Checklist Grid */
-    .checklist-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .checklist-box { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
-    .checklist-box h3 { font-size: 16px; color: var(--navy); margin-bottom: 10px; }
-    .checklist-box ul { padding-left: 16px; margin: 0; font-size: 13px; color: var(--muted); display: grid; gap: 5px; }
+    /* Checklist Section Styling */
+    .checklist-section-box { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); margin-bottom: 25px; }
+    .checklist-section-box h3 { font-size: 18px; color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 8px; margin-bottom: 15px; }
+    .checklist-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+    .checklist-list li { font-size: 13.5px; color: var(--text); background: #F8FAFC; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; }
+    .checklist-list li .item-eng { font-weight: 700; color: var(--navy); }
+    .checklist-list li .item-mar { font-size: 13px; color: var(--muted); }
 
     /* Pricing Section */
     .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
@@ -258,7 +260,7 @@
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 12px; }
 
     @media(max-width: 900px) {
-      .services-grid, .workflow-grid, .info-grid, .success-grid, .checklist-grid, .pricing-grid, .download-grid, .hero-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+      .services-grid, .workflow-grid, .info-grid, .success-grid, .pricing-grid, .download-grid, .hero-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
     }
   </style>
@@ -288,6 +290,7 @@
         <a href="#workflow">Workflow</a>
         <a href="#services">9 Services</a>
         <a href="#intake">Client Intake</a>
+        <a href="#checklists">Documents</a>
         <a href="#pricing">Fees & Pay</a>
         <a href="#downloads">Downloads</a>
         <a href="#faq">FAQ</a>
@@ -523,56 +526,127 @@
       </div>
     </section>
 
-    <!-- Case-Type-Wise Document Checklists Section -->
+    <!-- Complete 21-Item Dual-Language Document Checklists Section -->
     <section class="section section-alt" id="checklists">
       <div class="wrap">
         <div class="section-head">
           <div class="eyebrow">Client Resources</div>
-          <h2>Document Checklists by Service Type</h2>
-          <p>Prepare your records accurately based on your specific claim or dispute category.</p>
+          <h2>Comprehensive Document Checklist</h2>
+          <p>Reference guide containing all standard administrative, hospital, payment, and clinical records required for claim processing.</p>
         </div>
 
-        <div class="checklist-grid">
-          <div class="checklist-box">
-            <h3>1 & 8. Fresh Claims & Cashless</h3>
-            <ul>
-              <li>Original policy document & premium receipts</li>
-              <li>Hospital discharge summary & final bill</li>
-              <li>Diagnostic reports, prescriptions & pharmacy bills</li>
-              <li>Patient KYC (PAN, Aadhaar) & Canceled Cheque</li>
-            </ul>
-          </div>
-          <div class="checklist-box">
-            <h3>2, 4 & 5. Rejection, Grievance & Ombudsman</h3>
-            <ul>
-              <li>Official claim repudiation or rejection letter</li>
-              <li>All previous correspondence with TPA/Insurer</li>
-              <li>Hospital indoor case papers & complete treatment file</li>
-              <li>Formal written grievance statement</li>
-            </ul>
-          </div>
-          <div class="checklist-box">
-            <h3>3, 6 & 7. Queries & Deadlock Audits</h3>
-            <ul>
-              <li>Query letter raised by Insurance Carrier / TPA</li>
-              <li>Submitted document proofs against queries</li>
-              <li>Stalled settlement letters or bank statements</li>
-              <li>Authorized representative declaration</li>
-            </ul>
-          </div>
+        <!-- Section 1 -->
+        <div class="checklist-section-box">
+          <h3>Section 1: Administrative & Identity / प्रशासकीय आणि ओळख कागदपत्रे</h3>
+          <ul class="checklist-list">
+            <li>
+              <span class="item-eng">[ ] 1. Cover Letter (Signed summary and list of enclosures)</span>
+              <span class="item-mar marathi-text">कव्हर लेटर (स्वाक्षरी केलेले सारांश आणि कागदपत्रांची यादी)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 2. Claim Form (Part A & B) (Signed by Primary Policyholder and Hospital)</span>
+              <span class="item-mar marathi-text">क्लेम फॉर्म (भाग अ आणि ब) (मुख्य पॉलिसीधारक आणि हॉस्पिटलची स्वाक्षरी)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 3. Policy Schedule / Health Card (Photocopy of active insurance)</span>
+              <span class="item-mar marathi-text">पॉलिसी शेड्युल / हेल्थ कार्ड (सुरू असलेल्या इन्शुरन्सची झेरॉक्स प्रत)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 4. KYC – Patient (Aadhaar Card photocopy)</span>
+              <span class="item-mar marathi-text">केवायसी - रुग्ण (आधार कार्ड झेरॉक्स प्रत)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 5. KYC – Primary Policyholder (Aadhaar Card photocopy)</span>
+              <span class="item-mar marathi-text">केवायसी - मुख्य पॉलिसीधारक (आधार कार्ड झेरॉक्स प्रत)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 6. Bank Mandate Proof (Original Cancelled Cheque OR Bank Passbook Xerox copy)</span>
+              <span class="item-mar marathi-text">बँक तपशील पुरावा (मूळ रद्द चेक किंवा बँक पासबुक झेरॉक्स प्रत)</span>
+            </li>
+          </ul>
         </div>
-        
-        <div style="margin-top: 20px;">
-          <div class="checklist-box" style="max-width: 100%;">
-            <h3>9. MSME Samadhan Filings Checklist</h3>
-            <ul style="grid-template-columns: 1fr 1fr; display: grid;">
-              <li>Udyam Registration Certificate (UDYAM-MH-14-0183662)</li>
-              <li>Commercial Invoices & Delivery Challans</li>
-              <li>Purchase Orders / Work Contracts</li>
-              <li>Ledger statement showing delayed payments & outstanding balance</li>
-            </ul>
-          </div>
+
+        <!-- Section 2 -->
+        <div class="checklist-section-box">
+          <h3>Section 2: Hospital Formalities / हॉस्पिटल औपचारिकता</h3>
+          <ul class="checklist-list">
+            <li>
+              <span class="item-eng">[ ] 7. Hospital Registration Certificate (Photocopy of license)</span>
+              <span class="item-mar marathi-text">हॉस्पिटल नोंदणी प्रमाणपत्र (परवान्याची झेरॉक्स प्रत)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 8. Hospital Declaration Form (Signed and stamped)</span>
+              <span class="item-mar marathi-text">हॉस्पिटल घोषणापत्र फॉर्म (स्वाक्षरी आणि शिक्का मारलेला)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 9. Discharge Summary / Discharge Card (Original clinical course summary)</span>
+              <span class="item-mar marathi-text">डिस्चार्ज समरी / डिस्चार्ज कार्ड (मूळ वैद्यकीय उपचारांचा अहवाल)</span>
+            </li>
+          </ul>
         </div>
+
+        <!-- Section 3 -->
+        <div class="checklist-section-box">
+          <h3>Section 3: Payment Paid Records / भरणा केलेले पेमेंट रेकॉर्ड</h3>
+          <ul class="checklist-list">
+            <li>
+              <span class="item-eng">[ ] 10. Hospital Final Bill (Original master itemized bill)</span>
+              <span class="item-mar marathi-text">हॉस्पिटल अंतिम बिल (मूळ सविस्तर बिल)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 11. Hospital Payment Receipts (Original receipts with “Paid” stamps)</span>
+              <span class="item-mar marathi-text">हॉस्पिटल पेमेंट पावती (पैसे भरल्याच्या शिक्क्यासह मूळ पावत्या)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 12. Medical Bills with Statement (Itemized pharmacy bills)</span>
+              <span class="item-mar marathi-text">मेडिकल बिल आणि स्टेटमेंट (औषधांची सविस्तर बिले)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 13. Lab Bills (Itemized bills for diagnostic services)</span>
+              <span class="item-mar marathi-text">लॅब बिले (तपासणी सेवांची सविस्तर बिले)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 14. Other Diagnostic Bills and Receipts (Scans, X-rays, or external diagnostic charges)</span>
+              <span class="item-mar marathi-text">इतर निदान बिले आणि पावत्या (स्कॅन्स, एक्स-रे किंवा बाह्य निदान खर्च)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 15. Pre-Hospitalization Bills and Receipts (Original bills for consultation/tests prior to admission)</span>
+              <span class="item-mar marathi-text">हॉस्पिटलमध्ये दाखल होण्यापूर्वीची बिले आणि पावत्या (सल्ला/तपासणीसाठीचे मूळ बिल)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="checklist-section-box">
+          <h3>Section 4: Clinical & Medical Records / क्लिनिकल आणि वैद्यकीय रेकॉर्ड</h3>
+          <ul class="checklist-list">
+            <li>
+              <span class="item-eng">[ ] 16. Initial Assessment Report (Admission notes)</span>
+              <span class="item-mar marathi-text">प्रारंभिक मूल्यांकन अहवाल (हॉस्पिटलमध्ये दाखल时的 नोंदी)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 17. Indoor Case Papers (ICP) (Nursing, Treatment Sheet and daily charts)</span>
+              <span class="item-mar marathi-text">इंडोर केस पेपर (ICP) (नर्सिंग, उपचारांचे शीट आणि दैनंदिन चार्ट)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 18. Medicine Prescription (Doctor’s written advice for pharmacy)</span>
+              <span class="item-mar marathi-text">औषध प्रिस्क्रिप्शन (औषधांसाठी डॉक्टरांचे लेखी सल्लापत्र)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 19. Lab Prescription (Doctor’s advice for tests/investigations)</span>
+              <span class="item-mar marathi-text">लॅब प्रिस्क्रिप्शन (तपासण्यांसाठी डॉक्टरांचा सल्ला)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 20. Clinical Investigation Reports (Original Radiology/Pathology results)</span>
+              <span class="item-mar marathi-text">क्लिनिकल तपासणी अहवाल (मूळ रेडिओलॉजी/पॅथॉलॉजी तपासणी निकाल)</span>
+            </li>
+            <li>
+              <span class="item-eng">[ ] 21. Pre-Hospitalization Documents & Reports (Reports and prescriptions from the pre-admission period)</span>
+              <span class="item-mar marathi-text">दाखल होण्यापूर्वीची कागदपत्रे आणि अहवाल (पूर्वीच्या काळातील अहवाल आणि प्रिस्क्रिप्शन)</span>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </section>
 
@@ -888,7 +962,7 @@
   <script>
     function sendWhatsApp() {
       const name = document.getElementById('clientName').value.trim();
-      const phone = document.getElementById('clientPhone').value.trim();
+      const phone = document.getElementById('clientName').value.trim();
       const req = document.getElementById('clientReq').value.trim();
       
       const text = "Hi RB Consultancy, my name is " + (name || "[Not Provided]") + " (Phone: " + (phone || "[Not Provided]") + "). Requirement: " + (req || "I need assistance with my insurance claim/dispute.");
