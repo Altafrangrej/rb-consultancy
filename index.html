@@ -19,7 +19,6 @@
       --accent-blue-hover: #0052A3;
       --accent-blue-light: #E6F0FA;
       --green: #25D366;
-      --dark-green: #106634;
       --white: #FFFFFF;
       --light: #F4F8FB;
       --section-alt: #EBF2F8;
@@ -41,7 +40,7 @@
       line-height: 1.65;
     }
 
-    /* Strict 100% Single Language Toggle Rules */
+    /* Strict 100% Single Language Display Switch */
     body.lang-en [data-lang="mar"] { display: none !important; }
     body.lang-mar [data-lang="eng"] { display: none !important; }
     body.lang-mar { font-family: 'Hind', sans-serif; }
@@ -100,9 +99,9 @@
       color: var(--navy); font-weight: 800; font-size: 15px; letter-spacing: 0.08em; font-family: 'Poppins', sans-serif;
     }
     .logo-line-2 {
-      color: var(--dark-green); font-weight: 600; font-size: 11.5px; display: flex; align-items: center; gap: 6px; margin-top: 2px; font-family: 'Poppins', sans-serif;
+      color: var(--accent-blue); font-weight: 600; font-size: 11.5px; display: flex; align-items: center; gap: 6px; margin-top: 2px; font-family: 'Poppins', sans-serif;
     }
-    .logo-line-2 .pipe { color: var(--dark-green); font-weight: 400; opacity: 0.8; }
+    .logo-line-2 .pipe { color: var(--accent-blue); font-weight: 400; opacity: 0.8; }
 
     /* Professional Avatar Styling */
     .consultant-avatar {
@@ -112,27 +111,26 @@
     }
 
     /* Streamlined Minimalist Professional Nav Links */
-    .nav-links { display: flex; align-items: center; gap: 16px; }
+    .nav-links { display: flex; align-items: center; gap: 18px; }
     .nav-links a { font-size: 13px; font-weight: 700; color: #425466; transition: 0.2s; }
     .nav-links a:hover { color: var(--accent-blue); }
 
-    /* Clean Blue Highlighted Language Toggle Switch Button */
+    /* Premium Blue Language Toggle Switch Button */
     .lang-toggle-btn {
-      background: var(--accent-blue-light);
-      color: var(--accent-blue);
-      border: 2px solid var(--accent-blue);
-      padding: 6px 14px;
-      border-radius: 8px;
-      font-weight: 900;
-      font-size: 12.5px;
+      background: var(--accent-blue);
+      color: var(--white);
+      border: 2px solid var(--accent-blue-hover);
+      padding: 7px 16px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 13px;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,102,204,0.15);
+      box-shadow: 0 4px 14px rgba(0,102,204,0.25);
       transition: 0.2s;
     }
     .lang-toggle-btn:hover {
       transform: translateY(-2px);
-      background: var(--accent-blue);
-      color: var(--white);
+      background: var(--accent-blue-hover);
     }
     
     .btn {
@@ -243,7 +241,7 @@
     .download-card h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
     .download-card p { font-size: 13px; color: var(--muted); margin-bottom: 15px; }
 
-    /* Unified Intake & Registration Form Card with proper text area size */
+    /* Unified Intake & Registration Form Card */
     .intake-form-box {
       background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 35px; box-shadow: var(--shadow); max-width: 800px; margin: auto;
       border-top: 4px solid var(--navy);
@@ -328,7 +326,7 @@
         <a href="#contact"><span data-lang="eng">Contact</span><span data-lang="mar">संपर्क</span></a>
       </nav>
       <div style="display: flex; align-items: center; gap: 10px;">
-        <button class="lang-toggle-btn" id="langToggleBtn" onclick="toggleLanguage()">मराठी / ENG</button>
+        <button class="lang-toggle-btn" id="langToggleBtn" onclick="toggleLanguage()">Switch to Marathi</button>
         <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20I%20need%20a%20consultation." target="_blank">WhatsApp Chat</a>
       </div>
     </div>
@@ -632,51 +630,7 @@
               <span data-lang="mar">आवश्यक सेवा किंवा उद्देश निवडा</span>:
             </label>
             <select class="field" id="intakeService">
-              <option value="General Consultancy Inquiry">
-                <span data-lang="eng">General Consultancy Inquiry</span>
-                <span data-lang="mar">सामान्य सल्लामसलत चौकशी</span>
-              </option>
-              <option value="1. Fresh Claim Submissions (₹3,000)">
-                <span data-lang="eng">1. Fresh Claim Submissions (₹3,000)</span>
-                <span data-lang="mar">१. नवीन क्लेम दाखल करणे (₹३,०००)</span>
-              </option>
-              <option value="2. Rejected Claims Recovery (₹3,000 + 10%)">
-                <span data-lang="eng">2. Rejected Claims Recovery (₹3,000 + 10% Success Fee)</span>
-                <span data-lang="mar">२. नाकारलेल्या क्लेमची वसुली (₹३,००० + १०% यश फी)</span>
-              </option>
-              <option value="3. Queries Management">
-                <span data-lang="eng">3. Queries Management</span>
-                <span data-lang="mar">३. शंका आणि प्रश्न निवारण</span>
-              </option>
-              <option value="4. Reconsideration Or Grievance">
-                <span data-lang="eng">4. Reconsideration Or Grievance</span>
-                <span data-lang="mar">४. फेरविचार किंवा तक्रार</span>
-              </option>
-              <option value="5. IRDAI & Ombudsman Appeals">
-                <span data-lang="eng">5. IRDAI & Ombudsman Appeals</span>
-                <span data-lang="mar">५. लोकपाल (Ombudsman) अपील</span>
-              </option>
-              <option value="6. TPA/IC Issues Resolutions">
-                <span data-lang="eng">6. TPA/IC Issues Resolutions</span>
-                <span data-lang="mar">६. टीपीए आणि कंपनी वाद निवारण</span>
-              </option>
-              <option value="7. Deadlock Recoveries & Claims Audits">
-                <span data-lang="eng">7. Deadlock Recoveries & Claims Audits</span>
-                <span data-lang="mar">७. रखडलेले क्लेम आणि तांत्रिक ऑडिट</span>
-              </option>
-              <option value="8. End-To-End Cashless Management">
-                <span data-lang="eng">8. End-To-End Cashless Management (₹2,000)</span>
-                <span data-lang="mar">८. कॅशलेस व्यवस्थापन (₹२,०००)</span>
-              </option>
-              <option value="9. MSME Samadhan Filings">
-                <span data-lang="eng">9. MSME Samadhan Filings</span>
-                <span data-lang="mar">९. एमएसएमई समाधान फायलिंग</span>
-              </option>
-              <option value="Refer & Earn Partner Registration">
-                <span data-lang="eng">Refer & Earn Partner Registration</span>
-                <span data-lang="mar">पार्टनर म्हणून नोंदणी (Refer & Earn)</span>
-              </option>
-            </select>
+              </select>
           </div>
 
           <div class="form-group-full">
@@ -1203,54 +1157,6 @@
       </div>
     </section>
 
-    <section class="section section-alt" id="location">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="eyebrow">
-            <span data-lang="eng">Office Location & Reviews</span>
-            <span data-lang="mar">कार्यालय आणि रिव्ह्यू</span>
-          </div>
-          <h2>
-            <span data-lang="eng">Our Registered Office & Client Feedback</span>
-            <span data-lang="mar">आमचे नोंदणीकृत कार्यालय आणि अभिप्राय</span>
-          </h2>
-          <p>
-            <span data-lang="eng">Visit our office directory or share your valuable feedback and reviews.</span>
-            <span data-lang="mar">आमच्या कार्यालयाला भेट द्या किंवा तुमचा मौल्यवान अभिप्राय सामायिक करा.</span>
-          </p>
-        </div>
-
-        <div class="info-grid">
-          <div class="info-box">
-            <h3>
-              <span data-lang="eng">Office Address & Map Directory</span>
-              <span data-lang="mar">कार्यालयाचा पत्ता</span>
-            </h3>
-            <p><b>RB Consultancy</b><br>
-            201, Taimur Height, Dr. Iqbal Colony, Mehrun, Jalgaon, Maharashtra, India.<br>
-            <span class="marathi-text">२०१, तैमूर हाईट, डॉ. इक्बाल कॉलनी, मेहरूण, जळगाव, महाराष्ट्र, भारत.</span></p>
-            <p style="margin-top: 15px;"><b>Udyam Registration:</b> UDYAM-MH-14-0183662</p>
-          </div>
-          <div class="info-box" style="text-align: center; display: flex; flex-direction: column; justify-content: center;">
-            <h3>
-              <span data-lang="eng">Leave a Google Review / Feedback</span>
-              <span data-lang="mar">गुगल रिव्ह्यू किंवा अभिप्राय द्या</span>
-            </h3>
-            <p>
-              <span data-lang="eng">Your feedback helps us maintain high standards of transparency and client service.</span>
-              <span data-lang="mar">तुमचा अभिप्राय आम्हाला पारदर्शकता आणि उत्तम सेवा कायम ठेवण्यास मदत करतो.</span>
-            </p>
-            <div style="margin-top: 15px;">
-              <a class="btn btn-dark" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20I%20want%20to%20leave%20my%20feedback." target="_blank">
-                <span data-lang="eng">Share Feedback via WhatsApp</span>
-                <span data-lang="mar">व्हॉट्सॲपवर अभिप्राय पाठवा</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="contact">
       <div class="wrap">
         <div class="section-head">
@@ -1346,7 +1252,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#workflow">Case Workflow</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#portal">Inquiry & Intake Portal</a></li>
+            <li><a href="#portal">Inquiry Portal</a></li>
             <li><a href="#referral">Refer & Earn</a></li>
           </ul>
         </div>
@@ -1366,7 +1272,52 @@
   </footer>
 
   <script>
-    // Strict 100% Single Language Toggle Script with persistent user choice
+    // Strict Single-Language Dropdown Population
+    const dropdownOptions = {
+      en: [
+        { value: "General Consultancy Inquiry", text: "General Consultancy Inquiry" },
+        { value: "1. Fresh Claim Submissions (₹3,000)", text: "1. Fresh Claim Submissions (₹3,000)" },
+        { value: "2. Rejected Claims Recovery (₹3,000 + 10%)", text: "2. Rejected Claims Recovery (₹3,000 + 10% Success Fee)" },
+        { value: "3. Queries Management", text: "3. Queries Management" },
+        { value: "4. Reconsideration Or Grievance", text: "4. Reconsideration Or Grievance" },
+        { value: "5. IRDAI & Ombudsman Appeals", text: "5. IRDAI & Ombudsman Appeals" },
+        { value: "6. TPA/IC Issues Resolutions", text: "6. TPA/IC Issues Resolutions" },
+        { value: "7. Deadlock Recoveries & Claims Audits", text: "7. Deadlock Recoveries & Claims Audits" },
+        { value: "8. End-To-End Cashless Management", text: "8. End-To-End Cashless Management (₹2,000)" },
+        { value: "9. MSME Samadhan Filings", text: "9. MSME Samadhan Filings" },
+        { value: "Refer & Earn Partner Registration", text: "Refer & Earn Partner Registration" }
+      ],
+      mar: [
+        { value: "सामान्य सल्लामसलत चौकशी", text: "सामान्य सल्लामसलत चौकशी" },
+        { value: "१. नवीन क्लेम दाखल करणे (₹३,०००)", text: "१. नवीन क्लेम दाखल करणे (₹३,०००)" },
+        { value: "२. नाकारलेल्या क्लेमची वसुली (₹३,००० + १०% यश फी)", text: "२. नाकारलेल्या क्लेमची वसुली (₹३,००० + १०% यश फी)" },
+        { value: "३. शंका आणि प्रश्न निवारण", text: "३. शंका आणि प्रश्न निवारण" },
+        { value: "४. फेरविचार किंवा तक्रार", text: "४. फेरविचार किंवा तक्रार" },
+        { value: "५. लोकपाल (Ombudsman) अपील", text: "५. लोकपाल (Ombudsman) अपील" },
+        { value: "६. टीपीए आणि कंपनी वाद निवारण", text: "६. टीपीए आणि कंपनी वाद निवारण" },
+        { value: "७. रखडलेले क्लेम आणि तांत्रिक ऑडिट", text: "७. रखडलेले क्लेम आणि तांत्रिक ऑडिट" },
+        { value: "८. कॅशलेस व्यवस्थापन (₹२,०००)", text: "८. कॅशलेस व्यवस्थापन (₹२,०००)" },
+        { value: "९. एमएसएमई समाधान फायलिंग", text: "९. एमएसएमई समाधान फायलिंग" },
+        { value: "पार्टनर म्हणून नोंदणी (Refer & Earn)", text: "पार्टनर म्हणून नोंदणी (Refer & Earn)" }
+      ]
+    };
+
+    function updateDropdown(lang) {
+      const select = document.getElementById('intakeService');
+      const currentValue = select.value;
+      select.innerHTML = '';
+      const opts = dropdownOptions[lang];
+      opts.forEach(opt => {
+        const option = document.createElement('option');
+        option.value = opt.value;
+        option.innerText = opt.text;
+        select.appendChild(option);
+      });
+      // Keep previous selection if possible
+      select.value = currentValue;
+    }
+
+    // Strict Single Language Toggle Script with persistent user choice
     function toggleLanguage() {
       const body = document.body;
       const btn = document.getElementById('langToggleBtn');
@@ -1375,11 +1326,13 @@
         body.classList.add('lang-mar');
         btn.innerText = "Switch to English";
         localStorage.setItem('rb_lang', 'mar');
+        updateDropdown('mar');
       } else {
         body.classList.remove('lang-mar');
         body.classList.add('lang-en');
-        btn.innerText = "मराठीत पहा";
+        btn.innerText = "Switch to Marathi";
         localStorage.setItem('rb_lang', 'eng');
+        updateDropdown('en');
       }
     }
 
@@ -1392,10 +1345,12 @@
         body.classList.remove('lang-en');
         body.classList.add('lang-mar');
         btn.innerText = "Switch to English";
+        updateDropdown('mar');
       } else {
         body.classList.remove('lang-mar');
         body.classList.add('lang-en');
-        btn.innerText = "मराठीत पहा";
+        btn.innerText = "Switch to Marathi";
+        updateDropdown('en');
       }
     });
 
