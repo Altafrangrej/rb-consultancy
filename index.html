@@ -7,7 +7,6 @@
   <meta name="description" content="Independent insurance claim facilitation, rejected claims recovery, IRDAI appeals, and MSME resolution led by Altaf Rangrej in Jalgaon, Maharashtra.">
   <meta name="theme-color" content="#0B2F4A">
 
-  <!-- Professional Devanagari (Marathi) & English Typography from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -41,10 +40,10 @@
       line-height: 1.65;
     }
 
-    /* Single Language Toggle Control Classes */
+    /* Strict 100% Single Language Toggle Rules */
     body.lang-en [data-lang="mar"] { display: none !important; }
     body.lang-mar [data-lang="eng"] { display: none !important; }
-    body.lang-en [data-lang-suffix=" / mar"] { display: none !important; }
+    body.lang-mar { font-family: 'Hind', sans-serif; }
     
     .marathi-text {
       font-family: 'Hind', sans-serif;
@@ -191,14 +190,12 @@
     .service-card h3 { font-size: 18px; margin-bottom: 10px; }
     .service-card p.eng { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
     .service-fee-tag { font-size: 12px; font-weight: 800; color: var(--navy); background: #F0F4F8; padding: 6px 10px; border-radius: 6px; margin-bottom: 12px; display: inline-block; }
-    .service-card p.mar { font-size: 13.5px; color: var(--navy); font-weight: 600; border-top: 1px dashed var(--line); padding-top: 10px; background: #FFFDF4; padding: 10px; border-radius: 8px; }
 
     /* Info Sections */
     .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
     .info-box { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); }
     .info-box h3 { font-size: 20px; margin-bottom: 15px; color: var(--navy); }
     .info-box p { font-size: 14px; margin-bottom: 12px; }
-    .info-box p.mar { color: var(--navy); font-weight: 600; font-size: 15px; }
 
     /* Highlighted Refer & Earn Box */
     .highlight-referral-card {
@@ -223,14 +220,12 @@
     .workflow-step { font-size: 12px; font-weight: 900; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
     .workflow-card h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
     .workflow-card p { font-size: 13px; }
-    .workflow-card p.mar { font-size: 13px; color: var(--navy); font-weight: 600; margin-top: 8px; border-top: 1px dashed var(--line); padding-top: 8px; }
 
     /* Success Stories Grid */
     .success-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .success-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); border-left: 4px solid var(--green); display: flex; flex-direction: column; justify-content: space-between; }
     .success-card h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
-    .success-card p.eng { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
-    .success-card p.mar { font-size: 13.5px; color: var(--navy); font-weight: 600; font-family: 'Hind', sans-serif; background: #F8FAFC; padding: 8px 10px; border-radius: 6px; border-top: 1px dashed var(--line); }
+    .success-card p { font-size: 13px; color: var(--muted); }
 
     /* Checklist Container */
     .checklist-container { display: grid; gap: 24px; max-width: 900px; margin: auto; }
@@ -238,7 +233,6 @@
     .checklist-section-box h3 { font-size: 17px; color: var(--navy); margin-bottom: 14px; border-bottom: 2px solid var(--gold); padding-bottom: 6px; }
     .checklist-section-box ul { padding-left: 0; list-style: none; margin: 0; display: grid; gap: 12px; }
     .checklist-section-box li { font-size: 13.5px; color: var(--text); background: #F8FAFC; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; }
-    .checklist-section-box li .mar-sub { font-size: 13px; color: var(--navy); font-weight: 600; font-family: 'Hind', sans-serif; }
 
     /* Pricing Section */
     .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
@@ -246,16 +240,14 @@
     .pricing-card h3 { font-size: 17px; margin-bottom: 10px; color: var(--navy); }
     .pricing-fee { font-size: 16px; font-weight: 900; color: var(--navy); margin-bottom: 10px; }
     .pricing-card p { font-size: 13px; }
-    .pricing-card p.mar { font-size: 13px; color: var(--navy); font-weight: 600; margin-top: 8px; font-family: 'Hind', sans-serif; border-top: 1px dashed var(--line); padding-top: 8px; }
 
     /* Download Cards */
     .download-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .download-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: space-between; }
     .download-card h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
-    .download-card p.eng { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
-    .download-card p.mar { font-size: 13px; color: var(--navy); font-weight: 600; font-family: 'Hind', sans-serif; margin-bottom: 15px; }
+    .download-card p { font-size: 13px; color: var(--muted); margin-bottom: 15px; }
 
-    /* Unified Intake & Registration Form Card with proper text area size */
+    /* Unified Intake & Registration Form Card */
     .intake-form-box {
       background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 35px; box-shadow: var(--shadow); max-width: 800px; margin: auto;
       border-top: 4px solid var(--navy);
@@ -264,13 +256,12 @@
     .form-group-full { margin-top: 15px; display: flex; flex-direction: column; }
     .form-group-full textarea.field { min-height: 140px; width: 100%; resize: vertical; }
 
-    /* FAQ Accordion in Dual Language */
+    /* FAQ Accordion */
     .faq-container { display: grid; gap: 15px; max-width: 900px; margin: auto; }
     .faq-item { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 24px; box-shadow: var(--shadow); }
     .faq-item h3 { font-size: 16px; color: var(--navy); margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
     .faq-item h3 span { color: var(--gold); font-weight: 900; }
-    .faq-item p.eng { font-size: 13.5px; color: var(--muted); margin-bottom: 6px; }
-    .faq-item p.mar { font-size: 14px; color: var(--navy); font-weight: 600; font-family: 'Hind', sans-serif; background: #FFFDF4; padding: 8px 12px; border-radius: 6px; border: 1px dashed var(--line); }
+    .faq-item p { font-size: 13.5px; color: var(--muted); }
 
     /* Highlighted Disclaimer Box */
     .disclaimer-box {
@@ -284,11 +275,8 @@
     .disclaimer-box h4 {
       color: #856404; font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 8px 0;
     }
-    .disclaimer-box p.eng {
-      color: #533F04; font-size: 13.5px; font-weight: 600; margin-bottom: 10px; line-height: 1.6;
-    }
-    .disclaimer-box p.mar {
-      color: #3B2B02; font-size: 14px; font-weight: 600; font-family: 'Hind', sans-serif; line-height: 1.6; border-top: 1px dashed #D4A017; padding-top: 10px;
+    .disclaimer-box p {
+      color: #533F04; font-size: 13.5px; font-weight: 600; margin-bottom: 0; line-height: 1.6;
     }
 
     /* Contact & Footer */
@@ -314,12 +302,11 @@
 </head>
 <body class="lang-en">
 
-  <!-- Remote Working Notice Banner -->
   <div class="remote-notice-banner">
-    <span data-lang="eng">Notice:</span><span data-lang="mar">सूचना:</span> We operate entirely online and remotely across Maharashtra & India. <span data-lang="eng">No travel required to meet us!</span><span data-lang="mar">आमच्याशी भेटण्यासाठी कोणताही प्रवास करण्याची गरज नाही!</span>
+    <span data-lang="eng">Notice: We operate entirely online and remotely across Maharashtra & India. No travel required to meet us!</span>
+    <span data-lang="mar">सूचना: आमचे कामकाज महाराष्ट्र आणि भारतामध्ये पूर्णपणे ऑनलाइन आणि रिमोट पद्धतीने चालते. भेटण्यासाठी कोणतीही प्रवास करण्याची गरज नाही!</span>
   </div>
 
-  <!-- Header with Language Toggle Switch Button & Single WhatsApp Button -->
   <header class="header">
     <div class="wrap nav">
       <a class="brand-logo-vector" href="#home">
@@ -352,11 +339,13 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow"><span data-lang="eng">Professional Independent Facilitator</span><span data-lang="mar">व्यावसायिक स्वतंत्र फॅसिलिटेटर</span></div>
+          <div class="eyebrow">
+            <span data-lang="eng">Professional Independent Facilitator</span>
+            <span data-lang="mar">व्यावसायिक स्वतंत्र फॅसिलिटेटर</span>
+          </div>
           <h1>
             <span data-lang="eng">The Most Trusted Insurance Claim Recovery and Facilitator.</span>
             <span data-lang="mar">सर्वात विश्वासू इन्शुरन्स क्लेम रिकव्हरी आणि फॅसिलिटेटर.</span>
@@ -375,8 +364,14 @@
 
         <div class="hero-panel">
           <div class="consultant-avatar">AR</div>
-          <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 800; margin-top: 10px;"><span data-lang="eng">Leadership & Background</span><span data-lang="mar">नेतृत्व आणि पार्श्वभूमी</span></div>
-          <h2 style="color: #fff; font-size: 22px; margin: 8px 0 10px;"><span data-lang="eng">Headed by Altaf Rangrej</span><span data-lang="mar">अल्ताफ रंगरेज यांच्या नेतृत्वाखाली</span></h2>
+          <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 800; margin-top: 10px;">
+            <span data-lang="eng">Leadership & Background</span>
+            <span data-lang="mar">नेतृत्व आणि पार्श्वभूमी</span>
+          </div>
+          <h2 style="color: #fff; font-size: 22px; margin: 8px 0 10px;">
+            <span data-lang="eng">Headed by Altaf Rangrej</span>
+            <span data-lang="mar">अल्ताफ रंगरेज यांच्या नेतृत्वाखाली</span>
+          </h2>
           <p>
             <span data-lang="eng">Founder and Principal Consultant with over 15+ years of industry experience, operating as an independent claims facilitation firm located in Jalgaon, Maharashtra.</span>
             <span data-lang="mar">संस्थापक आणि मुख्य सल्लागार अल्ताफ रंगरेज यांच्या मार्गदर्शनाखाली जळगाव, महाराष्ट्र येथून स्वतंत्रपणे कार्यरत.</span>
@@ -385,11 +380,13 @@
       </div>
     </section>
 
-    <!-- Case Working Workflow Section in Dual Language -->
     <section class="section section-light" id="workflow">
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow"><span data-lang="eng">Professional Protocol</span><span data-lang="mar">व्यावसायिक शिष्टाचार</span></div>
+          <div class="eyebrow">
+            <span data-lang="eng">Professional Protocol</span>
+            <span data-lang="mar">व्यावसायिक शिष्टाचार</span>
+          </div>
           <h2>
             <span data-lang="eng">Our 4-Step Case Working Structure</span>
             <span data-lang="mar">आमची ४-टप्प्यांची कार्यपद्धती</span>
@@ -403,7 +400,10 @@
         <div class="workflow-grid">
           <div class="workflow-card">
             <div class="workflow-step">Step 01</div>
-            <h3>First Gate Audit (Free)</h3>
+            <h3>
+              <span data-lang="eng">First Gate Audit (Free)</span>
+              <span data-lang="mar">प्रथम गेट ऑडिट (मोफत)</span>
+            </h3>
             <p>
               <span data-lang="eng">We review your case file, rejection letters, and documents thoroughly. This initial audit is <b>100% complimentary free</b> for all cases.</span>
               <span data-lang="mar">आम्ही तुमच्या केस फाईलची आणि कागदपत्रांची तपासणी करतो. हे प्रथम ऑडिट १००% मोफत आहे.</span>
@@ -411,7 +411,10 @@
           </div>
           <div class="workflow-card">
             <div class="workflow-step">Step 02</div>
-            <h3>Strategy & Plan</h3>
+            <h3>
+              <span data-lang="eng">Strategy & Plan</span>
+              <span data-lang="mar">धोरण आणि योजना</span>
+            </h3>
             <p>
               <span data-lang="eng">Based on our audit, we formulate an expert action plan and present our assessment and recommendations directly to you.</span>
               <span data-lang="mar">ऑडिटच्या आधारे आम्ही योग्य कृती आराखडा तयार करून तुमच्यासमोर मांडतो.</span>
@@ -419,7 +422,10 @@
           </div>
           <div class="workflow-card">
             <div class="workflow-step">Step 03</div>
-            <h3>Client Agreement</h3>
+            <h3>
+              <span data-lang="eng">Client Agreement</span>
+              <span data-lang="mar">ग्राहक करार</span>
+            </h3>
             <p>
               <span data-lang="eng">We proceed with active case execution only after receiving your formal agreement and approval on the proposed strategy.</span>
               <span data-lang="mar">तुमच्याकडून औपचारिक करार आणि मंजुरी मिळाल्यानंतरच आपण पुढील कारवाई सुरू करतो.</span>
@@ -427,21 +433,26 @@
           </div>
           <div class="workflow-card">
             <div class="workflow-step">Step 04</div>
-            <h3>Execution & Follow-up</h3>
+            <h3>
+              <span data-lang="eng">Execution & Follow-up</span>
+              <span data-lang="mar">अंमलबजावणी आणि पाठपुरावा</span>
+            </h3>
             <p>
               <span data-lang="eng">We manage notices, IRDAI guidelines, and carrier communications until final settlement or resolution is achieved.</span>
-              <span data-lang="mar">अंमलबजावणी आणि पाठपुरावा: क्लेम मिळेपर्यंत सर्व पाठपुरावा आम्ही करतो.</span>
+              <span data-lang="mar">क्लेम मिळेपर्यंत सर्व कायदेशीर नोटिस आणि पाठपुरावा आम्ही करतो.</span>
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
     <section class="section section-alt" id="services">
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow"><span data-lang="eng">Comprehensive Service Portfolio</span><span data-lang="mar">सर्वसमावेशक सेवा</span></div>
+          <div class="eyebrow">
+            <span data-lang="eng">Comprehensive Service Portfolio</span>
+            <span data-lang="mar">सर्वसमावेशक सेवा</span>
+          </div>
           <h2>
             <span data-lang="eng">All Specialized Consultancy Services</span>
             <span data-lang="mar">विशेष सल्लागार सेवा</span>
@@ -456,130 +467,174 @@
           <article class="service-card">
             <div>
               <div class="service-num">Service 01</div>
-              <h3>Fresh Claim Submissions</h3>
+              <h3>
+                <span data-lang="eng">Fresh Claim Submissions</span>
+                <span data-lang="mar">नवीन क्लेम दाखल करणे</span>
+              </h3>
               <div class="service-fee-tag">Fee: ₹3,000</div>
-              <p class="eng">Complete initial documentation, medical file arrangement, and filing support for smooth processing from day one.</p>
+              <p data-lang="eng" class="eng">Complete initial documentation, medical file arrangement, and filing support for smooth processing from day one.</p>
+              <p data-lang="mar" class="marathi-text" style="color: var(--muted); font-size: 13px; margin-bottom: 12px;">पहिल्या दिवसापासून क्लेमची प्रक्रिया सोपी व्हावी यासाठी कागदपत्रे गोळा करणे आणि फाईल सादर करणे.</p>
             </div>
-            <p class="mar marathi-text">पहिल्या दिवसापासून क्लेमची प्रक्रिया सोपी व्हावी यासाठी कागदपत्रे गोळा करणे आणि फाईल सादर करणे.</p>
           </article>
 
           <article class="service-card">
             <div>
               <div class="service-num">Service 02</div>
-              <h3>Rejected Claims Recovery</h3>
+              <h3>
+                <span data-lang="eng">Rejected Claims Recovery</span>
+                <span data-lang="mar">नाकारलेल्या क्लेमची वसुली</span>
+              </h3>
               <div class="service-fee-tag">Fee: ₹3,000 + 10% Success Fee</div>
-              <p class="eng">Thorough reviews of rejection letters to identify wrong denials and file strategic appeals to overturn them.</p>
+              <p data-lang="eng" class="eng">Thorough reviews of rejection letters to identify wrong denials and file strategic appeals to overturn them.</p>
+              <p data-lang="mar" class="marathi-text" style="color: var(--muted); font-size: 13px; margin-bottom: 12px;">नाकारलेल्या क्लेमच्या पत्राची सखोल तपासणी करून चुकीचा नकार बदलवून घेण्यासाठी अर्ज करणे.</p>
             </div>
-            <p class="mar marathi-text">नाकारलेल्या क्लेमच्या पत्राची सखोल तपासणी करून चुकीचा नकार बदलवून घेण्यासाठी अर्ज करणे.</p>
           </article>
 
           <article class="service-card">
             <div>
               <div class="service-num">Service 03</div>
-              <h3>Queries Management</h3>
+              <h3>
+                <span data-lang="eng">Queries Management</span>
+                <span data-lang="mar">शंका आणि प्रश्न निवारण</span>
+              </h3>
               <div class="service-fee-tag">Fee: As per Query Profile</div>
-              <p class="eng">Quick and professional handling of document queries raised by insurance companies or TPAs to avoid delays.</p>
+              <p data-lang="eng" class="eng">Quick and professional handling of document queries raised by insurance companies or TPAs to avoid delays.</p>
+              <p data-lang="mar" class="marathi-text" style="color: var(--muted); font-size: 13px; margin-bottom: 12px;">इन्शुरन्स कंपनी किंवा टीपीएने विचारलेल्या प्रश्नांना व शंकांना वेगाने आणि अचूकपणे उत्तरे देणे.</p>
             </div>
-            <p class="mar marathi-text">इन्शुरन्स कंपनी किंवा टीपीएने विचारलेल्या प्रश्नांना व शंकांना वेगाने आणि अचूकपणे उत्तरे देणे.</p>
           </article>
 
           <article class="service-card">
             <div>
               <div class="service-num">Service 04</div>
-              <h3>Reconsideration Or Grievance</h3>
+              <h3>
+                <span data-lang="eng">Reconsideration Or Grievance</span>
+                <span data-lang="mar">फेरविचार किंवा तक्रार</span>
+              </h3>
               <div class="service-fee-tag">Fee: ₹3,000 + 10% Success Fee</div>
-              <p class="eng">Formal escalation steps to challenge low settlement amounts or long delays.</p>
+              <p data-lang="eng" class="eng">Formal escalation steps to challenge low settlement amounts or long delays.</p>
+              <p data-lang="mar" class="marathi-text" style="color: var(--muted); font-size: 13px; margin-bottom: 12px;">कमी रक्कम मंजूर झाल्याविरुद्ध किंवा उशीर होत असल्यास कायदेशीर मार्गाने दाद मागणे.</p>
             </div>
-            <p class="mar marathi-text">कमी रक्कम मंजूर झाल्याविरुद्ध किंवा उशीर होत असल्यास कायदेशीर मार्गाने दाद मागणे.</p>
           </article>
 
           <article class="service-card">
             <div>
               <div class="service-num">Service 05</div>
-              <h3>IRDAI & Ombudsman Appeals</h3>
+              <h3>
+                <span data-lang="eng">IRDAI & Ombudsman Appeals</span>
+                <span data-lang="mar">लोकपाल (Ombudsman) अपील</span>
+              </h3>
               <div class="service-fee-tag">Fee: ₹3,000 + 10% Success Fee</div>
-              <p class="eng">Expert dossier preparation and formal representation before higher authorities and the Insurance Ombudsman.</p>
+              <p data-lang="eng" class="eng">Expert dossier preparation and formal representation before higher authorities and the Insurance Ombudsman.</p>
+              <p data-lang="mar" class="marathi-text" style="color: var(--muted); font-size: 13px; margin-bottom: 12px;">लोकपाल यांच्याकडे केसची फाईल तयार करून योग्य प्रकारे बाजू मांडणे.</p>
             </div>
-            <p class="mar marathi-text">लोकपाल (Ombudsman) यांच्याकडे केसची फाईल तयार करून योग्य प्रकारे बाजू मांडणे.</p>
           </article>
 
           <article class="service-card">
             <div>
               <div class="service-num">Service 06</div>
-              <h3>TPA/IC Issues Resolutions</h3>
+              <h3>
+                <span data-lang="eng">TPA/IC Issues Resolutions</span>
+                <span data-lang="mar">टीपीए आणि कंपनी वाद निवारण</span>
+              </h3>
               <div class="service-fee-tag">Fee: As per Case Profile</div>
-              <p class="eng">Direct follow-up and communication management to clear administrative obstacles with carriers and TPAs.</p>
+              <p data-lang="eng" class="eng">Direct follow-up and communication management to clear administrative obstacles with carriers and TPAs.</p>
+              <p data-lang="mar" class="marathi-text" style="color: var(--muted); font-size: 13px; margin-bottom: 12px;">इन्शुरन्स कंपन्या आणि टीपीए सोबतचे वाद सोडवण्यासाठी थेट संपर्क साधून पाठपुरावा करणे.</p>
             </div>
-            <p class="mar marathi-text">इन्शुरन्स कंपन्या आणि टीपीए सोबतचे वाद सोडवण्यासाठी थेट संपर्क साधून पाठपुरावा करणे.</p>
           </article>
 
           <article class="service-card">
             <div>
               <div class="service-num">Service 07</div>
-              <h3>Deadlock Recoveries & Claims Audits</h3>
+              <h3>
+                <span data-lang="eng">Deadlock Recoveries & Claims Audits</span>
+                <span data-lang="mar">रखडलेले क्लेम आणि तांत्रिक ऑडिट</span>
+              </h3>
               <div class="service-fee-tag">Fee: As per Case Profile</div>
-              <p class="eng">In-depth case assessments to unlock frozen, stalled, or abandoned financial settlements.</p>
+              <p data-lang="eng" class="eng">In-depth case assessments to unlock frozen, stalled, or abandoned financial settlements.</p>
+              <p data-lang="mar" class="marathi-text" style="color: var(--muted); font-size: 13px; margin-bottom: 12px;">रखडलेले किंवा बंद पडलेले पैसे बाहेर काढण्यासाठी केस फायलीची तांत्रिक तपासणी करणे.</p>
             </div>
-            <p class="mar marathi-text">रखडलेले किंवा बंद पडलेले पैसे बाहेर काढण्यासाठी केस फायलीची तांत्रिक तपासणी करणे.</p>
           </article>
 
           <article class="service-card">
             <div>
               <div class="service-num">Service 08</div>
-              <h3>End-To-End Cashless Management</h3>
+              <h3>
+                <span data-lang="eng">End-To-End Cashless Management</span>
+                <span data-lang="mar">कॅशलेस व्यवस्थापन</span>
+              </h3>
               <div class="service-fee-tag">Fee: ₹2,000</div>
-              <p class="eng">Support for hospitalizations, pre-authorizations, treatment tracking, and discharge clearances.</p>
+              <p data-lang="eng" class="eng">Support for hospitalizations, pre-authorizations, treatment tracking, and discharge clearances.</p>
+              <p data-lang="mar" class="marathi-text" style="color: var(--muted); font-size: 13px; margin-bottom: 12px;">हॉस्पिटलमध्ये दाखल होण्यापासून ते पूर्व-परवानगी आणि डिस्चार्ज मिळेपर्यंत मार्गदर्शन.</p>
             </div>
-            <p class="mar marathi-text">हॉस्पिटलमध्ये दाखल होण्यापासून ते पूर्व-परवानगी आणि डिस्चार्ज मिळेपर्यंत मार्गदर्शन.</p>
           </article>
 
           <article class="service-card">
             <div>
               <div class="service-num">Service 09</div>
-              <h3>MSME Samadhan Filings</h3>
+              <h3>
+                <span data-lang="eng">MSME Samadhan Filings</span>
+                <span data-lang="mar">एमएसएमई समाधान फायलिंग</span>
+              </h3>
               <div class="service-fee-tag">Fee: As per Case Profile</div>
-              <p class="eng">Statutory recovery and micro-enterprise support using the MSMED Act for commercial payment disputes.</p>
+              <p data-lang="eng" class="eng">Statutory recovery and micro-enterprise support using the MSMED Act for commercial payment disputes.</p>
+              <p data-lang="mar" class="marathi-text" style="color: var(--muted); font-size: 13px; margin-bottom: 12px;">एमएसएमई कायद्यांतर्गत व्यावसायिक पेमेंट विवादांसाठी कायदेशीर वसुली प्रक्रिया सुलभ केली.</p>
             </div>
-            <p class="mar marathi-text">व्यावसायिक पेमेंट विवादांसाठी एमएसएमई कायद्यानुसार समाधान पोर्टलवर अर्ज करणे.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- General Inquiry & Case Registration Portal (Proper Textarea Width & Height) -->
     <section class="section section-light" id="portal">
       <div class="wrap">
         <div class="section-head" style="text-align: center; margin-left: auto; margin-right: auto;">
-          <div class="eyebrow" style="justify-content: center;"><span data-lang="eng">Digital Intake Portal</span><span data-lang="mar">डिजिटल नोंदणी पोर्टल</span></div>
+          <div class="eyebrow" style="justify-content: center;">
+            <span data-lang="eng">Digital Intake Portal</span>
+            <span data-lang="mar">डिजिटल नोंदणी पोर्टल</span>
+          </div>
           <h2>
             <span data-lang="eng">General Inquiry & Case Registration Portal</span>
             <span data-lang="mar">सर्वसाधारण चौकशी आणि केस नोंदणी पोर्टल</span>
           </h2>
           <p>
             <span data-lang="eng">Submit your case details or general consultancy inquiries instantly in English or Marathi for a complimentary Free First Gate Audit.</span>
-            <span data-lang="mar">मोफत फर्स्ट गेट ऑडिटसाठी आपली माहिती इंग्रजी किंवा मराठीत भरा.</span>
+            <span data-lang="mar">मोफत फर्स्ट गेट ऑडिटसाठी आपली माहिती भरा.</span>
           </p>
         </div>
 
         <div class="intake-form-box">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
-            <h3 style="margin: 0;"><span data-lang="eng">Online Inquiry & Registration</span><span data-lang="mar">ऑनलाइन चौकशी आणि नोंदणी अर्ज</span></h3>
-            <span style="font-size: 12px; font-weight: 800; color: var(--gold); background: #FFF9E6; padding: 4px 10px; border-radius: 6px;"><span data-lang="eng">Free First Gate Audit Included</span><span data-lang="mar">मोफत फर्स्ट गेट ऑडिट समाविष्ट</span></span>
+            <h3 style="margin: 0;">
+              <span data-lang="eng">Online Inquiry & Registration</span>
+              <span data-lang="mar">ऑनलाइन चौकशी आणि नोंदणी अर्ज</span>
+            </h3>
+            <span style="font-size: 12px; font-weight: 800; color: var(--gold); background: #FFF9E6; padding: 4px 10px; border-radius: 6px;">
+              <span data-lang="eng">Free First Gate Audit Included</span>
+              <span data-lang="mar">मोफत फर्स्ट गेट ऑडिट समाविष्ट</span>
+            </span>
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
             <div>
-              <label style="font-size: 12px; font-weight: 700; color: var(--navy);"><span data-lang="eng">Your Full Name</span><span data-lang="mar">पूर्ण नाव</span>:</label>
+              <label style="font-size: 12px; font-weight: 700; color: var(--navy);">
+                <span data-lang="eng">Your Full Name</span>
+                <span data-lang="mar">पूर्ण नाव</span>:
+              </label>
               <input class="field" id="intakeName" type="text" placeholder="Enter your full name">
             </div>
             <div>
-              <label style="font-size: 12px; font-weight: 700; color: var(--navy);"><span data-lang="eng">Mobile Number</span><span data-lang="mar">मोबाईल नंबर</span>:</label>
+              <label style="font-size: 12px; font-weight: 700; color: var(--navy);">
+                <span data-lang="eng">Mobile Number</span>
+                <span data-lang="mar">मोबाईल नंबर</span>:
+              </label>
               <input class="field" id="intakePhone" type="tel" placeholder="10-digit mobile number">
             </div>
           </div>
 
           <div class="form-group-full">
-            <label style="font-size: 12px; font-weight: 700; color: var(--navy);"><span data-lang="eng">Select Required Service / Purpose</span><span data-lang="mar">आवश्यक सेवा किंवा उद्देश निवडा</span>:</label>
+            <label style="font-size: 12px; font-weight: 700; color: var(--navy);">
+              <span data-lang="eng">Select Required Service / Purpose</span>
+              <span data-lang="mar">आवश्यक सेवा किंवा उद्देश निवडा</span>:
+            </label>
             <select class="field" id="intakeService">
               <option value="General Consultancy Inquiry">General Consultancy Inquiry / सामान्य सल्लामसलत चौकशी</option>
               <option value="1. Fresh Claim Submissions (₹3,000)">1. Fresh Claim Submissions (₹3,000)</option>
@@ -596,12 +651,18 @@
           </div>
 
           <div class="form-group-full">
-            <label style="font-size: 12px; font-weight: 700; color: var(--navy);"><span data-lang="eng">Referred By (Advisor/Partner Name & Phone) [Optional]</span><span data-lang="mar">कोणी संदर्भ दिला असल्यास त्यांचे नाव व नंबर [पर्यायी]</span>:</label>
+            <label style="font-size: 12px; font-weight: 700; color: var(--navy);">
+              <span data-lang="eng">Referred By (Advisor/Partner Name & Phone) [Optional]</span>
+              <span data-lang="mar">कोणी संदर्भ दिला असल्यास त्यांचे नाव व नंबर [पर्यायी]</span>:
+            </label>
             <input class="field" id="intakeReferral" type="text" placeholder="Optional: Enter referrer name and phone number">
           </div>
 
           <div class="form-group-full">
-            <label style="font-size: 12px; font-weight: 700; color: var(--navy);"><span data-lang="eng">Inquiry Details / Case Summary</span><span data-lang="mar">चौकशी तपशील किंवा केसचा सारांश</span>:</label>
+            <label style="font-size: 12px; font-weight: 700; color: var(--navy);">
+              <span data-lang="eng">Inquiry Details / Case Summary</span>
+              <span data-lang="mar">चौकशी तपशील किंवा केसचा सारांश</span>:
+            </label>
             <textarea class="field" id="intakeDetails" placeholder="Describe your general question, policy details, rejection reason, or dispute summary..."></textarea>
           </div>
 
@@ -611,122 +672,171 @@
           </div>
 
           <div style="margin-top: 20px; text-align: center;">
-            <button class="btn btn-whatsapp" onclick="submitIntakeWhatsApp()" style="width: 100%; justify-content: center; padding: 14px;"><span data-lang="eng">Submit Inquiry via WhatsApp</span><span data-lang="mar">व्हॉट्सॲप द्वारे चौकशी पाठवा</span></button>
+            <button class="btn btn-whatsapp" onclick="submitIntakeWhatsApp()" style="width: 100%; justify-content: center; padding: 14px;">
+              <span data-lang="eng">Submit Inquiry via WhatsApp</span>
+              <span data-lang="mar">व्हॉट्सॲप द्वारे चौकशी पाठवा</span>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Highlighted Refer & Earn Program Section -->
     <section class="section section-alt" id="referral">
       <div class="wrap">
         <div class="highlight-referral-card">
-          <div class="eyebrow" style="color: var(--navy);"><span data-lang="eng">Partner Reward Program</span><span data-lang="mar">पार्टनर रिवार्ड प्रोग्राम</span></div>
+          <div class="eyebrow" style="color: var(--navy);">
+            <span data-lang="eng">Partner Reward Program</span>
+            <span data-lang="mar">पार्टनर रिवार्ड प्रोग्राम</span>
+          </div>
           <h2 style="font-size: clamp(22px, 3vw, 32px); margin-bottom: 15px; color: var(--navy);">RB Consultancy "Refer & Earn" Program</h2>
           <p style="font-size: 15px; color: #334455; max-width: 800px; margin-bottom: 20px;">
             <span data-lang="eng">Know someone facing an insurance claim rejection, delay, or commercial payment dispute? Refer them to RB Consultancy! When they submit their case through our form and mention your name, you earn rewarding referral commissions upon successful onboarding and resolution.</span>
             <span data-lang="mar">इन्शुरन्स क्लेम नाकारला गेल्यास किंवा अडकल्यास आमच्याकडे संदर्भ द्या. फॉर्ममध्ये तुमचे नाव नमूद करून यशस्वी सहकार्यावर आकर्षक कमिशन मिळवा.</span>
           </p>
           <div>
-            <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20Altaf,%20I%20want%20to%20register%20as%20a%20Refer%20and%20Earn%20Partner." target="_blank" style="background: var(--navy); color: #fff;"><span data-lang="eng">Register as Referral Partner Now</span><span data-lang="mar">आत्ताच पार्टनर म्हणून नोंदणी करा</span></a>
+            <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20Altaf,%20I%20want%20to%20register%20as%20a%20Refer%20and%20Earn%20Partner." target="_blank" style="background: var(--navy); color: #fff;">
+              <span data-lang="eng">Register as Referral Partner Now</span>
+              <span data-lang="mar">आत्ताच पार्टनर म्हणून नोंदणी करा</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Document Checklists -->
     <section class="section section-light" id="checklists">
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow"><span data-lang="eng">Client Resources</span><span data-lang="mar">ग्राहक संसाधने</span></div>
-          <h2><span data-lang="eng">Required Documents Checklist</span><span data-lang="mar">आवश्यक कागदपत्रांची यादी</span></h2>
-          <p><span data-lang="eng">Applicable for all cases (except End-to-End Cashless, MSME, and TPA/IC types). These are standard records required for file evaluation.</span><span data-lang="mar">फाइल मूल्यांकनासाठी आवश्यक असलेली मानक कागदपत्रे.</span></p>
+          <div class="eyebrow">
+            <span data-lang="eng">Client Resources</span>
+            <span data-lang="mar">ग्राहक संसाधने</span>
+          </div>
+          <h2>
+            <span data-lang="eng">Required Documents Checklist</span>
+            <span data-lang="mar">आवश्यक कागदपत्रांची यादी</span>
+          </h2>
+          <p>
+            <span data-lang="eng">Applicable for all cases (except End-to-End Cashless, MSME, and TPA/IC types). These are standard records required for file evaluation.</span>
+            <span data-lang="mar">फाइल मूल्यांकनासाठी आवश्यक असलेली मानक कागदपत्रे.</span>
+          </p>
         </div>
 
         <div class="checklist-container">
           <div class="checklist-section-box">
-            <h3><span data-lang="eng">SECTION 1: ADMINISTRATIVE & IDENTITY</span><span data-lang="mar">विभाग १: प्रशासकीय आणि ओळख कागदपत्रे</span></h3>
+            <h3>
+              <span data-lang="eng">SECTION 1: ADMINISTRATIVE & IDENTITY</span>
+              <span data-lang="mar">विभाग १: प्रशासकीय आणि ओळख कागदपत्रे</span>
+            </h3>
             <ul>
               <li>
-                <span><b>1. Cover Letter:</b> <span data-lang="eng">Signed summary and list of enclosures.</span><span data-lang="mar">स्वाक्षरी केलेले सारांश आणि कागदपत्रांची यादी.</span></span>
+                <span data-lang="eng"><b>1. Cover Letter:</b> Signed summary and list of enclosures.</span>
+                <span data-lang="mar"><b>१. कव्हर लेटर:</b> स्वाक्षरी केलेले सारांश आणि कागदपत्रांची यादी.</span>
               </li>
               <li>
-                <span><b>2. Claim Form (Part A & B):</b> <span data-lang="eng">Signed by Primary Policyholder and Hospital.</span><span data-lang="mar">प्राथमिक पॉलिसीधारक आणि हॉस्पिटलद्वारे स्वाक्षरी केलेले.</span></span>
+                <span data-lang="eng"><b>2. Claim Form (Part A & B):</b> Signed by Primary Policyholder and Hospital.</span>
+                <span data-lang="mar"><b>२. क्लेम फॉर्म (भाग अ आणि ब):</b> प्राथमिक पॉलिसीधारक आणि हॉस्पिटलद्वारे स्वाक्षरी केलेले.</span>
               </li>
               <li>
-                <span><b>3. Policy Schedule / Health Card:</b> <span data-lang="eng">Photocopy of active insurance policy.</span><span data-lang="mar">सक्रिय इन्शुरन्स पॉलिसीची झेरॉक्स प्रत.</span></span>
+                <span data-lang="eng"><b>3. Policy Schedule / Health Card:</b> Photocopy of active insurance policy.</span>
+                <span data-lang="mar"><b>३. पॉलिसी शेड्यूल / हेल्थ कार्ड:</b> सक्रिय इन्शुरन्स पॉलिसीची झेरॉक्स प्रत.</span>
               </li>
               <li>
-                <span><b>4. KYC – Patient:</b> <span data-lang="eng">Aadhaar Card photocopy.</span><span data-lang="mar">रुग्णाचे आधार कार्ड झेरॉक्स.</span></span>
+                <span data-lang="eng"><b>4. KYC – Patient:</b> Aadhaar Card photocopy.</span>
+                <span data-lang="mar"><b>४. केवायसी - रुग्ण:</b> आधार कार्डची झेरॉक्स प्रत.</span>
               </li>
               <li>
-                <span><b>5. KYC – Primary Policyholder:</b> <span data-lang="eng">Aadhaar Card photocopy.</span><span data-lang="mar">पॉलिसीधारकाचे आधार कार्ड झेरॉक्स.</span></span>
+                <span data-lang="eng"><b>5. KYC – Primary Policyholder:</b> Aadhaar Card photocopy.</span>
+                <span data-lang="mar"><b>५. केवायसी - प्राथमिक पॉलिसीधारक:</b> आधार कार्डची झेरॉक्स प्रत.</span>
               </li>
               <li>
-                <span><b>6. Bank Mandate Proof:</b> <span data-lang="eng">Original Cancelled Cheque OR Bank Passbook Xerox copy.</span><span data-lang="mar">मूळ रद्द केलेला चेक किंवा बँक पासबुक झेरॉक्स.</span></span>
+                <span data-lang="eng"><b>6. Bank Mandate Proof:</b> Original Cancelled Cheque OR Bank Passbook Xerox copy.</span>
+                <span data-lang="mar"><b>६. बँक मॅंडेट पुरावा:</b> मूळ रद्द केलेला चेक किंवा बँक पासबुकची झेरॉक्स प्रत.</span>
               </li>
             </ul>
           </div>
 
           <div class="checklist-section-box">
-            <h3><span data-lang="eng">SECTION 2: HOSPITAL FORMALITIES</span><span data-lang="mar">विभाग २: हॉस्पिटल औपचारिकता</span></h3>
+            <h3>
+              <span data-lang="eng">SECTION 2: HOSPITAL FORMALITIES</span>
+              <span data-lang="mar">विभाग २: हॉस्पिटल औपचारिकता</span>
+            </h3>
             <ul>
               <li>
-                <span><b>7. Hospital Registration Certificate:</b> <span data-lang="eng">Photocopy of license.</span><span data-lang="mar">हॉस्पिटल परवान्याची झेरॉक्स प्रत.</span></span>
+                <span data-lang="eng"><b>7. Hospital Registration Certificate:</b> Photocopy of license.</span>
+                <span data-lang="mar"><b>७. हॉस्पिटल नोंदणी प्रमाणपत्र:</b> परवान्याची झेरॉक्स प्रत.</span>
               </li>
               <li>
-                <span><b>8. Hospital Declaration Form:</b> <span data-lang="eng">Signed and stamped.</span><span data-lang="mar">स्वाक्षरी आणि शिक्का मारलेला घोषणा फॉर्म.</span></span>
+                <span data-lang="eng"><b>8. Hospital Declaration Form:</b> Signed and stamped.</span>
+                <span data-lang="mar"><b>८. हॉस्पिटल घोषणा फॉर्म:</b> स्वाक्षरी आणि शिक्का मारलेला.</span>
               </li>
               <li>
-                <span><b>9. Discharge Summary / Discharge Card:</b> <span data-lang="eng">Original clinical course summary.</span><span data-lang="mar">मूळ डिस्चार्ज समरी अहवाल.</span></span>
+                <span data-lang="eng"><b>9. Discharge Summary / Discharge Card:</b> Original clinical course summary.</span>
+                <span data-lang="mar"><b>९. डिस्चार्ज समरी / डिस्चार्ज कार्ड:</b> मूळ क्लिनिकल समरी अहवाल.</span>
               </li>
             </ul>
           </div>
 
           <div class="checklist-section-box">
-            <h3><span data-lang="eng">SECTION 3: PAYMENT PAID RECORDS</span><span data-lang="mar">विभाग ३: भरलेल्या पैशांचे रेकॉर्ड</span></h3>
+            <h3>
+              <span data-lang="eng">SECTION 3: PAYMENT PAID RECORDS</span>
+              <span data-lang="mar">विभाग ३: भरलेल्या पैशांचे रेकॉर्ड</span>
+            </h3>
             <ul>
               <li>
-                <span><b>10. Hospital Final Bill:</b> <span data-lang="eng">Original master itemized bill.</span><span data-lang="mar">हॉस्पिटलचे मूळ तपशीलवार बिल.</span></span>
+                <span data-lang="eng"><b>10. Hospital Final Bill:</b> Original master itemized bill.</span>
+                <span data-lang="mar"><b>१०. हॉस्पिटल अंतिम बिल:</b> मूळ तपशीलवार बिल.</span>
               </li>
               <li>
-                <span><b>11. Hospital Payment Receipts:</b> <span data-lang="eng">Original receipts with "Paid" stamps.</span><span data-lang="mar">"Paid" शिक्का असलेल्या मूळ पावत्या.</span></span>
+                <span data-lang="eng"><b>11. Hospital Payment Receipts:</b> Original receipts with "Paid" stamps.</span>
+                <span data-lang="mar"><b>११. हॉस्पिटल पेमेंट पावत्या:</b> "Paid" शिक्का असलेल्या मूळ पावत्या.</span>
               </li>
               <li>
-                <span><b>12. Medical Bills with Statement:</b> <span data-lang="eng">Itemized pharmacy bills.</span><span data-lang="mar">तपशीलवार फार्मसी बिले.</span></span>
+                <span data-lang="eng"><b>12. Medical Bills with Statement:</b> Itemized pharmacy bills.</span>
+                <span data-lang="mar"><b>१२. मेडिकल बिले आणि स्टेटमेंट:</b> तपशीलवार फार्मसी बिले.</span>
               </li>
               <li>
-                <span><b>13. Lab Bills:</b> <span data-lang="eng">Itemized bills for diagnostic services.</span><span data-lang="mar">निदान सेवांसाठी लॅब बिले.</span></span>
+                <span data-lang="eng"><b>13. Lab Bills:</b> Itemized bills for diagnostic services.</span>
+                <span data-lang="mar"><b>१३. लॅब बिले:</b> निदान सेवांसाठी तपशीलवार बिले.</span>
               </li>
               <li>
-                <span><b>14. Other Diagnostic Bills and Receipts:</b> <span data-lang="eng">Scans, X-rays, or external diagnostic charges.</span><span data-lang="mar">स्कॅन, एक्स-रे किंवा बाह्य निदान शुल्क.</span></span>
+                <span data-lang="eng"><b>14. Other Diagnostic Bills and Receipts:</b> Scans, X-rays, or external diagnostic charges.</span>
+                <span data-lang="mar"><b>१४. इतर निदान बिले आणि पावत्या:</b> स्कॅन, एक्स-रे किंवा बाह्य निदान शुल्क.</span>
               </li>
               <li>
-                <span><b>15. Pre-Hospitalization Bills and Receipts:</b> <span data-lang="eng">Original bills for consultation/tests prior to admission.</span><span data-lang="mar">हॉस्पिटलमध्ये दाखल होण्यापूर्वीची बिले.</span></span>
+                <span data-lang="eng"><b>15. Pre-Hospitalization Bills and Receipts:</b> Original bills for consultation/tests prior to admission.</span>
+                <span data-lang="mar"><b>१५. हॉस्पिटलमध्ये दाखल होण्यापूर्वीचे बिले:</b> सल्ला किंवा चाचण्यांचे मूळ बिले.</span>
               </li>
             </ul>
           </div>
 
           <div class="checklist-section-box">
-            <h3><span data-lang="eng">SECTION 4: CLINICAL & MEDICAL RECORDS</span><span data-lang="mar">विभाग ४: वैद्यकीय रेकॉर्ड</span></h3>
+            <h3>
+              <span data-lang="eng">SECTION 4: CLINICAL & MEDICAL RECORDS</span>
+              <span data-lang="mar">विभाग ४: वैद्यकीय रेकॉर्ड</span>
+            </h3>
             <ul>
               <li>
-                <span><b>16. Initial Assessment Report:</b> <span data-lang="eng">Admission notes.</span><span data-lang="mar">हॉस्पिटलमध्ये दाखल केल्याच्या नोंदी.</span></span>
+                <span data-lang="eng"><b>16. Initial Assessment Report:</b> Admission notes.</span>
+                <span data-lang="mar"><b>१६. प्रारंभिक मूल्यांकन अहवाल:</b> हॉस्पिटलमध्ये दाखल केल्याच्या नोंदी.</span>
               </li>
               <li>
-                <span><b>17. Indoor Case Papers (ICP):</b> <span data-lang="eng">Nursing, Treatment Sheet and daily charts.</span><span data-lang="mar">नर्सिंग आणि उपचार पत्रक.</span></span>
+                <span data-lang="eng"><b>17. Indoor Case Papers (ICP):</b> Nursing, Treatment Sheet and daily charts.</span>
+                <span data-lang="mar"><b>१७. इन्डोअर केस पेपर्स (ICP):</b> नर्सिंग, उपचार पत्रक आणि दैनिक चार्ट.</span>
               </li>
               <li>
-                <span><b>18. Medicine Prescription:</b> <span data-lang="eng">Doctor's written advice for pharmacy.</span><span data-lang="mar">डॉक्टरांचे लिखित प्रिस्क्रिप्शन.</span></span>
+                <span data-lang="eng"><b>18. Medicine Prescription:</b> Doctor's written advice for pharmacy.</span>
+                <span data-lang="mar"><b>१८. औषध प्रिस्क्रिप्शन:</b> फार्मसीसाठी डॉक्टरांचे लिखित सल्लापत्र.</span>
               </li>
               <li>
-                <span><b>19. Lab Prescription:</b> <span data-lang="eng">Doctor's advice for tests/investigations.</span><span data-lang="mar">चाचण्यांसाठी डॉक्टरांचा सल्ला.</span></span>
+                <span data-lang="eng"><b>19. Lab Prescription:</b> Doctor's advice for tests/investigations.</span>
+                <span data-lang="mar"><b>१९. लॅब प्रिस्क्रिप्शन:</b> चाचण्यांसाठी डॉक्टरांचा सल्ला.</span>
               </li>
               <li>
-                <span><b>20. Clinical Investigation Reports:</b> <span data-lang="eng">Original Radiology/Pathology results.</span><span data-lang="mar">मूळ पॅथॉलॉजी निकाल.</span></span>
+                <span data-lang="eng"><b>20. Clinical Investigation Reports:</b> Original Radiology/Pathology results.</span>
+                <span data-lang="mar"><b>२०. क्लिनिकल तपासणी अहवाल:</b> मूळ रेडिओलॉजी / पॅथॉलॉजी निकाल.</span>
               </li>
               <li>
-                <span><b>21. Pre-Hospitalization Documents & Reports:</b> <span data-lang="eng">Reports and prescriptions from pre-admission period.</span><span data-lang="mar">प्रवेशपूर्व काळातील अहवाल.</span></span>
+                <span data-lang="eng"><b>21. Pre-Hospitalization Documents & Reports:</b> Reports and prescriptions from pre-admission period.</span>
+                <span data-lang="mar"><b>२१. प्रवेशपूर्व कागदपत्रे आणि अहवाल:</b> प्रवेशापूर्वीच्या काळातील अहवाल आणि प्रिस्क्रिप्शन.</span>
               </li>
             </ul>
           </div>
@@ -734,34 +844,62 @@
       </div>
     </section>
 
-    <!-- Transparent Fee Structure & Payment Information Section (English Only for Details) -->
     <section class="section section-alt" id="pricing">
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow"><span data-lang="eng">Transparent Pricing & Payment</span><span data-lang="mar">पारदर्शक मूल्य आणि पेमेंट</span></div>
-          <h2><span data-lang="eng">Our Professional Fee Structure & Bank Details</span><span data-lang="mar">व्यावसायिक फी संरचना आणि बँक तपशील</span></h2>
-          <p><span data-lang="eng">Clear, straightforward consultancy fees with secure payment options.</span><span data-lang="mar">सुरक्षित पेमेंट पर्यायांसह पारदर्शक सल्ला शुल्क.</span></p>
+          <div class="eyebrow">
+            <span data-lang="eng">Transparent Pricing & Payment</span>
+            <span data-lang="mar">पारदर्शक मूल्य आणि पेमेंट</span>
+          </div>
+          <h2>
+            <span data-lang="eng">Our Professional Fee Structure & Bank Details</span>
+            <span data-lang="mar">व्यावसायिक फी संरचना आणि बँक तपशील</span>
+          </h2>
+          <p>
+            <span data-lang="eng">Clear, straightforward consultancy fees with secure payment options.</span>
+            <span data-lang="mar">सुरक्षित पेमेंट पर्यायांसह पारदर्शक सल्ला शुल्क.</span>
+          </p>
         </div>
 
         <div class="pricing-grid">
           <div class="pricing-card">
-            <h3>Fresh Claim & Cashless</h3>
+            <h3>
+              <span data-lang="eng">Fresh Claim & Cashless</span>
+              <span data-lang="mar">नवीन क्लेम आणि कॅशलेस</span>
+            </h3>
             <div class="pricing-fee">₹3,000 (Fresh) / ₹2,000 (Cashless)</div>
-            <p>Standard filing, initial documentation, and hospital admission support.</p>
+            <p>
+              <span data-lang="eng">Standard filing, initial documentation, and hospital admission support.</span>
+              <span data-lang="mar">मानक फाईलिंग, प्राथमिक कागदपत्रे आणि हॉस्पिटल प्रवेश सहाय्य.</span>
+            </p>
           </div>
           <div class="pricing-card">
-            <h3>Reconsideration, Grievance & Ombudsman</h3>
+            <h3>
+              <span data-lang="eng">Reconsideration, Grievance & Ombudsman</span>
+              <span data-lang="mar">फेरविचार, तक्रार आणि लोकपाल</span>
+            </h3>
             <div class="pricing-fee">₹3,000 + 10% Success Fee</div>
-            <p>Comprehensive dossier preparation, grievance escalation, and formal representation.</p>
+            <p>
+              <span data-lang="eng">Comprehensive dossier preparation, grievance escalation, and formal representation.</span>
+              <span data-lang="mar">सर्वसमावेशक डॉसियर तयार करणे, तक्रार वाढवणे आणि औपचारिक प्रतिनिधित्व.</span>
+            </p>
           </div>
           <div class="pricing-card">
-            <h3>Recovery, MSME & Audits</h3>
-            <div class="pricing-fee">As per Case Profile</div>
-            <p>Detailed query management, deadlock recovery, and MSME Samadhan portal support structured according to case profile.</p>
+            <h3>
+              <span data-lang="eng">Recovery, MSME & Audits</span>
+              <span data-lang="mar">वसुली, एमएसएमई आणि ऑडिट</span>
+            </h3>
+            <div class="pricing-fee">
+              <span data-lang="eng">As per Case Profile</span>
+              <span data-lang="mar">केस प्रोफाइलनुसार</span>
+            </div>
+            <p>
+              <span data-lang="eng">Detailed query management, deadlock recovery, and MSME Samadhan portal support structured according to case profile.</span>
+              <span data-lang="mar">तपशीलवार प्रश्न व्यवस्थापन, रखडलेली वसुली आणि एमएसएमई समाधान पोर्टल समर्थन.</span>
+            </p>
           </div>
         </div>
 
-        <!-- Payment & Bank Details Box (English Only) -->
         <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); margin-top: 30px;">
           <h3 style="color: var(--navy); font-size: 18px; margin-bottom: 12px;">Official Payment Information & Bank Transfer Details</h3>
           <p style="font-size: 13.5px; margin-bottom: 15px;">Clients can transfer professional consultation fees directly through UPI or official bank accounts. Please share transaction screenshots via WhatsApp.</p>
@@ -783,175 +921,307 @@
       </div>
     </section>
 
-    <!-- Downloadable Templates Section -->
     <section class="section section-light" id="downloads">
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow"><span data-lang="eng">Administrative Hub</span><span data-lang="mar">प्रशासकीय केंद्र</span></div>
-          <h2><span data-lang="eng">Downloadable Templates & Forms</span><span data-lang="mar">डाउनलोड करण्यायोग्य नमुने आणि फॉर्म</span></h2>
-          <p><span data-lang="eng">Access official consultancy documents and agreements for review.</span><span data-lang="mar">पुनरावलोकनासाठी अधिकृत कागदपत्रे मिळवा.</span></p>
+          <div class="eyebrow">
+            <span data-lang="eng">Administrative Hub</span>
+            <span data-lang="mar">प्रशासकीय केंद्र</span>
+          </div>
+          <h2>
+            <span data-lang="eng">Downloadable Templates & Forms</span>
+            <span data-lang="mar">डाउनलोड करण्यायोग्य नमुने आणि फॉर्म</span>
+          </h2>
+          <p>
+            <span data-lang="eng">Access official consultancy documents and agreements for review.</span>
+            <span data-lang="mar">पुनरावलोकनासाठी अधिकृत कागदपत्रे मिळवा.</span>
+          </p>
         </div>
 
         <div class="download-grid">
           <div class="download-card">
             <div>
               <h3>Authorization Letter Template</h3>
-              <p class="eng">Standard authorization document enabling RB Consultancy to act as your authorized facilitator.</p>
-              <p class="mar marathi-text">अधिकृत फॅसिलिटेटर म्हणून काम करण्यासाठी आरबी कन्सल्टन्सीला सक्षम करणारे पत्र.</p>
+              <p>
+                <span data-lang="eng">Standard authorization document enabling RB Consultancy to act as your authorized facilitator.</span>
+                <span data-lang="mar">अधिकृत फॅसिलिटेटर म्हणून काम करण्यासाठी आरबी कन्सल्टन्सीला सक्षम करणारे पत्र.</span>
+              </p>
             </div>
-            <a class="btn btn-dark" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20please%20send%20me%20the%20Authorization%20Letter%20template." target="_blank" style="font-size: 12.5px; padding: 10px;"><span data-lang="eng">Request via WhatsApp</span><span data-lang="mar">व्हॉट्सॲपवर मागवा</span></a>
+            <a class="btn btn-dark" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20please%20send%20me%20the%20Authorization%20Letter%20template." target="_blank" style="font-size: 12.5px; padding: 10px;">
+              <span data-lang="eng">Request via WhatsApp</span>
+              <span data-lang="mar">व्हॉट्सॲपवर मागवा</span>
+            </a>
           </div>
 
           <div class="download-card">
             <div>
               <h3>Fee Agreement Form</h3>
-              <p class="eng">Transparent schedule of professional consultation fees and success fee terms.</p>
-              <p class="mar marathi-text">व्यावसायिक सल्ला फी आणि अटींची पारदर्शक अनुसूची.</p>
+              <p>
+                <span data-lang="eng">Transparent schedule of professional consultation fees and success fee terms.</span>
+                <span data-lang="mar">व्यावसायिक सल्ला फी आणि अटींची पारदर्शक अनुसूची.</span>
+              </p>
             </div>
-            <a class="btn btn-dark" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20please%20send%20me%20the%20Fee%20Agreement%20template." target="_blank" style="font-size: 12.5px; padding: 10px;"><span data-lang="eng">Request via WhatsApp</span><span data-lang="mar">व्हॉट्सॲपवर मागवा</span></a>
+            <a class="btn btn-dark" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20please%20send%20me%20the%20Fee%20Agreement%20template." target="_blank" style="font-size: 12.5px; padding: 10px;">
+              <span data-lang="eng">Request via WhatsApp</span>
+              <span data-lang="mar">व्हॉट्सॲपवर मागवा</span>
+            </a>
           </div>
 
           <div class="download-card">
             <div>
               <h3>Notice of Appointment (NOA)</h3>
-              <p class="eng">Official notice addressed to Insurance Carriers and TPAs citing IRDAI regulations.</p>
-              <p class="mar marathi-text">इन्शुरन्स कंपन्यांना पाठवलेली अधिकृत नोटीस.</p>
+              <p>
+                <span data-lang="eng">Official notice addressed to Insurance Carriers and TPAs citing IRDAI regulations.</span>
+                <span data-lang="mar">इन्शुरन्स कंपन्यांना पाठवलेली अधिकृत नोटीस.</span>
+              </p>
             </div>
-            <a class="btn btn-dark" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20please%20send%20me%20the%20Notice%20of%20Appointment%20template." target="_blank" style="font-size: 12.5px; padding: 10px;"><span data-lang="eng">Request via WhatsApp</span><span data-lang="mar">व्हॉट्सॲपवर मागवा</span></a>
+            <a class="btn btn-dark" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20please%20send%20me%20the%20Notice%20of%20Appointment%20template." target="_blank" style="font-size: 12.5px; padding: 10px;">
+              <span data-lang="eng">Request via WhatsApp</span>
+              <span data-lang="mar">व्हॉट्सॲपवर मागवा</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Success Stories -->
     <section class="section section-alt" id="success">
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow"><span data-lang="eng">Track Record & Case Highlights</span><span data-lang="mar">यशस्वी केसेस</span></div>
-          <h2><span data-lang="eng">Proven Success in Claim Recovery</span><span data-lang="mar">क्लेम रिकव्हरीमधील सिद्ध यश</span></h2>
-          <p><span data-lang="eng">Highlighting our commitment to overcoming obstacles and recovering rightful client settlements.</span><span data-lang="mar">अडथळे दूर करून ग्राहकांचे हक्काचे पैसे मिळवून देण्याची आमची बांधिलकी.</span></p>
+          <div class="eyebrow">
+            <span data-lang="eng">Track Record & Case Highlights</span>
+            <span data-lang="mar">यशस्वी केसेस</span>
+          </div>
+          <h2>
+            <span data-lang="eng">Proven Success in Claim Recovery</span>
+            <span data-lang="mar">क्लेम रिकव्हरीमधील सिद्ध यश</span>
+          </h2>
+          <p>
+            <span data-lang="eng">Highlighting our commitment to overcoming obstacles and recovering rightful client settlements.</span>
+            <span data-lang="mar">अडथळे दूर करून ग्राहकांचे हक्काचे पैसे मिळवून देण्याची आमची बांधिलकी.</span>
+          </p>
         </div>
 
         <div class="success-grid">
           <div class="success-card">
             <div>
-              <h3>Rejected Claim Overturned</h3>
-              <p class="eng">Successfully challenged unjustified claim repudiation letters using IRDAI 2024 policyholder regulations and secured full settlements.</p>
+              <h3>
+                <span data-lang="eng">Rejected Claim Overturned</span>
+                <span data-lang="mar">नाकारलेला क्लेम मंजूर करून घेतला</span>
+              </h3>
+              <p>
+                <span data-lang="eng">Successfully challenged unjustified claim repudiation letters using IRDAI 2024 policyholder regulations and secured full settlements.</span>
+                <span data-lang="mar">IRDAI नियमांचा वापर करून नाकारलेले क्लेम यशस्वीपणे परत मिळवून दिले.</span>
+              </p>
             </div>
-            <p class="mar marathi-text">IRDAI नियमांचा वापर करून नाकारलेले क्लेम यशस्वीपणे परत मिळवून दिले.</p>
           </div>
           <div class="success-card">
             <div>
-              <h3>Ombudsman Escalation</h3>
-              <p class="eng">Prepared structured dossiers that successfully represented clients before higher authorities to resolve prolonged settlement deadlocks.</p>
+              <h3>
+                <span data-lang="eng">Ombudsman Escalation</span>
+                <span data-lang="mar">लोकपाल (Ombudsman) दाद</span>
+              </h3>
+              <p>
+                <span data-lang="eng">Prepared structured dossiers that successfully represented clients before higher authorities to resolve prolonged settlement deadlocks.</span>
+                <span data-lang="mar">रखडलेले वाद सोडवण्यासाठी लोकपाल आणि उच्च अधिकार्‍यांसमोर सुव्यवस्थित दाद मागितली.</span>
+              </p>
             </div>
-            <p class="mar marathi-text">रखडलेले वाद सोडवण्यासाठी लोकपाल आणि उच्च अधिकार्‍यांसमोर सुव्यवस्थित दाद मागितली.</p>
           </div>
           <div class="success-card">
             <div>
-              <h3>MSME Payment Recovery</h3>
-              <p class="eng">Facilitated statutory recovery processes and statutory notices under the MSMED Act for commercial payment disputes.</p>
+              <h3>
+                <span data-lang="eng">MSME Payment Recovery</span>
+                <span data-lang="mar">एमएसएमई पेमेंट वसुली</span>
+              </h3>
+              <p>
+                <span data-lang="eng">Facilitated statutory recovery processes and statutory notices under the MSMED Act for commercial payment disputes.</span>
+                <span data-lang="mar">एमएसएमई कायद्यांतर्गत व्यावसायिक पेमेंट विवादांसाठी कायदेशीर वसुली प्रक्रिया सुलभ केली.</span>
+              </p>
             </div>
-            <p class="mar marathi-text">एमएसएमई कायद्यांतर्गत व्यावसायिक पेमेंट विवादांसाठी कायदेशीर वसुली प्रक्रिया सुलभ केली.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Section in Dual Language -->
     <section class="section section-light" id="faq">
       <div class="wrap">
         <div class="section-head" style="text-align: center; margin-left: auto; margin-right: auto;">
-          <div class="eyebrow" style="justify-content: center;"><span data-lang="eng">Knowledge Base</span><span data-lang="mar">माहिती भांडार</span></div>
-          <h2><span data-lang="eng">Frequently Asked Questions (FAQ)</span><span data-lang="mar">वारंवार विचारले जाणारे प्रश्न</span></h2>
-          <p><span data-lang="eng">Everything you need to know about our remote consultancy services and claim facilitation process.</span><span data-lang="mar">आमच्या रिमोट सल्लागार सेवांबद्दल सर्व काही जाणून घ्या.</span></p>
+          <div class="eyebrow" style="justify-content: center;">
+            <span data-lang="eng">Knowledge Base</span>
+            <span data-lang="mar">माहिती भांडार</span>
+          </div>
+          <h2>
+            <span data-lang="eng">Frequently Asked Questions (FAQ)</span>
+            <span data-lang="mar">वारंवार विचारले जाणारे प्रश्न</span>
+          </h2>
+          <p>
+            <span data-lang="eng">Everything you need to know about our remote consultancy services and claim facilitation process.</span>
+            <span data-lang="mar">आमच्या रिमोट सल्लागार सेवांबद्दल सर्व काही जाणून घ्या.</span>
+          </p>
         </div>
 
         <div class="faq-container">
           <div class="faq-item">
-            <h3><span>01.</span> What is the role of RB Consultancy in my insurance claim?</h3>
-            <p class="eng">RB Consultancy acts as an independent professional facilitator and authorized agent. We organize your documents, draft notices, and manage communications with insurance companies, TPAs, and statutory bodies on your behalf.</p>
-            <p class="mar marathi-text">आरबी कन्सल्टन्सी स्वतंत्र व्यावसायिक फॅसिलिटेटर म्हणून कार्य करते. आम्ही तुमचे कागदपत्रे व्यवस्थित करून कंपनीशी पत्रव्यवहार करतो.</p>
+            <h3>
+              <span>01.</span>
+              <span data-lang="eng">What is the role of RB Consultancy in my insurance claim?</span>
+              <span data-lang="mar">इन्शुरन्स क्लेममध्ये आरबी कन्सल्टन्सीची भूमिका काय आहे?</span>
+            </h3>
+            <p>
+              <span data-lang="eng">RB Consultancy acts as an independent professional facilitator and authorized agent. We organize your documents, draft notices, and manage communications with insurance companies, TPAs, and statutory bodies on your behalf.</span>
+              <span data-lang="mar">आरबी कन्सल्टन्सी स्वतंत्र व्यावसायिक फॅसिलिटेटर म्हणून कार्य करते. आम्ही तुमचे कागदपत्रे व्यवस्थित करून कंपनीशी पत्रव्यवहार करतो.</span>
+            </p>
           </div>
           <div class="faq-item">
-            <h3><span>02.</span> Are you an insurance company or a TPA?</h3>
-            <p class="eng">No. We are an independent consultancy firm led by Founder Altaf Rangrej. We are not an insurance carrier or Third-Party Administrator; we represent you (the policyholder) independently.</p>
-            <p class="mar marathi-text">नाही. आम्ही स्वतंत्र सल्लागार फर्म आहोत. आम्ही कोणतीही इन्शुरन्स कंपनी किंवा टीपीए नाही.</p>
+            <h3>
+              <span>02.</span>
+              <span data-lang="eng">Are you an insurance company or a TPA?</span>
+              <span data-lang="mar">तुम्ही इन्शुरन्स कंपनी किंवा टीपीए आहात का?</span>
+            </h3>
+            <p>
+              <span data-lang="eng">No. We are an independent consultancy firm led by Founder Altaf Rangrej. We are not an insurance carrier or Third-Party Administrator; we represent you (the policyholder) independently.</span>
+              <span data-lang="mar">नाही. आम्ही स्वतंत्र सल्लागार फर्म आहोत. आम्ही कोणतीही इन्शुरन्स कंपनी किंवा टीपीए नाही.</span>
+            </p>
           </div>
           <div class="faq-item">
-            <h3><span>03.</span> What is a "First Gate Audit" and is it really free?</h3>
-            <p class="eng">The First Gate Audit is our initial review of your claim files, rejection letters, and policy papers. Yes, it is <b>100% complimentary free</b> for all prospective clients.</p>
-            <p class="mar marathi-text">फर्स्ट गेट ऑडिट म्हणजे क्लेम फायलीची प्राथमिक तपासणी. हे सर्व ग्राहकांसाठी १००% मोफत आहे.</p>
+            <h3>
+              <span>03.</span>
+              <span data-lang="eng">What is a "First Gate Audit" and is it really free?</span>
+              <span data-lang="mar">"फर्स्ट गेट ऑडिट" म्हणजे काय आणि ते खरोखर मोफत आहे का?</span>
+            </h3>
+            <p>
+              <span data-lang="eng">The First Gate Audit is our initial review of your claim files, rejection letters, and policy papers. Yes, it is <b>100% complimentary free</b> for all prospective clients.</span>
+              <span data-lang="mar">फर्स्ट गेट ऑडिट म्हणजे क्लेम फायलीची प्राथमिक तपासणी. हे सर्व ग्राहकांसाठी १००% मोफत आहे.</span>
+            </p>
           </div>
           <div class="faq-item">
-            <h3><span>04.</span> How do your success fees and service charges work?</h3>
-            <p class="eng">We charge transparent initial fees (such as ₹3,000 for fresh claims or rejections) plus nominal success fees (10%) upon successful claim recovery, as outlined in our transparent fee structure.</p>
-            <p class="mar marathi-text">आम्ही पारदर्शक सुरुवातीची फी आणि क्लेम यशस्वी झाल्यावर यश फी (Success Fee) आकारतो.</p>
+            <h3>
+              <span>04.</span>
+              <span data-lang="eng">How do your success fees and service charges work?</span>
+              <span data-lang="mar">तुमचे सेवा शुल्क आणि यश फी कशी कार्य करते?</span>
+            </h3>
+            <p>
+              <span data-lang="eng">We charge transparent initial fees (such as ₹3,000 for fresh claims or rejections) plus nominal success fees (10%) upon successful claim recovery, as outlined in our transparent fee structure.</span>
+              <span data-lang="mar">आम्ही पारदर्शक सुरुवातीची फी आणि क्लेम यशस्वी झाल्यावर यश फी (Success Fee) आकारतो.</span>
+            </p>
           </div>
           <div class="faq-item">
-            <h3><span>05.</span> Do I need to travel to your office in Jalgaon to get my claim processed?</h3>
-            <p class="eng">Not at all! We operate entirely online and remotely. You can submit all documents, forms, and queries digitally via WhatsApp or email from anywhere in Maharashtra or India.</p>
-            <p class="mar marathi-text">अजिबात नाही! आमचे कामकाज पूर्णपणे ऑनलाइन आणि रिमोट पद्धतीने चालते.</p>
+            <h3>
+              <span>05.</span>
+              <span data-lang="eng">Do I need to travel to your office in Jalgaon to get my claim processed?</span>
+              <span data-lang="mar">क्लेम करण्यासाठी मला जळगाव ऑफिसमध्ये जावे लागेल का?</span>
+            </h3>
+            <p>
+              <span data-lang="eng">Not at all! We operate entirely online and remotely. You can submit all documents, forms, and queries digitally via WhatsApp or email from anywhere in Maharashtra or India.</span>
+              <span data-lang="mar">अजिबात नाही! आमचे कामकाज पूर्णपणे ऑनलाइन आणि रिमोट पद्धतीने चालते. तुम्ही घरबसल्या कागदपत्रे पाठवू शकता.</span>
+            </p>
           </div>
           <div class="faq-item">
-            <h3><span>06.</span> How long does a typical claim recovery or reconsideration process take?</h3>
-            <p class="eng">Timelines depend entirely on the respective insurance company, TPA, or statutory authority (such as the Insurance Ombudsman). As facilitators, we push files aggressively but do not guarantee strict completion deadlines.</p>
-            <p class="mar marathi-text">कालावधी पूर्णपणे इन्शुरन्स कंपनी किंवा लोकपाल यांच्यावर अवलंबून असतो.</p>
+            <h3>
+              <span>06.</span>
+              <span data-lang="eng">How long does a typical claim recovery or reconsideration process take?</span>
+              <span data-lang="mar">क्लेम रिकव्हरी किंवा फेरविचार प्रक्रियेस किती वेळ लागतो?</span>
+            </h3>
+            <p>
+              <span data-lang="eng">Timelines depend entirely on the respective insurance company, TPA, or statutory authority (such as the Insurance Ombudsman). As facilitators, we push files aggressively but do not guarantee strict completion deadlines.</span>
+              <span data-lang="mar">कालावधी पूर्णपणे इन्शुरन्स कंपनी किंवा लोकपाल यांच्यावर अवलंबून असतो.</span>
+            </p>
           </div>
           <div class="faq-item">
-            <h3><span>07.</span> What documents do I need to provide to start a case?</h3>
-            <p class="eng">Depending on your case type, you generally need your policy document, hospital discharge summary, final bills, rejection letters, and KYC details. Check our document checklist section for exact details.</p>
-            <p class="mar marathi-text">केसच्या प्रकारानुसार पॉलिसी, डिस्चार्ज समरी, अंतिम बिल, नाकारण्याचे पत्र आणि केवायसी कागदपत्रे लागतात.</p>
+            <h3>
+              <span>07.</span>
+              <span data-lang="eng">What documents do I need to provide to start a case?</span>
+              <span data-lang="mar">केस सुरू करण्यासाठी कोणती कागदपत्रे लागतात?</span>
+            </h3>
+            <p>
+              <span data-lang="eng">Depending on your case type, you generally need your policy document, hospital discharge summary, final bills, rejection letters, and KYC details. Check our document checklist section for exact details.</span>
+              <span data-lang="mar">केसच्या प्रकारानुसार पॉलिसी, डिस्चार्ज समरी, अंतिम बिल, नाकारण्याचे पत्र आणि केवायसी कागदपत्रे लागतात.</span>
+            </p>
           </div>
           <div class="faq-item">
-            <h3><span>08.</span> Can you help with health, life, and corporate/commercial claims?</h3>
-            <p class="eng">Yes. Our 9 specialized services cover health claims, life insurance disputes, cashless authorizations, rejected claim recoveries, and MSME commercial payment disputes.</p>
-            <p class="mar marathi-text">होय. आमच्या सेवांमध्ये आरोग्य विमा, जीवन विमा, आणि व्यावसायिक विवाद समाविष्ट आहेत.</p>
+            <h3>
+              <span>08.</span>
+              <span data-lang="eng">Can you help with health, life, and corporate/commercial claims?</span>
+              <span data-lang="mar">तुम्ही आरोग्य, जीवन आणि व्यावसायिक क्लेमसाठी मदत करू शकता का?</span>
+            </h3>
+            <p>
+              <span data-lang="eng">Yes. Our 9 specialized services cover health claims, life insurance disputes, cashless authorizations, rejected claim recoveries, and MSME commercial payment disputes.</span>
+              <span data-lang="mar">होय. आमच्या सेवांमध्ये आरोग्य विमा, जीवन विमा, आणि व्यावसायिक विवाद समाविष्ट आहेत.</span>
+            </p>
           </div>
           <div class="faq-item">
-            <h3><span>09.</span> What is an MSME Samadhan filing and who is eligible?</h3>
-            <p class="eng">MSME Samadhan is a statutory recovery process under the MSMED Act 2006 for registered micro and small enterprises facing delayed payments from buyers or corporate clients.</p>
-            <p class="mar marathi-text">एमएसएमई समाधान हा नोंदणीकृत सूक्ष्म आणि लघु उद्योगांसाठी थकबाकी वसुलीचा कायदेशीर अर्ज आहे.</p>
+            <h3>
+              <span>09.</span>
+              <span data-lang="eng">What is an MSME Samadhan filing and who is eligible?</span>
+              <span data-lang="mar">एमएसएमई समाधान फायलिंग म्हणजे काय आणि कोण पात्र आहे?</span>
+            </h3>
+            <p>
+              <span data-lang="eng">MSME Samadhan is a statutory recovery process under the MSMED Act 2006 for registered micro and small enterprises facing delayed payments from buyers or corporate clients.</span>
+              <span data-lang="mar">एमएसएमई समाधान हा नोंदणीकृत सूक्ष्म आणि लघु उद्योगांसाठी थकबाकी वसुलीचा कायदेशीर अर्ज आहे.</span>
+            </p>
           </div>
           <div class="faq-item">
-            <h3><span>10.</span> How do I initiate my case inquiry with RB Consultancy?</h3>
-            <p class="eng">You can simply fill out our online General Inquiry & Registration Portal on this website or click the WhatsApp chat button to connect instantly with our desk.</p>
-            <p class="mar marathi-text">तुम्ही वेबसाइटवरील पोर्टल वापरू शकता किंवा व्हॉट्सॲप चॅट बटणावर क्लिक करू शकता.</p>
+            <h3>
+              <span>10.</span>
+              <span data-lang="eng">How do I initiate my case inquiry with RB Consultancy?</span>
+              <span data-lang="mar">मी आरबी कन्सल्टन्सीकडे कशी चौकशी सुरू करू शकतो?</span>
+            </h3>
+            <p>
+              <span data-lang="eng">You can simply fill out our online General Inquiry & Registration Portal on this website or click the WhatsApp chat button to connect instantly with our desk.</span>
+              <span data-lang="mar">तुम्ही वेबसाइटवरील पोर्टल वापरू शकता किंवा व्हॉट्सॲप चॅट बटणावर क्लिक करू शकता.</span>
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Google Map Location & Reviews Section -->
     <section class="section section-alt" id="location">
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow"><span data-lang="eng">Office Location & Reviews</span><span data-lang="mar">कार्यालय आणि रिव्ह्यू</span></div>
-          <h2><span data-lang="eng">Our Registered Office & Client Feedback</span><span data-lang="mar">आमचे नोंदणीकृत कार्यालय आणि अभिप्राय</span></h2>
-          <p><span data-lang="eng">Visit our office directory or share your valuable feedback and reviews.</span><span data-lang="mar">आमच्या कार्यालयाला भेट द्या किंवा तुमचा मौल्यवान अभिप्राय सामायिक करा.</span></p>
+          <div class="eyebrow">
+            <span data-lang="eng">Office Location & Reviews</span>
+            <span data-lang="mar">कार्यालय आणि रिव्ह्यू</span>
+          </div>
+          <h2>
+            <span data-lang="eng">Our Registered Office & Client Feedback</span>
+            <span data-lang="mar">आमचे नोंदणीकृत कार्यालय आणि अभिप्राय</span>
+          </h2>
+          <p>
+            <span data-lang="eng">Visit our office directory or share your valuable feedback and reviews.</span>
+            <span data-lang="mar">आमच्या कार्यालयाला भेट द्या किंवा तुमचा मौल्यवान अभिप्राय सामायिक करा.</span>
+          </p>
         </div>
 
         <div class="info-grid">
           <div class="info-box">
-            <h3><span data-lang="eng">Office Address & Map Directory</span><span data-lang="mar">कार्यालयाचा पत्ता</span></h3>
+            <h3>
+              <span data-lang="eng">Office Address & Map Directory</span>
+              <span data-lang="mar">कार्यालयाचा पत्ता</span>
+            </h3>
             <p><b>RB Consultancy</b><br>
             201, Taimur Height, Dr. Iqbal Colony, Mehrun, Jalgaon, Maharashtra, India.<br>
             <span class="marathi-text">२०१, तैमूर हाईट, डॉ. इक्बाल कॉलनी, मेहरूण, जळगाव, महाराष्ट्र, भारत.</span></p>
             <p style="margin-top: 15px;"><b>Udyam Registration:</b> UDYAM-MH-14-0183662</p>
           </div>
           <div class="info-box" style="text-align: center; display: flex; flex-direction: column; justify-content: center;">
-            <h3><span data-lang="eng">Leave a Google Review / Feedback</span><span data-lang="mar">गुगल रिव्ह्यू किंवा अभिप्राय द्या</span></h3>
-            <p class="eng">Your feedback helps us maintain high standards of transparency and client service.</p>
-            <p class="mar marathi-text" style="margin-top: 6px;">तुमचा अभिप्राय आम्हाला पारदर्शकता आणि उत्तम सेवा कायम ठेवण्यास मदत करतो.</p>
+            <h3>
+              <span data-lang="eng">Leave a Google Review / Feedback</span>
+              <span data-lang="mar">गुगल रिव्ह्यू किंवा अभिप्राय द्या</span>
+            </h3>
+            <p>
+              <span data-lang="eng">Your feedback helps us maintain high standards of transparency and client service.</span>
+              <span data-lang="mar">तुमचा अभिप्राय आम्हाला पारदर्शकता आणि उत्तम सेवा कायम ठेवण्यास मदत करतो.</span>
+            </p>
             <div style="margin-top: 15px;">
-              <a class="btn btn-dark" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20I%20want%20to%20leave%20my%20feedback." target="_blank"><span data-lang="eng">Share Feedback via WhatsApp</span><span data-lang="mar">व्हॉट्सॲपवर अभिप्राय पाठवा</span></a>
+              <a class="btn btn-dark" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20I%20want%20to%20leave%20my%20feedback." target="_blank">
+                <span data-lang="eng">Share Feedback via WhatsApp</span>
+                <span data-lang="mar">व्हॉट्सॲपवर अभिप्राय पाठवा</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Clean Contact Section (English Only Header) -->
     <section class="section" id="contact">
       <div class="wrap">
         <div class="section-head">
@@ -984,15 +1254,17 @@
           </div>
         </div>
 
-        <!-- Comprehensive Dual-Language Legal & Contract Disclaimers Box -->
         <div class="disclaimer-box">
-          <h4>Important Legal & Contractual Disclaimers / महत्त्वाची कायदेशीर व करारविषयक माहिती</h4>
-          <p class="eng">
+          <h4>
+            <span data-lang="eng">Important Legal & Contractual Disclaimers</span>
+            <span data-lang="mar">महत्त्वाची कायदेशीर व करारविषयक माहिती</span>
+          </h4>
+          <p data-lang="eng">
             1. <b>Facilitator Only & Indian Contract Act 1872:</b> RB Consultancy operates strictly as an independent professional facilitator and authorized agent under the principles of the Indian Contract Act 1872. We provide documentation support and follow-up services only.<br>
             2. <b>No Guarantee of Outcomes or Timelines:</b> The final decisions regarding claim approvals, settlement payouts, and processing timelines rest entirely with insurance companies, TPAs, the Insurance Ombudsman, or statutory authorities. RB Consultancy does not guarantee specific results or exact timeframes.<br>
             3. <b>Client Liability:</b> All legal, financial, and document liabilities rest solely on the client and document issuing authorities.
           </p>
-          <p class="mar marathi-text">
+          <p data-lang="mar" class="marathi-text">
             १. <b>फक्त फॅसिलिटेटर आणि भारतीय करार कायदा १८७२:</b> आरबी कन्सल्टन्सी ही भारतीय करार कायदा १८७२ च्या तत्त्वांनुसार स्वतंत्र व्यावसायिक फॅसिलिटेटर म्हणून काम करते. आम्ही फक्त कागदपत्रे आणि पाठपुराव्याचे सहकार्य देतो.<br>
             २. <b>न निकाल किंवा मुदतीची हमी नाही:</b> क्लेम मंजुरी, पेमेंट आणि प्रक्रियेचा कालावधी यावरील अंतिम निर्णय इन्शुरन्स कंपन्या किंवा लोकपाल यांच्या हातात असतो. आरबी कन्सल्टन्सी कोणत्याही विशिष्ट निकालाची किंवा मुदतीची हमी देत नाही.<br>
             ३. <b>ग्राहकांची जबाबदारी:</b> सर्व कायदेशीर, आर्थिक आणि कागदपत्रांची जबाबदारी पूर्णपणे ग्राहकाची आणि कागदपत्र जारी करणाऱ्या अधिकाऱ्यांची राहील.
@@ -1002,7 +1274,6 @@
     </section>
   </main>
 
-  <!-- Footer with Social Media Links Hub -->
   <footer>
     <div class="wrap">
       <div class="footer-grid">
@@ -1041,18 +1312,18 @@
   </footer>
 
   <script>
-    // Language Switcher Toggle Script
+    // Strict 100% Single Language Toggle Script
     function toggleLanguage() {
       const body = document.body;
       const btn = document.getElementById('langToggleBtn');
       if (body.classList.contains('lang-en')) {
         body.classList.remove('lang-en');
         body.classList.add('lang-mar');
-        btn.innerText = "मराठी (Switch to ENG)";
+        btn.innerText = "Switch to English";
       } else {
         body.classList.remove('lang-mar');
         body.classList.add('lang-en');
-        btn.innerText = "ENG (मराठीत पहा)";
+        btn.innerText = "मराठीत पहा";
       }
     }
 
