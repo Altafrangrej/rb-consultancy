@@ -7,6 +7,7 @@
   <meta name="description" content="Independent insurance claim facilitation, rejected claims recovery, IRDAI appeals, and MSME resolution led by Altaf Rangrej in Jalgaon, Maharashtra.">
   <meta name="theme-color" content="#0B2F4A">
 
+  <!-- Professional Devanagari (Marathi) & English Typography from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -266,14 +267,11 @@
     }
 
     /* Contact & Footer */
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
-    .contact-card, .form-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 30px; box-shadow: var(--shadow); }
+    .contact-grid { display: grid; grid-template-columns: 1fr; gap: 25px; max-width: 600px; margin: auto; }
+    .contact-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 30px; box-shadow: var(--shadow); }
     .contact-list { display: grid; gap: 15px; margin: 20px 0; }
     .contact-item strong { display: block; color: var(--navy); font-size: 13px; }
     .contact-item span, .contact-item a { font-size: 13px; color: var(--muted); }
-    
-    .field { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 12px; outline: 0; background: #fff; margin-top: 10px; }
-    textarea.field { min-height: 90px; resize: vertical; }
 
     footer { background: #071F31; color: #B9C8D4; padding: 50px 0 25px; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; margin-bottom: 30px; }
@@ -284,17 +282,19 @@
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 12px; }
 
     @media(max-width: 900px) {
-      .services-grid, .workflow-grid, .info-grid, .success-grid, .checklist-grid, .pricing-grid, .download-grid, .hero-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+      .services-grid, .workflow-grid, .info-grid, .success-grid, .checklist-grid, .pricing-grid, .download-grid, .hero-grid, .footer-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
 
+  <!-- Remote Working Notice Banner -->
   <div class="remote-notice-banner">
     <span>Notice:</span> We operate entirely online and remotely across Maharashtra & India. <span>No travel required to meet us!</span>
   </div>
 
+  <!-- Header with Single Clean WhatsApp Button -->
   <header class="header">
     <div class="wrap nav">
       <a class="brand-logo-vector" href="#home">
@@ -324,6 +324,7 @@
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div>
@@ -332,7 +333,6 @@
           <p class="hero-lead">We bridge the gap between policyholders, companies, insurance carriers, and TPAs. Protecting your financial interests with 15+ years of industry experience entirely online.</p>
           
           <div class="hero-actions">
-            <a class="btn btn-dark" href="tel:+919325564770">Call Principal Consultant</a>
             <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20I%20need%20help%20with%20my%20claim." target="_blank">Chat on WhatsApp</a>
           </div>
 
@@ -353,6 +353,7 @@
       </div>
     </section>
 
+    <!-- Case Working Workflow Section in Dual Language -->
     <section class="section section-light" id="workflow">
       <div class="wrap">
         <div class="section-head">
@@ -390,6 +391,7 @@
       </div>
     </section>
 
+    <!-- ALL 9 SERVICES SECTION -->
     <section class="section section-alt" id="services">
       <div class="wrap">
         <div class="section-head">
@@ -492,6 +494,7 @@
       </div>
     </section>
 
+    <!-- Merged General Inquiry & Case Registration Portal with Clean Formatted WhatsApp Output -->
     <section class="section section-light" id="portal">
       <div class="wrap">
         <div class="section-head" style="text-align: center; margin-left: auto; margin-right: auto;">
@@ -545,17 +548,17 @@
           </div>
 
           <div style="background: #F8FAFC; border: 1px dashed var(--line); border-radius: 10px; padding: 15px; margin-top: 15px; font-size: 12.5px; color: var(--muted);">
-            <b>File Sharing Note:</b> After sending this inquiry via WhatsApp or Email, our team will review your details during the free audit and share a secure link to upload your files, bills, or invoices.
+            <b>File Sharing Note:</b> After sending this inquiry via WhatsApp, our team will review your details during the free audit and share a secure link to upload your files, bills, or invoices.
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
-            <button class="btn btn-whatsapp" onclick="submitIntakeWhatsApp()" style="width: 100%; justify-content: center;">Submit via WhatsApp</button>
-            <button class="btn btn-dark" onclick="submitIntakeEmail()" style="width: 100%; justify-content: center;">Submit via Email</button>
+          <div style="margin-top: 20px; text-align: center;">
+            <button class="btn btn-whatsapp" onclick="submitIntakeWhatsApp()" style="width: 100%; justify-content: center; padding: 14px;">Submit Inquiry via WhatsApp</button>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Highlighted Refer & Earn Program Section -->
     <section class="section section-alt" id="referral">
       <div class="wrap">
         <div class="highlight-referral-card">
@@ -574,6 +577,7 @@
       </div>
     </section>
 
+    <!-- Exact Document Checklist from Image in Dual Language -->
     <section class="section section-light" id="checklists">
       <div class="wrap">
         <div class="section-head">
@@ -583,6 +587,7 @@
         </div>
 
         <div class="checklist-container">
+          <!-- SECTION 1 -->
           <div class="checklist-section-box">
             <h3>SECTION 1: ADMINISTRATIVE & IDENTITY / प्रशासकीय आणि ओळख कागदपत्रे</h3>
             <ul>
@@ -613,6 +618,7 @@
             </ul>
           </div>
 
+          <!-- SECTION 2 -->
           <div class="checklist-section-box">
             <h3>SECTION 2: HOSPITAL FORMALITIES / हॉस्पिटल औपचारिकता</h3>
             <ul>
@@ -631,6 +637,7 @@
             </ul>
           </div>
 
+          <!-- SECTION 3 -->
           <div class="checklist-section-box">
             <h3>SECTION 3: PAYMENT PAID RECORDS / भरलेल्या पैशांचे रेकॉर्ड</h3>
             <ul>
@@ -661,6 +668,7 @@
             </ul>
           </div>
 
+          <!-- SECTION 4 -->
           <div class="checklist-section-box">
             <h3>SECTION 4: CLINICAL & MEDICAL RECORDS / वैद्यकीय आणि क्लिनिकल रेकॉर्ड</h3>
             <ul>
@@ -694,6 +702,7 @@
       </div>
     </section>
 
+    <!-- Transparent Fee Structure & Payment Information Section (Dual Language) -->
     <section class="section section-alt" id="pricing">
       <div class="wrap">
         <div class="section-head">
@@ -723,6 +732,7 @@
           </div>
         </div>
 
+        <!-- Payment & Bank Details Box (Dual Language) -->
         <div style="background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); margin-top: 30px;">
           <h3 style="color: var(--navy); font-size: 18px; margin-bottom: 12px;">Official Payment Information & Bank Transfer Details / अधिकृत पेमेंट माहिती आणि बँक हस्तांतरण तपशील</h3>
           <p style="font-size: 13.5px; margin-bottom: 15px;">Clients can transfer professional consultation fees directly through UPI or official bank accounts. Please share transaction screenshots via WhatsApp.</p>
@@ -745,6 +755,7 @@
       </div>
     </section>
 
+    <!-- Downloadable Templates Section (Dual Language) -->
     <section class="section section-light" id="downloads">
       <div class="wrap">
         <div class="section-head">
@@ -784,6 +795,7 @@
       </div>
     </section>
 
+    <!-- Success Stories & Track Record Section (Dual Language) -->
     <section class="section section-alt" id="success">
       <div class="wrap">
         <div class="section-head">
@@ -818,6 +830,7 @@
       </div>
     </section>
 
+    <!-- Comprehensive 10-Question FAQ Section in Dual Language -->
     <section class="section section-light" id="faq">
       <div class="wrap">
         <div class="section-head" style="text-align: center; margin-left: auto; margin-right: auto;">
@@ -828,52 +841,52 @@
 
         <div class="faq-container">
           <div class="faq-item">
-            <h3><span>01.</span> What is the role of RB Consultancy in my insurance claim?</h3>
+            <h3><span>01.</span> What is the role of RB Consultancy in my insurance claim? / इन्शुरन्स क्लेममध्ये आरबी कन्सल्टन्सीची भूमिका काय आहे?</h3>
             <p class="eng">RB Consultancy acts as an independent professional facilitator and authorized agent. We organize your documents, draft notices, and manage communications with insurance companies, TPAs, and statutory bodies on your behalf.</p>
             <p class="mar marathi-text">आरबी कन्सल्टन्सी स्वतंत्र व्यावसायिक फॅसिलिटेटर आणि अधिकृत प्रतिनिधी म्हणून कार्य करते. आम्ही तुमचे कागदपत्रे व्यवस्थित करून कंपनीशी पत्रव्यवहार करतो.</p>
           </div>
           <div class="faq-item">
-            <h3><span>02.</span> Are you an insurance company or a TPA?</h3>
+            <h3><span>02.</span> Are you an insurance company or a TPA? / तुम्ही इन्शुरन्स कंपनी किंवा टीपीए आहात का?</h3>
             <p class="eng">No. We are an independent consultancy firm led by Founder Altaf Rangrej. We are not an insurance carrier or Third-Party Administrator; we represent you (the policyholder) independently.</p>
             <p class="mar marathi-text">नाही. आम्ही स्वतंत्र सल्लागार फर्म आहोत. आम्ही कोणतीही इन्शुरन्स कंपनी किंवा टीपीए (TPA) नाही; आम्ही ग्राहकांच्या बाजूने स्वतंत्रपणे काम करतो.</p>
           </div>
           <div class="faq-item">
-            <h3><span>03.</span> What is a "First Gate Audit" and is it really free?</h3>
+            <h3><span>03.</span> What is a "First Gate Audit" and is it really free? / "फर्स्ट गेट ऑडिट" म्हणजे काय आणि ते खरोखर मोफत आहे का?</h3>
             <p class="eng">The First Gate Audit is our initial review of your claim files, rejection letters, and policy papers. Yes, it is <b>100% complimentary free</b> for all prospective clients.</p>
             <p class="mar marathi-text">फर्स्ट गेट ऑडिट म्हणजे तुमच्या क्लेम फायलीची आणि पत्रांची प्राथमिक तपासणी. हे सर्व ग्राहकांसाठी १००% मोफत आहे.</p>
           </div>
           <div class="faq-item">
-            <h3><span>04.</span> How do your success fees and service charges work?</h3>
+            <h3><span>04.</span> How do your success fees and service charges work? / तुमचे सेवा शुल्क आणि यश फी (Success Fee) कशी कार्य करते?</h3>
             <p class="eng">We charge transparent initial fees (such as ₹3,000 for fresh claims or rejections) plus nominal success fees (10%) upon successful claim recovery, as outlined in our transparent fee structure.</p>
             <p class="mar marathi-text">आम्ही पारदर्शक सुरुवातीची फी आणि क्लेम यशस्वी झाल्यावर ठराविक यश फी (Success Fee) आकारतो.</p>
           </div>
           <div class="faq-item">
-            <h3><span>05.</span> Do I need to travel to your office in Jalgaon to get my claim processed?</h3>
+            <h3><span>05.</span> Do I need to travel to your office in Jalgaon to get my claim processed? / क्लेम करण्यासाठी मला जळगाव ऑफिसमध्ये जावे लागेल का?</h3>
             <p class="eng">Not at all! We operate entirely online and remotely. You can submit all documents, forms, and queries digitally via WhatsApp or email from anywhere in Maharashtra or India.</p>
             <p class="mar marathi-text">अजिबात नाही! आमचे कामकाज पूर्णपणे ऑनलाइन आणि रिमोट पद्धतीने चालते. तुम्ही घरबसल्या व्हॉट्सॲप किंवा ईमेलद्वारे कागदपत्रे पाठवू शकता.</p>
           </div>
           <div class="faq-item">
-            <h3><span>06.</span> How long does a typical claim recovery or reconsideration process take?</h3>
+            <h3><span>06.</span> How long does a typical claim recovery or reconsideration process take? / क्लेम रिकव्हरी किंवा फेरविचार प्रक्रियेस किती वेळ लागतो?</h3>
             <p class="eng">Timelines depend entirely on the respective insurance company, TPA, or statutory authority (such as the Insurance Ombudsman). As facilitators, we push files aggressively but do not guarantee strict completion deadlines.</p>
             <p class="mar marathi-text">कालावधी पूर्णपणे इन्शुरन्स कंपनी किंवा लोकपाल यांच्यावर अवलंबून असतो. आम्ही फाईल वेगाने पुढे नेतो परंतु अचूक मुदतीची हमी देत नाही.</p>
           </div>
           <div class="faq-item">
-            <h3><span>07.</span> What documents do I need to provide to start a case?</h3>
+            <h3><span>07.</span> What documents do I need to provide to start a case? / केस सुरू करण्यासाठी कोणती कागदपत्रे लागतात?</h3>
             <p class="eng">Depending on your case type, you generally need your policy document, hospital discharge summary, final bills, rejection letters, and KYC details. Check our document checklist section for exact details.</p>
             <p class="mar marathi-text">तुमच्या केसच्या प्रकारानुसार पॉलिसी, डिस्चार्ज समरी, अंतिम बिल, नाकारण्याचे पत्र आणि केवायसी कागदपत्रे लागतात.</p>
           </div>
           <div class="faq-item">
-            <h3><span>08.</span> Can you help with health, life, and corporate/commercial claims?</h3>
+            <h3><span>08.</span> Can you help with health, life, and corporate/commercial claims? / तुम्ही आरोग्य, जीवन आणि व्यावसायिक क्लेमसाठी मदत करू शकता का?</h3>
             <p class="eng">Yes. Our 9 specialized services cover health claims, life insurance disputes, cashless authorizations, rejected claim recoveries, and MSME commercial payment disputes.</p>
             <p class="mar marathi-text">होय. आमच्या ९ सेवांमध्ये आरोग्य विमा, जीवन विमा, नाकारलेले क्लेम आणि एमएसएमई व्यावसायिक विवाद समाविष्ट आहेत.</p>
           </div>
           <div class="faq-item">
-            <h3><span>09.</span> What is an MSME Samadhan filing and who is eligible?</h3>
+            <h3><span>09.</span> What is an MSME Samadhan filing and who is eligible? / एमएसएमई समाधान फायलिंग म्हणजे काय आणि कोण पात्र आहे?</h3>
             <p class="eng">MSME Samadhan is a statutory recovery process under the MSMED Act 2006 for registered micro and small enterprises facing delayed payments from buyers or corporate clients.</p>
             <p class="mar marathi-text">एमएसएमई समाधान हा नोंदणीकृत सूक्ष्म आणि लघु उद्योगांसाठी थकबाकी वसुलीचा कायदेशीर अर्ज आहे.</p>
           </div>
           <div class="faq-item">
-            <h3><span>10.</span> How do I initiate my case inquiry with RB Consultancy?</h3>
+            <h3><span>10.</span> How do I initiate my case inquiry with RB Consultancy? / मी आरबी कन्सल्टन्सीकडे कशी चौकशी सुरू करू शकतो?</h3>
             <p class="eng">You can simply fill out our online General Inquiry & Registration Portal on this website or click the WhatsApp chat button to connect instantly with our desk.</p>
             <p class="mar marathi-text">तुम्ही आमच्या वेबसाइटवरील ऑनलाइन चौकशी आणि नोंदणी पोर्टल वापरू शकता किंवा व्हॉट्सॲप चॅट बटणावर क्लिक करून थेट संपर्क साधू शकता.</p>
           </div>
@@ -881,6 +894,7 @@
       </div>
     </section>
 
+    <!-- Google Map Location & Reviews Section (Dual Language) -->
     <section class="section section-alt" id="location">
       <div class="wrap">
         <div class="section-head">
@@ -909,17 +923,18 @@
       </div>
     </section>
 
+    <!-- Clean Single Contact Directory Section (No redundant buttons/details) -->
     <section class="section" id="contact">
       <div class="wrap">
         <div class="section-head">
           <div class="eyebrow">Official Contact Directory</div>
-          <h2>Connect with RB Consultancy</h2>
+          <h2>Connect with RB Consultancy / संपर्क माहिती</h2>
           <p>Registered office and direct communication channels.</p>
         </div>
 
         <div class="contact-grid">
           <div class="contact-card">
-            <h3>Directory Details</h3>
+            <h3>Directory Details / अधिकृत तपशील</h3>
             <div class="contact-list">
               <div class="contact-item">
                 <strong>Registered Office Address / पत्ता:</strong>
@@ -939,20 +954,9 @@
               </div>
             </div>
           </div>
-
-          <div class="form-card">
-            <h3>Send Direct Inquiry</h3>
-            <p style="font-size: 12px; margin-top: 4px;">Fill details to open WhatsApp or email us directly at rbconsultancyjalgaon@gmail.com.</p>
-            <input class="field" id="clientName" type="text" placeholder="Your Name">
-            <input class="field" id="clientPhone" type="tel" placeholder="Mobile Number">
-            <textarea class="field" id="clientReq" placeholder="Describe your claim requirement..."></textarea>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px;">
-              <button class="btn btn-whatsapp" onclick="sendWhatsApp()">Send WhatsApp</button>
-              <button class="btn btn-dark" onclick="sendEmail()">Send Email</button>
-            </div>
-          </div>
         </div>
 
+        <!-- Comprehensive Dual-Language Legal & Contract Disclaimers Box -->
         <div class="disclaimer-box">
           <h4>Important Legal & Contractual Disclaimers / महत्त्वाची कायदेशीर व करारविषयक माहिती</h4>
           <p class="eng">
@@ -970,6 +974,7 @@
     </section>
   </main>
 
+  <!-- Footer with Social Media Links Hub -->
   <footer>
     <div class="wrap">
       <div class="footer-grid">
@@ -1008,26 +1013,6 @@
   </footer>
 
   <script>
-    function sendWhatsApp() {
-      const name = document.getElementById('clientName').value.trim();
-      const phone = document.getElementById('clientPhone').value.trim();
-      const req = document.getElementById('clientReq').value.trim();
-      
-      const text = "Hi RB Consultancy, my name is " + (name || "[Not Provided]") + " (Phone: " + (phone || "[Not Provided]") + "). Requirement: " + (req || "I need assistance with my insurance claim/dispute.");
-      const url = "https://wa.me/919325564770?text=" + encodeURIComponent(text);
-      window.open(url, '_blank');
-    }
-
-    function sendEmail() {
-      const name = document.getElementById('clientName').value.trim();
-      const phone = document.getElementById('clientPhone').value.trim();
-      const req = document.getElementById('clientReq').value.trim();
-      
-      const subject = encodeURIComponent("Inquiry from " + (name || "Client") + " - RB Consultancy");
-      const body = encodeURIComponent("Name: " + (name || "[Not Provided]") + "\nPhone: " + (phone || "[Not Provided]") + "\n\nRequirement:\n" + (req || "I need assistance with my insurance claim/dispute."));
-      window.location.href = "mailto:rbconsultancyjalgaon@gmail.com?subject=" + subject + "&body=" + body;
-    }
-
     function submitIntakeWhatsApp() {
       const name = document.getElementById('intakeName').value.trim();
       const phone = document.getElementById('intakePhone').value.trim();
@@ -1035,31 +1020,19 @@
       const referral = document.getElementById('intakeReferral').value.trim();
       const details = document.getElementById('intakeDetails').value.trim();
       
-      let text = "Hi RB Consultancy (General Portal), Purpose/Service: " + service + ". Name: " + (name || "[Not Provided]") + " (Phone: " + (phone || "[Not Provided]") + ").";
+      let text = "Hi RB Consultancy,\n\n" +
+                 "Purpose/Service: " + service + "\n" +
+                 "Name: " + (name || "[Not Provided]") + "\n" +
+                 "Phone: " + (phone || "[Not Provided]") + "\n";
+      
       if (referral) {
-        text += " REFERRED BY: " + referral + ".";
+        text += "Referred By: " + referral + "\n";
       }
-      text += " Details: " + (details || "None");
+      
+      text += "\nDetails:\n" + (details || "None");
       
       const url = "https://wa.me/919325564770?text=" + encodeURIComponent(text);
       window.open(url, '_blank');
-    }
-
-    function submitIntakeEmail() {
-      const name = document.getElementById('intakeName').value.trim();
-      const phone = document.getElementById('intakePhone').value.trim();
-      const service = document.getElementById('intakeService').value;
-      const referral = document.getElementById('intakeReferral').value.trim();
-      const details = document.getElementById('intakeDetails').value.trim();
-      
-      const subject = encodeURIComponent("Inquiry & Intake (" + service + ") - " + (name || "Client"));
-      let body = "Selected Purpose/Service: " + service + "\nName: " + (name || "[Not Provided]") + "\nPhone: " + (phone || "[Not Provided]") + "\n";
-      if (referral) {
-        body += "Referred By: " + referral + "\n";
-      }
-      body += "\nInquiry / Case Details:\n" + (details || "None");
-      
-      window.location.href = "mailto:rbconsultancyjalgaon@gmail.com?subject=" + subject + "&body=" + encodeURIComponent(body);
     }
   </script>
 
