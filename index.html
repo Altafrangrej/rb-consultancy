@@ -299,33 +299,17 @@
     .download-card h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
     .download-card p { font-size: 13px; color: var(--muted); margin-bottom: 15px; }
 
-    /* Styled Input Field and Corporate Intake Form Box */
-    .field {
-      width: 100%;
-      border: 1.5px solid var(--line);
-      border-radius: 8px;
-      padding: 11px 14px;
-      outline: none;
-      background: #ffffff;
-      color: var(--text);
-      font-size: 13.5px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .field:focus {
-      border-color: var(--accent-blue);
-      box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.12);
-    }
+    /* Styled Responsive Corporate Intake Portal Box */
     .intake-form-box {
-      background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow); margin: auto;
+      background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 40px; box-shadow: var(--shadow); margin: auto;
       border-top: 5px solid var(--navy);
     }
     .intake-form-box h3 { font-size: 24px; color: var(--navy); margin-bottom: 6px; }
-    .form-group-full { margin-top: 16px; display: flex; flex-direction: column; gap: 6px; }
-    .form-grid-2col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
-
-    @media (max-width: 768px) {
-      .form-grid-2col { grid-template-columns: 1fr; }
-    }
+    .form-group-full { margin-top: 18px; display: flex; flex-direction: column; }
+    .form-group-full textarea.field { min-height: 110px; width: 100%; resize: vertical; }
+    .field { width: 100%; border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px; outline: none; background: #fff; color: var(--text); font-size: 13.5px; transition: border-color 0.2s, box-shadow 0.2s; }
+    .field:focus { border-color: var(--accent-blue); box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.12); }
+    .form-grid-2col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 16px; }
 
     /* FAQ Section Styles (Categorized Accordion Groups) */
     .faq-container { display: grid; gap: 24px; }
@@ -366,7 +350,7 @@
 
     @media(max-width: 900px) {
       .wrap { width: min(calc(100% - 32px), var(--max)); }
-      .services-grid, .workflow-grid, .b2b-feature-grid, .info-grid, .success-grid, .pricing-grid, .download-grid, .hero-grid, .footer-grid, .partner-grid { grid-template-columns: 1fr; }
+      .services-grid, .workflow-grid, .b2b-feature-grid, .info-grid, .success-grid, .pricing-grid, .download-grid, .hero-grid, .footer-grid, .partner-grid, .form-grid-2col { grid-template-columns: 1fr; }
       .nav-links { display: none; }
     }
   </style>
@@ -374,8 +358,8 @@
 <body class="lang-en">
 
   <div class="remote-notice-banner">
-    <span data-lang="eng">Notice: We operate online/remotely for policyholders and regionally on-ground for B2B investigation/fraud control unit audits.</span>
-    <span data-lang="mar">सूचना: पॉलिसीधारकांसाठी ऑनलाइन व B2B इन्व्हेस्टिगेशन/फ्रॉड कंट्रोल युनिट ऑडिटसाठी उत्तर महाराष्ट्रात ऑन-ग्राउंड कार्यक्षेत्र.</span>
+    <span data-lang="eng">Notice: We operate online/remotely for policyholders and regionally on-ground for B2B investigation/fraud control unit audits. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+    <span data-lang="mar">सूचना: पॉलिसीधारकांसाठी ऑनलाइन व B2B इन्व्हेस्टिगेशन/फ्रॉड कंट्रोल युनिट ऑडिटसाठी उत्तर महाराष्ट्रात ऑन-ग्राउंड कार्यक्षेत्र. पत्ता: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
   </div>
 
   <header class="header">
@@ -397,7 +381,7 @@
         <a href="#partners"><span data-lang="eng">Partners & Associates</span><span data-lang="mar">पार्टनर / असोसिएट</span></a>
         <a href="#workflow"><span data-lang="eng">Workflow</span><span data-lang="mar">कार्यपद्धती</span></a>
         <a href="#services"><span data-lang="eng">Services</span><span data-lang="mar">सेवा</span></a>
-        <a href="#portal"><span data-lang="eng">Inquiry / Agreement</span><span data-lang="mar">चौकशी/करार</span></a>
+        <a href="#portal"><span data-lang="eng">Inquiry / Agreement</span><span data-lang="mar">चौकशी व करार</span></a>
         <a href="#checklists"><span data-lang="eng">Checklists</span><span data-lang="mar">कागदपत्रे</span></a>
         <a href="#pricing"><span data-lang="eng">Fees</span><span data-lang="mar">फी</span></a>
         <a href="#faq"><span data-lang="eng">FAQ</span><span data-lang="mar">प्रश्न</span></a>
@@ -445,14 +429,14 @@
             <span data-lang="mar">मुख्य सल्लागार डेस्क</span>
           </h2>
           <p>
-            <span data-lang="eng">Headed with 15+ years experience in healthcare & pharmacy admin, managing lean scalable Fraud Control Unit/audit operations and policyholder advocacy.</span>
-            <span data-lang="mar">१५+ वर्षे आरोग्य व फार्मसी प्रशासनाचा अनुभव, कॉर्पोरेट ऑडिट व पॉलिसीधारक रिकव्हरी विशेषज्ञ.</span>
+            <span data-lang="eng">Headed with 15+ years experience in healthcare & pharmacy admin, managing lean scalable Fraud Control Unit/audit operations and policyholder advocacy. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+            <span data-lang="mar">१५+ वर्षे आरोग्य व फार्मसी प्रशासनाचा अनुभव, कॉर्पोरेट ऑडिट व पॉलिसीधारक रिकव्हरी विशेषज्ञ. पत्ता: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
           </p>
         </div>
       </div>
     </section>
 
-    <!-- DEDICATED B2B FIELD INVESTIGATION SECTION -->
+    <!-- DEDICATED B2B FIELD INVESTIGATION SECTION (Unannounced / Surprise Protocol) -->
     <section class="section section-light" id="b2b-section">
       <div class="wrap">
         <div class="section-head left">
@@ -706,7 +690,7 @@
       </div>
     </section>
 
-    <!-- SERVICES WITH DROPDOWN ACCORDIONS -->
+    <!-- SERVICES WITH DROPDOWN ACCORDIONS (Including Fraud Control Unit / FCU) -->
     <section class="section section-alt" id="services">
       <div class="wrap">
         <div class="section-head center">
@@ -863,7 +847,7 @@
       </div>
     </section>
 
-    <!-- DYNAMIC CLIENT, ASSOCIATE & PARTNER INTAKE PORTAL -->
+    <!-- DYNAMIC RESPONSIVE STYLED DIGITAL INTAKE & PRELIMINARY AGREEMENT PORTAL -->
     <section class="section section-light" id="portal">
       <div class="wrap">
         <div class="section-head center">
@@ -874,7 +858,7 @@
             <span>Client, Associate & Partner Intake Form</span>
           </h2>
           <p>
-            <span>Select your client/partner category to load applicable terms, date stamping, and printable preliminary agreement workflow.</span>
+            <span>Select your category to load category-specific terms, date stamping, and printable preliminary agreement workflow. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
           </p>
         </div>
 
@@ -883,24 +867,24 @@
             <h3 style="margin: 0;">
               <span>RBC Engagement & Preliminary Intake Form</span>
             </h3>
-            <span style="font-size: 12px; font-weight: 800; color: var(--accent-blue); background: var(--accent-blue-light); padding: 4px 10px; border-radius: 6px;">
+            <span style="font-size: 12px; font-weight: 800; color: var(--accent-blue); background: var(--accent-blue-light); padding: 5px 12px; border-radius: 6px;">
               <span>Udyam: UDYAM-MH-14-0183662</span>
             </span>
           </div>
 
           <!-- RBC Fixed Header Info Readout -->
-          <div style="background: #f1f5f9; padding: 12px 16px; border-radius: 8px; font-size: 12.5px; color: var(--navy); margin-bottom: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+          <div style="background: #f8fafc; border: 1px solid var(--line); padding: 14px 18px; border-radius: 10px; font-size: 13px; color: var(--navy); margin-bottom: 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
             <div><b>Consultancy:</b> RB Consultancy, Jalgaon</div>
             <div><b>Principal Consultant:</b> Altaf Rangrej</div>
             <div><b>Form Date:</b> <span id="dynamicFormDate"></span></div>
           </div>
 
           <!-- Category Selector -->
-          <div class="form-group-full">
-            <label style="font-size: 13px; font-weight: 700; color: var(--navy);">
+          <div class="form-group-full" style="margin-top: 0;">
+            <label style="font-size: 13.5px; font-weight: 700; color: var(--navy);">
               Select Engagement Category:
             </label>
-            <select class="field" id="engagementCategory" onchange="switchFormType()">
+            <select class="field" id="engagementCategory" onchange="switchFormType()" style="margin-top: 6px; font-weight: 600;">
               <option value="recovery">1. Recovery / Advocacy Client (Fresh/Rejection/Ombudsman/MSME)</option>
               <option value="b2b">2. B2B / FCU Investigation Client (Insurer / TPA Mandate)</option>
               <option value="associate">3. Regional Field Associate / Franchisee Application</option>
@@ -908,7 +892,7 @@
             </select>
           </div>
 
-          <!-- Common Fields -->
+          <!-- Common Fields Grid 1 -->
           <div class="form-grid-2col">
             <div>
               <label style="font-size: 13px; font-weight: 700; color: var(--navy);">Full Name / Organization Name:</label>
@@ -920,7 +904,8 @@
             </div>
           </div>
 
-          <div class="form-grid-2col" id="extraContactRow">
+          <!-- Common Fields Grid 2 -->
+          <div class="form-grid-2col">
             <div>
               <label style="font-size: 13px; font-weight: 700; color: var(--navy);">Official Email Correspondence:</label>
               <input class="field" id="formEmail" type="email" placeholder="client@company.com">
@@ -936,31 +921,31 @@
 
           <div class="form-group-full">
             <label style="font-size: 13px; font-weight: 700; color: var(--navy);">Case Summary / Specific Scope / Remarks:</label>
-            <textarea class="field" id="formDetails" style="min-height: 100px;" placeholder="Describe claim details, fraud scope, or associate background summary..."></textarea>
+            <textarea class="field" id="formDetails" placeholder="Describe claim details, fraud scope, or associate background summary..."></textarea>
           </div>
 
           <!-- Category-Specific T&C Accordion Preview Box -->
-          <div style="margin-top: 20px; background: #F8FAFC; border: 1px solid var(--line); border-radius: 10px; padding: 18px;">
-            <h4 style="color: var(--navy); font-size: 14px; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 0.05em;">
+          <div style="margin-top: 24px; background: #F8FAFC; border: 1.5px solid var(--line); border-radius: 12px; padding: 20px;">
+            <h4 style="color: var(--navy); font-size: 14px; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 0.05em;">
               Applicable Terms & Conditions (<span id="tcCategoryTitle">Recovery Client</span>)
             </h4>
-            <div id="categoryTermsText" style="font-size: 12.5px; color: var(--muted); line-height: 1.6;">
+            <div id="categoryTermsText" style="font-size: 13px; color: var(--text); line-height: 1.6; max-height: 180px; overflow-y: auto; padding-right: 6px;">
               Loading terms...
             </div>
-            <div style="margin-top: 14px; display: flex; align-items: center; gap: 10px;">
-              <input type="checkbox" id="acceptTermsCheck" style="width: 17px; height: 17px; accent-color: var(--navy);">
+            <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 10px;">
+              <input type="checkbox" id="acceptTermsCheck" style="width: 18px; height: 18px; cursor: pointer;">
               <label for="acceptTermsCheck" style="font-size: 13px; font-weight: 600; color: var(--navy); cursor: pointer;">
-                I/We agree to the above category-specific terms and authorize RB Consultancy to process this preliminary inquiry.
+                I/We agree to the above category-specific terms and authorize RB Consultancy (Office: 201, Taimur Height, Mehrun, Jalgaon) to process this preliminary inquiry.
               </label>
             </div>
           </div>
 
           <!-- Action Buttons -->
-          <div style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-            <button class="btn btn-dark" onclick="generatePrintableForm()" style="justify-content: center; padding: 15px;">
+          <div style="margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+            <button class="btn btn-dark" onclick="generatePrintableForm()" style="justify-content: center; padding: 16px; font-size: 14px;">
               Generate Printable Agreement / Form PDF
             </button>
-            <button class="btn btn-whatsapp" onclick="submitFormWhatsApp()" style="justify-content: center; padding: 15px;">
+            <button class="btn btn-whatsapp" onclick="submitFormWhatsApp()" style="justify-content: center; padding: 16px; font-size: 14px;">
               Submit Inquiry via WhatsApp
             </button>
           </div>
@@ -1032,7 +1017,7 @@
             <span data-lang="mar">आवश्यक कागदपत्रांची यादी</span>
           </h2>
           <p>
-            <span data-lang="eng">Expand each checklist section to review required records for file evaluation.</span>
+            <span data-lang="eng">Expand each checklist section to review required records for file evaluation. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
             <span data-lang="mar">फाइल मूल्यांकनासाठी आवश्यक कागदपत्रे पाहण्यासाठी खाली क्लिक करा.</span>
           </p>
         </div>
@@ -1107,7 +1092,7 @@
             <span data-lang="mar">व्यावसायिक फी संरचना व फ्रॉड कंट्रोल युनिट मँडेट फी</span>
           </h2>
           <p>
-            <span data-lang="eng">Clear consultancy fees for policyholders and structured MoU commercial terms for TPA / IC partners. Internal MoU accessible on demand.</span>
+            <span data-lang="eng">Clear consultancy fees for policyholders and structured MoU commercial terms for TPA / IC partners. Internal MoU accessible on demand. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
             <span data-lang="mar">पॉलिसीधारकांसाठी पारदर्शक सल्ला शुल्क व टीपीए/इन्शुरन्स कंपनीच्या अंतर्गत MoU नुसार फी संरचना (MoU मागणीनुसार उपलब्ध).</span>
           </p>
         </div>
@@ -1133,6 +1118,7 @@
             <div style="background: #F8FAFC; padding: 15px; border-radius: 10px; border: 1px solid var(--line);">
               <strong>Account Name:</strong> RB Consultancy<br>
               <strong>Principal Consultant:</strong> Altaf Rangrej<br>
+              <strong>Office:</strong> 201, Taimur Height, Mehrun, Jalgaon<br>
               <strong>Udyam Registration:</strong> UDYAM-MH-14-0183662
             </div>
             <div style="background: #F8FAFC; padding: 15px; border-radius: 10px; border: 1px solid var(--line);">
@@ -1145,7 +1131,7 @@
       </div>
     </section>
 
-    <!-- ADMIN HUB WITH FCU DOWNLOADABLE FORM & INTERACTIVE MOU BUILDER CARD -->
+    <!-- ADMIN HUB WITH INTERACTIVE MOU BUILDER CARD -->
     <section class="section section-light" id="downloads">
       <div class="wrap">
         <div class="section-head center">
@@ -1154,24 +1140,25 @@
             <span data-lang="mar">प्रशासकीय केंद्र</span>
           </div>
           <h2>
-            <span data-lang="eng">Downloadable Templates & Institutional Portal</span>
-            <span data-lang="mar">डाउनलोड करण्यायोग्य नमुने व कॉर्पोरेट पोर्टल</span>
+            <span data-lang="eng">Downloadable Templates & Interactive MoU Portal</span>
+            <span data-lang="mar">डाउनलोड करण्यायोग्य नमुने व थेट MoU जनरेटर पोर्टल</span>
           </h2>
           <p>
-            <span data-lang="eng">Access official consultancy documents, TPA assignment briefs, associate checklists, and agreement rate sheets.</span>
-            <span data-lang="mar">अधिकृत कागदपत्रे व कॉर्पोरेट फॉर्म्स डाउनलोड करा.</span>
+            <span data-lang="eng">Access official consultancy documents, generate print-ready institutional MoUs on demand, or request briefs.</span>
+            <span data-lang="mar">अधिकृत कागदपत्रे व थेट प्रिंट-रेडी MoU तयार करण्यासाठी खालील बटन वापरा.</span>
           </p>
         </div>
 
         <div class="download-grid">
-          <div class="download-card fcu-dl">
+          <div class="download-card fcu-dl" style="background: linear-gradient(135deg, #F0F6FF 0%, #D6E8FF 100%); border: 2px solid var(--accent-blue);">
             <div>
-              <h3>Internal B2B / FCU Audit MoU Template Request</h3>
-              <p>Standard bilateral rate card and verification service agreement template available for instant request or on-demand dispatch via email/WhatsApp.</p>
+              <span class="partner-top-badge">★ Institutional MoU Builder</span>
+              <h3>Interactive FCU Agreement Generator</h3>
+              <p>Fill corporate details to preview, print, or save a signed copy of the bilateral B2B investigation rate card & MoU framework.</p>
             </div>
-            <a class="btn btn-dark" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20please%20send/share%20the%20Internal%20FCU%20Audit%20MoU%20template." target="_blank" style="font-size: 12.5px; padding: 10px;">
-              Request via WhatsApp
-            </a>
+            <button class="btn btn-dark" onclick="openMoUModal()" style="font-size: 13px; padding: 12px; margin-top: 15px;">
+              Generate / Fill MoU Agreement
+            </button>
           </div>
 
           <div class="download-card fcu-dl">
@@ -1207,6 +1194,79 @@
       </div>
     </section>
 
+    <!-- SEPARATE DESCLAIMER AND TERMS & CONDITIONS TEXT BLOCKS -->
+    <section class="section section-light" id="terms-disclaimer-section">
+      <div class="wrap">
+        <div class="section-head left">
+          <div class="eyebrow">
+            <span>Corporate Governance & Legal</span>
+          </div>
+          <h2>
+            <span>Disclaimer & Terms and Conditions</span>
+          </h2>
+          <p>
+            <span>Complete binding plain-text corporate governance, liability limitations, and engagement terms for RB Consultancy (201, Taimur Height, Mehrun, Jalgaon).</span>
+          </p>
+        </div>
+
+        <div style="background:#fff; border:1px solid var(--line); border-radius:18px; padding:40px; box-shadow:var(--shadow);">
+          <h3 style="color:var(--navy); font-size:20px; margin-bottom:14px; border-bottom:2px solid var(--accent-blue); padding-bottom:8px;">DISCLAIMER</h3>
+          <div style="font-size:13.5px; color:var(--text); line-height:1.7; white-space:pre-line;">
+<b>1. Independent Facilitator Nature (Indian Contract Act, 1872)</b>
+RB Consultancy operates strictly as an independent professional facilitator, administrative coordinator, and advisory agent under the framework of the Indian Contract Act, 1872. Engagement with RB Consultancy does not constitute legal representation, insurance underwriting, Third-Party Administrator (TPA) adjudication, or direct corporate sponsorship by any insurance carrier. All document compilation, submission staging, and escalation tracking are performed on a facilitative basis at the explicit instruction of the client.
+
+<b>2. Regulatory Compliance & IRDAI Framework</b>
+All advisory, grievance redirection, and escalation protocols regarding health or general insurance policies align with principles under the Insurance Regulatory and Development Authority of India (IRDAI) Protection of Policyholders' Interests regulations. Statutory compliance monitoring and final regulatory determinations remain the legal duty of the respective insurance carrier or the Insurance Ombudsman (up to the applicable award threshold of 30 lakh rupees).
+
+<b>3. Absence of Outcome or Timeline Guarantees</b>
+RB Consultancy makes no representation, warranty, or guarantee—express or implied—regarding the final approval, repudiation reversal, or quantum settlement of any insurance claim; exact operational, statutory, or judicial processing timelines managed by carriers, TPAs, the Insurance Ombudsman, or MSME Samadhan authorities; or financial liquidity and debtor realization speed in commercial recovery mandates.
+
+<b>4. Client, Provider, and Data Authenticity Liability</b>
+• Document Veracity: All statutory, financial, clinical, and commercial records submitted through RB Consultancy remain the sole legal responsibility of the client and/or issuing authority/provider. RB Consultancy assumes zero liability for forged, manipulated, suppressed, or misrepresented paper trails.
+• Field Verification & Audit Observations: For Fraud Control Unit (FCU), cashless audit, and ground field verification mandates executed for corporate partners, findings reflect objective physical and provider conditions observed strictly at the date and time of physical inspection. Field audit reports constitute advisory risk-containment opinions and do not bind insurers to override contractual policy warranties or adjudicate clinical malpractice.
+          </div>
+
+          <h3 style="color:var(--navy); font-size:20px; margin-top:40px; margin-bottom:14px; border-bottom:2px solid var(--navy); padding-bottom:8px;">TERMS AND CONDITIONS</h3>
+          <div style="font-size:13.5px; color:var(--text); line-height:1.7; white-space:pre-line;">
+<b>1. Scope of Services</b>
+Consultancy engagements categorize into Policyholder Advocacy (fresh claim filings, rejected claim recovery, query profile management, grievance/reconsideration escalation, IRDAI/Ombudsman representation, End-to-End Cashless Management, and MSME Samadhan filings under the MSMED Act, 2006) and Institutional B2B Services (Fraud Control Unit ground field verification, bed-bound patient validation, attending physician statement recording, and forensic pharmacy/surgical implant bill reconciliation).
+
+<b>2. Fee Structure, Success Compensation & Expenses</b>
+• Policyholder Engagement Schedule:
+  - Fresh Claims: ₹3,000 baseline fee + single-sided stationery at ₹2 per page.
+  - Reconsideration & IRDAI Cases: ₹3,000 baseline fee + 10% Success Fee upon realization.
+  - Ombudsman Cases: ₹3,000 baseline fee + 12% Success Fee upon award settlement.
+  - MSME Samadhan Filings: ₹3,000 baseline fee + 12% of total funds received.
+  - Recovery Cases: ₹5,000 baseline fee + 10% Success Fee.
+  - End-to-End Cashless Management: ₹2,000 fixed fee.
+• Institutional B2B / FCU Mandates: Commercial rates, per-assignment fee schedules, and emergency TAT surcharges are governed strictly by executed bilateral internal MoU agreements with the respective TPA or Insurance Company.
+• Travel & Conveyance Reimbursement: Field travel under 100 km is billed at ₹7 per km; travel exceeding 100 km requires AC Sleeper or 3-Tier AC Train fare provisioning.
+
+<b>3. Digital Workflow, Communication & Anti-Bypassing Protocol</b>
+• Designated Correspondence Channel: All formal notices, authorization letters, and case status communications must route through rbconsultancyjalgaon@gmail.com.
+• System Registration: Authorization letters instruct insurance carriers and TPAs to register the official facilitator email into their core digital workflow for automated status replication.
+• Anti-Bypassing Enforcement: If an insurance carrier, IC, or TPA attempts direct client contact, bypass, or coercive settlement negotiation after receiving a formal Notice of Appointment, RB Consultancy shall immediately issue a Cease and Desist notice to the Grievance Redressal Officer citing agency principles under the Indian Contract Act, 1872, and prejudicial disruption rules.
+
+<b>4. Regional Field Associate & Franchisee Governance</b>
+• Independent Contractor Status: Field associates and regional franchisees operate as independent professional contractors. RB Consultancy holds no vicarious liability for local transit incidents, third-party altercations, or unauthorized verbal commitments made during taluka field visits.
+• Mandatory Onboarding Credentials: Active assignment deployment requires submission of a verified resume/CV, all academic degree/diploma certificates, active pharmacy council or professional investigator registrations, and compliant identity documentation [ID Omitted].
+• Confidentiality & Data Protection: Associates must maintain strict data segregation and confidentiality regarding patient clinical notes, hospital records, and insurer proprietary query briefs. Retention, duplication, or external social/digital transmission of unredacted hospital media outside official Oken/encrypted submission channels constitutes a material breach.
+
+<b>5. Intellectual Property & Workflow Methodology</b>
+All proprietary table templates, First Gate Audit risk matrices, Notice of Appointment drafting styles, and calculation formulas remain intellectual property of RB Consultancy. Unauthorized commercial replication or white-label resale of audit frameworks is prohibited.
+
+<b>6. Force Majeure</b>
+Neither party shall be liable for service delays or execution failures resulting from acts of God, systemic insurance portal/API outages, national regulatory freezes, natural disasters, or civil disruptions exceeding operational control.
+
+<b>7. Governing Law, Venue & Dispute Resolution</b>
+• Jurisdiction: Exclusive legal venue and commercial dispute resolution jurisdiction shall rest with competent courts/tribunals located in Jalgaon, Maharashtra, India, corresponding to Udyam Registration UDYAM-MH-14-0183662.
+• Office Address: 201, Taimur Height, Dr. Iqbal Colony, Mehrun, Jalgaon, Maharashtra, India.
+• Standard Sign-off Protocol: Official formal correspondence closes with Client/Representative Name followed by Altaf Rangrej, Principal Consultant and Founder, RB Consultancy, Jalgaon.
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CATEGORIZED FAQ SECTION WITH DROPDOWNS -->
     <section class="section section-light" id="faq">
       <div class="wrap">
@@ -1232,7 +1292,7 @@
             <div class="faq-inner-list">
               <details class="site-accordion">
                 <summary>What is the role of RB Consultancy in my insurance claim?</summary>
-                <div class="accordion-body">RB Consultancy acts as an independent professional facilitator and authorized agent under the Indian Contract Act 1872. We organize your documents, draft notices, and manage communications with insurance companies, TPAs, and statutory bodies on your behalf.</div>
+                <div class="accordion-body">RB Consultancy acts as an independent professional facilitator and authorized agent under the Indian Contract Act 1872. Office: 201, Taimur Height, Mehrun, Jalgaon. We organize your documents, draft notices, and manage communications with insurance companies, TPAs, and statutory bodies on your behalf.</div>
               </details>
 
               <details class="site-accordion">
@@ -1252,7 +1312,7 @@
 
               <details class="site-accordion">
                 <summary>Do I need to travel to your office in Jalgaon to get my claim processed?</summary>
-                <div class="accordion-body">Not at all! We operate entirely online and remotely. You can submit all documents, forms, and queries digitally via WhatsApp or email from anywhere in Maharashtra or India.</div>
+                <div class="accordion-body">Not at all! We operate entirely online and remotely. You can submit all documents, forms, and queries digitally via WhatsApp or email from anywhere in Maharashtra or India. Office reference: 201, Taimur Height, Mehrun, Jalgaon.</div>
               </details>
             </div>
           </div>
@@ -1268,7 +1328,7 @@
 
               <details class="site-accordion">
                 <summary>How fast are your unannounced field investigation turnaround times (TAT)?</summary>
-                <div class="accordion-body">Standard ground field investigation and hospital/pharmacy bill forensic audit verification reports are delivered within 24 to 48 hours of assignment dispatch.</div>
+                <div class="accordion-body">Standard ground field verification and hospital/pharmacy bill forensic audit verification reports are delivered within 24 to 48 hours of assignment dispatch.</div>
               </details>
 
               <details class="site-accordion">
@@ -1277,8 +1337,8 @@
               </details>
 
               <details class="site-accordion">
-                <summary>How do category-specific terms populate in the Digital Intake Portal?</summary>
-                <div class="accordion-body">Selecting your engagement category (Recovery, B2B FCU, Associate, or Referral) dynamically loads respective legal terms, field requirements, and print-ready summary layouts.</div>
+                <summary>How can institutional partners generate or sign the Internal MoU template?</summary>
+                <div class="accordion-body">Use the interactive "Generate / Fill MoU Agreement" button in the Administrative Hub to dynamically populate, print, and save your signed copy on demand. Office: 201, Taimur Height, Mehrun, Jalgaon.</div>
               </details>
             </div>
           </div>
@@ -1291,66 +1351,38 @@
       <div class="wrap contact-layout-wrapper">
         <div class="section-head left" style="width:100%;">
           <div class="eyebrow">
-            <span data-lang="eng">Official Contact Directory</span>
-            <span data-lang="mar">अधिकृत संपर्क माहिती</span>
+            <span>Official Contact Directory</span>
           </div>
           <h2>
-            <span data-lang="eng">Connect with RB Consultancy</span>
-            <span data-lang="mar">आरबी कन्सल्टन्सीशी संपर्क साधा</span>
+            <span>Connect with RB Consultancy</span>
           </h2>
           <p>
-            <span data-lang="eng">Registered office and direct communication channels. Internal MoU available on demand.</span>
-            <span data-lang="mar">नोंदणीकृत कार्यालय आणि थेट संपर्काची माध्यमे. अंतर्गत MoU मागणीनुसार उपलब्ध.</span>
+            <span>Registered office and direct communication channels. Office located at 201, Taimur Height, Mehrun, Jalgaon.</span>
           </p>
         </div>
 
         <div class="contact-card">
           <h3>
-            <span data-lang="eng">Directory Details</span>
-            <span data-lang="mar">कार्यालयाचे तपशील</span>
+            <span>Directory Details</span>
           </h3>
           <div class="contact-list">
             <div class="contact-item">
-              <strong>
-                <span data-lang="eng">Registered Office Address</span>
-                <span data-lang="mar">नोंदणीकृत कार्यालय पत्ता</span>
-              </strong>
+              <strong>Registered Office Address</strong>
               <span>201, Taimur Height, Dr. Iqbal Colony, Mehrun, Jalgaon, Maharashtra, India.</span>
             </div>
             <div class="contact-item">
-              <strong>
-                <span data-lang="eng">Udyam Registration</span>
-                <span data-lang="mar">उद्यम नोंदणी</span>
-              </strong>
+              <strong>Udyam Registration</strong>
               <span>UDYAM-MH-14-0183662</span>
             </div>
             <div class="contact-item">
-              <strong>
-                <span data-lang="eng">Official Contact Number</span>
-                <span data-lang="mar">अधिकृत संपर्क क्रमांक</span>
-              </strong>
+              <strong>Official Contact Number</strong>
               <a href="tel:+919325564770">+91 9325564770</a>
             </div>
             <div class="contact-item">
-              <strong>
-                <span data-lang="eng">Official Correspondence Email</span>
-                <span data-lang="mar">अधिकृत ई-मेल पत्ता</span>
-              </strong>
+              <strong>Official Correspondence Email</strong>
               <a href="mailto:rbconsultancyjalgaon@gmail.com">rbconsultancyjalgaon@gmail.com</a>
             </div>
           </div>
-        </div>
-
-        <div class="disclaimer-box" style="width:100%; text-align: left;">
-          <h4>
-            <span data-lang="eng">Important Legal & Contractual Disclaimers</span>
-            <span data-lang="mar">महत्त्वाची कायदेशीर व करारविषयक माहिती</span>
-          </h4>
-          <p data-lang="eng">
-            1. <b>Facilitator Only & Indian Contract Act 1872:</b> RB Consultancy operates strictly as an independent professional facilitator and authorized agent under the principles of the Indian Contract Act 1872. We provide documentation support and follow-up services only.<br>
-            2. <b>No Guarantee of Outcomes or Timelines:</b> The final decisions regarding claim approvals, settlement payouts, and processing timelines rest entirely with insurance companies, TPAs, the Insurance Ombudsman, or statutory authorities.<br>
-            3. <b>Client Liability & Unannounced Audits:</b> All legal, financial, and document liabilities rest solely on the client and document issuing authorities. FCU observations reflect objective site facts observed during unannounced site inspection.
-          </p>
         </div>
       </div>
     </section>
@@ -1361,7 +1393,7 @@
       <div class="footer-grid">
         <div>
           <strong style="font-size: 16px; color: #fff;">RB Consultancy</strong>
-          <p style="margin-top: 8px; font-size: 13px;">Official Email: <a href="mailto:rbconsultancyjalgaon@gmail.com">rbconsultancyjalgaon@gmail.com</a> | Contact: +91 9325564770</p>
+          <p style="margin-top: 8px; font-size: 13px;">Office: 201, Taimur Height, Mehrun, Jalgaon<br>Email: <a href="mailto:rbconsultancyjalgaon@gmail.com">rbconsultancyjalgaon@gmail.com</a> | Contact: +91 9325564770</p>
           <div style="display: flex; gap: 12px; margin-top: 15px;">
             <a href="https://www.facebook.com" target="_blank" style="color: #80B3FF; font-size: 13px; font-weight: 700;">Facebook</a>
             <a href="https://www.instagram.com" target="_blank" style="color: #80B3FF; font-size: 13px; font-weight: 700;">Instagram</a>
@@ -1389,116 +1421,85 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 RB Consultancy | Founder & Principal Consultant: Altaf Rangrej | Udyam: UDYAM-MH-14-0183662</p>
+        <p>© 2026 RB Consultancy | Office: 201, Taimur Height, Mehrun, Jalgaon | Founder: Altaf Rangrej | Udyam: UDYAM-MH-14-0183662</p>
       </div>
     </div>
   </footer>
 
-  <!-- PRINTABLE FORM MODAL OVERLAY -->
-  <div id="printableFormModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(11,47,74,0.85); z-index:3500; overflow-y:auto; padding:20px;">
-    <div style="background:#fff; max-width:850px; margin:30px auto; border-radius:14px; padding:35px; box-shadow:0 25px 60px rgba(0,0,0,0.4);" id="printableSheetContent">
-      <!-- Rendered via JS -->
+  <!-- INTERACTIVE MOU BUILDER MODAL OVERLAY -->
+  <div id="mouModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(11,47,74,0.85); z-index:3000; overflow-y:auto; padding:20px;">
+    <div style="background:#fff; max-width:850px; margin:30px auto; border-radius:14px; padding:35px; box-shadow:0 25px 60px rgba(0,0,0,0.4);">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d0dce6; padding-bottom:15px; margin-bottom:20px;">
+        <h3 style="color:#0b2f4a; margin:0; font-size:20px;">Institutional FCU MoU & Rate Agreement Generator</h3>
+        <button onclick="closeMoUModal()" style="border:none; background:none; font-size:28px; cursor:pointer; color:#556677;">&times;</button>
+      </div>
+
+      <div id="mouFormView">
+        <p style="font-size:13.5px; color:#556677; margin-bottom:20px;">Enter institutional reviewer details below to generate a print-ready bilateral MoU containing unannounced 24–48h investigation terms, fee structures, and disclaimers (Office: 201, Taimur Height, Mehrun, Jalgaon).</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div><label style="font-size:12px; font-weight:700; color:var(--navy);">Entity / Insurance Co. / TPA Name</label><input class="field" id="instName" type="text" placeholder="e.g., Example Health Insurance Ltd"></div>
+          <div><label style="font-size:12px; font-weight:700; color:var(--navy);">Corporate / Regional Office Address</label><input class="field" id="instAddress" type="text" placeholder="e.g., Nashik / Mumbai / Regional Hub"></div>
+          <div><label style="font-size:12px; font-weight:700; color:var(--navy);">Designated Reviewer / FCU Officer</label><input class="field" id="instOfficer" type="text" placeholder="Name & Designation"></div>
+          <div><label style="font-size:12px; font-weight:700; color:var(--navy);">Official Corporate Email</label><input class="field" id="instEmail" type="email" placeholder="fcu@company.com"></div>
+        </div>
+        <div style="margin-top:20px; background:#f8fafc; border:1px solid #d0dce6; padding:15px; border-radius:8px; font-size:13px; color:#334455;">
+          <b>Framework Included:</b> Unannounced surprise 24–48h field verification TAT, wholesale pharmacy/surgical bill reconciliation, office reference (201, Taimur Height, Mehrun, Jalgaon), and legal disclaimers under Indian Contract Act 1872 / IRDAI PPHI principles.
+        </div>
+        <div style="margin-top:25px; text-align:right;">
+          <button class="btn btn-dark" onclick="renderPrintableAgreement()">Preview & Print / Save PDF</button>
+        </div>
+      </div>
+
+      <div id="mouPrintView" style="display:none; font-size:13px; line-height:1.6; color:#1a365d;">
+        <div style="text-align:center; border-bottom:2px solid #0b2f4a; padding-bottom:15px; margin-bottom:20px;">
+          <h2 style="color:#0b2f4a; margin:0; font-size:22px;">MEMORANDUM OF UNDERSTANDING (MoU)</h2>
+          <p style="margin:4px 0 0; font-weight:600; font-size:13.5px; color:#0066cc;">Fraud Control Unit (FCU) Ground Investigation & Forensic Audit Mandate</p>
+        </div>
+        
+        <p><b>1. PARTIES:</b> This MoU is entered into digitally/administratively between <b>RB Consultancy</b> (Office: 201, Taimur Height, Dr. Iqbal Colony, Mehrun, Jalgaon, Maharashtra; Udyam: UDYAM-MH-14-0183662; Led by Principal Consultant Altaf Rangrej) and Institutional Partner: <b id="pInstName">[Entity Name]</b>, operating at <b id="pInstAddress">[Address]</b>, represented by <b id="pInstOfficer">[Officer]</b> (<b id="pInstEmail">[Email]</b>).</p>
+        
+        <p><b>2. SCOPE OF SERVICES & SURPRISE PROTOCOL:</b> Unannounced (surprise) physical bed-bound validation, attending physician statement recording, proxy admission interception, and forensic pharmacy/surgical implant invoice cross-matching across North Maharashtra operational zones to preserve evidential integrity.</p>
+        
+        <p><b>3. SERVICE LEVEL AGREEMENT (TAT):</b> Standard verification reports delivered within 24 to 48 hours of assignment dispatch, subject to lawful site access cooperation.</p>
+        
+        <p><b>4. COMMERCIAL & FEE TERMS:</b> Per-assignment investigation fee schedules, emergency TAT surcharges, and conveyance metrics (₹7/km under 100km, AC Tier 3 / AC Sleeper over 100km) governed strictly by agreed bilateral rate cards.</p>
+        
+        <p><b>5. LEGAL & FACILITATOR DISCLAIMER:</b> RB Consultancy operates strictly as an independent facilitator under the Indian Contract Act, 1872. Field observations reflect objective physical conditions at timestamp of inspection. Legal/financial liabilities for claim adjudication rest with the carrier/client.</p>
+        
+        <div style="display:grid; grid-template-columns:1fr 1fr; margin-top:40px; gap:40px;">
+          <div style="border-top:1px solid #334455; padding-top:10px;">
+            <b>For RB Consultancy (Jalgaon Office)</b><br>
+            Altaf Rangrej (Principal Consultant)<br>
+            Address: 201, Taimur Height, Mehrun, Jalgaon<br>
+            Date: <span id="pDate"></span>
+          </div>
+          <div style="border-top:1px solid #334455; padding-top:10px;">
+            <b>For Institutional Partner</b><br>
+            Authorized Signatory Stamp & Signature<br>
+            Date: ________________________
+          </div>
+        </div>
+
+        <div style="margin-top:30px; text-align:center;" class="no-print">
+          <button class="btn btn-dark" onclick="window.print()">Print / Save as PDF</button>
+          <button class="btn" style="background:#e2e8f0; color:#334455; margin-left:10px;" onclick="resetMouForm()">Edit Details</button>
+        </div>
+      </div>
     </div>
   </div>
 
   <script>
-    const dropdownOptions = {
-      en: [
-        { value: "General Consultancy Inquiry", text: "General Consultancy Inquiry" },
-        { value: "TPA/Insurer FCU Investigation Mandate (Unannounced)", text: "TPA/Insurer FCU Investigation Mandate (Unannounced)" },
-        { value: "Internal B2B Audit MoU Request", text: "Internal B2B Audit MoU Request (On-Demand Dispatch)" },
-        { value: "Regional Field Associate Application (Resume Attached)", text: "Regional Field Associate / Franchisee Application (Resume/Certificates)" },
-        { value: "Refer & Earn Partner Registration", text: "Refer & Earn Partner Registration" },
-        { value: "1. Fresh Claim Submissions (₹3,000)", text: "1. Fresh Claim Submissions (₹3,000)" },
-        { value: "2. Rejected Claims Recovery (₹3,000 + 10%)", text: "2. Rejected Claims Recovery (₹3,000 + 10% Success Fee)" },
-        { value: "3. Fraud Control Unit (FCU) Ground Audit", text: "3. Fraud Control Unit (FCU) Ground Audit (MoU Rate)" },
-        { value: "4. Queries Management", text: "4. Queries Management" },
-        { value: "5. Reconsideration Or Grievance", text: "5. Reconsideration Or Grievance" },
-        { value: "6. IRDAI & Ombudsman Appeals", text: "6. IRDAI & Ombudsman Appeals" },
-        { value: "7. TPA/IC Issues Resolutions", text: "7. TPA/IC Issues Resolutions" },
-        { value: "8. Deadlock Recoveries & Claims Audits", text: "8. Deadlock Recoveries & Claims Audits" },
-        { value: "9. End-To-End Cashless Management", text: "9. End-To-End Cashless Management (₹2,000)" },
-        { value: "10. MSME Samadhan Filings", text: "10. MSME Samadhan Filings" }
-      ],
-      mar: [
-        { value: "सामान्य सल्लामसलत चौकशी", text: "सामान्य सल्लामसलत चौकशी" },
-        { value: "टीपीए/इन्शुरन्स FCU इन्व्हेस्टिगेशन मँडेट (सरप्राईज)", text: "टीपीए/इन्शुरन्स FCU इन्व्हेस्टिगेशन मँडेट (सरप्राईज)" },
-        { value: "अंतर्गत B2B ऑडिट MoU मागणी", text: "अंतर्गत B2B ऑडिट MoU मागणी (मागणीनुसार उपलब्ध)" },
-        { value: "प्रादेशिक फील्ड असोसिएट / फ्रँचायझी अर्ज (बायोडाटा सह)", text: "प्रादेशिक फील्ड असोसिएट / फ्रँचायझी अर्ज (बायोडाटा सह)" },
-        { value: "रेफरल पार्टनर म्हणून नोंदणी", text: "रेफरल पार्टनर म्हणून नोंदणी" },
-        { value: "१. नवीन क्लेम दाखल करणे (₹३,०००)", text: "१. नवीन क्लेम दाखल करणे (₹३,०००)" },
-        { value: "२. नाकारलेल्या क्लेमची वसुली (₹३,००० + १०% यश फी)", text: "२. नाकारलेल्या क्लेमची वसुली (₹३,००० + १०% यश फी)" },
-        { value: "३. फ्रॉड कंट्रोल युनिट (FCU) ऑन-ग्राउंड ऑडिट", text: "३. फ्रॉड कंट्रोल युनिट (FCU) ऑन-ग्राउंड ऑडिट (MoU दर)" },
-        { value: "४. शंका आणि प्रश्न निवारण", text: "४. शंका आणि प्रश्न निवारण" },
-        { value: "५. फेरविचार किंवा तक्रार", text: "५. फेरविचार किंवा तक्रार" },
-        { value: "६. लोकपाल (Ombudsman) अपील", text: "६. लोकपाल (Ombudsman) अपील" },
-        { value: "७. टीपीए आणि कंपनी वाद निवारण", text: "७. टीपीए आणि कंपनी वाद निवारण" },
-        { value: "८. रखडलेले क्लेम आणि तांत्रिक ऑडिट", text: "८. रखडलेले क्लेम आणि तांत्रिक ऑडिट" },
-        { value: "९. कॅशलेस व्यवस्थापन (₹२,०००)", text: "९. कॅशलेस व्यवस्थापन (₹२,०००)" },
-        { value: "१०. एमएसएमई समाधान फायलिंग", text: "१०. एमएसएमई समाधान फायलिंग" }
-      ]
-    };
-
-    function updateDropdown(lang) {
-      const select = document.getElementById('intakeService');
-      const currentValue = select.value;
-      select.innerHTML = '';
-      const opts = dropdownOptions[lang];
-      opts.forEach(opt => {
-        const option = document.createElement('option');
-        option.value = opt.value;
-        option.innerText = opt.text;
-        select.appendChild(option);
-      });
-      select.value = currentValue;
-    }
-
-    function toggleLanguage() {
-      const body = document.body;
-      const btn = document.getElementById('langToggleBtn');
-      if (body.classList.contains('lang-en')) {
-        body.classList.remove('lang-en');
-        body.classList.add('lang-mar');
-        btn.innerText = "Switch to English";
-        localStorage.setItem('rb_lang', 'mar');
-        updateDropdown('mar');
-      } else {
-        body.classList.remove('lang-mar');
-        body.classList.add('lang-en');
-        btn.innerText = "Switch to Marathi";
-        localStorage.setItem('rb_lang', 'eng');
-        updateDropdown('en');
-      }
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const savedLang = localStorage.getItem('rb_lang');
-      const body = document.body;
-      const btn = document.getElementById('langToggleBtn');
-      if (savedLang === 'mar') {
-        body.classList.remove('lang-en');
-        body.classList.add('lang-mar');
-        btn.innerText = "Switch to English";
-        updateDropdown('mar');
-      } else {
-        body.classList.remove('lang-mar');
-        body.classList.add('lang-en');
-        btn.innerText = "Switch to Marathi";
-        updateDropdown('en');
-      }
-    });
-
-    // Dynamic Category Terms & Form Data
+    // Category-specific terms data dictionary
     const termsData = {
       recovery: `
-        <b>1. Independent Facilitator Nature:</b> RB Consultancy acts as an independent facilitator under the Indian Contract Act, 1872.<br>
+        <b>1. Independent Facilitator Nature:</b> RB Consultancy operates strictly as an independent facilitator under the Indian Contract Act, 1872 (Office: 201, Taimur Height, Mehrun, Jalgaon).<br>
         <b>2. Fee Structure:</b> Fresh/Cashless as scheduled; Reconsideration/Ombudsman/Recovery includes baseline ₹3,000–₹5,000 plus applicable 10%–12% Success Fee upon realized recovery.<br>
         <b>3. Timelines:</b> No guarantee of statutory or carrier processing deadlines. All documents remain client liability.
       `,
       b2b: `
         <b>1. Unannounced Protocol:</b> FCU/audit field visits are unannounced (surprise) to preserve evidentiary integrity.<br>
         <b>2. SLA Compliance:</b> Standard report delivery within 24–48 hours subject to reasonable site access.<br>
-        <b>3. Commercial Terms:</b> Governed strictly by bilateral internal MoU execution with Insurance Co / TPA. Conveyance billed at ₹7/km (<100km) or Tier-3/AC Sleeper (>100km).
+        <b>3. Commercial Terms:</b> Governed strictly by bilateral internal MoU execution with Insurance Co / TPA. Conveyance billed at ₹7/km (<100km) or Tier-3/AC Sleeper (>100km). Office: 201, Taimur Height, Mehrun, Jalgaon.
       `,
       associate: `
         <b>1. Independent Contractor Status:</b> Regional field associates operate independently under central QA briefs.<br>
@@ -1565,7 +1566,7 @@
       const htmlContent = `
         <div style="text-align:center; border-bottom:2px solid #0b2f4a; padding-bottom:12px; margin-bottom:18px;">
           <h2 style="color:#0b2f4a; margin:0; font-size:20px;">RB CONSULTANCY — JALGAON</h2>
-          <p style="margin:2px 0; font-size:12px; color:#556677;">Udyam: UDYAM-MH-14-0183662 | Founder & Principal Consultant: Altaf Rangrej</p>
+          <p style="margin:2px 0; font-size:12px; color:#556677;">Office: 201, Taimur Height, Mehrun, Jalgaon | Udyam: UDYAM-MH-14-0183662 | Founder: Altaf Rangrej</p>
           <h3 style="color:#0066cc; margin:8px 0 0; font-size:15px;">${catTitles[cat]}</h3>
         </div>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:12.5px; background:#f8fafc; padding:12px; border-radius:8px; margin-bottom:15px;">
@@ -1593,7 +1594,7 @@
             Name: ${fullName}
           </div>
           <div style="border-top:1px solid #334455; padding-top:8px;">
-            <b>For RB Consultancy (Jalgaon):</b><br>
+            <b>For RB Consultancy (201, Taimur Height, Jalgaon):</b><br>
             Stamp & Signature: ______________<br>
             Altaf Rangrej (Principal Consultant)
           </div>
@@ -1612,6 +1613,97 @@
       document.getElementById('printableFormModal').style.display = 'none';
     }
 
+    const dropdownOptions = {
+      en: [
+        { value: "General Consultancy Inquiry", text: "General Consultancy Inquiry" },
+        { value: "TPA/Insurer FCU Investigation Mandate (Unannounced)", text: "TPA/Insurer FCU Investigation Mandate (Unannounced)" },
+        { value: "Internal B2B Audit MoU Request", text: "Internal B2B Audit MoU Request (On-Demand Dispatch)" },
+        { value: "Regional Field Associate Application (Resume Attached)", text: "Regional Field Associate / Franchisee Application (Resume/Certificates)" },
+        { value: "Refer & Earn Partner Registration", text: "Refer & Earn Partner Registration" },
+        { value: "1. Fresh Claim Submissions (₹3,000)", text: "1. Fresh Claim Submissions (₹3,000)" },
+        { value: "2. Rejected Claims Recovery (₹3,000 + 10%)", text: "2. Rejected Claims Recovery (₹3,000 + 10% Success Fee)" },
+        { value: "3. Fraud Control Unit (FCU) Ground Audit", text: "3. Fraud Control Unit (FCU) Ground Audit (MoU Rate)" },
+        { value: "4. Queries Management", text: "4. Queries Management" },
+        { value: "5. Reconsideration Or Grievance", text: "5. Reconsideration Or Grievance" },
+        { value: "6. IRDAI & Ombudsman Appeals", text: "6. IRDAI & Ombudsman Appeals" },
+        { value: "7. TPA/IC Issues Resolutions", text: "7. TPA/IC Issues Resolutions" },
+        { value: "8. Deadlock Recoveries & Claims Audits", text: "8. Deadlock Recoveries & Claims Audits" },
+        { value: "9. End-To-End Cashless Management", text: "9. End-To-End Cashless Management (₹2,000)" },
+        { value: "10. MSME Samadhan Filings", text: "10. MSME Samadhan Filings" }
+      ],
+      mar: [
+        { value: "सामान्य सल्लामसलत चौकशी", text: "सामान्य सल्लामसलत चौकशी" },
+        { value: "टीपीए/इन्शुरन्स FCU इन्व्हेस्टिगेशन मँडेट (सरप्राईज)", text: "टीपीए/इन्शुरन्स FCU इन्व्हेस्टिगेशन मँडेट (सरप्राईज)" },
+        { value: "अंतर्गत B2B ऑडिट MoU मागणी", text: "अंतर्गत B2B ऑडिट MoU मागणी (मागणीनुसार उपलब्ध)" },
+        { value: "प्रादेशिक फील्ड असोसिएट / फ्रँचायझी अर्ज (बायोडाटा सह)", text: "प्रादेशिक फील्ड असोसिएट / फ्रँचायझी अर्ज (बायोडाटा सह)" },
+        { value: "रेफरल पार्टनर म्हणून नोंदणी", text: "रेफरल पार्टनर म्हणून नोंदणी" },
+        { value: "१. नवीन क्लेम दाखल करणे (₹३,०००)", text: "१. नवीन क्लेम दाखल करणे (₹३,०००)" },
+        { value: "२. नाकारलेल्या क्लेमची वसुली (₹३,००० + १०% यश फी)", text: "२. नाकारलेल्या क्लेमची वसुली (₹३,००० + १०% यश फी)" },
+        { value: "३. फ्रॉड कंट्रोल युनिट (FCU) ऑन-ग्राउंड ऑडिट", text: "३. फ्रॉड कंट्रोल युनिट (FCU) ऑन-ग्राउंड ऑडिट (MoU दर)" },
+        { value: "४. शंका आणि प्रश्न निवारण", text: "४. शंका आणि प्रश्न निवारण" },
+        { value: "५. फेरविचार किंवा तक्रार", text: "५. फेरविचार किंवा तक्रार" },
+        { value: "६. लोकपाल (Ombudsman) अपील", text: "६. लोकपाल (Ombudsman) अपील" },
+        { value: "७. टीपीए आणि कंपनी वाद निवारण", text: "७. टीपीए आणि कंपनी वाद निवारण" },
+        { value: "८. रखडलेले क्लेम आणि तांत्रिक ऑडिट", text: "८. रखडलेले क्लेम आणि तांत्रिक ऑडिट" },
+        { value: "९. कॅशलेस व्यवस्थापन (₹२,०००)", text: "९. कॅशलेस व्यवस्थापन (₹२,०००)" },
+        { value: "१०. एमएसएमई समाधान फायलिंग", text: "१०. एमएसएमई समाधान फायलिंग" }
+      ]
+    };
+
+    function updateDropdown(lang) {
+      const select = document.getElementById('intakeService');
+      const currentValue = select ? select.value : '';
+      if(!select) return;
+      select.innerHTML = '';
+      const opts = dropdownOptions[lang];
+      opts.forEach(opt => {
+        const option = document.createElement('option');
+        option.value = opt.value;
+        option.innerText = opt.text;
+        select.appendChild(option);
+      });
+      select.value = currentValue;
+    }
+
+    function toggleLanguage() {
+      const body = document.body;
+      const btn = document.getElementById('langToggleBtn');
+      if (body.classList.contains('lang-en')) {
+        body.classList.remove('lang-en');
+        body.classList.add('lang-mar');
+        btn.innerText = "Switch to English";
+        localStorage.setItem('rb_lang', 'mar');
+        updateDropdown('mar');
+      } else {
+        body.classList.remove('lang-mar');
+        body.classList.add('lang-en');
+        btn.innerText = "Switch to Marathi";
+        localStorage.setItem('rb_lang', 'eng');
+        updateDropdown('en');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('rb_lang');
+      const body = document.body;
+      const btn = document.getElementById('langToggleBtn');
+      if (savedLang === 'mar') {
+        body.classList.remove('lang-en');
+        body.classList.add('lang-mar');
+        if(btn) btn.innerText = "Switch to English";
+        updateDropdown('mar');
+      } else {
+        body.classList.remove('lang-mar');
+        body.classList.add('lang-en');
+        if(btn) btn.innerText = "Switch to Marathi";
+        updateDropdown('en');
+      }
+      if(document.getElementById('dynamicFormDate')) {
+        document.getElementById('dynamicFormDate').innerText = new Date().toLocaleDateString('en-IN');
+      }
+      switchFormType();
+    });
+
     function submitFormWhatsApp() {
       const cat = document.getElementById('engagementCategory').value;
       const fullName = document.getElementById('formFullName').value.trim();
@@ -1621,29 +1713,63 @@
       const details = document.getElementById('formDetails').value.trim();
 
       let text = `Hi RB Consultancy,\n\nCategory Intake: ${cat.toUpperCase()}\n` +
-                 `Name/Org: ${fullName || '[Not Provided]'}\n` +
-                 `Phone: ${phone || '[Not Provided]'}\n` +
-                 `Email: ${email || '[Not Provided]'}\n` +
-                 `Location: ${location || '[Not Provided]'}\n\n` +
-                 `Details:\n${details || 'None'}\n\n` +
-                 `[Terms accepted via Digital Portal on ${new Date().toLocaleDateString('en-IN')}]`;
+               `Name/Org: ${fullName || '[Not Provided]'}\n` +
+               `Phone: ${phone || '[Not Provided]'}\n` +
+               `Email: ${email || '[Not Provided]'}\n` +
+               `Location: ${location || '[Not Provided]'}\n\n` +
+               `Details:\n${details || 'None'}\n\n` +
+               `[Terms accepted via Digital Portal on ${new Date().toLocaleDateString('en-IN')}]`;
 
       const url = "https://wa.me/919325564770?text=" + encodeURIComponent(text);
       window.open(url, '_blank');
     }
 
-    function submitIntakeWhatsApp() {
-      submitFormWhatsApp();
+    /* Interactive MoU Modal Functions */
+    function openMoUModal() {
+      document.getElementById('mouModal').style.display = 'block';
+    }
+    function closeMoUModal() {
+      document.getElementById('mouModal').style.display = 'none';
+    }
+    function renderPrintableAgreement() {
+      const name = document.getElementById('instName').value || '[Unspecified Entity]';
+      const address = document.getElementById('instAddress').value || '[Unspecified Address]';
+      const officer = document.getElementById('instOfficer').value || '[Unspecified Officer]';
+      const email = document.getElementById('instEmail').value || '[Unspecified Email]';
+      
+      document.getElementById('pInstName').innerText = name;
+      document.getElementById('pInstAddress').innerText = address;
+      document.getElementById('pInstOfficer').innerText = officer;
+      document.getElementById('pInstEmail').innerText = email;
+      document.getElementById('pDate').innerText = new Date().toLocaleDateString();
+
+      document.getElementById('mouFormView').style.display = 'none';
+      document.getElementById('mouPrintView').style.display = 'block';
+    }
+    function resetMouForm() {
+      document.getElementById('mouPrintView').style.display = 'none';
+      document.getElementById('mouFormView').style.display = 'block';
     }
   </script>
   <style>
     @media print {
       body * { visibility: hidden; }
-      #printableSheetContent, #printableSheetContent * { visibility: visible; }
-      #printableSheetContent { position: absolute; left: 0; top: 0; width: 100%; background: #fff; padding: 20px; box-shadow: none; max-width: 100%; }
+      #mouPrintView, #mouPrintView * { visibility: visible; }
+      #mouPrintView { position: absolute; left: 0; top: 0; width: 100%; background: #fff; padding: 20px; }
+      #printableFormModal * { visibility: visible; }
+      #printableFormModal { position: absolute; left: 0; top: 0; width: 100%; height: auto; background: #fff; padding: 0; }
+      #printableSheetContent { box-shadow: none; max-width: 100%; width: 100%; padding: 0; }
       .no-print { display: none !important; }
     }
   </style>
 
+  <!-- PRINTABLE FORM MODAL OVERLAY -->
+  <div id="printableFormModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(11,47,74,0.85); z-index:3500; overflow-y:auto; padding:20px;">
+    <div style="background:#fff; max-width:850px; margin:30px auto; border-radius:14px; padding:35px; box-shadow:0 25px 60px rgba(0,0,0,0.4);" id="printableSheetContent">
+      <!-- Rendered via JS -->
+    </div>
+  </div>
+
 </body>
 </html>
+```[cite: 1, 2]
