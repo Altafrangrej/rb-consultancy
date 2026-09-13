@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RB Consultancy | Claim Facilitation, Fraud Control Unit & Dispute Resolution | आरबी कन्सल्टन्सी</title>
+  <title>RB Consultancy | Claim Facilitation, Fraud Control Unit & Dispute Resolution | आरबी कन्सल्टन्सी जळगाव</title>
   <meta name="description" content="Independent insurance claim facilitation, rejected claims recovery, IRDAI appeals, MSME resolution, Fraud Control Unit field investigations, and regional B2B associate networks led by Altaf Rangrej in Jalgaon, Maharashtra.">
   <meta name="theme-color" content="#0B2F4A">
 
@@ -44,6 +44,12 @@
     body.lang-en [data-lang="mar"] { display: none !important; }
     body.lang-mar [data-lang="eng"] { display: none !important; }
     body.lang-mar { font-family: 'Hind', sans-serif; }
+    
+    .marathi-text {
+      font-family: 'Hind', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
 
     a { color: inherit; text-decoration: none; }
     button, input, select, textarea { font: inherit; }
@@ -309,6 +315,17 @@
     .faq-category-title { font-size: 19px; color: var(--navy); margin-bottom: 16px; border-bottom: 2px solid var(--accent-blue); padding-bottom: 8px; font-weight: 800; }
     .faq-inner-list { display: grid; gap: 14px; }
 
+    /* Legal Disclaimer Fixed Corporate Box */
+    .corporate-legal-box {
+      background: #F8FAFC; border: 1.5px solid var(--line); border-radius: 14px; padding: 30px; margin-top: 30px;
+    }
+    .corporate-legal-box h4 {
+      color: var(--navy); font-size: 16px; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 12px 0; border-bottom: 2px solid var(--accent-blue); padding-bottom: 6px;
+    }
+    .corporate-legal-box p {
+      color: var(--text); font-size: 13px; line-height: 1.7; margin-bottom: 14px;
+    }
+
     /* Left-Aligned Contact & Directory Section */
     .contact-layout-wrapper { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
     .contact-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 32px; box-shadow: var(--shadow); width: 100%; text-align: left; }
@@ -415,7 +432,7 @@
       </nav>
       <div style="display: flex; align-items: center; gap: 10px;">
         <button class="lang-toggle-btn" id="langToggleBtn" onclick="toggleLanguage()">मराठी मध्ये पहा / View EN</button>
-        <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20I%20need%20a%20consultation." target="_blank">WhatsApp Chat</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20I%20need%20a%20consultation." target="_blank"><span data-lang="eng">WhatsApp Chat</span><span data-lang="mar">व्हॉट्सॲप संवाद</span></a>
       </div>
     </div>
   </header>
@@ -433,7 +450,7 @@
             <span data-lang="mar">इन्शुरन्स क्लेम फॅसिलिटेशन, मेडिकल ऑडिट व फ्रॉड कंट्रोल युनिट तपास सेवा.</span>
           </h1>
           <p class="hero-lead">
-            <span data-lang="eng">Supporting policyholders with online claim recovery and delivering rapid ground field verification, hospital/pharmacy bill forensic checks, and Fraud Control Unit audit mandates for Insurance Companies & TPAs across North Maharashtra. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+            <span data-lang="eng">Supporting policyholders with online claim recovery and delivering rapid ground field verification, hospital/pharmacy bill forensic checks, and Fraud Control Unit audit mandates for Insurance Companies & TPAs across North Maharashtra including referral partner referral loops and regional field associate networks. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
             <span data-lang="mar">पॉलिसीधारकांसाठी ऑनलाइन क्लेम रिकव्हरी आणि उत्तर महाराष्ट्रात कॉर्पोरेट/टीपीएसाठी २४-४८ तासांत फिल्ड इन्व्हेस्टिगेशन व फ्रॉड कंट्रोल युनिट पडताळणी. कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
           </p>
           <div class="trust-row">
@@ -453,7 +470,7 @@
             <span data-lang="mar">मुख्य सल्लागार डेस्क</span>
           </h2>
           <p>
-            <span data-lang="eng">Headed with 15+ years experience in healthcare & pharmacy admin, managing lean scalable Fraud Control Unit/audit operations and policyholder advocacy. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+            <span data-lang="eng">Headed with 15+ years experience in healthcare & pharmacy admin, managing lean scalable Fraud Control Unit/audit operations, referral partner programs, regional associate networks, and policyholder advocacy. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
             <span data-lang="mar">१५+ वर्षे आरोग्य व फार्मसी प्रशासनाचा अनुभव, कॉर्पोरेट ऑडिट व पॉलिसीधारक रिकव्हरी विशेषज्ञ. पत्ता: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
           </p>
         </div>
@@ -632,71 +649,113 @@
     <section class="section section-light" id="portal">
       <div class="wrap">
         <div class="section-head center">
-          <div class="eyebrow" style="justify-content: center;"><span>Digital Intake & Agreement Portal</span></div>
-          <h2><span>Client, Associate & Partner Intake Form</span></h2>
-          <p>Select category (Recovery, B2B FCU, Associate, or Referral Partner) to load terms, date stamping, and printable A4 agreement workflow. Office: 201, Taimur Height, Mehrun, Jalgaon.</p>
+          <div class="eyebrow" style="justify-content: center;">
+            <span data-lang="eng">Digital Intake & Agreement Portal</span>
+            <span data-lang="mar">डिजिटल नोंदणी व करार पोर्टल</span>
+          </div>
+          <h2>
+            <span data-lang="eng">Client, Associate & Partner Intake Form</span>
+            <span data-lang="mar">ग्राहक, असोसिएट व पार्टनर नोंदणी फॉर्म</span>
+          </h2>
+          <p>
+            <span data-lang="eng">Select category (Recovery, B2B FCU, Associate, or Referral Partner) to load terms, date stamping, and printable A4 agreement workflow. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+            <span data-lang="mar">श्रेणी निवडून ए४ प्रिंट करण्यायोग्य करार पत्र तयार करा. कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
+          </p>
         </div>
 
         <div class="intake-form-box">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
-            <h3 style="margin: 0;"><span>RBC Engagement & Preliminary Intake Form</span></h3>
+            <h3 style="margin: 0;">
+              <span data-lang="eng">RBC Engagement & Preliminary Intake Form</span>
+              <span data-lang="mar">आरबीसी सहकार्य व प्रारंभिक नोंदणी अर्ज</span>
+            </h3>
             <span style="font-size: 12px; font-weight: 800; color: var(--accent-blue); background: var(--accent-blue-light); padding: 5px 12px; border-radius: 6px;">
               <span>Udyam: UDYAM-MH-14-0183662</span>
             </span>
           </div>
 
           <div style="background: #f8fafc; border: 1px solid var(--line); padding: 14px 18px; border-radius: 10px; font-size: 13px; color: var(--navy); margin-bottom: 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
-            <div><b>Office:</b> 201, Taimur Height, Jalgaon</div>
-            <div><b>Principal Consultant:</b> Altaf Rangrej</div>
-            <div><b>Form Date:</b> <span id="dynamicFormDate"></span></div>
+            <div><b>Office / कार्यालय:</b> 201, Taimur Height, Jalgaon</div>
+            <div><b>Principal Consultant / प्रमुख सल्लागार:</b> Altaf Rangrej</div>
+            <div><b>Form Date / दिनांक:</b> <span id="dynamicFormDate"></span></div>
           </div>
 
           <div class="form-group-full" style="margin-top: 0;">
-            <label style="font-size: 13.5px; font-weight: 700; color: var(--navy);">Select Engagement Category:</label>
+            <label style="font-size: 13.5px; font-weight: 700; color: var(--navy);">
+              <span data-lang="eng">Select Engagement Category:</span>
+              <span data-lang="mar">सहकार्य श्रेणी निवडा:</span>
+            </label>
             <select class="field" id="engagementCategory" onchange="switchFormType()" style="margin-top: 6px; font-weight: 600;">
-              <option value="recovery">1. Recovery / Advocacy Client (Fresh/Rejection/Ombudsman/MSME)</option>
-              <option value="b2b">2. B2B / FCU Investigation Client (Insurer / TPA Mandate)</option>
-              <option value="associate">3. Regional Field Associate / Franchisee Application</option>
-              <option value="referral">4. Referral Partner Program Registration</option>
             </select>
           </div>
 
           <div class="form-grid-2col">
-            <div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Full Name / Organization Name:</label><input class="field" id="formFullName" type="text" placeholder="Enter full name or corporate entity"></div>
-            <div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Mobile / WhatsApp Number:</label><input class="field" id="formPhone" type="tel" placeholder="10-digit mobile number"></div>
+            <div>
+              <label style="font-size: 13px; font-weight: 700; color: var(--navy);">
+                <span data-lang="eng">Full Name / Organization Name:</span>
+                <span data-lang="mar">पूर्ण नाव / संस्थेचे नाव:</span>
+              </label>
+              <input class="field" id="formFullName" type="text" placeholder="Enter full name or corporate entity">
+            </div>
+            <div>
+              <label style="font-size: 13px; font-weight: 700; color: var(--navy);">
+                <span data-lang="eng">Mobile / WhatsApp Number:</span>
+                <span data-lang="mar">मोबाईल / व्हॉट्सॲप नंबर:</span>
+              </label>
+              <input class="field" id="formPhone" type="tel" placeholder="10-digit mobile number">
+            </div>
           </div>
 
           <div class="form-grid-2col">
-            <div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Official Email Correspondence:</label><input class="field" id="formEmail" type="email" placeholder="client@company.com"></div>
-            <div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Location / Operating Base (Taluka/City):</label><input class="field" id="formLocation" type="text" placeholder="e.g., Jalgaon / Bhusawal / Pune"></div>
+            <div>
+              <label style="font-size: 13px; font-weight: 700; color: var(--navy);">
+                <span data-lang="eng">Official Email Correspondence:</span>
+                <span data-lang="mar">अधिकृत ई-मेल पत्ता:</span>
+              </label>
+              <input class="field" id="formEmail" type="email" placeholder="client@company.com">
+            </div>
+            <div>
+              <label style="font-size: 13px; font-weight: 700; color: var(--navy);">
+                <span data-lang="eng">Location / Operating Base (Taluka/City):</span>
+                <span data-lang="mar">कार्यक्षेत्र / ठिकाण (तालुका/शहर):</span>
+              </label>
+              <input class="field" id="formLocation" type="text" placeholder="e.g., Jalgaon / Bhusawal / Pune">
+            </div>
           </div>
 
           <div id="dynamicFieldsContainer" style="margin-top: 16px;"></div>
 
           <div class="form-group-full">
-            <label style="font-size: 13px; font-weight: 700; color: var(--navy);">Case Summary / Specific Scope / Remarks / Referral Info:</label>
+            <label style="font-size: 13px; font-weight: 700; color: var(--navy);">
+              <span data-lang="eng">Case Summary / Specific Scope / Remarks / Referral Info:</span>
+              <span data-lang="mar">केस तपशील / व्याप्ती / शेरा / रेफरल माहिती:</span>
+            </label>
             <textarea class="field" id="formDetails" placeholder="Describe claim details, fraud scope, referral attribution notes, or associate background summary..."></textarea>
           </div>
 
           <div style="margin-top: 24px; background: #F8FAFC; border: 1.5px solid var(--line); border-radius: 12px; padding: 20px;">
             <h4 style="color: var(--navy); font-size: 14px; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 0.05em;">
-              Applicable Terms & Conditions (<span id="tcCategoryTitle">Recovery Client</span>)
+              <span data-lang="eng">Category-Specific Agreement Consent</span>
+              <span data-lang="mar">श्रेणीनुसार सहमती व करार</span>
             </h4>
             <div id="categoryTermsText" style="font-size: 13px; color: var(--text); line-height: 1.6; max-height: 180px; overflow-y: auto; padding-right: 6px;">Loading terms...</div>
             <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 10px;">
               <input type="checkbox" id="acceptTermsCheck" style="width: 18px; height: 18px; cursor: pointer;">
               <label for="acceptTermsCheck" style="font-size: 13px; font-weight: 600; color: var(--navy); cursor: pointer;">
-                I/We agree to the above category-specific terms and authorize RB Consultancy (Office: 201, Taimur Height, Mehrun, Jalgaon) to process this preliminary inquiry / referral attribution.
+                <span data-lang="eng">I/We agree to the above category-specific terms and authorize RB Consultancy (Office: 201, Taimur Height, Mehrun, Jalgaon) to process this preliminary inquiry / referral attribution.</span>
+                <span data-lang="mar">मी/आम्ही वरील श्रेणीनुसार नियम व अटींशी सहमत आहे आणि आरबी कन्सल्टन्सी (कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव) यांना ही चौकशी/करार प्रक्रिया पुढे नेण्यास अधिकृत करीत आहे.</span>
               </label>
             </div>
           </div>
 
           <div style="margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
             <button class="btn btn-dark" onclick="generatePrintableForm()" style="justify-content: center; padding: 16px; font-size: 14px;">
-              Generate Printable A4 Agreement PDF
+              <span data-lang="eng">Generate Printable A4 Agreement PDF</span>
+              <span data-lang="mar">प्रिंट-रेडी ए४ करार PDF तयार करा</span>
             </button>
             <button class="btn btn-whatsapp" onclick="submitFormWhatsApp()" style="justify-content: center; padding: 16px; font-size: 14px;">
-              Submit Inquiry via WhatsApp
+              <span data-lang="eng">Submit Inquiry via WhatsApp</span>
+              <span data-lang="mar">व्हॉट्सॲप द्वारे चौकशी पाठवा</span>
             </button>
           </div>
         </div>
@@ -768,6 +827,30 @@
       </div>
     </section>
 
+    <!-- FIXED LEGAL DISCLAIMER BOX WITH INDIAN CONTRACT ACT & IRDAI ACT REFERENCE -->
+    <section class="section section-light" id="corporate-legal">
+      <div class="wrap">
+        <div class="corporate-legal-box">
+          <h4>
+            <span data-lang="eng">Corporate Statutory Disclaimer & Legal Governance</span>
+            <span data-lang="mar">कॉर्पोरेट कायदेशीर व वैधानिक डिस्क्लेमर</span>
+          </h4>
+          <p>
+            <span data-lang="eng"><b>1. Facilitator Role & Indian Contract Act, 1872:</b> RB Consultancy operates strictly as an independent professional facilitator, administrative coordinator, and authorized advisory agent under the framework of the Indian Contract Act, 1872 (Section 182-195 principle of agent-principal authority). All document staging, filing assistance, and escalation tracking are performed on a facilitative basis at the explicit instruction of the principal client. RB Consultancy is neither an insurance company nor a Third-Party Administrator (TPA) and does not underwrite risk.</span>
+            <span data-lang="mar"><b>१. स्वतंत्र फॅसिलिटेटर व भारतीय करार कायदा १८७२:</b> आरबी कन्सल्टन्सी भारतीय करार कायदा १८७२ अंतर्गत स्वतंत्र व्यावसायिक फॅसिलिटेटर व प्रशासकीय समन्वयक म्हणून कार्य करते. सर्व कागदपत्र तयारी व पाठपुरावा क्लायंटच्या सूचनेनुसार फॅसिलिटेटर क्षमतेत केला जातो.</span>
+          </p>
+          <p>
+            <span data-lang="eng"><b>2. Regulatory Governance & IRDAI Framework:</b> Advisory redirection, grievance coordination, and policyholder relief claims align with guidelines and statutory protections established under the Insurance Regulatory and Development Authority of India (IRDAI Protection of Policyholders' Interests Regulations, 2024 and amended guidelines). However, final claim decisions, repudiation reversals, settlement payouts, and Ombudsman awards (up to 30 lakh rupees) rest exclusively with the designated insurance carrier, TPA, or Insurance Ombudsman under statutory authority.</span>
+            <span data-lang="mar"><b>२. IRDAI नियमन फ्रेमवर्क:</b> पॉलिसीधारक संरक्षण व तक्रार निवारण मार्गदर्शक तत्त्वे IRDAI नियमांनुसार जुळवली जातात. तथापि, क्लेम मंजुरी, नाकारणे किंवा लोकपाल (Ombudsman) पुरस्कारांचे अंतिम निर्णय विमा कंपनी किंवा लोकपाल यांच्याकडेच सुरक्षित असतात.</span>
+          </p>
+          <p>
+            <span data-lang="eng"><b>3. Statutory Liablity Limitations & Document Veracity:</b> All legal, financial, and clinical document authenticity liabilities rest solely with the client and document-issuing authorities/providers under applicable Indian penal, contract, and consumer protection statutes. For B2B Fraud Control Unit (FCU) and ground field verification assignments, observation reports reflect objective physical and provider conditions observed strictly at the date and time of physical inspection, constituting advisory risk-containment opinions without binding carriers to override contractual policy warranties or adjudicate clinical medical malpractice. Office Address: 201, Taimur Height, Dr. Iqbal Colony, Mehrun, Jalgaon, Maharashtra, India. Udyam Registration: UDYAM-MH-14-0183662.</span>
+            <span data-lang="mar"><b>३. कायदेशीर व कागदपत्र सत्यता जबाबदारी:</b> कागदपत्रांची वैधता व सत्यता ही क्लायंट व जारी करणाऱ्या प्राधिकरणाची एकमेव जबाबदारी आहे. B2B FCU तपास अहवाल हे केवळ पडताळणीचे व्यावसायिक मत दर्शवतात. कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- LEFT-ALIGNED CONTACT -->
     <section class="section" id="contact">
       <div class="wrap contact-layout-wrapper">
@@ -802,68 +885,140 @@
 
   <script>
     const termsData = {
-      recovery: `
-        <b>1. Independent Facilitator Nature:</b> RB Consultancy acts as an independent facilitator under Indian Contract Act 1872 (Office: 201, Taimur Height, Mehrun, Jalgaon).<br>
-        <b>2. Fee Structure:</b> Fresh/Cashless scheduled; Reconsideration/Ombudsman/Recovery includes baseline ₹3,000–₹5,000 plus applicable 10%–12% Success Fee.<br>
-        <b>3. Liability & Timelines:</b> No guarantee of statutory/carrier deadlines. Document veracity rests solely on client and issuing authorities.
-      `,
-      b2b: `
-        <b>1. Operational Scope:</b> FCU/audit field visits preserve evidentiary integrity.<br>
-        <b>2. SLA Compliance:</b> Report within 24–48 hours. Office: 201, Taimur Height, Mehrun, Jalgaon.<br>
-        <b>3. Commercial Terms:</b> Governed by bilateral internal MoU rate cards and conveyance rules (₹7/km <100km; Tier-3 AC/AC Sleeper >100km).
-      `,
-      associate: `
-        <b>1. Independent Contractor Status:</b> Regional field associates operate independently under central QA briefs.<br>
-        <b>2. Mandatory Verification:</b> Onboarding requires verified CV/resume, academic certificates, and council/investigator credentials.<br>
-        <b>3. Confidentiality:</b> Strict non-disclosure of patient clinical records, hospital paperwork, and carrier proprietary briefs.
-      `,
-      referral: `
-        <b>1. Commission Scope:</b> Earn referral commissions upon successful client onboarding and resolution/realization for referred files.<br>
-        <b>2. Attribution:</b> Referrer name/phone must be declared at initial intake submission.<br>
-        <b>3. Compliance:</b> Zero authority to misrepresent RBC regulatory standing or engage in coercive client solicitation.
-      `
+      en: {
+        recovery: `
+          <b>1. Independent Facilitator Nature:</b> RB Consultancy acts as an independent facilitator under Indian Contract Act 1872 (Office: 201, Taimur Height, Mehrun, Jalgaon).<br>
+          <b>2. Fee Structure:</b> Fresh/Cashless scheduled; Reconsideration/Ombudsman/Recovery includes baseline ₹3,000–₹5,000 plus applicable 10%–12% Success Fee.<br>
+          <b>3. Liability & Timelines:</b> No guarantee of statutory/carrier deadlines. Document veracity rests solely on client and issuing authorities.
+        `,
+        b2b: `
+          <b>1. Operational Scope:</b> FCU/audit field visits preserve evidentiary integrity.<br>
+          <b>2. SLA Compliance:</b> Report within 24–48 hours. Office: 201, Taimur Height, Mehrun, Jalgaon.<br>
+          <b>3. Commercial Terms:</b> Governed by bilateral internal MoU rate cards and conveyance rules (₹7/km <100km; Tier-3 AC/AC Sleeper >100km).
+        `,
+        associate: `
+          <b>1. Independent Contractor Status:</b> Regional field associates operate independently under central QA briefs.<br>
+          <b>2. Mandatory Verification:</b> Onboarding requires verified CV/resume, academic certificates, and council/investigator credentials.<br>
+          <b>3. Confidentiality:</b> Strict non-disclosure of patient clinical records, hospital paperwork, and carrier proprietary briefs.
+        `,
+        referral: `
+          <b>1. Commission Scope:</b> Earn referral commissions upon successful client onboarding and resolution/realization for referred files.<br>
+          <b>2. Attribution:</b> Referrer name/phone must be declared at initial intake submission.<br>
+          <b>3. Compliance:</b> Zero authority to misrepresent RBC regulatory standing or engage in coercive client solicitation.
+        `
+      },
+      mar: {
+        recovery: `
+          <b>१. स्वतंत्र फॅसिलिटेटर स्वरूप:</b> आरबी कन्सल्टन्सी भारतीय करार कायदा १८७२ अंतर्गत स्वतंत्र फॅसिलिटेटर म्हणून कार्य करते (कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव).<br>
+          <b>२. फी संरचना:</b> नवीन/कॅशलेस ठरल्याप्रमाणे; फेरविचार/लोकपाल/रिकव्हरी बेसलाइन ₹३,०००–₹५,००० अधिक १०%–१२% यश फी (सक्सेस फी).<br>
+          <b>३. कायदेशीर जबाबदारी:</b> वैधानिक किंवा विमा कंपनीच्या मुदतीची हमी नाही. कागदपत्रांची सत्यता क्लायंट व जारी करणाऱ्या प्राधिकरणाची जबाबदारी आहे.
+        `,
+        b2b: `
+          <b>१. व्याप्ती:</b> FCU/ऑडिट फिल्ड पडताळणी पुराव्यांची अखंडता राखतात.<br>
+          <b>२. SLA TAT:</b> २४ ते ४८ तासांत अहवाल सादर. कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव.<br>
+          <b>३. व्यावसायिक अटी:</b> द्विपक्षीय अंतर्गत MoU दर आणि प्रवास भत्ता नियमांनुसार (₹७/किमी <१००किमी; AC sleeper >१००किमी).
+        `,
+        associate: `
+          <b>१. स्वतंत्र कंत्राटदार दर्जा:</b> प्रादेशिक असोसिएट केंद्रीय गुणवत्तेच्या मार्गदर्शक तत्त्वांवर स्वतंत्रपणे काम करतात.<br>
+          <b>२. अनिवार्य पडताळणी:</b> ऑनबोर्डिंगसाठी सत्यापित बायोडाटा, शैक्षणिक प्रमाणपत्रे आणि फार्मसी कौन्सिल/इन्वेस्टिगेशन पुरावे आवश्यक.<br>
+          <b>३. गोपनीयता:</b> रुग्णांचे वैद्यकीय रेकॉर्ड व हॉस्पिटल कागदपत्रांची गुप्तता राखणे बंधनकारक.
+        `,
+        referral: `
+          <b>१. कमिशन व्याप्ती:</b> संदर्भित केस यशस्वी सहकार्य व सेटलमेंटवर आकर्षक रेफरल कमिशन मिळवा.<br>
+          <b>२. नोंदणी:</b> रेफररचे नाव व नंबर प्रारंभिक नोंदणी फॉर्ममध्ये नमूद करणे अनिवार्य.<br>
+          <b>३. अनुपालन:</b> आरबीसीची नियामक स्थिती चुकीच्या पद्धतीने सादर करण्यास किंवा सक्तीच्या solicitation ला मनाई.
+        `
+      }
     };
 
     const dynamicFieldsHTML = {
-      recovery: `<div class="form-group-full"><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Insurance Carrier / TPA Name & Policy Type:</label><input class="field" id="dynField1" type="text" placeholder="e.g., Health Policy / Life / Commercial"></div>`,
-      b2b: `<div class="form-grid-2col"><div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Target Hospital Location:</label><input class="field" id="dynField1" type="text" placeholder="Hospital name & taluka"></div><div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Required TAT Ref:</label><input class="field" id="dynField2" type="text" placeholder="24-48h TAT reference"></div></div>`,
-      associate: `<div class="form-grid-2col"><div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Primary Taluka Base:</label><input class="field" id="dynField1" type="text" placeholder="e.g., Bhusawal / Amalner"></div><div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Resume Drive Link:</label><input class="field" id="dynField2" type="url" placeholder="Google Drive CV link"></div></div>`,
-      referral: `<div class="form-group-full"><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Preferred Payout Mode / UPI ID:</label><input class="field" id="dynField1" type="text" placeholder="UPI ID / Bank details"></div>`
+      en: {
+        recovery: `<div class="form-group-full"><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Insurance Carrier / TPA Name & Policy Type:</label><input class="field" id="dynField1" type="text" placeholder="e.g., Health Policy / Life / Commercial"></div>`,
+        b2b: `<div class="form-grid-2col"><div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Target Hospital Location:</label><input class="field" id="dynField1" type="text" placeholder="Hospital name & taluka"></div><div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Required TAT Ref:</label><input class="field" id="dynField2" type="text" placeholder="24-48h TAT reference"></div></div>`,
+        associate: `<div class="form-grid-2col"><div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Primary Taluka Base:</label><input class="field" id="dynField1" type="text" placeholder="e.g., Bhusawal / Amalner"></div><div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Resume Drive Link:</label><input class="field" id="dynField2" type="url" placeholder="Google Drive CV link"></div></div>`,
+        referral: `<div class="form-group-full"><label style="font-size: 13px; font-weight: 700; color: var(--navy);">Preferred Payout Mode / UPI ID:</label><input class="field" id="dynField1" type="text" placeholder="UPI ID / Bank details"></div>`
+      },
+      mar: {
+        recovery: `<div class="form-group-full"><label style="font-size: 13px; font-weight: 700; color: var(--navy);">विमा कंपनी / टीपीए नाव व पॉलिसी प्रकार:</label><input class="field" id="dynField1" type="text" placeholder="उदा. हेल्थ पॉलिसी / लाईफ / कमर्शियल"></div>`,
+        b2b: `<div class="form-grid-2col"><div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">हॉस्पिटल / provider ठिकाण (तालुका):</label><input class="field" id="dynField1" type="text" placeholder="हॉस्पिटल नाव व तालुका"></div><div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">आवश्यक TAT संदर्भ:</label><input class="field" id="dynField2" type="text" placeholder="२४-४८ तास TAT संदर्भ"></div></div>`,
+        associate: `<div class="form-grid-2col"><div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">प्राथमिक तालुका बेस:</label><input class="field" id="dynField1" type="text" placeholder="उदा. भुसावळ / अमळनेर"></div><div><label style="font-size: 13px; font-weight: 700; color: var(--navy);">बायोडाटा / प्रमाणपत्र ड्राइव्ह लिंक:</label><input class="field" id="dynField2" type="url" placeholder="गुगल ड्राईव्ह सीव्ही लिंक"></div></div>`,
+        referral: `<div class="form-group-full"><label style="font-size: 13px; font-weight: 700; color: var(--navy);">पेआउट पद्धत / UPI आयडी:</label><input class="field" id="dynField1" type="text" placeholder="UPI आयडी किंवा बँक तपशील"></div>`
+      }
     };
 
+    const categoryTitlesMap = {
+      en: { recovery: 'Recovery / Advocacy Client', b2b: 'B2B / FCU Investigation Client', associate: 'Regional Field Associate', referral: 'Referral Partner Program' },
+      mar: { recovery: 'रिकव्हरी / अ‍ॅडव्होकसी क्लायंट', b2b: 'बी२बी / FCU इन्व्हेस्टिगेशन क्लायंट', associate: 'प्रादेशिक फील्ड असोसिएट', referral: 'रेफरल पार्टनर प्रोग्राम' }
+    };
+
+    const sheetTitlesMap = {
+      en: { recovery: 'RECOVERY / ADVOCACY CLIENT INTAKE & ENGAGEMENT SHEET', b2b: 'B2B / FCU INVESTIGATION MANDATE SHEET', associate: 'REGIONAL FIELD ASSOCIATE ONBOARDING SHEET', referral: 'REFERRAL PARTNER ENROLLMENT FORM' },
+      mar: { recovery: 'रिकव्हरी / अ‍ॅडव्होकसी क्लायंट नोंदणी व करार पत्र', b2b: 'बी२बी / FCU इन्व्हेस्टिगेशन मँडेट पत्र', associate: 'प्रादेशिक फील्ड असोसिएट ऑनबोर्डिंग पत्र', referral: 'रेफरल पार्टनर नोंदणी फॉर्म' }
+    };
+
+    const categoryDropdownList = {
+      en: [
+        { value: 'recovery', text: '1. Recovery / Advocacy Client (Fresh/Rejection/Ombudsman/MSME)' },
+        { value: 'b2b', text: '2. B2B / FCU Investigation Client (Insurer / TPA Mandate)' },
+        { value: 'associate', text: '3. Regional Field Associate / Franchisee Application' },
+        { value: 'referral', text: '4. Referral Partner Program Registration' }
+      ],
+      mar: [
+        { value: 'recovery', text: '१. रिकव्हरी / अ‍ॅडव्होकसी क्लायंट (फ्रेश/रिजेक्टेड/लोकपाल/MSME)' },
+        { value: 'b2b', text: '२. बी२बी / FCU इन्व्हेस्टिगेशन क्लायंट (इन्शुरन्स / टीपीए मँडेट)' },
+        { value: 'associate', text: '३. प्रादेशिक फील्ड असोसिएट / फ्रँचायझी अर्ज' },
+        { value: 'referral', text: '४. रेफरल पार्टनर प्रोग्राम नोंदणी' }
+      ]
+    };
+
+    function getCurrentLang() {
+      return document.body.classList.contains('lang-mar') ? 'mar' : 'en';
+    }
+
     function switchFormType() {
-      const cat = document.getElementById('engagementCategory').value;
-      const titles = { recovery: 'Recovery / Advocacy Client', b2b: 'B2B / FCU Investigation Client', associate: 'Regional Field Associate', referral: 'Referral Partner Program' };
-      document.getElementById('tcCategoryTitle').innerText = titles[cat];
-      document.getElementById('categoryTermsText').innerHTML = termsData[cat];
-      document.getElementById('dynamicFieldsContainer').innerHTML = dynamicFieldsHTML[cat];
+      const cat = document.getElementById('engagementCategory').value || 'recovery';
+      const lang = getCurrentLang();
+      document.getElementById('tcCategoryTitle').innerText = categoryTitlesMap[lang][cat];
+      document.getElementById('categoryTermsText').innerHTML = termsData[lang][cat];
+      document.getElementById('dynamicFieldsContainer').innerHTML = dynamicFieldsHTML[lang][cat];
+    }
+
+    function updateCategoryDropdownLang(lang) {
+      const select = document.getElementById('engagementCategory');
+      if(!select) return;
+      const currentVal = select.value || 'recovery';
+      select.innerHTML = '';
+      categoryDropdownList[lang].forEach(item => {
+        const opt = document.createElement('option');
+        opt.value = item.value;
+        opt.innerText = item.text;
+        select.appendChild(opt);
+      });
+      select.value = currentVal;
+      switchFormType();
     }
 
     window.addEventListener('DOMContentLoaded', () => {
       if(document.getElementById('dynamicFormDate')) {
         document.getElementById('dynamicFormDate').innerText = new Date().toLocaleDateString('en-IN');
       }
-      switchFormType();
+      updateCategoryDropdownLang('en');
     });
 
     function generatePrintableForm() {
       if(!document.getElementById('acceptTermsCheck').checked) {
-        alert('Please check the agreement box for category-specific terms and conditions first.');
+        alert(getCurrentLang() === 'mar' ? 'कृपया श्रेणीनुसार नियम व अटींशी सहमती दर्शवणारा बॉक्स निवडा.' : 'Please check the agreement box for category-specific terms and conditions first.');
         return;
       }
       const cat = document.getElementById('engagementCategory').value;
-      const catTitles = { 
-        recovery: 'RECOVERY / ADVOCACY CLIENT INTAKE & ENGAGEMENT SHEET', 
-        b2b: 'B2B / FCU INVESTIGATION MANDATE SHEET', 
-        associate: 'REGIONAL FIELD ASSOCIATE ONBOARDING SHEET', 
-        referral: 'REFERRAL PARTNER ENROLLMENT FORM' 
-      };
+      const lang = getCurrentLang();
+      const catTitles = sheetTitlesMap[lang];
       
-      const fullName = document.getElementById('formFullName').value || '[Not Provided]';
-      const phone = document.getElementById('formPhone').value || '[Not Provided]';
-      const email = document.getElementById('formEmail').value || '[Not Provided]';
-      const location = document.getElementById('formLocation').value || '[Not Provided]';
-      const details = document.getElementById('formDetails').value || '[None]';
+      const fullName = document.getElementById('formFullName').value || (lang === 'mar' ? '[नोंद नाही]' : '[Not Provided]');
+      const phone = document.getElementById('formPhone').value || (lang === 'mar' ? '[नोंद नाही]' : '[Not Provided]');
+      const email = document.getElementById('formEmail').value || (lang === 'mar' ? '[नोंद नाही]' : '[Not Provided]');
+      const location = document.getElementById('formLocation').value || (lang === 'mar' ? '[नोंद नाही]' : '[Not Provided]');
+      const details = document.getElementById('formDetails').value || (lang === 'mar' ? '[नाही]' : '[None]');
       const f1 = document.getElementById('dynField1') ? document.getElementById('dynField1').value : '';
       const f2 = document.getElementById('dynField2') ? document.getElementById('dynField2').value : '';
 
@@ -871,11 +1026,11 @@
         <div style="border-bottom:2px solid #0b2f4a; padding-bottom:8px; margin-bottom:12px;">
           <div style="display:flex; justify-content:space-between; align-items:center;">
             <div>
-              <h2 style="color:#0b2f4a; margin:0; font-size:16px;">RB CONSULTANCY</h2>
+              <h2 style="color:#0b2f4a; margin:0; font-size:16px;">RB CONSULTANCY (आरबी कन्सल्टन्सी)</h2>
               <p style="margin:2px 0; font-size:10.5px; color:#556677;">Office: 201, Taimur Height, Mehrun, Jalgaon | Udyam: UDYAM-MH-14-0183662</p>
             </div>
             <div style="text-align:right; font-size:9.5pt; color:#334455;">
-              <b>Date:</b> ${new Date().toLocaleDateString('en-IN')}<br>
+              <b>Date / दिनांक:</b> ${new Date().toLocaleDateString('en-IN')}<br>
               <b>Ref:</b> RBC-${cat.toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}
             </div>
           </div>
@@ -885,7 +1040,7 @@
         </div>
 
         <div style="margin-bottom:10px;">
-          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">1. ENGAGEMENT PARTICULARS</h4>
+          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">1. ${lang==='mar' ? 'सहकार्य तपशील (PARTICULARS)' : 'ENGAGEMENT PARTICULARS'}</h4>
           <table style="width:100%; border-collapse:collapse; font-size:9pt;">
             <tr><td style="padding:3px 6px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Category</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">${cat.toUpperCase()}</td><td style="padding:3px 6px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Place</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">Jalgaon, MH</td></tr>
             <tr><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Name / Org</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">${fullName}</td><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Mobile</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">${phone}</td></tr>
@@ -896,35 +1051,38 @@
         </div>
 
         <div style="margin-bottom:10px;">
-          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">2. CASE SUMMARY / SCOPE OF WORK / BRIEF</h4>
+          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">2. ${lang==='mar' ? 'केस तपशील / व्याप्ती' : 'CASE SUMMARY / SCOPE OF WORK / BRIEF'}</h4>
           <div style="background:#fff; border:1px solid #d0dce6; padding:6px 10px; border-radius:4px; font-size:9pt;">${details}</div>
         </div>
 
         <div style="margin-bottom:10px;">
-          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">3. FIXED TERMS & CONDITIONS (${cat.toUpperCase()})</h4>
+          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">3. ${lang==='mar' ? 'श्रेणीनुसार नियम व अटी' : 'FIXED TERMS & CONDITIONS'} (${cat.toUpperCase()})</h4>
           <div style="font-size:8.5pt; line-height:1.4; color:#263746; background:#f8fafc; border:1px solid #d0dce6; border-radius:5px; padding:7px 10px;">
-            ${termsData[cat].replace(/<br>/g, '<br>')}
+            ${termsData[lang][cat].replace(/<br>/g, '<br>')}
           </div>
         </div>
 
         <div style="margin-bottom:12px;">
-          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">4. FIXED BINDING DISCLAIMER (RB CONSULTANCY)</h4>
+          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">4. ${lang==='mar' ? 'वैधानिक डिस्क्लेमर (भारतीय करार कायदा व IRDAI)' : 'FIXED BINDING STATUTORY DISCLAIMER'}</h4>
           <div style="font-size:8pt; color:#425466; line-height:1.35; background:#fff; border:1px solid #94a3b8; padding:7px 10px; border-radius:4px;">
-            <b>Facilitator Only:</b> RB Consultancy operates strictly as an independent facilitator/agent under the Indian Contract Act 1872 (Office: 201, Taimur Height, Mehrun, Jalgaon). No outcome, approval, or completion timeline guarantees are expressed or implied. Legal, financial, and document authenticity liabilities rest solely with the client and document-issuing authorities. Field audit/verification findings reflect objective physical conditions observed at the timestamp of inspection.
+            ${lang==='mar' ? 
+              '<b>स्वतंत्र फॅसिलिटेटर (भारतीय करार कायदा १८७२):</b> आरबी कन्सल्टन्सी स्वतंत्र फॅसिलिटेटर म्हणून कार्य करते (कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव). क्लेम मंजुरी, निकाल किंवा कालावधीची कोणतीही हमी नाही. कागदपत्रांची कायदेशीर व सत्यता जबाबदारी क्लायंटची राहील. IRDAI धोरणांशी सुसंगत मार्गदर्शन.' : 
+              '<b>Facilitator Only (Indian Contract Act 1872 & IRDAI Framework):</b> RB Consultancy operates strictly as an independent professional facilitator/agent under the Indian Contract Act 1872 (Office: 201, Taimur Height, Mehrun, Jalgaon; Udyam: UDYAM-MH-14-0183662). No outcome, approval, or completion timeline guarantees are expressed or implied. Legal, financial, statutory compliance monitoring, and document authenticity liabilities rest solely with the client and issuing authorities. Field inspection/audit reports reflect objective physical conditions at timestamp of inspection.'
+            }
           </div>
         </div>
 
         <div style="display:grid; grid-template-columns:1fr 1fr; margin-top:16px; gap:30px; font-size:9pt;">
           <div style="border-top:1px solid #334455; padding-top:4px;">
-            <b>Client / Associate / Partner Signature:</b><br><br>
+            <b>${lang==='mar' ? 'क्लायंट / असोसिएट सही:' : 'Client / Associate / Partner Signature:'}</b><br><br>
             Signature: __________________________<br>
             Name: ${fullName}<br>
             Date: ____ / ____ / 2026
           </div>
           <div style="border-top:1px solid #334455; padding-top:4px;">
-            <b>For RB Consultancy (Jalgaon Office):</b><br><br>
+            <b>${lang==='mar' ? 'आरबी कन्सल्टन्सी (जळगाव कार्यालय):' : 'For RB Consultancy (Jalgaon Office):'}</b><br><br>
             Stamp & Signature: __________________<br>
-            Altaf Rangrej (Principal Consultant)<br>
+            Altaf Rangrej (Principal Consultant / संस्थापक)<br>
             Office: 201, Taimur Height, Jalgaon
           </div>
         </div>
@@ -945,19 +1103,20 @@
 
     function submitFormWhatsApp() {
       const cat = document.getElementById('engagementCategory').value;
+      const lang = getCurrentLang();
       const fullName = document.getElementById('formFullName').value.trim();
       const phone = document.getElementById('formPhone').value.trim();
       const email = document.getElementById('formEmail').value.trim();
       const location = document.getElementById('formLocation').value.trim();
       const details = document.getElementById('formDetails').value.trim();
 
-      let text = `Hi RB Consultancy,\n\nCategory Intake: ${cat.toUpperCase()}\n` +
+      let text = `Hi RB Consultancy, Inquiry Category: ${cat.toUpperCase()}\n` +
                `Name/Org: ${fullName || '[Not Provided]'}\n` +
                `Phone: ${phone || '[Not Provided]'}\n` +
                `Email: ${email || '[Not Provided]'}\n` +
                `Location: ${location || '[Not Provided]'}\n\n` +
                `Details:\n${details || 'None'}\n\n` +
-               `[Terms accepted via Digital Portal on ${new Date().toLocaleDateString('en-IN')}]`;
+               `[Language mode: ${lang.toUpperCase()}]`;
 
       const url = "https://wa.me/919325564770?text=" + encodeURIComponent(text);
       window.open(url, '_blank');
@@ -988,67 +1147,32 @@
         body.classList.add('lang-mar');
         if(btn) btn.innerText = "Switch to English";
         localStorage.setItem('rb_lang', 'mar');
-        updateDropdown('mar');
+        updateCategoryDropdownLang('mar');
       } else {
         body.classList.remove('lang-mar');
         body.classList.add('lang-en');
         if(btn) btn.innerText = "मराठी मध्ये पहा / View EN";
         localStorage.setItem('rb_lang', 'eng');
-        updateDropdown('en');
+        updateCategoryDropdownLang('en');
       }
     }
 
-    const dropdownOptions = {
-      en: [
-        { value: "General Consultancy Inquiry", text: "General Consultancy Inquiry" },
-        { value: "TPA/Insurer FCU Investigation Mandate", text: "TPA/Insurer FCU Investigation Mandate" },
-        { value: "Internal B2B Audit MoU Request", text: "Internal B2B Audit MoU Request (On-Demand Dispatch)" },
-        { value: "Regional Field Associate Application (Resume Attached)", text: "Regional Field Associate / Franchisee Application (Resume/Certificates)" },
-        { value: "Refer & Earn Partner Registration", text: "Refer & Earn Partner Registration" },
-        { value: "1. Fresh Claim Submissions (₹3,000)", text: "1. Fresh Claim Submissions (₹3,000)" },
-        { value: "2. Rejected Claims Recovery (₹3,000 + 10%)", text: "2. Rejected Claims Recovery (₹3,000 + 10% Success Fee)" },
-        { value: "3. Fraud Control Unit (FCU) Ground Audit", text: "3. Fraud Control Unit (FCU) Ground Audit (MoU Rate)" },
-        { value: "4. Queries Management", text: "4. Queries Management" },
-        { value: "5. Reconsideration Or Grievance", text: "5. Reconsideration Or Grievance" },
-        { value: "6. IRDAI & Ombudsman Appeals", text: "6. IRDAI & Ombudsman Appeals" },
-        { value: "7. TPA/IC Issues Resolutions", text: "7. TPA/IC Issues Resolutions" },
-        { value: "8. Deadlock Recoveries & Claims Audits", text: "8. Deadlock Recoveries & Claims Audits" },
-        { value: "9. End-To-End Cashless Management", text: "9. End-To-End Cashless Management (₹2,000)" },
-        { value: "10. MSME Samadhan Filings", text: "10. MSME Samadhan Filings" }
-      ],
-      mar: [
-        { value: "सामान्य सल्लामसलत चौकशी", text: "सामान्य सल्लामसलत चौकशी" },
-        { value: "टीपीए/इन्शुरन्स FCU इन्व्हेस्टिगेशन मँडेट", text: "टीपीए/इन्शुरन्स FCU इन्व्हेस्टिगेशन मँडेट" },
-        { value: "अंतर्गत B2B ऑडिट MoU मागणी", text: "अंतर्गत B2B ऑडिट MoU मागणी (मागणीनुसार उपलब्ध)" },
-        { value: "प्रादेशिक फील्ड असोसिएट / फ्रँचायझी अर्ज (बायोडाटा सह)", text: "प्रादेशिक फील्ड असोसिएट / फ्रँचायझी अर्ज (बायोडाटा सह)" },
-        { value: "रेफरल पार्टनर म्हणून नोंदणी", text: "रेफरल पार्टनर म्हणून नोंदणी" },
-        { value: "१. नवीन क्लेम दाखल करणे (₹३,०००)", text: "१. नवीन क्लेम दाखल करणे (₹३,०००)" },
-        { value: "२. नाकारलेल्या क्लेमची वसुली (₹३,००० + १०% यश फी)", text: "२. नाकारलेल्या क्लेमची वसुली (₹३,००० + १०% यश फी)" },
-        { value: "३. फ्रॉड कंट्रोल युनिट (FCU) ऑन-ग्राउंड ऑडिट", text: "३. फ्रॉड कंट्रोल युनिट (FCU) ऑन-ग्राउंड ऑडिट (MoU दर)" },
-        { value: "४. शंका आणि प्रश्न निवारण", text: "४. शंका आणि प्रश्न निवारण" },
-        { value: "५. फेरविचार किंवा तक्रार", text: "५. फेरविचार किंवा तक्रार" },
-        { value: "६. लोकपाल (Ombudsman) अपील", text: "६. लोकपाल (Ombudsman) अपील" },
-        { value: "७. टीपीए आणि कंपनी वाद निवारण", text: "७. टीपीए आणि कंपनी वाद निवारण" },
-        { value: "८. रखडलेले क्लेम आणि तांत्रिक ऑडिट", text: "८. रखडलेले क्लेम आणि तांत्रिक ऑडिट" },
-        { value: "९. कॅशलेस व्यवस्थापन (₹२,०००)", text: "९. कॅशलेस व्यवस्थापन (₹२,०००)" },
-        { value: "१०. एमएसएमई समाधान फायलिंग", text: "१०. एमएसएमई समाधान फायलिंग" }
-      ]
-    };
-
-    function updateDropdown(lang) {
-      const select = document.getElementById('intakeService');
-      const currentValue = select ? select.value : '';
-      if(!select) return;
-      select.innerHTML = '';
-      const opts = dropdownOptions[lang];
-      opts.forEach(opt => {
-        const option = document.createElement('option');
-        option.value = opt.value;
-        option.innerText = opt.text;
-        select.appendChild(option);
-      });
-      select.value = currentValue;
-    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('rb_lang');
+      const body = document.body;
+      const btn = document.getElementById('langToggleBtn');
+      if (savedLang === 'mar') {
+        body.classList.remove('lang-en');
+        body.classList.add('lang-mar');
+        if(btn) btn.innerText = "Switch to English";
+        updateCategoryDropdownLang('mar');
+      } else {
+        body.classList.remove('lang-mar');
+        body.classList.add('lang-en');
+        if(btn) btn.innerText = "मराठी मध्ये पहा / View EN";
+        updateCategoryDropdownLang('en');
+      }
+    });
   </script>
 
   <!-- INTERACTIVE MOU BUILDER MODAL OVERLAY -->
