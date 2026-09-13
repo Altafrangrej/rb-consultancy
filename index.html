@@ -712,7 +712,7 @@
         <div class="section-head left">
           <div class="eyebrow"><span>Corporate Governance & Legal</span></div>
           <h2><span>Disclaimer & Terms and Conditions</span></h2>
-          <p>Complete binding plain-text corporate governance, liability limitations, referral partner terms, associate verification mandates, and engagement terms for RB Consultancy (201, Taimur Height, Mehrun, Jalgaon).</p>
+          <p>Binding corporate governance, liability limitations, referral partner terms, associate verification mandates, and engagement terms for RB Consultancy (201, Taimur Height, Mehrun, Jalgaon).</p>
         </div>
 
         <div style="background:#fff; border:1px solid var(--line); border-radius:18px; padding:40px; box-shadow:var(--shadow);">
@@ -852,20 +852,6 @@ Neither party shall be liable for service delays or execution failures resulting
       switchFormType();
     });
 
-    window.togglePrintableTerms = function() {
-      const body = document.getElementById('printTermsBody');
-      const arrow = document.getElementById('printTermsArrow');
-      if(body && arrow) {
-        if(body.style.display === 'none') {
-          body.style.display = 'block';
-          arrow.innerText = '▼';
-        } else {
-          body.style.display = 'none';
-          arrow.innerText = '▶';
-        }
-      }
-    };
-
     function generatePrintableForm() {
       if(!document.getElementById('acceptTermsCheck').checked) {
         alert('Please check the agreement box for category-specific terms and conditions first.');
@@ -888,7 +874,7 @@ Neither party shall be liable for service delays or execution failures resulting
       const f2 = document.getElementById('dynField2') ? document.getElementById('dynField2').value : '';
 
       const htmlContent = `
-        <div style="border-bottom:2px solid #0b2f4a; padding-bottom:10px; margin-bottom:14px;">
+        <div style="border-bottom:2px solid #0b2f4a; padding-bottom:8px; margin-bottom:12px;">
           <div style="display:flex; justify-content:space-between; align-items:center;">
             <div>
               <h2 style="color:#0b2f4a; margin:0; font-size:16px;">RB CONSULTANCY</h2>
@@ -899,45 +885,42 @@ Neither party shall be liable for service delays or execution failures resulting
               <b>Ref:</b> RBC-${cat.toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}
             </div>
           </div>
-          <div style="background:#0b2f4a; color:#fff; text-align:center; padding:6px; margin-top:10px; border-radius:4px; font-weight:700; font-size:12.5pt;">
+          <div style="background:#0b2f4a; color:#fff; text-align:center; padding:6px; margin-top:8px; border-radius:4px; font-weight:700; font-size:12pt;">
             ${catTitles[cat]}
           </div>
         </div>
 
         <div style="margin-bottom:10px;">
-          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 5px 0; border-bottom:1px solid #d0dce6; padding-bottom:3px;">1. ENGAGEMENT PARTICULARS</h4>
-          <table style="width:100%; border-collapse:collapse; font-size:9.5pt;">
-            <tr><td style="padding:3.5px 6px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Category</b></td><td style="padding:3.5px 6px; border:1px solid #d0dce6;">${cat.toUpperCase()}</td><td style="padding:3.5px 6px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Place</b></td><td style="padding:3.5px 6px; border:1px solid #d0dce6;">Jalgaon, MH</td></tr>
-            <tr><td style="padding:3.5px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Name / Org</b></td><td style="padding:3.5px 6px; border:1px solid #d0dce6;">${fullName}</td><td style="padding:3.5px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Mobile</b></td><td style="padding:3.5px 6px; border:1px solid #d0dce6;">${phone}</td></tr>
-            <tr><td style="padding:3.5px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Email</b></td><td style="padding:3.5px 6px; border:1px solid #d0dce6;">${email}</td><td style="padding:3.5px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Location</b></td><td style="padding:3.5px 6px; border:1px solid #d0dce6;">${location}</td></tr>
-            ${f1 ? `<tr><td style="padding:3.5px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 1</b></td><td colspan="3" style="padding:3.5px 6px; border:1px solid #d0dce6;">${f1}</td></tr>` : ''}
-            ${f2 ? `<tr><td style="padding:3.5px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 2</b></td><td colspan="3" style="padding:3.5px 6px; border:1px solid #d0dce6;">${f2}</td></tr>` : ''}
+          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">1. ENGAGEMENT PARTICULARS</h4>
+          <table style="width:100%; border-collapse:collapse; font-size:9pt;">
+            <tr><td style="padding:3px 6px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Category</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">${cat.toUpperCase()}</td><td style="padding:3px 6px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Place</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">Jalgaon, MH</td></tr>
+            <tr><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Name / Org</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">${fullName}</td><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Mobile</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">${phone}</td></tr>
+            <tr><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Email</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">${email}</td><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Location</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">${location}</td></tr>
+            ${f1 ? `<tr><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 1</b></td><td colspan="3" style="padding:3px 6px; border:1px solid #d0dce6;">${f1}</td></tr>` : ''}
+            ${f2 ? `<tr><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 2</b></td><td colspan="3" style="padding:3px 6px; border:1px solid #d0dce6;">${f2}</td></tr>` : ''}
           </table>
         </div>
 
         <div style="margin-bottom:10px;">
-          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 5px 0; border-bottom:1px solid #d0dce6; padding-bottom:3px;">2. CASE SUMMARY / SCOPE OF WORK / BRIEF</h4>
-          <div style="background:#fff; border:1px solid #d0dce6; padding:7px 10px; border-radius:4px; font-size:9.5pt;">${details}</div>
+          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">2. CASE SUMMARY / SCOPE OF WORK / BRIEF</h4>
+          <div style="background:#fff; border:1px solid #d0dce6; padding:6px 10px; border-radius:4px; font-size:9pt;">${details}</div>
         </div>
 
         <div style="margin-bottom:10px;">
-          <div onclick="window.togglePrintableTerms()" style="background:#f8fafc; border:1px solid #d0dce6; border-radius:5px; padding:6px 10px; cursor:pointer; display:flex; justify-content:space-between; align-items:center;">
-            <span style="color:#0b2f4a; font-weight:700; font-size:10pt;">3. TERMS & CONDITIONS (${cat.toUpperCase()}) [Click to expand/collapse]</span>
-            <span id="printTermsArrow" style="font-weight:bold; color:#0b2f4a;">▼</span>
-          </div>
-          <div id="printTermsBody" style="font-size:8.5pt; margin-top:6px; line-height:1.4; color:#263746; background:#f8fafc; border:1px solid #d0dce6; border-radius:5px; padding:8px 10px; display:block;">
+          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">3. FIXED TERMS & CONDITIONS (${cat.toUpperCase()})</h4>
+          <div style="font-size:8.5pt; line-height:1.4; color:#263746; background:#f8fafc; border:1px solid #d0dce6; border-radius:5px; padding:7px 10px;">
             ${termsData[cat].replace(/<br>/g, '<br>')}
           </div>
         </div>
 
         <div style="margin-bottom:12px;">
           <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">4. FIXED BINDING DISCLAIMER (RB CONSULTANCY)</h4>
-          <div style="font-size:8pt; color:#425466; line-height:1.35; background:#fff; border:1px dashed #94a3b8; padding:8px; border-radius:4px;">
-            <b>Facilitator Only:</b> RB Consultancy operates strictly as an independent facilitator/agent under the Indian Contract Act 1872 (Office: 201, Taimur Height, Mehrun, Jalgaon). No outcome, approval, or completion timeline guarantees are expressed or implied. Legal, financial, and document authenticity liabilities rest solely with the client and document-issuing authorities. FCU/audit findings reflect objective physical conditions observed at the timestamp of inspection.
+          <div style="font-size:8pt; color:#425466; line-height:1.35; background:#fff; border:1px solid #94a3b8; padding:7px 10px; border-radius:4px;">
+            <b>Facilitator Only:</b> RB Consultancy operates strictly as an independent facilitator/agent under the Indian Contract Act 1872 (Office: 201, Taimur Height, Mehrun, Jalgaon). No outcome, approval, or completion timeline guarantees are expressed or implied. Legal, financial, and document authenticity liabilities rest solely with the client and document-issuing authorities. Field audit/verification findings reflect objective physical conditions observed at the timestamp of inspection.
           </div>
         </div>
 
-        <div style="display:grid; grid-template-columns:1fr 1fr; margin-top:20px; gap:30px; font-size:9.5pt;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; margin-top:16px; gap:30px; font-size:9pt;">
           <div style="border-top:1px solid #334455; padding-top:4px;">
             <b>Client / Associate / Partner Signature:</b><br><br>
             Signature: __________________________<br>
@@ -952,7 +935,7 @@ Neither party shall be liable for service delays or execution failures resulting
           </div>
         </div>
 
-        <div style="margin-top:15px; text-align:center;" class="no-print">
+        <div style="margin-top:14px; text-align:center;" class="no-print">
           <button class="btn btn-dark" onclick="window.print()">Print / Save as PDF (Strict A4 Portrait)</button>
           <button class="btn" style="background:#e2e8f0; color:#334455; margin-left:10px;" onclick="closePrintableModal()">Close Window</button>
         </div>
