@@ -27,7 +27,7 @@
       --line: #D0DCE6;
       --shadow: 0 14px 40px rgba(11,47,74,0.09);
       --radius: 14px;
-      --max: 1320px; /* Wider container for cleaner 2-inch edge spacing feel */
+      --max: 1320px; /* Comfortably proportioned outer grid width */
     }
 
     * { box-sizing: border-box; }
@@ -236,7 +236,7 @@
     .service-card h3 { font-size: 17px; margin-bottom: 8px; }
     .service-fee-tag { font-size: 11.5px; font-weight: 800; color: var(--navy); background: var(--accent-blue-light); padding: 5px 9px; border-radius: 6px; margin-bottom: 12px; display: inline-block; }
 
-    /* Corrected Ribbon Badge Partner Cards (fixing diagonal clipping text) */
+    /* Corrected Ribbon Badge Partner Cards */
     .partner-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
     .highlight-partner-card {
       background: linear-gradient(135deg, #F0F6FF 0%, #D6E8FF 100%);
@@ -297,7 +297,7 @@
     .download-card h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
     .download-card p { font-size: 13px; color: var(--muted); margin-bottom: 15px; }
 
-    /* Fluid Page-Width Unified Intake & Registration Form Card (~2 inch edge spacing) */
+    /* Fluid Page-Width Unified Intake & Registration Form Card (~2 inch edge spacing visual feel) */
     .intake-form-box {
       background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow); margin: auto;
       border-top: 5px solid var(--navy);
@@ -307,8 +307,11 @@
     .form-group-full textarea.field { min-height: 140px; width: 100%; resize: vertical; }
     .field { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 14px; outline: 0; background: #fff; margin-top: 6px; font-size: 14px; }
 
-    /* FAQ Accordion */
-    .faq-container { display: grid; gap: 14px; }
+    /* FAQ 2-Section Structure */
+    .faq-dual-container { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1200px; margin: auto; }
+    .faq-section-group { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
+    .faq-section-group h3 { font-size: 19px; color: var(--navy); margin-bottom: 16px; border-bottom: 2px solid var(--accent-blue); padding-bottom: 8px; }
+    .faq-sub-group { display: grid; gap: 12px; }
 
     /* Highlighted Disclaimer Box */
     .disclaimer-box {
@@ -343,7 +346,7 @@
 
     @media(max-width: 900px) {
       .wrap { width: min(calc(100% - 32px), var(--max)); }
-      .services-grid, .workflow-grid, .b2b-feature-grid, .info-grid, .success-grid, .checklist-grid, .pricing-grid, .download-grid, .hero-grid, .footer-grid, .partner-grid { grid-template-columns: 1fr; }
+      .services-grid, .workflow-grid, .b2b-feature-grid, .info-grid, .success-grid, .checklist-grid, .pricing-grid, .download-grid, .hero-grid, .footer-grid, .partner-grid, .faq-dual-container { grid-template-columns: 1fr; }
       .nav-links { display: none; }
     }
   </style>
@@ -399,7 +402,7 @@
             <span data-lang="mar">इन्शुरन्स क्लेम फॅसिलिटेशन, मेडिकल ऑडिट व फिल्ड इन्व्हेस्टिगेशन सेवा.</span>
           </h1>
           <p class="hero-lead">
-            <span data-lang="eng">Supporting policyholders with online claim recovery and delivering rapid 24–48hr ground field verification, hospital/pharmacy bill forensic checks, and FCU services for Insurance Companies & TPAs across North Maharashtra.</span>
+            <span data-lang="eng">Supporting policyholders with online claim recovery and delivering rapid 24–48hr ground field verification, hospital/pharmacy bill forensic checks, and Fraud Containment Unit (FCU) verification services for Insurance Companies & TPAs across North Maharashtra.</span>
             <span data-lang="mar">पॉलिसीधारकांसाठी ऑनलाइन क्लेम रिकव्हरी आणि उत्तर महाराष्ट्रात कॉर्पोरेट/टीपीएसाठी २४-४८ तासांत फिल्ड इन्व्हेस्टिगेशन व बोगस भरती/बिल पडताळणी.</span>
           </p>
 
@@ -421,7 +424,7 @@
             <span data-lang="mar">मुख्य सल्लागार डेस्क</span>
           </h2>
           <p>
-            <span data-lang="eng">Headed with 15+ years experience in healthcare & pharmacy admin, managing lean scalable FCU/audit operations and policyholder advocacy.</span>
+            <span data-lang="eng">Headed with 15+ years experience in healthcare & pharmacy admin, managing lean scalable Fraud Containment Unit/audit operations and policyholder advocacy.</span>
             <span data-lang="mar">१५+ वर्षे आरोग्य व फार्मसी प्रशासनाचा अनुभव, कॉर्पोरेट ऑडिट व पॉलिसीधारक रिकव्हरी विशेषज्ञ.</span>
           </p>
         </div>
@@ -442,7 +445,7 @@
           </h2>
           <p>
             <span data-lang="eng">Dedicated local ground execution and claim verification partner for Private Health & General Insurance Companies and Third-Party Administrators (TPAs) handling claims in North Maharashtra.</span>
-            <span data-lang="mar">उत्तर महाराष्ट्रात क्लेम पडताळणी व फ्रॉड कंट्रोल (FCU) साठी खाजगी इन्शुरन्स कंपन्या व टीपीएसाठी ऑन-ग्राउंड तपास पार्टनर.</span>
+            <span data-lang="mar">उत्तर महाराष्ट्रात क्लेम पडताळणी व फ्रॉड कंट्रोल (Fraud Control Unit) साठी खाजगी इन्शुरन्स कंपन्या व टीपीएसाठी ऑन-ग्राउंड तपास पार्टनर.</span>
           </p>
         </div>
 
@@ -814,7 +817,7 @@
       </div>
     </section>
 
-    <!-- FLUID PAGE-WIDTH DIGITAL INTAKE PORTAL (approx 2-inch edge spacing visual feel) -->
+    <!-- FLUID PAGE-WIDTH DIGITAL INTAKE PORTAL (~2 inch edge spacing visual feel) -->
     <section class="section section-light" id="portal">
       <div class="wrap">
         <div class="section-head center">
@@ -1122,7 +1125,7 @@
       </div>
     </section>
 
-    <!-- FAQ SECTION WITH ACCORDIONS -->
+    <!-- FAQ SECTION: 2 DEDICATED SECTIONS WITH DROPDOWN ACCORDIONS -->
     <section class="section section-light" id="faq">
       <div class="wrap">
         <div class="section-head center">
@@ -1135,61 +1138,69 @@
             <span data-lang="mar">वारंवार विचारले जाणारे प्रश्न</span>
           </h2>
           <p>
-            <span data-lang="eng">Click any question below to read detailed answers.</span>
-            <span data-lang="mar">प्रश्न वाचण्यासाठी त्यावर क्लिक करा.</span>
+            <span data-lang="eng">Browse interactive dropdown answers organized by claim recovery/facilitation and field verification services.</span>
+            <span data-lang="mar">क्लेम रिकव्हरी व फिल्ड पडताळणीनुसार ड्युल-सेक्शन FAQ.</span>
           </p>
         </div>
 
-        <div class="faq-container">
-          <details class="site-accordion faq-item">
-            <summary style="font-size:16px; font-weight:700; color:var(--navy);">What is the role of RB Consultancy in my insurance claim?</summary>
-            <div class="accordion-body">RB Consultancy acts as an independent professional facilitator and authorized agent. We organize your documents, draft notices, and manage communications with insurance companies, TPAs, and statutory bodies on your behalf.</div>
-          </details>
+        <div class="faq-dual-container">
+          <!-- SECTION 1: CLAIM RECOVERY & FACILITATION -->
+          <div class="faq-section-group">
+            <h3>1. Claim Recovery & Facilitation</h3>
+            <div class="faq-sub-group">
+              <details class="site-accordion">
+                <summary>What is the role of RB Consultancy in my insurance claim?</summary>
+                <div class="accordion-body">RB Consultancy acts as an independent professional facilitator and authorized agent. We organize your documents, draft notices, and manage communications with insurance companies, TPAs, and statutory bodies on your behalf.</div>
+              </details>
+              <details class="site-accordion">
+                <summary>Are you an insurance company or a TPA?</summary>
+                <div class="accordion-body">No. We are an independent consultancy firm led by Founder Altaf Rangrej. We are not an insurance carrier or Third-Party Administrator; we represent you (the policyholder) independently.</div>
+              </details>
+              <details class="site-accordion">
+                <summary>What is a "First Gate Audit" and is it really free?</summary>
+                <div class="accordion-body">The First Gate Audit is our initial review of your claim files, rejection letters, and policy papers. Yes, it is <b>100% complimentary free</b> for all prospective clients.</div>
+              </details>
+              <details class="site-accordion">
+                <summary>How do your success fees and service charges work?</summary>
+                <div class="accordion-body">We charge transparent initial fees (such as ₹3,000 for fresh claims or rejections) plus nominal success fees (10%) upon successful claim recovery, as outlined in our transparent fee structure.</div>
+              </details>
+              <details class="site-accordion">
+                <summary>Do I need to travel to your office in Jalgaon to get my claim processed?</summary>
+                <div class="accordion-body">Not at all! We operate entirely online and remotely. You can submit all documents, forms, and queries digitally via WhatsApp or email from anywhere in Maharashtra or India.</div>
+              </details>
+              <details class="site-accordion">
+                <summary>How long does a typical claim recovery or reconsideration process take?</summary>
+                <div class="accordion-body">Timelines depend entirely on the respective insurance company, TPA, or statutory authority (such as the Insurance Ombudsman). As facilitators, we push files aggressively but do not guarantee strict completion deadlines.</div>
+              </details>
+            </div>
+          </div>
 
-          <details class="site-accordion faq-item">
-            <summary style="font-size:16px; font-weight:700; color:var(--navy);">Are you an insurance company or a TPA?</summary>
-            <div class="accordion-body">No. We are an independent consultancy firm led by Founder Altaf Rangrej. We are not an insurance carrier or Third-Party Administrator; we represent you (the policyholder) independently.</div>
-          </details>
-
-          <details class="site-accordion faq-item">
-            <summary style="font-size:16px; font-weight:700; color:var(--navy);">What is a "First Gate Audit" and is it really free?</summary>
-            <div class="accordion-body">The First Gate Audit is our initial review of your claim files, rejection letters, and policy papers. Yes, it is <b>100% complimentary free</b> for all prospective clients.</div>
-          </details>
-
-          <details class="site-accordion faq-item">
-            <summary style="font-size:16px; font-weight:700; color:var(--navy);">How do your success fees and service charges work?</summary>
-            <div class="accordion-body">We charge transparent initial fees (such as ₹3,000 for fresh claims or rejections) plus nominal success fees (10%) upon successful claim recovery, as outlined in our transparent fee structure.</div>
-          </details>
-
-          <details class="site-accordion faq-item">
-            <summary style="font-size:16px; font-weight:700; color:var(--navy);">Do I need to travel to your office in Jalgaon to get my claim processed?</summary>
-            <div class="accordion-body">Not at all! We operate entirely online and remotely. You can submit all documents, forms, and queries digitally via WhatsApp or email from anywhere in Maharashtra or India.</div>
-          </details>
-
-          <details class="site-accordion faq-item">
-            <summary style="font-size:16px; font-weight:700; color:var(--navy);">How long does a typical claim recovery or reconsideration process take?</summary>
-            <div class="accordion-body">Timelines depend entirely on the respective insurance company, TPA, or statutory authority (such as the Insurance Ombudsman). As facilitators, we push files aggressively but do not guarantee strict completion deadlines.</div>
-          </details>
-
-          <details class="site-accordion faq-item">
-            <summary style="font-size:16px; font-weight:700; color:var(--navy);">What documents do I need to provide to start a case?</summary>
-            <div class="accordion-body">Depending on your case type, you generally need your policy document, hospital discharge summary, final bills, rejection letters, and KYC details. Check our document checklist section for exact details.</div>
-          </details>
-
-          <details class="site-accordion faq-item">
-            <summary style="font-size:16px; font-weight:700; color:var(--navy);">Can you help with health, life, and corporate/commercial claims?</summary>
-            <div class="accordion-body">Yes. Our specialized services cover health claims, life insurance disputes, cashless authorizations, rejected claim recoveries, and MSME commercial payment disputes.</div>
-          </details>
-
-          <details class="site-accordion faq-item">
-            <summary style="font-size:16px; font-weight:700; color:var(--navy);">What is an MSME Samadhan filing and who is eligible?</summary>
-            <div class="accordion-body">MSME Samadhan is a statutory recovery process under the MSMED Act 2006 for registered micro and small enterprises facing delayed payments from buyers or corporate clients.</div>
-          </details>
-
-          <details class="site-accordion faq-item">
-            <summary style="font-size:16px; font-weight:700; color:var(--navy);">How do I initiate my case inquiry with RB Consultancy?</summary>
-            <div class="accordion-body">You can simply fill out our online General Inquiry & Registration Portal on this website or click the WhatsApp chat button to connect instantly with our desk.</div>
-          </details>
+          <!-- SECTION 2: FIELD VERIFICATION SERVICES & VERIFICATION ASSOCIATES -->
+          <div class="faq-section-group">
+            <h3>2. Field Verification Services & Verification Associates</h3>
+            <div class="faq-sub-group">
+              <details class="site-accordion">
+                <summary>What turnaround time (TAT) do you offer for field verifications?</summary>
+                <div class="accordion-body">Standard ground investigations and bed-bound hospital validity checks are delivered within 24 to 48 hours across North Maharashtra centers.</div>
+              </details>
+              <details class="site-accordion">
+                <summary>How do regional verification associates get assigned and dispatched?</summary>
+                <div class="accordion-body">Associates are geo-mapped across 16 talukas and dispatched via centralized briefing under Principal Consultant quality control.</div>
+              </details>
+              <details class="site-accordion">
+                <summary>What talukas and districts are covered by your field associate network?</summary>
+                <div class="accordion-body">We cover Jalgaon, Bhusawal, Amalner, Chopda, Pachora, Chalisgaon, Dhule, Jamner, Raver, Yawal, Bhadgaon, Dharangaon, Muktainagar, Savda, Faizpur, and Bodwad.</div>
+              </details>
+              <details class="site-accordion">
+                <summary>Can TPA audit teams integrate directly with your Fraud Containment Unit desk?</summary>
+                <div class="accordion-body">Yes. We provide designated liaison emails, CC compliance workflows, and standardized digital report formats compatible with insurer audit portals.</div>
+              </details>
+              <details class="site-accordion">
+                <summary>How can a local investigator or pharmacist join as a verification associate?</summary>
+                <div class="accordion-body">Apply via our Regional Associate onboarding inquiry form on this site with your credentials and active regional operational base.</div>
+              </details>
+            </div>
+          </div>
         </div>
       </div>
     </section>
