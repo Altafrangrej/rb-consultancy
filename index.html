@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RB Consultancy | Claim Facilitation & Dispute Resolution</title>
-  <meta name="description" content="Independent insurance claim facilitation, rejected claims recovery, IRDAI appeals, and MSME resolution led by Altaf Rangrej in Jalgaon, Maharashtra.">
+  <title>RB Consultancy | Claim Facilitation, Investigation & Dispute Resolution</title>
+  <meta name="description" content="Independent insurance claim facilitation, rejected claims recovery, IRDAI appeals, MSME resolution, and regional B2B investigation/audit empannelment led by Altaf Rangrej in Jalgaon, Maharashtra.">
   <meta name="theme-color" content="#0B2F4A">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,7 +69,7 @@
     p { margin: 0; color: var(--muted); }
 
     /* Header & Vector-Style Logo Component */
-    .header {
+    header {
       position: sticky; top: 0; z-index: 1000;
       background: rgba(255,255,255,0.96);
       backdrop-filter: blur(12px);
@@ -111,8 +111,8 @@
     }
 
     /* Streamlined Minimalist Professional Nav Links */
-    .nav-links { display: flex; align-items: center; gap: 18px; }
-    .nav-links a { font-size: 13px; font-weight: 700; color: #425466; transition: 0.2s; }
+    .nav-links { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .nav-links a { font-size: 12.5px; font-weight: 700; color: #425466; transition: 0.2s; }
     .nav-links a:hover { color: var(--accent-blue); }
 
     /* Premium Blue Language Toggle Switch Button */
@@ -179,6 +179,30 @@
     .section-light { background: var(--light); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     .section-head { max-width: 750px; margin-bottom: 40px; }
     .section-head p { margin-top: 12px; font-size: 15px; }
+
+    /* Dual Track Containers for B2B Investigation & Franchisee Expansion */
+    .track-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 30px; }
+    .track-section-card {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 30px;
+      box-shadow: var(--shadow); border-top: 5px solid var(--accent-blue); display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .track-section-card h3 { font-size: 20px; margin-bottom: 10px; color: var(--navy); }
+    .track-sub { font-size: 13px; font-weight: 800; color: var(--accent-blue); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* Clean Accordions/Dropdowns (<details>) */
+    details.site-accordion {
+      background: #f1f5f9; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 10px; overflow: hidden; transition: all 0.2s ease;
+    }
+    details.site-accordion[open] { background: #ffffff; border-color: var(--accent-blue); }
+    details.site-accordion summary {
+      padding: 12px 16px; font-weight: 700; font-size: 13.5px; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
+    }
+    details.site-accordion summary::-webkit-details-marker { display: none; }
+    details.site-accordion summary::after { content: '+'; font-size: 1.25rem; color: var(--accent-blue); font-weight: bold; }
+    details.site-accordion[open] summary::after { content: '−'; }
+    .accordion-body { padding: 12px 16px 16px; border-top: 1px solid var(--line); color: var(--text); font-size: 13px; line-height: 1.6; }
+    .tag-list { display: flex; flex-wrap: gap; gap: 6px; margin-top: 8px; }
+    .tag { background: #e0f2fe; color: #0369a1; padding: 3px 10px; border-radius: 999.9px; font-size: 11.5px; font-weight: 600; display: inline-block; }
 
     /* Service Cards Layout */
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -290,7 +314,7 @@
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 12px; }
 
     @media(max-width: 900px) {
-      .services-grid, .workflow-grid, .info-grid, .success-grid, .checklist-grid, .pricing-grid, .download-grid, .hero-grid, .footer-grid { grid-template-columns: 1fr; }
+      .services-grid, .workflow-grid, .info-grid, .success-grid, .checklist-grid, .pricing-grid, .download-grid, .hero-grid, .footer-grid, .track-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
     }
   </style>
@@ -298,8 +322,8 @@
 <body class="lang-en">
 
   <div class="remote-notice-banner">
-    <span data-lang="eng">Notice: We operate entirely online and remotely across Maharashtra & India. No travel required to meet us!</span>
-    <span data-lang="mar">सूचना: आमचे कामकाज महाराष्ट्र आणि भारतामध्ये पूर्णपणे ऑनलाइन आणि रिमोट पद्धतीने चालते. भेटण्यासाठी कोणतीही प्रवास करण्याची गरज नाही!</span>
+    <span data-lang="eng">Notice: We operate online/remotely for policyholders and regionally on-ground for B2B investigation/audit empannelment.</span>
+    <span data-lang="mar">सूचना: पॉलिसीधारकांसाठी ऑनलाइन व B2B इन्व्हेस्टिगेशन/ऑडिटसाठी उत्तर महाराष्ट्रात ऑन-ग्राउंड कार्यक्षेत्र.</span>
   </div>
 
   <header class="header">
@@ -316,6 +340,7 @@
       </a>
       <nav class="nav-links">
         <a href="#home"><span data-lang="eng">Home</span><span data-lang="mar">मुख्यपृष्ठ</span></a>
+        <a href="#b2b-tracks"><span data-lang="eng">B2B & Franchisee</span><span data-lang="mar">कॉर्पोरेट/फ्रँचायझी</span></a>
         <a href="#workflow"><span data-lang="eng">Workflow</span><span data-lang="mar">कार्यपद्धती</span></a>
         <a href="#services"><span data-lang="eng">Services</span><span data-lang="mar">सेवा</span></a>
         <a href="#portal"><span data-lang="eng">Inquiry</span><span data-lang="mar">चौकशी</span></a>
@@ -341,17 +366,17 @@
             <span data-lang="mar">व्यावसायिक स्वतंत्र फॅसिलिटेटर</span>
           </div>
           <h1>
-            <span data-lang="eng">The Most Trusted Insurance Claim Recovery and Facilitator.</span>
-            <span data-lang="mar">सर्वात विश्वासू इन्शुरन्स क्लेम रिकव्हरी आणि फॅसिलिटेटर.</span>
+            <span data-lang="eng">The Most Trusted Insurance Claim Recovery, Audit & B2B Facilitator.</span>
+            <span data-lang="mar">सर्वात विश्वासू इन्शुरन्स क्लेम रिकव्हरी, ऑडिट आणि B2B फॅसिलिटेटर.</span>
           </h1>
           <p class="hero-lead">
-            <span data-lang="eng">We bridge the gap between policyholders, companies, insurance carriers, and TPAs. Protecting your financial interests with 15+ years of industry experience entirely online.</span>
-            <span data-lang="mar">आम्ही पॉलिसीधारक आणि इन्शुरन्स कंपन्यांमधील दुवा म्हणून काम करतो. १५ वर्षांहून अधिक अनुभवासह पूर्णपणे ऑनलाइन पद्धतीने तुमचे हित जपतो.</span>
+            <span data-lang="eng">Bridging policyholders with carriers/TPAs, and delivering 24–48hr field investigations, medical audits, and regional associate networks across North Maharashtra.</span>
+            <span data-lang="mar">पॉलिसीधारकांसाठी ऑनलाइन क्लेम रिकव्हरी आणि उत्तर महाराष्ट्रात कॉर्पोरेट/टीपीएसाठी २४-४८ तासांत फिल्ड इन्व्हेस्टिगेशन व ऑडिट सेवा.</span>
           </p>
 
           <div class="trust-row">
             <div class="trust-pill">✓ <b>15+ Years</b> <span data-lang="eng">Experience</span><span data-lang="mar">वर्षांचा अनुभव</span></div>
-            <div class="trust-pill">✓ <b>100% Online</b> & Remote</div>
+            <div class="trust-pill">✓ <b>24-48 hr TAT</b> <span data-lang="eng">Investigation</span><span data-lang="mar">जलद तपासणी</span></div>
             <div class="trust-pill">★ Founder: <b>Altaf Rangrej</b></div>
           </div>
         </div>
@@ -367,9 +392,156 @@
             <span data-lang="mar">अल्ताफ रंगरेज यांच्या नेतृत्वाखाली</span>
           </h2>
           <p>
-            <span data-lang="eng">Founder and Principal Consultant with over 15+ years of industry experience, operating as an independent claims facilitation firm located in Jalgaon, Maharashtra.</span>
-            <span data-lang="mar">संस्थापक आणि मुख्य सल्लागार अल्ताफ रंगरेज यांच्या मार्गदर्शनाखाली जळगाव, महाराष्ट्र येथून स्वतंत्रपणे कार्यरत.</span>
+            <span data-lang="eng">Founder and Principal Consultant with 15+ years experience in healthcare & pharmacy admin, managing lean scalable FCU/audit operations and policyholder advocacy.</span>
+            <span data-lang="mar">संस्थापक व मुख्य सल्लागार (१५+ वर्षे आरोग्य व फार्मसी प्रशासनाचा अनुभव), कॉर्पोरेट ऑडिट व पॉलिसीधारक रिकव्हरी विशेषज्ञ.</span>
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION: B2B Empanelment & Regional Field Franchisee Expansion (Dual-Track with Dropdown/Accordions) -->
+    <section class="section section-light" id="b2b-tracks">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">
+            <span data-lang="eng">Institutional & Franchisee Growth</span>
+            <span data-lang="mar">कॉर्पोरेट आणि फ्रँचायझी नेटवर्क</span>
+          </div>
+          <h2>
+            <span data-lang="eng">B2B Empanelment & Regional Investigation Network</span>
+            <span data-lang="mar">बी२बी पॅनेल नियुक्ती आणि प्रादेशिक तपास जाळे</span>
+          </h2>
+          <p>
+            <span data-lang="eng">Click any category below to review our enterprise FCU scope, scalable manpower framework, or local field associate representation across North Maharashtra talukas.</span>
+            <span data-lang="mar">आमची कॉर्पोरेट सेवा व्याप्ती किंवा उत्तर महाराष्ट्र प्रादेशिक फील्ड नेटवर्क तपशील पाहण्यासाठी खाली क्लिक करा.</span>
+          </p>
+        </div>
+
+        <div class="track-grid">
+          <!-- TRACK 1: INSURERS / TPAS EMPANELMENT -->
+          <div class="track-section-card">
+            <div>
+              <h3>
+                <span data-lang="eng">Track A: Insurers, TPAs & Corporate FCU</span>
+                <span data-lang="mar">ट्रॅक अ: इन्शुरन्स, टीपीए आणि कॉर्पोरेट FCU</span>
+              </h3>
+              <div class="track-sub">
+                <span data-lang="eng">Direct Panel Empanelment | 24–48h TAT</span>
+                <span data-lang="mar">थेट पॅनेल नियुक्ती | २४-४८ तासांत अहवाल</span>
+              </div>
+
+              <details class="site-accordion">
+                <summary>
+                  <span data-lang="eng">Core Investigation & Audit Scope</span>
+                  <span data-lang="mar">मुख्य तपास व ऑडिट व्याप्ती</span>
+                </summary>
+                <div class="accordion-body">
+                  <span data-lang="eng">Bed-bound physical verification, doctor/nurse statement recording, proxy/bogus admission interception, and forensic pharmacy bill/surgical item reconciliation.</span>
+                  <span data-lang="mar">रुग्णालयात प्रत्यक्ष तपासणी, डॉक्टरांचे जबाब, बोगस भरती पडताळणी आणि फार्मसी बिलांचे फॉरेन्सिक ऑडिट.</span>
+                </div>
+              </details>
+
+              <details class="site-accordion">
+                <summary>
+                  <span data-lang="eng">Agile Manpower & Escalation Model</span>
+                  <span data-lang="mar">टीम क्षमता आणि थेट समन्वय</span>
+                </summary>
+                <div class="accordion-body">
+                  <span data-lang="eng">Principal Consultant-led direction backed by 4–5 vetted tactical freelance field associates across regional hubs. Zero junior management lag.</span>
+                  <span data-lang="mar">मुख्य सल्लागाराचे थेट नियंत्रण आणि ४-५ प्रशिक्षित प्रादेशिक फील्ड असोसिएटचे नेटवर्क. ज्युनियर मॅनेजमेंटचा वेळखाऊ विलंब नाही.</span>
+                </div>
+              </details>
+
+              <details class="site-accordion">
+                <summary>
+                  <span data-lang="eng">Compliance & Facilitator Boundary Stance</span>
+                  <span data-lang="mar">कायदेशीर भूमिका व फॅसिलिटेटर मर्यादा</span>
+                </summary>
+                <div class="accordion-body">
+                  <span data-lang="eng">Strict IRDAI PPHI compliance framework. Document authenticity liabilities remain with document issuers/clients as per facilitator-only terms.</span>
+                  <span data-lang="mar">IRDAI नियमांचे कडक पालन. कागदपत्रांच्या सत्यतेची अंतिम कायदेशीर जबाबदारी कागदपत्र जारी करणाऱ्या प्राधिकरणांची/क्लायंटची राहील.</span>
+                </div>
+              </details>
+            </div>
+
+            <div style="margin-top: 20px;">
+              <a class="btn btn-dark" href="mailto:rbconsultancyjalgaon@gmail.com?subject=B2B%20Vendor%20Empanelment%20Inquiry" style="width: 100%; justify-content: center;">
+                <span data-lang="eng">Request Empanelment Proposal</span>
+                <span data-lang="mar">पॅनेल नियुक्ती प्रस्ताव मागवा</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- TRACK 2: REGIONAL FIELD ASSOCIATES / FRANCHISEE NETWORK -->
+          <div class="track-section-card">
+            <div>
+              <h3>
+                <span data-lang="eng">Track B: Regional Associate & Franchisee Network</span>
+                <span data-lang="mar">ट्रॅक ब: प्रादेशिक असोसिएट व फ्रँचायझी नेटवर्क</span>
+              </h3>
+              <div class="track-sub">
+                <span data-lang="eng">Taluka-Level Field Franchisee Operations</span>
+                <span data-lang="mar">तालुकास्तरीय ऑन-ग्राउंड नेटवर्क</span>
+              </div>
+
+              <details class="site-accordion">
+                <summary>
+                  <span data-lang="eng">Associate Engagement Model</span>
+                  <span data-lang="mar">असोसिएट सहकार्य मॉडेल</span>
+                </summary>
+                <div class="accordion-body">
+                  <span data-lang="eng">Structured collaboration for registered pharmacists, experienced claims investigators, and local verifiers operating under centralized QA reporting.</span>
+                  <span data-lang="mar">नोंदणीकृत फार्मासिस्ट आणि अनुभवी फील्ड इन्वेस्टिगेटर्ससाठी केंद्रीकृत गुणवत्ता नियंत्रणाखाली स्थानिक कार्यप्रणाली.</span>
+                </div>
+              </details>
+
+              <details class="site-accordion">
+                <summary>
+                  <span data-lang="eng">Coverage Footprint (16 Talukas & Hubs)</span>
+                  <span data-lang="mar">प्रादेशिक कव्हरेज (१६ तालुके व केंद्रे)</span>
+                </summary>
+                <div class="accordion-body">
+                  <span data-lang="eng">Active local coverage footprint across core districts and talukas:</span>
+                  <div class="tag-list">
+                    <span class="tag">Jalgaon</span>
+                    <span class="tag">Bhusawal</span>
+                    <span class="tag">Amalner</span>
+                    <span class="tag">Chopda</span>
+                    <span class="tag">Pachora</span>
+                    <span class="tag">Chalisgaon</span>
+                    <span class="tag">Dhule</span>
+                    <span class="tag">Jamner</span>
+                    <span class="tag">Raver</span>
+                    <span class="tag">Yawal</span>
+                    <span class="tag">Bhadgaon</span>
+                    <span class="tag">Dharangaon</span>
+                    <span class="tag">Muktainagar</span>
+                    <span class="tag">Savda</span>
+                    <span class="tag">Faizpur</span>
+                    <span class="tag">Bodwad</span>
+                  </div>
+                </div>
+              </details>
+
+              <details class="site-accordion">
+                <summary>
+                  <span data-lang="eng">Why Partner as Local Associate/Franchisee</span>
+                  <span data-lang="mar">असोसिएट म्हणून का जोडावे?</span>
+                </summary>
+                <div class="accordion-body">
+                  <span data-lang="eng">Monetize local medical/ground presence with standardized audit briefs, prompt task dispatch, and transparent payout structures.</span>
+                  <span data-lang="mar">मानक ऑडिट असाइनमेंट्स, जलद टास्क डिस्पेच आणि पारदर्शक पेआउटसह आपल्या स्थानिक कौशल्याचा मोबदला मिळवा.</span>
+                </div>
+              </details>
+            </div>
+
+            <div style="margin-top: 20px;">
+              <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20Altaf,%20I%20want%20to%20apply%20as%20a%20Regional%20Associate%20Field%20Partner." target="_blank" style="width: 100%; justify-content: center;">
+                <span data-lang="eng">Apply as Regional Field Associate</span>
+                <span data-lang="mar">प्रादेशिक असोसिएट अर्ज करा</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -630,7 +802,7 @@
               <span data-lang="mar">आवश्यक सेवा किंवा उद्देश निवडा</span>:
             </label>
             <select class="field" id="intakeService">
-              </select>
+            </select>
           </div>
 
           <div class="form-group-full">
@@ -724,11 +896,11 @@
               </li>
               <li>
                 <span data-lang="eng"><b>4. KYC – Patient:</b> Aadhaar Card photocopy.</span>
-                <span data-lang="mar"><b>४. केवायसी - रुग्ण:</b> आधार कार्डची झेरॉक्स प्रत.</span>
+                <span data-lang="mar"><b>४. केवायसी - रुग्ण:</b> [Aadhaar Redacted] कार्डची झेरॉक्स प्रत.</span>
               </li>
               <li>
                 <span data-lang="eng"><b>5. KYC – Primary Policyholder:</b> Aadhaar Card photocopy.</span>
-                <span data-lang="mar"><b>५. केवायसी - प्राथमिक पॉलिसीधारक:</b> आधार कार्डची झेरॉक्स प्रत.</span>
+                <span data-lang="mar"><b>५. केवायसी - प्राथमिक पॉलिसीधारक:</b> [Aadhaar Redacted] कार्डची झेरॉक्स प्रत.</span>
               </li>
               <li>
                 <span data-lang="eng"><b>6. Bank Mandate Proof:</b> Original Cancelled Cheque OR Bank Passbook Xerox copy.</span>
@@ -900,7 +1072,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -1250,6 +1421,7 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="#home">Home</a></li>
+            <li><a href="#b2b-tracks">B2B & Franchisee</a></li>
             <li><a href="#workflow">Case Workflow</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portal">Inquiry Portal</a></li>
@@ -1276,6 +1448,8 @@
     const dropdownOptions = {
       en: [
         { value: "General Consultancy Inquiry", text: "General Consultancy Inquiry" },
+        { value: "B2B Vendor Empanelment Inquiry", text: "B2B Vendor Empanelment Inquiry (Insurers/TPAs)" },
+        { value: "Regional Field Associate Application", text: "Regional Field Associate / Franchisee Application" },
         { value: "1. Fresh Claim Submissions (₹3,000)", text: "1. Fresh Claim Submissions (₹3,000)" },
         { value: "2. Rejected Claims Recovery (₹3,000 + 10%)", text: "2. Rejected Claims Recovery (₹3,000 + 10% Success Fee)" },
         { value: "3. Queries Management", text: "3. Queries Management" },
@@ -1289,6 +1463,8 @@
       ],
       mar: [
         { value: "सामान्य सल्लामसलत चौकशी", text: "सामान्य सल्लामसलत चौकशी" },
+        { value: "बी२बी पॅनेल नियुक्ती चौकशी (इन्शुरन्स/टीपीए)", text: "बी२बी पॅनेल नियुक्ती चौकशी (इन्शुरन्स/टीपीए)" },
+        { value: "प्रादेशिक फील्ड असोसिएट / फ्रँचायझी अर्ज", text: "प्रादेशिक फील्ड असोसिएट / फ्रँचायझी अर्ज" },
         { value: "१. नवीन क्लेम दाखल करणे (₹३,०००)", text: "१. नवीन क्लेम दाखल करणे (₹३,०००)" },
         { value: "२. नाकारलेल्या क्लेमची वसुली (₹३,००० + १०% यश फी)", text: "२. नाकारलेल्या क्लेमची वसुली (₹३,००० + १०% यश फी)" },
         { value: "३. शंका आणि प्रश्न निवारण", text: "३. शंका आणि प्रश्न निवारण" },
@@ -1313,7 +1489,6 @@
         option.innerText = opt.text;
         select.appendChild(option);
       });
-      // Keep previous selection if possible
       select.value = currentValue;
     }
 
