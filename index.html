@@ -304,10 +304,10 @@
     }
     .intake-form-box h3 { font-size: 24px; color: var(--navy); margin-bottom: 6px; }
     .form-group-full { margin-top: 18px; display: flex; flex-direction: column; }
-    .form-group-full textarea.field { min-height: 90px; width: 100%; resize: vertical; }
-    .field { width: 100%; border: 1.5px solid var(--line); border-radius: 10px; padding: 10px 12px; outline: none; background: #fff; color: var(--text); font-size: 13px; transition: border-color 0.2s, box-shadow 0.2s; }
+    .form-group-full textarea.field { min-height: 80px; width: 100%; resize: vertical; }
+    .field { width: 100%; border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px; outline: none; background: #fff; color: var(--text); font-size: 13.5px; transition: border-color 0.2s, box-shadow 0.2s; }
     .field:focus { border-color: var(--accent-blue); box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.12); }
-    .form-grid-2col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 12px; }
+    .form-grid-2col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 16px; }
 
     /* FAQ Section Styles (Categorized Accordion Groups) */
     .faq-container { display: grid; gap: 24px; }
@@ -341,7 +341,7 @@
     .footer-links a:hover { color: #80B3FF; }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 12px; }
 
-    /* SINGLE PAGE A4 COMPACT FIT (NO MULTI-PAGE SPILL) */
+    /* SINGLE PAGE A4 STRICT PRINT FIX (FORCED 1-PAGE PORTRAIT) */
     @page {
       size: A4 portrait;
       margin: 8mm;
@@ -369,15 +369,15 @@
         width: 100% !important;
         height: auto !important;
         margin: 0 auto !important;
-        padding: 2mm 4mm !important;
-        font-size: 7.5pt !important;
-        line-height: 1.25 !important;
+        padding: 4mm 6mm !important;
+        font-size: 8pt !important;
+        line-height: 1.3 !important;
         background: #fff !important;
         overflow: visible !important;
-        max-height: 275mm !important;
-        page-break-after: avoid;
-        page-break-inside: avoid;
-        break-inside: avoid;
+        max-height: 270mm !important;
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
       }
       #printableSheetContent * {
         max-height: none !important;
@@ -1155,48 +1155,47 @@
       const f2 = document.getElementById('dynField2') ? document.getElementById('dynField2').value : '';
 
       const htmlContent = `
-        <div style="border-bottom:1.5px solid #0b2f4a; padding-bottom:4px; margin-bottom:6px;">
+        <div style="border-bottom:1.5px solid #0b2f4a; padding-bottom:3px; margin-bottom:5px;">
           <div style="display:flex; justify-content:space-between; align-items:center;">
             <div>
-              <h2 style="color:#0b2f4a; margin:0; font-size:12.5px;">RB CONSULTANCY (आरबी कन्सल्टन्सी)</h2>
-              <p style="margin:1px 0; font-size:7.5pt; color:#556677;">Office: 201, Taimur Height, Mehrun, Jalgaon | Udyam: UDYAM-MH-14-0183662</p>
+              <h2 style="color:#0b2f4a; margin:0; font-size:12px;">RB CONSULTANCY (आरबी कन्सल्टन्सी)</h2>
+              <p style="margin:0; font-size:7pt; color:#556677;">Office: 201, Taimur Height, Mehrun, Jalgaon | Udyam: UDYAM-MH-14-0183662</p>
             </div>
-            <div style="text-align:right; font-size:7.5pt; color:#334455;">
-              <b>Date / दिनांक:</b> ${new Date().toLocaleDateString('en-IN')}<br>
-              <b>Ref:</b> RBC-${cat.toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}
+            <div style="text-align:right; font-size:7pt; color:#334455;">
+              <b>Date:</b> ${new Date().toLocaleDateString('en-IN')} | <b>Ref:</b> RBC-${cat.toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}
             </div>
           </div>
-          <div style="background:#0b2f4a; color:#fff; text-align:center; padding:3px; margin-top:4px; border-radius:3px; font-weight:700; font-size:10pt;">
+          <div style="background:#0b2f4a; color:#fff; text-align:center; padding:2.5px; margin-top:3px; border-radius:2px; font-weight:700; font-size:9.5pt;">
             ${catTitles[cat]}
           </div>
         </div>
 
-        <div style="margin-bottom:6px;">
-          <h4 style="color:#0b2f4a; font-size:8.5pt; margin:0 0 2px 0; border-bottom:1px solid #d0dce6; padding-bottom:1px;">1. ${lang==='mar' ? 'सहकार्य तपशील (PARTICULARS)' : 'ENGAGEMENT PARTICULARS'}</h4>
-          <table style="width:100%; border-collapse:collapse; font-size:8pt;">
-            <tr><td style="padding:1.5px 4px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Category</b></td><td style="padding:1.5px 4px; border:1px solid #d0dce6;">${cat.toUpperCase()}</td><td style="padding:1.5px 4px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Place</b></td><td style="padding:1.5px 4px; border:1px solid #d0dce6;">Jalgaon, MH</td></tr>
-            <tr><td style="padding:1.5px 4px; border:1px solid #d0dce6; background:#f8fafc;"><b>Name / Org</b></td><td style="padding:1.5px 4px; border:1px solid #d0dce6;">${fullName}</td><td style="padding:1.5px 4px; border:1px solid #d0dce6; background:#f8fafc;"><b>Mobile</b></td><td style="padding:1.5px 4px; border:1px solid #d0dce6;">${phone}</td></tr>
-            <tr><td style="padding:1.5px 4px; border:1px solid #d0dce6; background:#f8fafc;"><b>Email</b></td><td style="padding:1.5px 4px; border:1px solid #d0dce6;">${email}</td><td style="padding:1.5px 4px; border:1px solid #d0dce6; background:#f8fafc;"><b>Location</b></td><td style="padding:1.5px 4px; border:1px solid #d0dce6;">${location}</td></tr>
-            ${f1 ? `<tr><td style="padding:1.5px 4px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 1</b></td><td colspan="3" style="padding:1.5px 4px; border:1px solid #d0dce6;">${f1}</td></tr>` : ''}
-            ${f2 ? `<tr><td style="padding:1.5px 4px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 2</b></td><td colspan="3" style="padding:1.5px 4px; border:1px solid #d0dce6;">${f2}</td></tr>` : ''}
+        <div style="margin-bottom:5px;">
+          <h4 style="color:#0b2f4a; font-size:8pt; margin:0 0 2px 0; border-bottom:1px solid #d0dce6; padding-bottom:1px;">1. ${lang==='mar' ? 'सहकार्य तपशील (PARTICULARS)' : 'ENGAGEMENT PARTICULARS'}</h4>
+          <table style="width:100%; border-collapse:collapse; font-size:7.5pt;">
+            <tr><td style="padding:1.5px 3.5px; border:1px solid #d0dce6; width:18%; background:#f8fafc;"><b>Category</b></td><td style="padding:1.5px 3.5px; border:1px solid #d0dce6; width:32%;">${cat.toUpperCase()}</td><td style="padding:1.5px 3.5px; border:1px solid #d0dce6; width:18%; background:#f8fafc;"><b>Place</b></td><td style="padding:1.5px 3.5px; border:1px solid #d0dce6;">Jalgaon, MH</td></tr>
+            <tr><td style="padding:1.5px 3.5px; border:1px solid #d0dce6; background:#f8fafc;"><b>Name/Org</b></td><td style="padding:1.5px 3.5px; border:1px solid #d0dce6;">${fullName}</td><td style="padding:1.5px 3.5px; border:1px solid #d0dce6; background:#f8fafc;"><b>Mobile</b></td><td style="padding:1.5px 3.5px; border:1px solid #d0dce6;">${phone}</td></tr>
+            <tr><td style="padding:1.5px 3.5px; border:1px solid #d0dce6; background:#f8fafc;"><b>Email</b></td><td style="padding:1.5px 3.5px; border:1px solid #d0dce6;">${email}</td><td style="padding:1.5px 3.5px; border:1px solid #d0dce6; background:#f8fafc;"><b>Location</b></td><td style="padding:1.5px 3.5px; border:1px solid #d0dce6;">${location}</td></tr>
+            ${f1 ? `<tr><td style="padding:1.5px 3.5px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 1</b></td><td colspan="3" style="padding:1.5px 3.5px; border:1px solid #d0dce6;">${f1}</td></tr>` : ''}
+            ${f2 ? `<tr><td style="padding:1.5px 3.5px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 2</b></td><td colspan="3" style="padding:1.5px 3.5px; border:1px solid #d0dce6;">${f2}</td></tr>` : ''}
           </table>
         </div>
 
-        <div style="margin-bottom:6px;">
-          <h4 style="color:#0b2f4a; font-size:8.5pt; margin:0 0 2px 0; border-bottom:1px solid #d0dce6; padding-bottom:1px;">2. ${lang==='mar' ? 'केस तपशील / व्याप्ती' : 'CASE SUMMARY / SCOPE OF WORK / BRIEF'}</h4>
-          <div style="background:#fff; border:1px solid #d0dce6; padding:4px 6px; border-radius:3px; font-size:8pt; max-height:22mm; overflow:hidden;">${details}</div>
+        <div style="margin-bottom:5px;">
+          <h4 style="color:#0b2f4a; font-size:8pt; margin:0 0 2px 0; border-bottom:1px solid #d0dce6; padding-bottom:1px;">2. ${lang==='mar' ? 'केस तपशील / व्याप्ती' : 'CASE SUMMARY / SCOPE OF WORK / BRIEF'}</h4>
+          <div style="background:#fff; border:1px solid #d0dce6; padding:3.5px 5px; border-radius:2px; font-size:7.5pt; max-height:16mm; overflow:hidden;">${details}</div>
         </div>
 
-        <div style="margin-bottom:6px;">
-          <h4 style="color:#0b2f4a; font-size:8.5pt; margin:0 0 2px 0; border-bottom:1px solid #d0dce6; padding-bottom:1px;">3. ${lang==='mar' ? 'श्रेणीनुसार नियम व अटी' : 'FIXED TERMS & CONDITIONS'} (${cat.toUpperCase()})</h4>
-          <div style="font-size:7.5pt; line-height:1.25; color:#263746; background:#f8fafc; border:1px solid #d0dce6; border-radius:3px; padding:4px 6px; max-height:28mm; overflow:hidden;">
+        <div style="margin-bottom:5px;">
+          <h4 style="color:#0b2f4a; font-size:8pt; margin:0 0 2px 0; border-bottom:1px solid #d0dce6; padding-bottom:1px;">3. ${lang==='mar' ? 'श्रेणीनुसार नियम व अटी' : 'FIXED TERMS & CONDITIONS'} (${cat.toUpperCase()})</h4>
+          <div style="font-size:7pt; line-height:1.2; color:#263746; background:#f8fafc; border:1px solid #d0dce6; border-radius:3px; padding:3.5px 5px; max-height:22mm; overflow:hidden;">
             ${termsData[lang][cat].replace(/<br>/g, '<br>')}
           </div>
         </div>
 
-        <div style="margin-bottom:8px;">
-          <h4 style="color:#0b2f4a; font-size:8.5pt; margin:0 0 2px 0; border-bottom:1px solid #d0dce6; padding-bottom:1px;">4. ${lang==='mar' ? 'वैधानिक डिस्क्लेमर (भारतीय करार कायदा व IRDAI)' : 'FIXED BINDING STATUTORY DISCLAIMER'}</h4>
-          <div style="font-size:7pt; color:#425466; line-height:1.2; background:#fff; border:1px solid #94a3b8; padding:4px 6px; border-radius:3px;">
+        <div style="margin-bottom:6px;">
+          <h4 style="color:#0b2f4a; font-size:8pt; margin:0 0 2px 0; border-bottom:1px solid #d0dce6; padding-bottom:1px;">4. ${lang==='mar' ? 'वैधानिक डिस्क्लेमर (भारतीय करार कायदा व IRDAI)' : 'FIXED BINDING STATUTORY DISCLAIMER'}</h4>
+          <div style="font-size:6.5pt; color:#425466; line-height:1.15; background:#fff; border:1px solid #94a3b8; padding:3.5px 5px; border-radius:2px;">
             ${lang==='mar' ? 
               '<b>स्वतंत्र फॅसिलिटेटर (भारतीय करार कायदा १८७२):</b> आरबी कन्सल्टन्सी स्वतंत्र फॅसिलिटेटर म्हणून कार्य करते (कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव). क्लेम मंजुरी, निकाल किंवा कालावधीची कोणतीही हमी नाही. कागदपत्रांची कायदेशीर व सत्यता जबाबदारी क्लायंटची राहील. IRDAI धोरणांशी सुसंगत मार्गदर्शन.' : 
               '<b>Facilitator Only (Indian Contract Act 1872 & IRDAI Framework):</b> RB Consultancy operates strictly as an independent professional facilitator/agent under the Indian Contract Act 1872 (Office: 201, Taimur Height, Mehrun, Jalgaon; Udyam: UDYAM-MH-14-0183662). No outcome, approval, or completion timeline guarantees are expressed or implied. Legal, financial, statutory compliance monitoring, and document authenticity liabilities rest solely with the client and issuing authorities. Field inspection/audit reports reflect objective physical conditions at timestamp of inspection.'
@@ -1204,7 +1203,7 @@
           </div>
         </div>
 
-        <div style="display:grid; grid-template-columns:1fr 1fr; margin-top:8px; gap:16px; font-size:8pt;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; margin-top:6px; gap:12px; font-size:7.5pt;">
           <div style="border-top:1px solid #334455; padding-top:2px;">
             <b>${lang==='mar' ? 'क्लायंट / असोसिएट सही:' : 'Client / Associate / Partner Signature:'}</b><br>
             Signature: __________________________<br>
