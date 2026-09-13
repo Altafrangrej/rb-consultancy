@@ -68,7 +68,7 @@
     h2 { font-size: clamp(24px, 3.2vw, 38px); letter-spacing: -0.025em; }
     p { margin: 0; color: var(--muted); }
 
-    /* Header & Vector-Style Logo Component (As per RBC Brand Specs) */
+    /* Header & Vector-Style Logo Component */
     header {
       position: sticky; top: 0; z-index: 1000;
       background: rgba(255,255,255,0.96);
@@ -822,10 +822,26 @@ Neither party shall be liable for service delays or execution failures resulting
 
   <script>
     const termsData = {
-      recovery: `<b>1. Independent Facilitator Nature:</b> RB Consultancy acts as an independent facilitator under Indian Contract Act 1872 (Office: 201, Taimur Height, Mehrun, Jalgaon).<br><b>2. Fee Structure:</b> Fresh/Cashless scheduled; Reconsideration/Ombudsman/Recovery includes baseline ₹3,000–₹5,000 plus applicable 10%–12% Success Fee.`,
-      b2b: `<b>1. Unannounced Protocol:</b> FCU/audit field visits are unannounced (surprise) to preserve evidentiary integrity.<br><b>2. SLA Compliance:</b> Report within 24–48 hours. Office: 201, Taimur Height, Mehrun, Jalgaon.`,
-      associate: `<b>1. Independent Contractor Status:</b> Regional field associates operate independently under central QA briefs.<br><b>2. Mandatory Verification:</b> Onboarding requires verified CV/resume, academic certificates, and council/investigator credentials.`,
-      referral: `<b>1. Commission Scope:</b> Earn referral commissions upon successful client onboarding and resolution/realization for referred files.`
+      recovery: `
+        <b>1. Independent Facilitator Nature:</b> RB Consultancy acts as an independent facilitator under Indian Contract Act 1872 (Office: 201, Taimur Height, Mehrun, Jalgaon).<br>
+        <b>2. Fee Structure:</b> Fresh/Cashless scheduled; Reconsideration/Ombudsman/Recovery includes baseline ₹3,000–₹5,000 plus applicable 10%–12% Success Fee.<br>
+        <b>3. Liability & Timelines:</b> No guarantee of statutory/carrier deadlines. Document veracity rests solely on client and issuing authorities.
+      `,
+      b2b: `
+        <b>1. Unannounced Protocol:</b> FCU/audit field visits are unannounced (surprise) to preserve evidentiary integrity.<br>
+        <b>2. SLA Compliance:</b> Report within 24–48 hours. Office: 201, Taimur Height, Mehrun, Jalgaon.<br>
+        <b>3. Commercial Terms:</b> Governed by bilateral internal MoU rate cards and conveyance rules (₹7/km <100km; Tier-3 AC/AC Sleeper >100km).
+      `,
+      associate: `
+        <b>1. Independent Contractor Status:</b> Regional field associates operate independently under central QA briefs.<br>
+        <b>2. Mandatory Verification:</b> Onboarding requires verified CV/resume, academic certificates, and council/investigator credentials.<br>
+        <b>3. Confidentiality:</b> Strict non-disclosure of patient clinical records, hospital paperwork, and carrier proprietary briefs.
+      `,
+      referral: `
+        <b>1. Commission Scope:</b> Earn referral commissions upon successful client onboarding and resolution/realization for referred files.<br>
+        <b>2. Attribution:</b> Referrer name/phone must be declared at initial intake submission.<br>
+        <b>3. Compliance:</b> Zero authority to misrepresent RBC regulatory standing or engage in coercive client solicitation.
+      `
     };
 
     const dynamicFieldsHTML = {
@@ -856,7 +872,12 @@ Neither party shall be liable for service delays or execution failures resulting
         return;
       }
       const cat = document.getElementById('engagementCategory').value;
-      const catTitles = { recovery: 'RECOVERY / ADVOCACY CLIENT INTAKE & TERMS', b2b: 'B2B / FCU INVESTIGATION MANDATE SHEET', associate: 'REGIONAL FIELD ASSOCIATE ONBOARDING SHEET', referral: 'REFERRAL PARTNER ENROLLMENT FORM' };
+      const catTitles = { 
+        recovery: 'RECOVERY / ADVOCACY CLIENT INTAKE & ENGAGEMENT SHEET', 
+        b2b: 'B2B / FCU INVESTIGATION MANDATE SHEET', 
+        associate: 'REGIONAL FIELD ASSOCIATE ONBOARDING SHEET', 
+        referral: 'REFERRAL PARTNER ENROLLMENT FORM' 
+      };
       
       const fullName = document.getElementById('formFullName').value || '[Not Provided]';
       const phone = document.getElementById('formPhone').value || '[Not Provided]';
@@ -873,49 +894,56 @@ Neither party shall be liable for service delays or execution failures resulting
               <h2 style="color:#0b2f4a; margin:0; font-size:16px;">RB CONSULTANCY</h2>
               <p style="margin:2px 0; font-size:10.5px; color:#556677;">Office: 201, Taimur Height, Mehrun, Jalgaon | Udyam: UDYAM-MH-14-0183662</p>
             </div>
-            <div style="text-align:right; font-size:10.5pt; color:#334455;">
+            <div style="text-align:right; font-size:9.5pt; color:#334455;">
               <b>Date:</b> ${new Date().toLocaleDateString('en-IN')}<br>
               <b>Ref:</b> RBC-${cat.toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}
             </div>
           </div>
-          <div style="background:#0b2f4a; color:#fff; text-align:center; padding:6px; margin-top:10px; border-radius:4px; font-weight:700; font-size:13pt;">
+          <div style="background:#0b2f4a; color:#fff; text-align:center; padding:6px; margin-top:10px; border-radius:4px; font-weight:700; font-size:12.5pt;">
             ${catTitles[cat]}
           </div>
         </div>
 
-        <div style="margin-bottom:12px;">
-          <h4 style="color:#0b2f4a; font-size:11pt; margin:0 0 6px 0; border-bottom:1px solid #d0dce6; padding-bottom:3px;">1. ENGAGEMENT PARTICULARS</h4>
-          <table style="width:100%; border-collapse:collapse; font-size:10pt;">
-            <tr><td style="padding:4px 6px; border:1px solid #d0dce6; width:25%; background:#f8fafc;"><b>Category Profile</b></td><td style="padding:4px 6px; border:1px solid #d0dce6;">${cat.toUpperCase()}</td><td style="padding:4px 6px; border:1px solid #d0dce6; width:25%; background:#f8fafc;"><b>Stamping Place</b></td><td style="padding:4px 6px; border:1px solid #d0dce6;">Jalgaon, MH</td></tr>
-            <tr><td style="padding:4px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Name / Org</b></td><td style="padding:4px 6px; border:1px solid #d0dce6;">${fullName}</td><td style="padding:4px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Mobile / WhatsApp</b></td><td style="padding:4px 6px; border:1px solid #d0dce6;">${phone}</td></tr>
-            <tr><td style="padding:4px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Email Address</b></td><td style="padding:4px 6px; border:1px solid #d0dce6;">${email}</td><td style="padding:4px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Location / Base</b></td><td style="padding:4px 6px; border:1px solid #d0dce6;">${location}</td></tr>
-            ${f1 ? `<tr><td style="padding:4px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Specific Attribute 1</b></td><td colspan="3" style="padding:4px 6px; border:1px solid #d0dce6;">${f1}</td></tr>` : ''}
-            ${f2 ? `<tr><td style="padding:4px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Specific Attribute 2</b></td><td colspan="3" style="padding:4px 6px; border:1px solid #d0dce6;">${f2}</td></tr>` : ''}
+        <div style="margin-bottom:10px;">
+          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 5px 0; border-bottom:1px solid #d0dce6; padding-bottom:3px;">1. ENGAGEMENT PARTICULARS</h4>
+          <table style="width:100%; border-collapse:collapse; font-size:9.5pt;">
+            <tr><td style="padding:3.5px 6px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Category</b></td><td style="padding:3.5px 6px; border:1px solid #d0dce6;">${cat.toUpperCase()}</td><td style="padding:3.5px 6px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Place</b></td><td style="padding:3.5px 6px; border:1px solid #d0dce6;">Jalgaon, MH</td></tr>
+            <tr><td style="padding:3.5px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Name / Org</b></td><td style="padding:3.5px 6px; border:1px solid #d0dce6;">${fullName}</td><td style="padding:3.5px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Mobile</b></td><td style="padding:3.5px 6px; border:1px solid #d0dce6;">${phone}</td></tr>
+            <tr><td style="padding:3.5px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Email</b></td><td style="padding:3.5px 6px; border:1px solid #d0dce6;">${email}</td><td style="padding:3.5px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Location</b></td><td style="padding:3.5px 6px; border:1px solid #d0dce6;">${location}</td></tr>
+            ${f1 ? `<tr><td style="padding:3.5px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 1</b></td><td colspan="3" style="padding:3.5px 6px; border:1px solid #d0dce6;">${f1}</td></tr>` : ''}
+            ${f2 ? `<tr><td style="padding:3.5px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 2</b></td><td colspan="3" style="padding:3.5px 6px; border:1px solid #d0dce6;">${f2}</td></tr>` : ''}
           </table>
         </div>
 
-        <div style="margin-bottom:12px;">
-          <h4 style="color:#0b2f4a; font-size:11pt; margin:0 0 6px 0; border-bottom:1px solid #d0dce6; padding-bottom:3px;">2. CASE SUMMARY / SCOPE OF WORK / BRIEF</h4>
-          <div style="background:#fff; border:1px solid #d0dce6; padding:8px 10px; border-radius:4px; font-size:10pt; min-height:50px;">${details}</div>
+        <div style="margin-bottom:10px;">
+          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 5px 0; border-bottom:1px solid #d0dce6; padding-bottom:3px;">2. CASE SUMMARY / SCOPE OF WORK / BRIEF</h4>
+          <div style="background:#fff; border:1px solid #d0dce6; padding:7px 10px; border-radius:4px; font-size:9.5pt;">${details}</div>
+        </div>
+
+        <div style="margin-bottom:10px;">
+          <details open style="background:#f8fafc; border:1px solid #d0dce6; border-radius:5px; padding:6px 10px;">
+            <summary style="color:#0b2f4a; font-weight:700; font-size:10pt; cursor:pointer;">3. EXPANDED TERMS & CONDITIONS (${cat.toUpperCase()}) [Click to collapse/expand]</summary>
+            <div style="font-size:8.5pt; margin-top:6px; line-height:1.4; color:#263746;">
+              ${termsData[cat].replace(/<br>/g, '<br>')}
+            </div>
+          </details>
         </div>
 
         <div style="margin-bottom:12px;">
-          <h4 style="color:#0b2f4a; font-size:11pt; margin:0 0 6px 0; border-bottom:1px solid #d0dce6; padding-bottom:3px;">3. EMBEDDED CATEGORY TERMS, CONDITIONS & DISCLAIMER</h4>
-          <div style="font-size:9pt; background:#f8fafc; border:1px solid #d0dce6; padding:10px; border-radius:4px; line-height:1.4;">
-            <b>General Facilitator Governance:</b> RB Consultancy acts strictly as an independent facilitator/agent under the Indian Contract Act 1872 (Office: 201, Taimur Height, Mehrun, Jalgaon; Udyam: UDYAM-MH-14-0183662). No outcomes or deadlines guaranteed. All document authenticity liabilities rest with the client/issuing authorities.<br><br>
-            <b>Category-Specific Schedule Applied (${cat.toUpperCase()}):</b><br>
-            ${termsData[cat].replace(/<br>/g, '<br>')}
+          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">4. FIXED BINDING DISCLAIMER (RB CONSULTANCY)</h4>
+          <div style="font-size:8pt; color:#425466; line-height:1.35; background:#fff; border:1px dashed #94a3b8; padding:8px; border-radius:4px;">
+            <b>Facilitator Only:</b> RB Consultancy operates strictly as an independent facilitator/agent under the Indian Contract Act 1872 (Office: 201, Taimur Height, Mehrun, Jalgaon). No outcome, approval, or completion timeline guarantees are expressed or implied. Legal, financial, and document authenticity liabilities rest solely with the client and document-issuing authorities. FCU/audit findings reflect objective physical conditions observed at the timestamp of inspection.
           </div>
         </div>
 
-        <div style="display:grid; grid-template-columns:1fr 1fr; margin-top:30px; gap:40px; font-size:10.5pt;">
-          <div style="border-top:1px solid #334455; padding-top:6px;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; margin-top:20px; gap:30px; font-size:9.5pt;">
+          <div style="border-top:1px solid #334455; padding-top:4px;">
             <b>Client / Associate / Partner Signature:</b><br><br>
             Signature: __________________________<br>
             Name: ${fullName}<br>
             Date: ____ / ____ / 2026
           </div>
-          <div style="border-top:1px solid #334455; padding-top:6px;">
+          <div style="border-top:1px solid #334455; padding-top:4px;">
             <b>For RB Consultancy (Jalgaon Office):</b><br><br>
             Stamp & Signature: __________________<br>
             Altaf Rangrej (Principal Consultant)<br>
@@ -923,7 +951,7 @@ Neither party shall be liable for service delays or execution failures resulting
           </div>
         </div>
 
-        <div style="margin-top:20px; text-align:center;" class="no-print">
+        <div style="margin-top:15px; text-align:center;" class="no-print">
           <button class="btn btn-dark" onclick="window.print()">Print / Save as PDF (Strict A4 Portrait)</button>
           <button class="btn" style="background:#e2e8f0; color:#334455; margin-left:10px;" onclick="closePrintableModal()">Close Window</button>
         </div>
@@ -935,6 +963,61 @@ Neither party shall be liable for service delays or execution failures resulting
 
     function closePrintableModal() {
       document.getElementById('printableFormModal').style.display = 'none';
+    }
+
+    function submitFormWhatsApp() {
+      const cat = document.getElementById('engagementCategory').value;
+      const fullName = document.getElementById('formFullName').value.trim();
+      const phone = document.getElementById('formPhone').value.trim();
+      const email = document.getElementById('formEmail').value.trim();
+      const location = document.getElementById('formLocation').value.trim();
+      const details = document.getElementById('formDetails').value.trim();
+
+      let text = `Hi RB Consultancy,\n\nCategory Intake: ${cat.toUpperCase()}\n` +
+               `Name/Org: ${fullName || '[Not Provided]'}\n` +
+               `Phone: ${phone || '[Not Provided]'}\n` +
+               `Email: ${email || '[Not Provided]'}\n` +
+               `Location: ${location || '[Not Provided]'}\n\n` +
+               `Details:\n${details || 'None'}\n\n` +
+               `[Terms accepted via Digital Portal on ${new Date().toLocaleDateString('en-IN')}]`;
+
+      const url = "https://wa.me/919325564770?text=" + encodeURIComponent(text);
+      window.open(url, '_blank');
+    }
+
+    /* Interactive MoU Modal Functions */
+    function openMoUModal() { document.getElementById('mouModal').style.display = 'block'; }
+    function closeMoUModal() { document.getElementById('mouModal').style.display = 'none'; }
+    function renderPrintableAgreement() {
+      document.getElementById('pInstName').innerText = document.getElementById('instName').value || '[Entity]';
+      document.getElementById('pInstAddress').innerText = document.getElementById('instAddress').value || '[Address]';
+      document.getElementById('pInstOfficer').innerText = document.getElementById('instOfficer').value || '[Officer]';
+      document.getElementById('pInstEmail').innerText = document.getElementById('instEmail').value || '[Email]';
+      document.getElementById('pDate').innerText = new Date().toLocaleDateString();
+      document.getElementById('mouFormView').style.display = 'none';
+      document.getElementById('mouPrintView').style.display = 'block';
+    }
+    function resetMouForm() {
+      document.getElementById('mouPrintView').style.display = 'none';
+      document.getElementById('mouFormView').style.display = 'block';
+    }
+
+    function toggleLanguage() {
+      const body = document.body;
+      const btn = document.getElementById('langToggleBtn');
+      if (body.classList.contains('lang-en')) {
+        body.classList.remove('lang-en');
+        body.classList.add('lang-mar');
+        if(btn) btn.innerText = "Switch to English";
+        localStorage.setItem('rb_lang', 'mar');
+        updateDropdown('mar');
+      } else {
+        body.classList.remove('lang-mar');
+        body.classList.add('lang-en');
+        if(btn) btn.innerText = "Switch to Marathi";
+        localStorage.setItem('rb_lang', 'eng');
+        updateDropdown('en');
+      }
     }
 
     const dropdownOptions = {
@@ -988,82 +1071,6 @@ Neither party shall be liable for service delays or execution failures resulting
       });
       select.value = currentValue;
     }
-
-    function toggleLanguage() {
-      const body = document.body;
-      const btn = document.getElementById('langToggleBtn');
-      if (body.classList.contains('lang-en')) {
-        body.classList.remove('lang-en');
-        body.classList.add('lang-mar');
-        btn.innerText = "Switch to English";
-        localStorage.setItem('rb_lang', 'mar');
-        updateDropdown('mar');
-      } else {
-        body.classList.remove('lang-mar');
-        body.classList.add('lang-en');
-        btn.innerText = "Switch to Marathi";
-        localStorage.setItem('rb_lang', 'eng');
-        updateDropdown('en');
-      }
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const savedLang = localStorage.getItem('rb_lang');
-      const body = document.body;
-      const btn = document.getElementById('langToggleBtn');
-      if (savedLang === 'mar') {
-        body.classList.remove('lang-en');
-        body.classList.add('lang-mar');
-        if(btn) btn.innerText = "Switch to English";
-        updateDropdown('mar');
-      } else {
-        body.classList.remove('lang-mar');
-        body.classList.add('lang-en');
-        if(btn) btn.innerText = "Switch to Marathi";
-        updateDropdown('en');
-      }
-      if(document.getElementById('dynamicFormDate')) {
-        document.getElementById('dynamicFormDate').innerText = new Date().toLocaleDateString('en-IN');
-      }
-      switchFormType();
-    });
-
-    function submitFormWhatsApp() {
-      const cat = document.getElementById('engagementCategory').value;
-      const fullName = document.getElementById('formFullName').value.trim();
-      const phone = document.getElementById('formPhone').value.trim();
-      const email = document.getElementById('formEmail').value.trim();
-      const location = document.getElementById('formLocation').value.trim();
-      const details = document.getElementById('formDetails').value.trim();
-
-      let text = `Hi RB Consultancy,\n\nCategory Intake: ${cat.toUpperCase()}\n` +
-               `Name/Org: ${fullName || '[Not Provided]'}\n` +
-               `Phone: ${phone || '[Not Provided]'}\n` +
-               `Email: ${email || '[Not Provided]'}\n` +
-               `Location: ${location || '[Not Provided]'}\n\n` +
-               `Details:\n${details || 'None'}\n\n` +
-               `[Terms accepted via Digital Portal on ${new Date().toLocaleDateString('en-IN')}]`;
-
-      const url = "https://wa.me/919325564770?text=" + encodeURIComponent(text);
-      window.open(url, '_blank');
-    }
-
-    /* Interactive MoU Modal Functions */
-    function openMoUModal() { document.getElementById('mouModal').style.display = 'block'; }
-    function closeMoUModal() { document.getElementById('mouModal').style.display = 'none'; }
-    function renderPrintableAgreement() {
-      document.getElementById('pInstName').innerText = document.getElementById('instName').value || '[Entity]';
-      document.getElementById('pInstAddress').innerText = document.getElementById('instAddress').value || '[Address]';
-      document.getElementById('pInstOfficer').innerText = document.getElementById('instOfficer').value || '[Officer]';
-      document.getElementById('pInstEmail').innerText = document.getElementById('instEmail').value || '[Email]';
-      document.getElementById('pDate').innerText = new Date().toLocaleDateString();
-      document.getElementById('mouFormView').style.display = 'none';
-      document.getElementById('mouPrintView').style.display = 'block';
-    }
-    function resetMouForm() {
-      document.getElementById('mouPrintView').style.display = 'none';
-      document.getElementById('mouFormView').style.display = 'block';
-    }
   </script>
 
   <!-- INTERACTIVE MOU BUILDER MODAL OVERLAY -->
@@ -1095,7 +1102,7 @@ Neither party shall be liable for service delays or execution failures resulting
     </div>
   </div>
 
-  <!-- PRINTABLE FORM MODAL OVERLAY (Strict Structured Corporate A4 Layout with Embedded T&C) -->
+  <!-- PRINTABLE FORM MODAL OVERLAY (Strict Structured Corporate A4 Layout with Fixed Disclaimer & Dropdown T&C) -->
   <div id="printableFormModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(11,47,74,0.85); z-index:3500; overflow-y:auto; padding:20px;">
     <div style="background:#fff; max-width:850px; margin:20px auto; border-radius:14px; padding:30px; box-shadow:0 25px 60px rgba(0,0,0,0.4);" id="printableSheetContent">
       <!-- Rendered via JS -->
