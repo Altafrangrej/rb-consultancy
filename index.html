@@ -1109,7 +1109,7 @@
       </div>
     </section>
 
-    <!-- ADMIN HUB WITH FCU DOWNLOADABLE FORM & INTERNAL MOU TRACK -->
+    <!-- ADMIN HUB WITH FCU DOWNLOADABLE FORM & INTERACTIVE MOU BUILDER CARD -->
     <section class="section section-light" id="downloads">
       <div class="wrap">
         <div class="section-head center">
@@ -1118,24 +1118,26 @@
             <span data-lang="mar">प्रशासकीय केंद्र</span>
           </div>
           <h2>
-            <span data-lang="eng">Downloadable Templates & Internal MoU Portal</span>
-            <span data-lang="mar">डाउनलोड करण्यायोग्य नमुने व अंतर्गत MoU पोर्टल</span>
+            <span data-lang="eng">Downloadable Templates & Interactive MoU Portal</span>
+            <span data-lang="mar">डाउनलोड करण्यायोग्य नमुने व थेट MoU जनरेटर पोर्टल</span>
           </h2>
           <p>
-            <span data-lang="eng">Access official consultancy documents, TPA assignment briefs, associate checklists, and internal audit MoU forms.</span>
-            <span data-lang="mar">अधिकृत कागदपत्रे, असोसिएट चेकलिस्ट व अंतर्गत MoU डाउनलोड किंवा मागणीनुसार मिळवा.</span>
+            <span data-lang="eng">Access official consultancy documents, generate print-ready institutional MoUs on demand, or request briefs.</span>
+            <span data-lang="mar">अधिकृत कागदपत्रे व थेट प्रिंट-रेडी MoU तयार करण्यासाठी खालील बटन वापरा.</span>
           </p>
         </div>
 
         <div class="download-grid">
-          <div class="download-card fcu-dl">
+          <!-- Interactive Agreement Builder Trigger Card -->
+          <div class="download-card fcu-dl" style="background: linear-gradient(135deg, #F0F6FF 0%, #D6E8FF 100%); border: 2px solid var(--accent-blue);">
             <div>
-              <h3>Internal B2B / FCU Audit MoU Template (Download / On-Demand)</h3>
-              <p>Standard bilateral rate card and verification service agreement template available for instant request or on-demand dispatch via email/WhatsApp.</p>
+              <span class="partner-top-badge">★ Institutional MoU Builder</span>
+              <h3>Interactive FCU Agreement Generator</h3>
+              <p>Fill corporate details to preview, print, or save a signed copy of the bilateral B2B investigation rate card & MoU framework.</p>
             </div>
-            <a class="btn btn-dark" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20please%20send/share%20the%20Internal%20FCU%20Audit%20MoU%20template." target="_blank" style="font-size: 12.5px; padding: 10px;">
-              Request / Download via WhatsApp
-            </a>
+            <button class="btn btn-dark" onclick="openMoUModal()" style="font-size: 13px; padding: 12px; margin-top: 15px;">
+              Generate / Fill MoU Agreement
+            </button>
           </div>
 
           <div class="download-card fcu-dl">
@@ -1160,8 +1162,8 @@
 
           <div class="download-card">
             <div>
-              <h3>Authorization Letter Template</h3>
-              <p>Standard authorization document enabling RB Consultancy to act as your authorized facilitator.</p>
+              <h3>Authorization Letter Template & Notice of Appointment</h3>
+              <p>Standard authorization document enabling RB Consultancy to act as your authorized facilitator or notify IC/TPAs.</p>
             </div>
             <a class="btn btn-dark" href="https://wa.me/919325564770?text=Hi%20RB%20Consultancy,%20please%20send%20me%20the%20Authorization%20Letter%20template." target="_blank" style="font-size: 12.5px; padding: 10px;">
               Request via WhatsApp
@@ -1241,8 +1243,8 @@
               </details>
 
               <details class="site-accordion">
-                <summary>How can institutional partners access or request the Internal MoU template?</summary>
-                <div class="accordion-body">The Internal B2B/FCU Audit MoU template can be downloaded directly from the Administrative Hub on this website or requested on-demand via WhatsApp/email dispatch.</div>
+                <summary>How can institutional partners generate or sign the Internal MoU template?</summary>
+                <div class="accordion-body">Use the interactive "Generate / Fill MoU Agreement" button in the Administrative Hub to dynamically populate, print, and save your signed copy on demand.</div>
               </details>
             </div>
           </div>
@@ -1358,6 +1360,69 @@
     </div>
   </footer>
 
+  <!-- INTERACTIVE MOU BUILDER MODAL OVERLAY -->
+  <div id="mouModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(11,47,74,0.85); z-index:3000; overflow-y:auto; padding:20px;">
+    <div style="background:#fff; max-width:850px; margin:30px auto; border-radius:14px; padding:35px; box-shadow:0 25px 60px rgba(0,0,0,0.4);">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d0dce6; padding-bottom:15px; margin-bottom:20px;">
+        <h3 style="color:#0b2f4a; margin:0; font-size:20px;">Institutional FCU MoU & Rate Agreement Generator</h3>
+        <button onclick="closeMoUModal()" style="border:none; background:none; font-size:28px; cursor:pointer; color:#556677;">&times;</button>
+      </div>
+
+      <!-- Interactive Input Form View -->
+      <div id="mouFormView">
+        <p style="font-size:13.5px; color:#556677; margin-bottom:20px;">Enter institutional reviewer details below to generate a print-ready bilateral MoU containing unannounced 24–48h investigation terms, fee structures, and disclaimers.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div><label style="font-size:12px; font-weight:700; color:var(--navy);">Entity / Insurance Co. / TPA Name</label><input class="field" id="instName" type="text" placeholder="e.g., Example Health Insurance Ltd"></div>
+          <div><label style="font-size:12px; font-weight:700; color:var(--navy);">Corporate / Regional Office Address</label><input class="field" id="instAddress" type="text" placeholder="e.g., Nashik / Mumbai / Regional Hub"></div>
+          <div><label style="font-size:12px; font-weight:700; color:var(--navy);">Designated Reviewer / FCU Officer</label><input class="field" id="instOfficer" type="text" placeholder="Name & Designation"></div>
+          <div><label style="font-size:12px; font-weight:700; color:var(--navy);">Official Corporate Email</label><input class="field" id="instEmail" type="email" placeholder="fcu@company.com"></div>
+        </div>
+        <div style="margin-top:20px; background:#f8fafc; border:1px solid #d0dce6; padding:15px; border-radius:8px; font-size:13px; color:#334455;">
+          <b>Framework Included:</b> Unannounced surprise 24–48h field verification TAT, wholesale pharmacy/surgical bill reconciliation, and plain-text legal disclaimers under Indian Contract Act 1872 / IRDAI PPHI principles.
+        </div>
+        <div style="margin-top:25px; text-align:right;">
+          <button class="btn btn-dark" onclick="renderPrintableAgreement()">Preview & Print / Save PDF</button>
+        </div>
+      </div>
+
+      <!-- Printable Preview Area (Hidden until generated) -->
+      <div id="mouPrintView" style="display:none; font-size:13px; line-height:1.6; color:#1a365d;">
+        <div style="text-align:center; border-bottom:2px solid #0b2f4a; padding-bottom:15px; margin-bottom:20px;">
+          <h2 style="color:#0b2f4a; margin:0; font-size:22px;">MEMORANDUM OF UNDERSTANDING (MoU)</h2>
+          <p style="margin:4px 0 0; font-weight:600; font-size:13.5px; color:#0066cc;">Fraud Control Unit (FCU) Ground Investigation & Forensic Audit Mandate</p>
+        </div>
+        
+        <p><b>1. PARTIES:</b> This MoU is entered into digitally/administratively between <b>RB Consultancy</b> (Led by Altaf Rangrej, Udyam: UDYAM-MH-14-0183662, Jalgaon, Maharashtra) and Institutional Partner: <b id="pInstName">[Entity Name]</b>, operating at <b id="pInstAddress">[Address]</b>, represented by <b id="pInstOfficer">[Officer]</b> (<b id="pInstEmail">[Email]</b>).</p>
+        
+        <p><b>2. SCOPE OF SERVICES & SURPRISE PROTOCOL:</b> Unannounced (surprise) physical bed-bound validation, attending physician statement recording, proxy admission interception, and forensic pharmacy/surgical implant invoice cross-matching across North Maharashtra operational zones to preserve evidential integrity.</p>
+        
+        <p><b>3. SERVICE LEVEL AGREEMENT (TAT):</b> Standard verification reports delivered within 24 to 48 hours of assignment dispatch, subject to lawful site access cooperation.</p>
+        
+        <p><b>4. COMMERCIAL & FEE TERMS:</b> Per-assignment investigation fee schedules, emergency TAT surcharges, and conveyance metrics (₹7/km under 100km, AC Tier 3 / AC Sleeper over 100km) governed strictly by agreed bilateral rate cards.</p>
+        
+        <p><b>5. LEGAL & FACILITATOR DISCLAIMER:</b> RB Consultancy operates strictly as an independent facilitator under the Indian Contract Act, 1872. Field observations reflect objective physical conditions at timestamp of inspection. Legal/financial liabilities for claim adjudication rest with the carrier/client.</p>
+        
+        <div style="display:grid; grid-template-columns:1fr 1fr; margin-top:40px; gap:40px;">
+          <div style="border-top:1px solid #334455; padding-top:10px;">
+            <b>For RB Consultancy</b><br>
+            Altaf Rangrej (Principal Consultant)<br>
+            Date: <span id="pDate"></span>
+          </div>
+          <div style="border-top:1px solid #334455; padding-top:10px;">
+            <b>For Institutional Partner</b><br>
+            Authorized Signatory Stamp & Signature<br>
+            Date: ________________________
+          </div>
+        </div>
+
+        <div style="margin-top:30px; text-align:center;" class="no-print">
+          <button class="btn btn-dark" onclick="window.print()">Print / Save as PDF</button>
+          <button class="btn" style="background:#e2e8f0; color:#334455; margin-left:10px;" onclick="resetMouForm()">Edit Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     const dropdownOptions = {
       en: [
@@ -1466,7 +1531,42 @@
       const url = "https://wa.me/919325564770?text=" + encodeURIComponent(text);
       window.open(url, '_blank');
     }
+
+    /* Interactive MoU Modal Functions */
+    function openMoUModal() {
+      document.getElementById('mouModal').style.display = 'block';
+    }
+    function closeMoUModal() {
+      document.getElementById('mouModal').style.display = 'none';
+    }
+    function renderPrintableAgreement() {
+      const name = document.getElementById('instName').value || '[Unspecified Entity]';
+      const address = document.getElementById('instAddress').value || '[Unspecified Address]';
+      const officer = document.getElementById('instOfficer').value || '[Unspecified Officer]';
+      const email = document.getElementById('instEmail').value || '[Unspecified Email]';
+      
+      document.getElementById('pInstName').innerText = name;
+      document.getElementById('pInstAddress').innerText = address;
+      document.getElementById('pInstOfficer').innerText = officer;
+      document.getElementById('pInstEmail').innerText = email;
+      document.getElementById('pDate').innerText = new Date().toLocaleDateString();
+
+      document.getElementById('mouFormView').style.display = 'none';
+      document.getElementById('mouPrintView').style.display = 'block';
+    }
+    function resetMouForm() {
+      document.getElementById('mouPrintView').style.display = 'none';
+      document.getElementById('mouFormView').style.display = 'block';
+    }
   </script>
+  <style>
+    @media print {
+      body * { visibility: hidden; }
+      #mouPrintView, #mouPrintView * { visibility: visible; }
+      #mouPrintView { position: absolute; left: 0; top: 0; width: 100%; background: #fff; padding: 20px; }
+      .no-print { display: none !important; }
+    }
+  </style>
 
 </body>
 </html>
