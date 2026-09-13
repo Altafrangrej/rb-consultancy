@@ -341,23 +341,24 @@
     .footer-links a:hover { color: #80B3FF; }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 12px; }
 
-    /* STRICT A4 PORTRAIT PRINT STYLESHEET WITH NO REPETITIVE DUPLICATION */
+    /* SINGLE PAGE A4 STRICT PRINT FIX (NO 17-PAGE OVERFLOW LOOP) */
     @page {
       size: A4 portrait;
-      margin: 14mm 12mm 14mm 12mm;
+      margin: 10mm;
     }
 
     @media print {
-      body * { visibility: hidden !important; }
+      body * { visibility: hidden !important; height: auto !important; overflow: visible !important; }
       #printableFormModal, #printableFormModal * { visibility: visible !important; }
       #printableFormModal {
-        position: absolute !important;
+        position: relative !important;
         left: 0 !important;
         top: 0 !important;
         width: 100% !important;
         height: auto !important;
         background: #fff !important;
         padding: 0 !important;
+        margin: 0 !important;
         overflow: visible !important;
         z-index: 99999 !important;
         display: block !important;
@@ -366,13 +367,15 @@
         box-shadow: none !important;
         max-width: 100% !important;
         width: 100% !important;
+        height: auto !important;
         margin: 0 auto !important;
-        padding: 10mm !important;
-        font-size: 9.5pt !important;
-        line-height: 1.45 !important;
+        padding: 0 !important;
+        font-size: 8.5pt !important;
+        line-height: 1.35 !important;
         background: #fff !important;
         overflow: visible !important;
         max-height: none !important;
+        page-break-after: avoid;
         page-break-inside: avoid;
       }
       #printableSheetContent * {
@@ -392,8 +395,8 @@
 <body class="lang-en">
 
   <div class="remote-notice-banner">
-    <span data-lang="eng">Notice: Online/remote facilitation for policyholders & on-ground B2B investigation/FCU audits across North Maharashtra.</span>
-    <span data-lang="mar">सूचना: पॉलिसीधारकांसाठी ऑनलाइन व B2B इन्व्हेस्टिगेशन/फ्रॉड कंट्रोल युनिट ऑडिटसाठी उत्तर महाराष्ट्रात ऑन-ग्राउंड कार्यक्षेत्र.</span>
+    <span data-lang="eng">Notice: Online/remote facilitation for policyholders & on-ground B2B investigation/FCU audits across North Maharashtra. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+    <span data-lang="mar">सूचना: पॉलिसीधारकांसाठी ऑनलाइन व B2B इन्व्हेस्टिगेशन/फ्रॉड कंट्रोल युनिट ऑडिटसाठी उत्तर महाराष्ट्रात ऑन-ग्राउंड कार्यक्षेत्र. पत्ता: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
   </div>
 
   <header class="header">
@@ -440,8 +443,8 @@
             <span data-lang="mar">इन्शुरन्स क्लेम फॅसिलिटेशन, मेडिकल ऑडिट व फ्रॉड कंट्रोल युनिट तपास सेवा.</span>
           </h1>
           <p class="hero-lead">
-            <span data-lang="eng">Supporting policyholders with online claim recovery and delivering rapid ground field verification, hospital/pharmacy bill forensic checks, and Fraud Control Unit audit mandates for Insurance Companies & TPAs across North Maharashtra including referral partner referral loops and regional field associate networks.</span>
-            <span data-lang="mar">पॉलिसीधारकांसाठी ऑनलाइन क्लेम रिकव्हरी आणि उत्तर महाराष्ट्रात कॉर्पोरेट/टीपीएसाठी २४-४८ तासांत फिल्ड इन्व्हेस्टिगेशन व फ्रॉड कंट्रोल युनिट पडताळणी.</span>
+            <span data-lang="eng">Supporting policyholders with online claim recovery and delivering rapid ground field verification, hospital/pharmacy bill forensic checks, and Fraud Control Unit audit mandates for Insurance Companies & TPAs across North Maharashtra including referral partner referral loops and regional field associate networks. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+            <span data-lang="mar">पॉलिसीधारकांसाठी ऑनलाइन क्लेम रिकव्हरी आणि उत्तर महाराष्ट्रात कॉर्पोरेट/टीपीएसाठी २४-४८ तासांत फिल्ड इन्व्हेस्टिगेशन व फ्रॉड कंट्रोल युनिट पडताळणी. कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
           </p>
           <div class="trust-row">
             <div class="trust-pill">✓ <b>15+ Years</b> <span data-lang="eng">Experience</span><span data-lang="mar">वर्षांचा अनुभव</span></div>
@@ -460,8 +463,8 @@
             <span data-lang="mar">मुख्य सल्लागार डेस्क</span>
           </h2>
           <p>
-            <span data-lang="eng">Headed with 15+ years experience in healthcare & pharmacy admin, managing lean scalable Fraud Control Unit/audit operations, referral partner programs, regional associate networks, and policyholder advocacy.</span>
-            <span data-lang="mar">१५+ वर्षे आरोग्य व फार्मसी प्रशासनाचा अनुभव, कॉर्पोरेट ऑडिट, रेफरल पार्टनर प्रोग्राम, प्रादेशिक असोसिएट नेटवर्क व पॉलिसीधारक रिकव्हरी विशेषज्ञ.</span>
+            <span data-lang="eng">Headed with 15+ years experience in healthcare & pharmacy admin, managing lean scalable Fraud Control Unit/audit operations, referral partner programs, regional associate networks, and policyholder advocacy. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+            <span data-lang="mar">१५+ वर्षे आरोग्य व फार्मसी प्रशासनाचा अनुभव, कॉर्पोरेट ऑडिट, रेफरल पार्टनर प्रोग्राम, प्रादेशिक असोसिएट नेटवर्क व पॉलिसीधारक रिकव्हरी विशेषज्ञ. पत्ता: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
           </p>
         </div>
       </div>
@@ -480,8 +483,8 @@
             <span data-lang="mar">टीपीए आणि इन्शुरन्स कंपन्यांसाठी फिल्ड इन्व्हेस्टिगेशन व क्लेम ऑडिट सेवा</span>
           </h2>
           <p>
-            <span data-lang="eng">Dedicated ground execution and claim verification partner for Private Health & General Insurance Companies and Third-Party Administrators (TPAs) handling claims in North Maharashtra.</span>
-            <span data-lang="mar">उत्तर महाराष्ट्रात क्लेम पडताळणी व फ्रॉड कंट्रोल युनिटसाठी खाजगी इन्शुरन्स कंपन्या व टीपीएसाठी ऑन-ग्राउंड तपास पार्टनर.</span>
+            <span data-lang="eng">Dedicated ground execution and claim verification partner for Private Health & General Insurance Companies and Third-Party Administrators (TPAs) handling claims in North Maharashtra. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+            <span data-lang="mar">उत्तर महाराष्ट्रात क्लेम पडताळणी व फ्रॉड कंट्रोल युनिटसाठी खाजगी इन्शुरन्स कंपन्या व टीपीएसाठी ऑन-ग्राउंड तपास पार्टनर. पत्ता: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
           </p>
         </div>
         <div class="b2b-master-container">
@@ -491,8 +494,8 @@
               <span data-lang="mar">प्रोटोकॉल: ऑन-ग्राउंड पडताळणी व ऑडिट:</span>
             </h3>
             <p>
-              <span data-lang="eng">To eliminate fraud tampering or proxy patient staging, field verifiers execute hospital desk and bed-side visits under direct principal oversight, deploying digital time-stamped evidence capture.</span>
-              <span data-lang="mar">फ्रॉड टॅम्परिंग टाळण्यासाठी, मुख्य संचालकांच्या देखरेखीखाली थेट हॉस्पिटल डेस्क व बेड-साईड पडताळणी केली जाते.</span>
+              <span data-lang="eng">To eliminate fraud tampering or proxy patient staging, field verifiers execute hospital desk and bed-side visits under direct principal oversight, deploying digital time-stamped evidence capture. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+              <span data-lang="mar">फ्रॉड टॅम्परिंग टाळण्यासाठी, मुख्य संचालकांच्या देखरेखीखाली थेट हॉस्पिटल डेस्क व बेड-साईड पडताळणी केली जाते. पत्ता: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
             </p>
           </div>
           <div style="font-size: 13px; font-weight: 800; color: var(--navy); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px;">
@@ -552,8 +555,8 @@
             <span data-lang="mar">फ्रॉड कंट्रोल युनिट (FCU) तपास मँडेट व शासन मानके</span>
           </h2>
           <p>
-            <span data-lang="eng">Structured investigation workflows aligned with internal carrier/TPA service level agreements and IRDAI policyholder protection frameworks.</span>
-            <span data-lang="mar">टीपीए/इन्शुरन्स कंपनीच्या अंतर्गत MoU व SLA नुसार फ्रॉड कंट्रोल युनिट तपास पद्धती.</span>
+            <span data-lang="eng">Structured investigation workflows aligned with internal carrier/TPA service level agreements and IRDAI policyholder protection frameworks. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+            <span data-lang="mar">टीपीए/इन्शुरन्स कंपनीच्या अंतर्गत MoU व SLA नुसार फ्रॉड कंट्रोल युनिट तपास पद्धती. पत्ता: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
           </p>
         </div>
         <div class="b2b-master-container">
@@ -564,8 +567,8 @@
                 <span data-lang="mar">१. प्री-ऑथोरायझेशन व कॅशलेस फ्रॉड ट्रिगर्स</span>
               </summary>
               <div class="accordion-body">
-                <span data-lang="eng">Screening suspicious elective-turned-emergency admissions, unusual ICU stay inflations matching policy sum insured limits, and unverified network provider credentials via verification audits.</span>
-                <span data-lang="mar">इलेक्टिव्हचे आपत्कालीन अॅडमिशनमध्ये रूपांतर, पॉलिसी सम इन्शुर्ड मर्यादेनुसार आयसीयू मुक्काम फुगवणे आणि पडताळणीद्वारे अप्रमाणित नेटवर्क प्रदात्यांची तपासणी.</span>
+                <span data-lang="eng">Screening suspicious elective-turned-emergency admissions, unusual ICU stay inflations matching policy sum insured limits, and unverified network provider credentials via verification audits. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+                <span data-lang="mar">इलेक्टिव्हचे आपत्कालीन अॅडमिशनमध्ये रूपांतर, पॉलिसी सम इन्शुर्ड मर्यादेनुसार आयसीयू मुक्काम फुगवणे आणि पडताळणीद्वारे अप्रमाणित नेटवर्क प्रदात्यांची तपासणी. कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
               </div>
             </details>
             <details class="site-accordion" open>
@@ -584,8 +587,8 @@
                 <span data-lang="mar">३. डिजिटल व फिल्ड पुरावा पॅकेजिंग</span>
               </summary>
               <div class="accordion-body">
-                <span data-lang="eng">Delivery of court/Ombudsman-ready dossiers containing geo-tagged hospital site photographs, signed statement transcripts, and auditor calculation reconciliation sheets.</span>
-                <span data-lang="mar">जिओ-टॅग हॉस्पिटल फोटो, स्वाक्षरी केलेले जबाब ट्रान्सक्रिप्ट व ऑडिटर रिकॉन्सिलिएशन शीटसह कोर्ट/लोकपाल-रेडी डॉसियर डिलिव्हरी.</span>
+                <span data-lang="eng">Delivery of court/Ombudsman-ready dossiers containing geo-tagged hospital site photographs, signed statement transcripts, and auditor calculation reconciliation sheets. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+                <span data-lang="mar">जिओ-टॅग हॉस्पिटल फोटो, स्वाक्षरी केलेले जबाब ट्रान्सक्रिप्ट व ऑडिटर रिकॉन्सिलिएशन शीटसह कोर्ट/लोकपाल-रेडी डॉसियर डिलिव्हरी. कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
               </div>
             </details>
             <details class="site-accordion">
@@ -594,8 +597,8 @@
                 <span data-lang="mar">४. तक्रार व एस्केलेशन इंटरसेप्शन</span>
               </summary>
               <div class="accordion-body">
-                <span data-lang="eng">Direct coordination with carrier Grievance Redressal Officers when fraudulent rejection disputes or provider collusion escalations occur.</span>
-                <span data-lang="mar">फ्रॉड नाकारण्याच्या विवादांमध्ये किंवा प्रदाता संगनमत एस्केलेशनमध्ये थेट विमा कंपनीच्या तक्रार निवारण अधिकाऱ्यांशी समन्वय.</span>
+                <span data-lang="eng">Direct coordination with carrier Grievance Redressal Officers when fraudulent rejection disputes or provider collusion escalations occur. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+                <span data-lang="mar">फ्रॉड नाकारण्याच्या विवादांमध्ये किंवा प्रदाता संगनमत एस्केलेशनमध्ये थेट विमा कंपनीच्या तक्रार निवारण अधिकाऱ्यांशी समन्वय. कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
               </div>
             </details>
           </div>
@@ -616,8 +619,8 @@
             <span data-lang="mar">रेफरल पार्टनर प्रोग्राम आणि प्रादेशिक फील्ड असोसिएट</span>
           </h2>
           <p>
-            <span data-lang="eng">Partner with RB Consultancy to monetize referrals or represent us on-ground as a taluka-level field investigator.</span>
-            <span data-lang="mar">रेफरल कमिशन मिळवा किंवा तालुकास्तरीय असोसिएट म्हणून ऑन-ग्राउंड काम करा.</span>
+            <span data-lang="eng">Partner with RB Consultancy to monetize referrals or represent us on-ground as a taluka-level field investigator. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+            <span data-lang="mar">रेफरल कमिशन मिळवा किंवा तालुकास्तरीय असोसिएट म्हणून ऑन-ग्राउंड काम करा. पत्ता: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
           </p>
         </div>
         <div class="partner-grid">
@@ -656,8 +659,8 @@
                 <span data-lang="mar">प्रादेशिक फील्ड असोसिएट / फ्रँचायझी व्हा</span>
               </h3>
               <p style="font-size: 14px; color: #334455; margin-bottom: 12px;">
-                <span data-lang="eng">Are you a registered pharmacist, claim coordinator, or field investigator in North Maharashtra? Join our pre-vetted associate network handling localized hospital verifications across 16 talukas including referral-linked task tracking.</span>
-                <span data-lang="mar">उत्तर महाराष्ट्रातील नोंदणीकृत फार्मासिस्ट, क्लेम कोऑर्डिनेटर किंवा इन्व्हेस्टिगेटर आहात का? १६ तालुक्यांमध्ये स्थानिक हॉस्पिटल पडताळणी करण्यासाठी असोसिएट नेटवर्कमध्ये जोडा.</span>
+                <span data-lang="eng">Are you a registered pharmacist, claim coordinator, or field investigator in North Maharashtra? Join our pre-vetted associate network handling localized hospital verifications across 16 talukas including referral-linked task tracking. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+                <span data-lang="mar">उत्तर महाराष्ट्रातील नोंदणीकृत फार्मासिस्ट, क्लेम कोऑर्डिनेटर किंवा इन्व्हेस्टिगेटर आहात का? १६ तालुक्यांमध्ये स्थानिक हॉस्पिटल पडताळणी करण्यासाठी असोसिएट नेटवर्कमध्ये जोडा. पत्ता: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
               </p>
               <div style="background: #eef4fc; border: 1px dashed var(--accent-blue); padding: 10px 12px; border-radius: 8px; font-size: 12.5px; color: var(--navy); margin-bottom: 15px;">
                 <b><span data-lang="eng">Mandatory Onboarding Document:</span><span data-lang="mar">अनिवार्य कागदपत्रे:</span></b> <span data-lang="eng">Verified Resume / CV + All Academic Certificates + Experience/Pharmacy Council Registration Proofs.</span><span data-lang="mar">सत्यापित बायोडाटा / CV + सर्व शैक्षणिक प्रमाणपत्रे + अनुभव / फार्मसी कौन्सिल नोंदणी पुरावे.</span>
@@ -688,8 +691,8 @@
             <span data-lang="mar">आमची ४-टप्प्यांची कार्यपद्धती</span>
           </h2>
           <p>
-            <span data-lang="eng">We maintain absolute transparency. Here is how we evaluate, strategy, and execute your claim or referral coordination.</span>
-            <span data-lang="mar">आम्ही संपूर्ण पारदर्शकता राखतो. आमची केस किंवा रेफरल समन्वयाची ४-टप्प्यांची पद्धत.</span>
+            <span data-lang="eng">We maintain absolute transparency. Here is how we evaluate, strategy, and execute your claim or referral coordination. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+            <span data-lang="mar">आम्ही संपूर्ण पारदर्शकता राखतो. आमची केस किंवा रेफरल समन्वयाची ४-टप्प्यांची पद्धत. पत्ता: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
           </p>
         </div>
         <div class="workflow-grid">
@@ -733,8 +736,8 @@
               <span data-lang="mar">अंमलबजावणी व पाठपुरावा</span>
             </h3>
             <p>
-              <span data-lang="eng">We manage notices, IRDAI guidelines, and carrier communications until final settlement or referral commission disbursement.</span>
-              <span data-lang="mar">अंतिम सेटलमेंट किंवा रेफरल कमिशन वितरणापर्यंत नोटीस, IRDAI मार्गदर्शक तत्त्वे व पत्रव्यवहार हाताळतो.</span>
+              <span data-lang="eng">We manage notices, IRDAI guidelines, and carrier communications until final settlement or referral commission disbursement. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+              <span data-lang="mar">अंतिम सेटलमेंट किंवा रेफरल कमिशन वितरणापर्यंत नोटीस, IRDAI मार्गदर्शक तत्त्वे व पत्रव्यवहार हाताळतो. पत्ता: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
             </p>
           </div>
         </div>
@@ -754,21 +757,21 @@
             <span data-lang="mar">विशेष सल्लागार, रेफरल व फ्रॉड कंट्रोल सेवा</span>
           </h2>
           <p>
-            <span data-lang="eng">Click any service card accordion to inspect scope, deliverables, and fee structure details.</span>
-            <span data-lang="mar">प्रत्येक सेवेची व्याप्ती आणि फी संरचना पाहण्यासाठी खाली क्लिक करा.</span>
+            <span data-lang="eng">Click any service card accordion to inspect scope, deliverables, and fee structure details. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+            <span data-lang="mar">प्रत्येक सेवेची व्याप्ती आणि फी संरचना पाहण्यासाठी खाली क्लिक करा. पत्ता: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
           </p>
         </div>
         <div class="services-grid">
-          <article class="service-card"><div><div class="service-num">Service 01</div><h3><span data-lang="eng">Fresh Claim Submissions</span><span data-lang="mar">नवीन क्लेम दाखल करणे</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: ₹3,000</span><span data-lang="mar">फी: ₹३,०००</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Complete initial documentation and medical file arrangement.</span><span data-lang="mar">प्रारंभिक कागदपत्रे पूर्ण करणे व मेडिकल फाईल सुव्यवस्थित मांडणी.</span></div></details></div></article>
+          <article class="service-card"><div><div class="service-num">Service 01</div><h3><span data-lang="eng">Fresh Claim Submissions</span><span data-lang="mar">नवीन क्लेम दाखल करणे</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: ₹3,000</span><span data-lang="mar">फी: ₹३,०००</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Complete initial documentation and medical file arrangement.</span><span data-lang="mar">प्रारंभिक कागदपत्रे पूर्ण करणे व मेडिकल फाईल सुव्यवस्थित मांडणी. Office: 201, Taimur Height, Jalgaon.</span></div></details></div></article>
           <article class="service-card"><div><div class="service-num">Service 02</div><h3><span data-lang="eng">Rejected Claims Recovery</span><span data-lang="mar">नाकारलेल्या क्लेमची वसुली</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: ₹3,000 + 10% Success Fee</span><span data-lang="mar">फी: ₹३,००० + १०% यश फी</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Review rejection letters and file strategic appeals under IRDAI 2024.</span><span data-lang="mar">रिजेक्शन लेटरची तपासणी व IRDAI २०२४ नुसार धोरणात्मक अपील फाइल करणे.</span></div></details></div></article>
           <article class="service-card"><div><div class="service-num">Service 03</div><h3><span data-lang="eng">Fraud Control Unit (FCU) Ground Audits</span><span data-lang="mar">फ्रॉड कंट्रोल युनिट ऑन-ग्राउंड ऑडिट</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: As per MoU with TPA / IC</span><span data-lang="mar">फी: टीपीए / इन्शुरन्स MoU नुसार</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Field verification, bed-bound patient check, and bill forensic audit.</span><span data-lang="mar">फिल्ड पडताळणी, बेड-बाऊंड रुग्ण तपासणी व बिल फॉरेन्सिक ऑडिट.</span></div></details></div></article>
           <article class="service-card"><div><div class="service-num">Service 04</div><h3><span data-lang="eng">Queries Management</span><span data-lang="mar">शंका व प्रश्न निवारण</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: As per Query Profile</span><span data-lang="mar">फी: क्वेरी प्रोफाइलनुसार</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Quick handling of queries raised by insurance companies or TPAs.</span><span data-lang="mar">विमा कंपनी किंवा टीपीएने विचारलेल्या शंकांचे जलद व व्यावसायिक निवारण.</span></div></details></div></article>
           <article class="service-card"><div><div class="service-num">Service 05</div><h3><span data-lang="eng">Reconsideration Or Grievance</span><span data-lang="mar">फेरविचार किंवा तक्रार</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: ₹3,000 + 10% Success Fee</span><span data-lang="mar">फी: ₹३,००० + १०% यश फी</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Formal escalation to challenge low settlement amounts or delays.</span><span data-lang="mar">कमी सेटलमेंट किंवा विलंबाला आव्हान देण्यासाठी औपचारिक एस्केलेशन.</span></div></details></div></article>
-          <article class="service-card"><div><div class="service-num">Service 06</div><h3><span data-lang="eng">IRDAI & Ombudsman Appeals</span><span data-lang="mar">लोकपाल (Ombudsman) अपील</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: ₹3,000 + 10% Success Fee</span><span data-lang="mar">फी: ₹३,००० + १०% यश फी</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Dossier preparation and representation up to ₹30 Lakh award limit.</span><span data-lang="mar">₹३० लाखापर्यंतच्या मर्यादेत डॉसियर तयार करणे व लोकपालसमोर प्रतिनिधित्व.</span></div></details></div></article>
+          <article class="service-card"><div><div class="service-num">Service 06</div><h3><span data-lang="eng">IRDAI & Ombudsman Appeals</span><span data-lang="mar">लोकपाल (Ombudsman) अपील</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: ₹3,000 + 10% Success Fee</span><span data-lang="mar">फी: ₹३,००० + १०% यश फी</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Dossier preparation and representation up to ₹30 Lakh award limit.</span><span data-lang="mar">₹३० लाखापर्यंतच्या मर्यादेत डॉसियर तयार करणे व लोकपालसमोर प्रतिनिधित्व. Office: 201, Taimur Height, Jalgaon.</span></div></details></div></article>
           <article class="service-card"><div><div class="service-num">Service 07</div><h3><span data-lang="eng">TPA/IC Issues Resolutions</span><span data-lang="mar">टीपीए/कंपनी वाद निवारण</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: As per Case Profile</span><span data-lang="mar">फी: केस प्रोफाइलनुसार</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Direct follow-up and digital portal registration enforcement.</span><span data-lang="mar">थेट पाठपुरावा व डिजिटल पोर्टल नोंदणी अंमलबजावणी.</span></div></details></div></article>
-          <article class="service-card"><div><div class="service-num">Service 08</div><h3><span data-lang="eng">End-To-End Cashless Management</span><span data-lang="mar">कॅशलेस व्यवस्थापन</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: ₹2,000</span><span data-lang="mar">फी: ₹२,०००</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Pre-authorization, treatment tracking, and discharge clearance.</span><span data-lang="mar">प्री-ऑथोरायझेशन, उपचाराTracking व डिस्चार्ज क्लिरन्स समन्वय.</span></div></details></div></article>
+          <article class="service-card"><div><div class="service-num">Service 08</div><h3><span data-lang="eng">End-To-End Cashless Management</span><span data-lang="mar">कॅशलेस व्यवस्थापन</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: ₹2,000</span><span data-lang="mar">फी: ₹२,०००</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Pre-authorization, treatment tracking, and discharge clearance.</span><span data-lang="mar">प्री-ऑथोरायझेशन, उपचाराTracking व डिस्चार्ज क्लिरन्स समन्वय. Office: 201, Taimur Height, Jalgaon.</span></div></details></div></article>
           <article class="service-card"><div><div class="service-num">Service 09</div><h3><span data-lang="eng">MSME Samadhan Filings</span><span data-lang="mar">एमएसएमई समाधान फायलिंग</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: 12% Received Funds</span><span data-lang="mar">फी: प्राप्त निधीचे १२%</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Statutory recovery under MSMED Act Section 15 & 16.</span><span data-lang="mar">MSMED कायदा कलम १५ व १६ अन्वये वैधानिक वसुली.</span></div></details></div></article>
-          <article class="service-card"><div><div class="service-num">Service 10</div><h3><span data-lang="eng">Referral Partner & Associate Coordination</span><span data-lang="mar">रेफरल पार्टनर व असोसिएट समन्वय</span></h3><div class="service-fee-tag"><span data-lang="eng">Included / Commission Loop</span><span data-lang="mar">समाविष्ट / कमिशन लूप</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Attribution logging for Referral Partners and regional task dispatch for Field Associates.</span><span data-lang="mar">रेफरल पार्टनरसाठी अट्रिब्युशन लॉंगिंग व प्रादेशिक असोसिएटसाठी टास्क डिस्पॅच.</span></div></details></div></article>
+          <article class="service-card"><div><div class="service-num">Service 10</div><h3><span data-lang="eng">Referral Partner & Associate Coordination</span><span data-lang="mar">रेफरल पार्टनर व असोसिएट समन्वय</span></h3><div class="service-fee-tag"><span data-lang="eng">Included / Commission Loop</span><span data-lang="mar">समाविष्ट / कमिशन लूप</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Attribution logging for Referral Partners and regional task dispatch for Field Associates. Office: 201, Taimur Height, Jalgaon.</span><span data-lang="mar">रेफरल पार्टनरसाठी अट्रिब्युशन लॉंगिंग व प्रादेशिक असोसिएटसाठी टास्क डिस्पॅच. पत्ता: २०१, तैमूर हाईट, जळगाव.</span></div></details></div></article>
         </div>
       </div>
     </section>
@@ -827,7 +830,7 @@
             <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 10px;">
               <input type="checkbox" id="acceptTermsCheck" style="width: 18px; height: 18px; cursor: pointer;">
               <label for="acceptTermsCheck" style="font-size: 13px; font-weight: 600; color: var(--navy); cursor: pointer;">
-                I/We agree to the above category-specific terms and authorize RB Consultancy (Office: 201, Taimur Height, Mehrun, Jalgaon) to process this preliminary inquiry / referral attribution.
+                I/We agree to the above category-specific terms and authorize RB Consultancy to process this preliminary inquiry / referral attribution.
               </label>
             </div>
           </div>
@@ -858,10 +861,10 @@
           </h2>
         </div>
         <div class="success-grid">
-          <div class="success-card fcu-track"><div><span style="font-size:11px; font-weight:800; color:var(--accent-blue);">FCU TRACK</span><h3><span data-lang="eng">Bogus/Proxy Hospital Admission Intercepted</span><span data-lang="mar">बोगस/प्रॉक्सी हॉस्पिटल अॅडमिशन रोखले</span></h3><p><span data-lang="eng">Successfully flagged localized day-care invoice recycling and ghost patient entries across North Maharashtra hospital network queries within 36-hr operational window.</span><span data-lang="mar">३६ तासांच्या आत उत्तर महाराष्ट्र हॉस्पिटल नेटवर्कमध्ये डे-केअर इनव्हॉइस सायकलिंग व घोस्ट पेशंट नोंदी पकडल्या.</span></p></div></div>
-          <div class="success-card fcu-track"><div><span style="font-size:11px; font-weight:800; color:var(--accent-blue);">FCU TRACK</span><h3><span data-lang="eng">Implant & Surgical Consumable Overbilling Audit</span><span data-lang="mar">इम्प्लांट व सर्जिकल बिल ओव्हरबில்லிंग ऑडिट</span></h3><p><span data-lang="eng">Reconciled wholesale distributor rates against high-value implant statements, preventing unverified payout inflation.</span><span data-lang="mar">होलसेल डिस्ट्रीब्यूटर दरांशी इम्प्लांट बिलांचे रिकॉन्सिलिएशन करून विना-प्रमाणित फुगवलेला दावा थांबवला.</span></p></div></div>
-          <div class="success-card"><div><span style="font-size:11px; font-weight:800; color:var(--green);">ADVOCACY</span><h3><span data-lang="eng">Rejected Claim Overturned (IRDAI 2024)</span><span data-lang="mar">नाकारलेला क्लेम मंजूर (IRDAI २०२४)</span></h3><p><span data-lang="eng">Successfully challenged unjustified claim repudiation letters and secured full settlements via referral intake loops.</span><span data-lang="mar">अन्यायकारक रिप्युடியேशन आव्हानाद्वारे पूर्ण सेटलमेंट मिळवले.</span></p></div></div>
-          <div class="success-card"><div><span style="font-size:11px; font-weight:800; color:var(--green);">RECOVERY</span><h3><span data-lang="eng">Ombudsman & MSME Payment Recovery</span><span data-lang="mar">लोकपाल व एमएसएमई पेमेंट वसुली</span></h3><p><span data-lang="eng">Invoked MSMED Act statutory notices and secured commercial settlements with transparent partner commission fulfillment.</span><span data-lang="mar">MSMED कायद्यांतर्गत नोटीस पाठवून पारदर्शक कमिशनसह कमर्शियल वसुली साधली.</span></p></div></div>
+          <div class="success-card fcu-track"><div><span style="font-size:11px; font-weight:800; color:var(--accent-blue);">FCU TRACK</span><h3><span data-lang="eng">Bogus/Proxy Hospital Admission Intercepted</span><span data-lang="mar">बोगस/प्रॉक्सी हॉस्पिटल अॅडमिशन रोखले</span></h3><p><span data-lang="eng">Successfully flagged localized day-care invoice recycling and ghost patient entries across North Maharashtra hospital network queries within 36-hr operational window. Office: 201, Taimur Height, Jalgaon.</span><span data-lang="mar">३६ तासांच्या आत उत्तर महाराष्ट्र हॉस्पिटल नेटवर्कमध्ये डे-केअर इनव्हॉइस सायकलिंग व घोस्ट पेशंट नोंदी पकडल्या. कार्यालय: २०१, तैमूर हाईट, जळगाव.</span></p></div></div>
+          <div class="success-card fcu-track"><div><span style="font-size:11px; font-weight:800; color:var(--accent-blue);">FCU TRACK</span><h3><span data-lang="eng">Implant & Surgical Consumable Overbilling Audit</span><span data-lang="mar">इम्प्लांट व सर्जिकल बिल ओव्हरबில்லிंग ऑडिट</span></h3><p><span data-lang="eng">Reconciled wholesale distributor rates against high-value implant statements, preventing unverified payout inflation.</span><span data-lang="mar">होलसेल डिस्ट्रीब्यूटर दरांशी इम्प्लांट बिलांचे रिकॉन्सिलिएशन करून विना-प्रमाणित फुगवलेला दावा थांबवला. Office: 201, Taimur Height, Jalgaon.</span></p></div></div>
+          <div class="success-card"><div><span style="font-size:11px; font-weight:800; color:var(--green);">ADVOCACY</span><h3><span data-lang="eng">Rejected Claim Overturned (IRDAI 2024)</span><span data-lang="mar">नाकारलेला क्लेम मंजूर (IRDAI २०२४)</span></h3><p><span data-lang="eng">Successfully challenged unjustified claim repudiation letters and secured full settlements via referral intake loops. Office: 201, Taimur Height, Jalgaon.</span><span data-lang="mar">अन्यायकारक रिप्युடியேशन आव्हानाद्वारे पूर्ण सेटलमेंट मिळवले. कार्यालय: २०१, तैमूर हाईट, जळगाव.</span></p></div></div>
+          <div class="success-card"><div><span style="font-size:11px; font-weight:800; color:var(--green);">RECOVERY</span><h3><span data-lang="eng">Ombudsman & MSME Payment Recovery</span><span data-lang="mar">लोकपाल व एमएसएमई पेमेंट वसुली</span></h3><p><span data-lang="eng">Invoked MSMED Act statutory notices and secured commercial settlements with transparent partner commission fulfillment. Office: 201, Taimur Height, Jalgaon.</span><span data-lang="mar">MSMED कायद्यांतर्गत नोटीस पाठवून पारदर्शक कमिशनसह कमर्शियल वसुली साधली. कार्यालय: २०१, तैमूर हाईट, जळगाव.</span></p></div></div>
         </div>
       </div>
     </section>
@@ -875,8 +878,8 @@
             <span data-lang="mar">आवश्यक कागदपत्रे व असोसिएट ऑनबोर्डिंग चेकलिस्ट</span>
           </h2>
           <p>
-            <span data-lang="eng">Expand sections to review required records and mandatory verification documents.</span>
-            <span data-lang="mar">आवश्यक कागदपत्रे व पडताळणी अहवाल पाहण्यासाठी खाली क्लिक करा.</span>
+            <span data-lang="eng">Expand sections to review required records and mandatory verification documents. Office: 201, Taimur Height, Mehrun, Jalgaon.</span>
+            <span data-lang="mar">आवश्यक कागदपत्रे व पडताळणी अहवाल पाहण्यासाठी खाली क्लिक करा. कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
           </p>
         </div>
         <div class="checklist-container">
@@ -896,17 +899,18 @@
             <span data-lang="eng">Fee Structure, Referral Rewards & FCU Terms</span>
             <span data-lang="mar">फी संरचना, रेफरल रिवार्ड्स व FCU अटी</span>
           </h2>
+          <p>Office: 201, Taimur Height, Mehrun, Jalgaon.</p>
         </div>
         <div class="pricing-grid">
           <div class="pricing-card">
             <h3><span data-lang="eng">Policyholder Advocacy & Referral</span><span data-lang="mar">पॉलिसीधारक अ‍ॅडव्होकसी व रेफरल</span></h3>
             <div class="pricing-fee">₹3,000 (Fresh) | ₹2,000 (Cashless) | Referral Commission Loop</div>
-            <p><span data-lang="eng">Baseline fee plus 10%-12% success fee upon realization; rewarding commission payout for verified Referral Partners.</span><span data-lang="mar">बेसलाईन फी अधिक १०%-१२% यश फी; सत्यापित रेफरल पार्टनरसाठी आकर्षक कमिशन.</span></p>
+            <p><span data-lang="eng">Baseline fee plus 10%-12% success fee upon realization; rewarding commission payout for verified Referral Partners. Office: 201, Taimur Height, Jalgaon.</span><span data-lang="mar">बेसलाईन फी अधिक १०%-१२% यश फी; सत्यापित रेफरल पार्टनरसाठी आकर्षक कमिशन. पत्ता: २०१, तैमूर हाईट, जळगाव.</span></p>
           </div>
           <div class="pricing-card" style="border-top-color: var(--navy);">
             <h3><span data-lang="eng">Fraud Control Unit (FCU) & Associate Network</span><span data-lang="mar">फ्रॉड कंट्रोल युनिट (FCU) व असोसिएट नेटवर्क</span></h3>
             <div class="pricing-fee">As per internal MoU with TPA / IC | Taluka Task Rate</div>
-            <p><span data-lang="eng">Per-assignment audit rate card governed via bilateral MoU execution and task-linked field associate payouts.</span><span data-lang="mar">द्विपक्षीय MoU व तालुका टास्क दरानुसार ऑडिट व असोसिएट पेआउट.</span></p>
+            <p><span data-lang="eng">Per-assignment audit rate card governed via bilateral MoU execution and task-linked field associate payouts. Office: 201, Taimur Height, Jalgaon.</span><span data-lang="mar">द्विपक्षीय MoU व तालुका टास्क दरानुसार ऑडिट व असोसिएट पेआउट. पत्ता: २०१, तैमूर हाईट, जळगाव.</span></p>
           </div>
         </div>
         <div style="background:#fff; border:1px solid var(--line); border-radius:14px; padding:24px;">
@@ -923,13 +927,14 @@
             <span data-lang="eng">Administrative Hub</span>
             <span data-lang="mar">प्रशासकीय केंद्र</span>
           </h2>
+          <p>Office: 201, Taimur Height, Mehrun, Jalgaon.</p>
         </div>
         <div class="download-grid">
           <div class="download-card fcu-dl" style="background: linear-gradient(135deg, #F0F6FF 0%, #D6E8FF 100%); border: 2px solid var(--accent-blue);">
             <div>
               <span class="partner-top-badge">★ Institutional MoU Builder</span>
               <h3><span data-lang="eng">Interactive FCU Agreement Generator</span><span data-lang="mar">इन्स्टिट्यूशनल FCU करार जनरेटर</span></h3>
-              <p><span data-lang="eng">Fill corporate details to generate printable signed-off copy.</span><span data-lang="mar">प्रिंट-रेडी स्वाक्षरी प्रत तयार करण्यासाठी कॉर्पोरेट तपशील भरा.</span></p>
+              <p><span data-lang="eng">Fill corporate details to generate printable signed-off copy. Office: 201, Taimur Height, Jalgaon.</span><span data-lang="mar">प्रिंट-रेडी स्वाक्षरी प्रत तयार करण्यासाठी कॉर्पोरेट तपशील भरा. कार्यालय: २०१, तैमूर हाईट, जळगाव.</span></p>
             </div>
             <button class="btn btn-dark" onclick="openMoUModal()" style="font-size: 13px; padding: 12px; margin-top: 15px;">
               <span data-lang="eng">Generate / Fill MoU Agreement</span>
@@ -939,7 +944,7 @@
           <div class="download-card fcu-dl">
             <div>
               <h3><span data-lang="eng">FCU Investigation Mandate Brief</span><span data-lang="mar">FCU इन्व्हेस्टिगेशन मँडेट ब्रीफ</span></h3>
-              <p><span data-lang="eng">Trigger verification & bill audit scopes.</span><span data-lang="mar">पडताळणी व बिल ऑडिट व्याप्ती सुरू करा.</span></p>
+              <p><span data-lang="eng">Trigger verification & bill audit scopes. Office: 201, Taimur Height, Jalgaon.</span><span data-lang="mar">पडताळणी व बिल ऑडिट व्याप्ती सुरू करा. कार्यालय: २०१, तैमूर हाईट, जळगाव.</span></p>
             </div>
             <a class="btn btn-dark" href="https://wa.me/919325564770?text=Request%20FCU%20Mandate%20Form" target="_blank" style="font-size:12.5px;padding:10px;">
               <span data-lang="eng">Request via WhatsApp</span>
@@ -949,7 +954,7 @@
           <div class="download-card">
             <div>
               <h3><span data-lang="eng">Regional Associate & Referral Brief</span><span data-lang="mar">प्रादेशिक असोसिएट व रेफरल ब्रीफ</span></h3>
-              <p><span data-lang="eng">Verified CV checklist, commission schedule & NDA terms.</span><span data-lang="mar">सत्यापित CV चेकलिस्ट, कमिशन शेड्यूल व NDA अटी.</span></p>
+              <p><span data-lang="eng">Verified CV checklist, commission schedule & NDA terms. Office: 201, Taimur Height, Jalgaon.</span><span data-lang="mar">सत्यापित CV चेकलिस्ट, कमिशन शेड्यूल व NDA अटी. कार्यालय: २०१, तैमूर हाईट, जळगाव.</span></p>
             </div>
             <a class="btn btn-dark" href="https://wa.me/919325564770?text=Request%20Associate%20Checklist" target="_blank" style="font-size:12.5px;padding:10px;">
               <span data-lang="eng">Request via WhatsApp</span>
@@ -959,7 +964,7 @@
           <div class="download-card">
             <div>
               <h3><span data-lang="eng">Authorization Letter & NOA</span><span data-lang="mar">अथॉरायझेशन लेटर व NOA</span></h3>
-              <p><span data-lang="eng">Official notice addressed to IC/TPAs citing IRDAI rules.</span><span data-lang="mar">IRDAI नियमांनुसार IC/TPA ला पाठवलेली अधिकृत नोटीस.</span></p>
+              <p><span data-lang="eng">Official notice addressed to IC/TPAs citing IRDAI rules. Office: 201, Taimur Height, Jalgaon.</span><span data-lang="mar">IRDAI नियमांनुसार IC/TPA ला पाठवलेली अधिकृत नोटीस. कार्यालय: २०१, तैमूर हाईट, जळगाव.</span></p>
             </div>
             <a class="btn btn-dark" href="https://wa.me/919325564770?text=Request%20Authorization%20Template" target="_blank" style="font-size:12.5px;padding:10px;">
               <span data-lang="eng">Request via WhatsApp</span>
@@ -979,16 +984,16 @@
             <span data-lang="mar">कॉर्पोरेट कायदेशीर व वैधानिक डिस्क्लेमर</span>
           </h4>
           <p>
-            <span data-lang="eng"><b>1. Facilitator Role & Indian Contract Act, 1872:</b> RB Consultancy operates strictly as an independent professional facilitator, administrative coordinator, and authorized advisory agent under the framework of the Indian Contract Act, 1872 (Section 182-195 principle of agent-principal authority). All document staging, filing assistance, referral attribution logging, and escalation tracking are performed on a facilitative basis at the explicit instruction of the principal client/partner. RB Consultancy is neither an insurance company nor a Third-Party Administrator (TPA) and does not underwrite risk.</span>
-            <span data-lang="mar"><b>१. स्वतंत्र फॅसिलिटेटर व भारतीय करार कायदा १८७२:</b> आरबी कन्सल्टन्सी भारतीय करार कायदा १८७२ अंतर्गत स्वतंत्र व्यावसायिक फॅसिलिटेटर व प्रशासकीय समन्वयक म्हणून कार्य करते. सर्व कागदपत्र तयारी व पाठपुरावा क्लायंट/पार्टनरच्या सूचनेनुसार फॅसिलिटेटर क्षमतेत केला जातो.</span>
+            <span data-lang="eng"><b>1. Facilitator Role & Indian Contract Act, 1872:</b> RB Consultancy operates strictly as an independent professional facilitator, administrative coordinator, and authorized advisory agent under the framework of the Indian Contract Act, 1872 (Section 182-195 principle of agent-principal authority). All document staging, filing assistance, referral attribution logging, and escalation tracking are performed on a facilitative basis at the explicit instruction of the principal client/partner. RB Consultancy is neither an insurance company nor a Third-Party Administrator (TPA) and does not underwrite risk. Office Address: 201, Taimur Height, Dr. Iqbal Colony, Mehrun, Jalgaon, Maharashtra, India. Udyam Registration: UDYAM-MH-14-0183662.</span>
+            <span data-lang="mar"><b>१. स्वतंत्र फॅसिलिटेटर व भारतीय करार कायदा १८७२:</b> आरबी कन्सल्टन्सी भारतीय करार कायदा १८७२ अंतर्गत स्वतंत्र व्यावसायिक फॅसिलिटेटर व प्रशासकीय समन्वयक म्हणून कार्य करते. सर्व कागदपत्र तयारी व पाठपुरावा क्लायंट/पार्टनरच्या सूचनेनुसार फॅसिलिटेटर क्षमतेत केला जातो. कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
           </p>
           <p>
             <span data-lang="eng"><b>2. Regulatory Governance & IRDAI Framework:</b> Advisory redirection, grievance coordination, and policyholder relief claims align with guidelines and statutory protections established under the Insurance Regulatory and Development Authority of India (IRDAI Protection of Policyholders' Interests Regulations, 2024 and amended guidelines). However, final claim decisions, repudiation reversals, settlement payouts, and Ombudsman awards (up to 30 lakh rupees) rest exclusively with the designated insurance carrier, TPA, or Insurance Ombudsman under statutory authority.</span>
             <span data-lang="mar"><b>२. IRDAI नियमन फ्रेमवर्क:</b> पॉलिसीधारक संरक्षण व तक्रार निवारण मार्गदर्शक तत्त्वे IRDAI नियमांनुसार जुळवली जातात. तथापि, क्लेम मंजुरी, नाकारणे किंवा लोकपाल (Ombudsman) पुरस्कारांचे अंतिम निर्णय विमा कंपनी किंवा लोकपाल यांच्याकडेच सुरक्षित असतात.</span>
           </p>
           <p>
-            <span data-lang="eng"><b>3. Statutory Liablity Limitations & Document Veracity:</b> All legal, financial, and clinical document authenticity liabilities rest solely with the client and document-issuing authorities/providers under applicable Indian penal, contract, and consumer protection statutes. Referral partners warrant accurate initial attribution declaration. For B2B Fraud Control Unit (FCU) and ground field verification assignments, observation reports reflect objective physical and provider conditions observed strictly at the date and time of physical inspection, constituting advisory risk-containment opinions without binding carriers to override contractual policy warranties or adjudicate clinical medical malpractice. Office Address: 201, Taimur Height, Dr. Iqbal Colony, Mehrun, Jalgaon, Maharashtra, India. Udyam Registration: UDYAM-MH-14-0183662.</span>
-            <span data-lang="mar"><b>३. कायदेशीर व कागदपत्र सत्यता जबाबदारी:</b> कागदपत्रांची वैधता व सत्यता ही क्लायंट व जारी करणाऱ्या प्राधिकरणाची एकमेव जबाबदारी आहे. B2B FCU तपास अहवाल हे केवळ पडताळणीचे व्यावसायिक मत दर्शवतात. कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव.</span>
+            <span data-lang="eng"><b>3. Statutory Liablity Limitations & Document Veracity:</b> All legal, financial, and clinical document authenticity liabilities rest solely with the client and document-issuing authorities/providers under applicable Indian penal, contract, and consumer protection statutes. Referral partners warrant accurate initial attribution declaration. For B2B Fraud Control Unit (FCU) and ground field verification assignments, observation reports reflect objective physical and provider conditions observed strictly at the date and time of physical inspection, constituting advisory risk-containment opinions without binding carriers to override contractual policy warranties or adjudicate clinical medical malpractice.</span>
+            <span data-lang="mar"><b>३. कायदेशीर व कागदपत्र सत्यता जबाबदारी:</b> कागदपत्रांची वैधता व सत्यता ही क्लायंट व जारी करणाऱ्या प्राधिकरणाची एकमेव जबाबदारी आहे. B2B FCU तपास अहवाल हे केवळ पडताळणीचे व्यावसायिक मत दर्शवतात.</span>
           </p>
         </div>
       </div>
@@ -1213,48 +1218,48 @@
       const f2 = document.getElementById('dynField2') ? document.getElementById('dynField2').value : '';
 
       const htmlContent = `
-        <div style="border-bottom:2px solid #0b2f4a; padding-bottom:8px; margin-bottom:12px;">
+        <div style="border-bottom:1.5px solid #0b2f4a; padding-bottom:6px; margin-bottom:8px;">
           <div style="display:flex; justify-content:space-between; align-items:center;">
             <div>
-              <h2 style="color:#0b2f4a; margin:0; font-size:16px;">RB CONSULTANCY (आरबी कन्सल्टन्सी)</h2>
-              <p style="margin:2px 0; font-size:10.5px; color:#556677;">Office: 201, Taimur Height, Mehrun, Jalgaon | Udyam: UDYAM-MH-14-0183662</p>
+              <h2 style="color:#0b2f4a; margin:0; font-size:14px;">RB CONSULTANCY (आरबी कन्सल्टन्सी)</h2>
+              <p style="margin:1px 0; font-size:9pt; color:#556677;">Office: 201, Taimur Height, Mehrun, Jalgaon | Udyam: UDYAM-MH-14-0183662</p>
             </div>
-            <div style="text-align:right; font-size:9.5pt; color:#334455;">
+            <div style="text-align:right; font-size:8.5pt; color:#334455;">
               <b>Date / दिनांक:</b> ${new Date().toLocaleDateString('en-IN')}<br>
               <b>Ref:</b> RBC-${cat.toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}
             </div>
           </div>
-          <div style="background:#0b2f4a; color:#fff; text-align:center; padding:6px; margin-top:8px; border-radius:4px; font-weight:700; font-size:12pt;">
+          <div style="background:#0b2f4a; color:#fff; text-align:center; padding:4px; margin-top:6px; border-radius:4px; font-weight:700; font-size:11pt;">
             ${catTitles[cat]}
           </div>
         </div>
 
-        <div style="margin-bottom:10px;">
-          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">1. ${lang==='mar' ? 'सहकार्य तपशील (PARTICULARS)' : 'ENGAGEMENT PARTICULARS'}</h4>
-          <table style="width:100%; border-collapse:collapse; font-size:9pt;">
-            <tr><td style="padding:3px 6px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Category</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">${cat.toUpperCase()}</td><td style="padding:3px 6px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Place</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">Jalgaon, MH</td></tr>
-            <tr><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Name / Org</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">${fullName}</td><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Mobile</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">${phone}</td></tr>
-            <tr><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Email</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">${email}</td><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Location</b></td><td style="padding:3px 6px; border:1px solid #d0dce6;">${location}</td></tr>
-            ${f1 ? `<tr><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 1</b></td><td colspan="3" style="padding:3px 6px; border:1px solid #d0dce6;">${f1}</td></tr>` : ''}
-            ${f2 ? `<tr><td style="padding:3px 6px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 2</b></td><td colspan="3" style="padding:3px 6px; border:1px solid #d0dce6;">${f2}</td></tr>` : ''}
+        <div style="margin-bottom:8px;">
+          <h4 style="color:#0b2f4a; font-size:9.5pt; margin:0 0 3px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">1. ${lang==='mar' ? 'सहकार्य तपशील (PARTICULARS)' : 'ENGAGEMENT PARTICULARS'}</h4>
+          <table style="width:100%; border-collapse:collapse; font-size:8.5pt;">
+            <tr><td style="padding:2.5px 5px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Category</b></td><td style="padding:2.5px 5px; border:1px solid #d0dce6;">${cat.toUpperCase()}</td><td style="padding:2.5px 5px; border:1px solid #d0dce6; width:22%; background:#f8fafc;"><b>Place</b></td><td style="padding:2.5px 5px; border:1px solid #d0dce6;">Jalgaon, MH</td></tr>
+            <tr><td style="padding:2.5px 5px; border:1px solid #d0dce6; background:#f8fafc;"><b>Name / Org</b></td><td style="padding:2.5px 5px; border:1px solid #d0dce6;">${fullName}</td><td style="padding:2.5px 5px; border:1px solid #d0dce6; background:#f8fafc;"><b>Mobile</b></td><td style="padding:2.5px 5px; border:1px solid #d0dce6;">${phone}</td></tr>
+            <tr><td style="padding:2.5px 5px; border:1px solid #d0dce6; background:#f8fafc;"><b>Email</b></td><td style="padding:2.5px 5px; border:1px solid #d0dce6;">${email}</td><td style="padding:2.5px 5px; border:1px solid #d0dce6; background:#f8fafc;"><b>Location</b></td><td style="padding:2.5px 5px; border:1px solid #d0dce6;">${location}</td></tr>
+            ${f1 ? `<tr><td style="padding:2.5px 5px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 1</b></td><td colspan="3" style="padding:2.5px 5px; border:1px solid #d0dce6;">${f1}</td></tr>` : ''}
+            ${f2 ? `<tr><td style="padding:2.5px 5px; border:1px solid #d0dce6; background:#f8fafc;"><b>Attr 2</b></td><td colspan="3" style="padding:2.5px 5px; border:1px solid #d0dce6;">${f2}</td></tr>` : ''}
           </table>
         </div>
 
-        <div style="margin-bottom:10px;">
-          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">2. ${lang==='mar' ? 'केस तपशील / व्याप्ती' : 'CASE SUMMARY / SCOPE OF WORK / BRIEF'}</h4>
-          <div style="background:#fff; border:1px solid #d0dce6; padding:6px 10px; border-radius:4px; font-size:9pt;">${details}</div>
+        <div style="margin-bottom:8px;">
+          <h4 style="color:#0b2f4a; font-size:9.5pt; margin:0 0 3px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">2. ${lang==='mar' ? 'केस तपशील / व्याप्ती' : 'CASE SUMMARY / SCOPE OF WORK / BRIEF'}</h4>
+          <div style="background:#fff; border:1px solid #d0dce6; padding:5px 8px; border-radius:4px; font-size:8.5pt;">${details}</div>
         </div>
 
-        <div style="margin-bottom:10px;">
-          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">3. ${lang==='mar' ? 'श्रेणीनुसार नियम व अटी' : 'FIXED TERMS & CONDITIONS'} (${cat.toUpperCase()})</h4>
-          <div style="font-size:8.5pt; line-height:1.4; color:#263746; background:#f8fafc; border:1px solid #d0dce6; border-radius:5px; padding:7px 10px;">
+        <div style="margin-bottom:8px;">
+          <h4 style="color:#0b2f4a; font-size:9.5pt; margin:0 0 3px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">3. ${lang==='mar' ? 'श्रेणीनुसार नियम व अटी' : 'FIXED TERMS & CONDITIONS'} (${cat.toUpperCase()})</h4>
+          <div style="font-size:8pt; line-height:1.35; color:#263746; background:#f8fafc; border:1px solid #d0dce6; border-radius:4px; padding:5px 8px;">
             ${termsData[lang][cat].replace(/<br>/g, '<br>')}
           </div>
         </div>
 
-        <div style="margin-bottom:12px;">
-          <h4 style="color:#0b2f4a; font-size:10.5pt; margin:0 0 4px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">4. ${lang==='mar' ? 'वैधानिक डिस्क्लेमर (भारतीय करार कायदा व IRDAI)' : 'FIXED BINDING STATUTORY DISCLAIMER'}</h4>
-          <div style="font-size:8pt; color:#425466; line-height:1.35; background:#fff; border:1px solid #94a3b8; padding:7px 10px; border-radius:4px;">
+        <div style="margin-bottom:10px;">
+          <h4 style="color:#0b2f4a; font-size:9.5pt; margin:0 0 3px 0; border-bottom:1px solid #d0dce6; padding-bottom:2px;">4. ${lang==='mar' ? 'वैधानिक डिस्क्लेमर (भारतीय करार कायदा व IRDAI)' : 'FIXED BINDING STATUTORY DISCLAIMER'}</h4>
+          <div style="font-size:7.5pt; color:#425466; line-height:1.3; background:#fff; border:1px solid #94a3b8; padding:5px 8px; border-radius:4px;">
             ${lang==='mar' ? 
               '<b>स्वतंत्र फॅसिलिटेटर (भारतीय करार कायदा १८७२):</b> आरबी कन्सल्टन्सी स्वतंत्र फॅसिलिटेटर म्हणून कार्य करते (कार्यालय: २०१, तैमूर हाईट, मेहरूण, जळगाव). क्लेम मंजुरी, निकाल किंवा कालावधीची कोणतीही हमी नाही. कागदपत्रांची कायदेशीर व सत्यता जबाबदारी क्लायंटची राहील. IRDAI धोरणांशी सुसंगत मार्गदर्शन.' : 
               '<b>Facilitator Only (Indian Contract Act 1872 & IRDAI Framework):</b> RB Consultancy operates strictly as an independent professional facilitator/agent under the Indian Contract Act 1872 (Office: 201, Taimur Height, Mehrun, Jalgaon; Udyam: UDYAM-MH-14-0183662). No outcome, approval, or completion timeline guarantees are expressed or implied. Legal, financial, statutory compliance monitoring, and document authenticity liabilities rest solely with the client and issuing authorities. Field inspection/audit reports reflect objective physical conditions at timestamp of inspection.'
@@ -1262,14 +1267,14 @@
           </div>
         </div>
 
-        <div style="display:grid; grid-template-columns:1fr 1fr; margin-top:16px; gap:30px; font-size:9pt;">
-          <div style="border-top:1px solid #334455; padding-top:4px;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; margin-top:12px; gap:20px; font-size:8.5pt;">
+          <div style="border-top:1px solid #334455; padding-top:3px;">
             <b>${lang==='mar' ? 'क्लायंट / असोसिएट सही:' : 'Client / Associate / Partner Signature:'}</b><br><br>
             Signature: __________________________<br>
             Name: ${fullName}<br>
             Date: ____ / ____ / 2026
           </div>
-          <div style="border-top:1px solid #334455; padding-top:4px;">
+          <div style="border-top:1px solid #334455; padding-top:3px;">
             <b>${lang==='mar' ? 'आरबी कन्सल्टन्सी (जळगाव कार्यालय):' : 'For RB Consultancy (Jalgaon Office):'}</b><br><br>
             Stamp & Signature: __________________<br>
             Altaf Rangrej (Principal Consultant / संस्थापक)<br>
@@ -1277,8 +1282,8 @@
           </div>
         </div>
 
-        <div style="margin-top:14px; text-align:center;" class="no-print">
-          <button class="btn btn-dark" onclick="window.print()">Print / Save as PDF (Strict A4 Portrait)</button>
+        <div style="margin-top:12px; text-align:center;" class="no-print">
+          <button class="btn btn-dark" onclick="window.print()">Print / Save as PDF (Strict Single-Page A4)</button>
           <button class="btn" style="background:#e2e8f0; color:#334455; margin-left:10px;" onclick="closePrintableModal()">Close Window</button>
         </div>
       `;
