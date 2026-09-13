@@ -201,7 +201,7 @@
     .b2b-intro-block h3 { color: #ffffff; font-size: 22px; margin-bottom: 8px; }
     .b2b-intro-block p { color: #D0E1F0; font-size: 14px; }
     
-    .track-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .track-grid { display: grid; grid-template-columns: 1fr; gap: 28px; max-width: 900px; margin: auto; }
     .track-section-card {
       background: #F8FAFC; border: 1px solid var(--line); border-radius: var(--radius); padding: 30px;
       box-shadow: 0 6px 20px rgba(11,47,74,0.05); border-top: 5px solid var(--accent-blue); display: flex; flex-direction: column; justify-content: space-between;
@@ -235,8 +235,9 @@
     .service-card h3 { font-size: 17px; margin-bottom: 8px; }
     .service-fee-tag { font-size: 11.5px; font-weight: 800; color: var(--navy); background: var(--accent-blue-light); padding: 5px 9px; border-radius: 6px; margin-bottom: 12px; display: inline-block; }
 
-    /* Highlighted Refer & Earn Box */
-    .highlight-referral-card {
+    /* Highlighted Partner Reward & Regional Associate Cards */
+    .partner-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1000px; margin: auto; }
+    .highlight-partner-card {
       background: linear-gradient(135deg, #F0F6FF 0%, #D6E8FF 100%);
       border: 2px solid var(--accent-blue);
       border-radius: var(--radius);
@@ -244,12 +245,18 @@
       box-shadow: 0 15px 45px rgba(0,102,204,0.15);
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .highlight-referral-card:before {
-      content: "★ EARN REWARDS";
-      position: absolute; top: 15px; right: -30px; background: var(--accent-blue); color: var(--white);
+    .highlight-partner-card:before {
+      content: "★ PARTNER PROGRAM";
+      position: top: 15px; right: -30px; background: var(--accent-blue); color: var(--white);
       font-size: 10px; font-weight: 900; padding: 5px 35px; transform: rotate(45deg); letter-spacing: 0.1em;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .highlight-partner-card.alternate:before {
+      content: "★ FIELD FRANCHISEE";
     }
 
     /* Workflow Steps */
@@ -285,15 +292,15 @@
     .download-card h3 { font-size: 16px; color: var(--navy); margin-bottom: 8px; }
     .download-card p { font-size: 13px; color: var(--muted); margin-bottom: 15px; }
 
-    /* Unified Intake & Registration Form Card */
+    /* Fluid Page-Width Unified Intake & Registration Form Card */
     .intake-form-box {
-      background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 35px; box-shadow: var(--shadow); max-width: 800px; margin: auto;
-      border-top: 4px solid var(--navy);
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow); max-width: 1000px; margin: auto;
+      border-top: 5px solid var(--navy);
     }
-    .intake-form-box h3 { font-size: 22px; color: var(--navy); margin-bottom: 6px; }
-    .form-group-full { margin-top: 15px; display: flex; flex-direction: column; }
+    .intake-form-box h3 { font-size: 24px; color: var(--navy); margin-bottom: 6px; }
+    .form-group-full { margin-top: 18px; display: flex; flex-direction: column; }
     .form-group-full textarea.field { min-height: 140px; width: 100%; resize: vertical; }
-    .field { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 12px; outline: 0; background: #fff; margin-top: 6px; }
+    .field { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 14px; outline: 0; background: #fff; margin-top: 6px; font-size: 14px; }
 
     /* FAQ Accordion */
     .faq-container { display: grid; gap: 14px; max-width: 900px; margin: auto; }
@@ -330,7 +337,7 @@
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 12px; }
 
     @media(max-width: 900px) {
-      .services-grid, .workflow-grid, .info-grid, .success-grid, .checklist-grid, .pricing-grid, .download-grid, .hero-grid, .footer-grid, .track-grid { grid-template-columns: 1fr; }
+      .services-grid, .workflow-grid, .info-grid, .success-grid, .checklist-grid, .pricing-grid, .download-grid, .hero-grid, .footer-grid, .partner-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
     }
   </style>
@@ -356,11 +363,11 @@
       </a>
       <nav class="nav-links">
         <a href="#home"><span data-lang="eng">Home</span><span data-lang="mar">मुख्यपृष्ठ</span></a>
-        <a href="#b2b-section"><span data-lang="eng">B2B & Franchisee</span><span data-lang="mar">कॉर्पोरेट/फ्रँचायझी</span></a>
+        <a href="#b2b-section"><span data-lang="eng">B2B Field Investigation</span><span data-lang="mar">बी२बी तपास</span></a>
+        <a href="#partners"><span data-lang="eng">Partners & Associates</span><span data-lang="mar">पार्टनर / असोसिएट</span></a>
         <a href="#workflow"><span data-lang="eng">Workflow</span><span data-lang="mar">कार्यपद्धती</span></a>
         <a href="#services"><span data-lang="eng">Services</span><span data-lang="mar">सेवा</span></a>
         <a href="#portal"><span data-lang="eng">Inquiry</span><span data-lang="mar">चौकशी</span></a>
-        <a href="#referral"><span data-lang="eng">Refer & Earn</span><span data-lang="mar">रेफर आणि अर्न</span></a>
         <a href="#checklists"><span data-lang="eng">Checklists</span><span data-lang="mar">कागदपत्रे</span></a>
         <a href="#pricing"><span data-lang="eng">Fees</span><span data-lang="mar">फी</span></a>
         <a href="#faq"><span data-lang="eng">FAQ</span><span data-lang="mar">प्रश्न</span></a>
@@ -382,18 +389,18 @@
             <span data-lang="mar">व्यावसायिक स्वतंत्र फॅसिलिटेटर</span>
           </div>
           <h1>
-            <span data-lang="eng">The Most Trusted Insurance Claim Recovery, Audit & B2B Facilitator.</span>
-            <span data-lang="mar">सर्वात विश्वासू इन्शुरन्स क्लेम रिकव्हरी, ऑडिट आणि B2B फॅसिलिटेटर.</span>
+            <span data-lang="eng">Insurance Claim Facilitation, Medical Audits & Field Investigations.</span>
+            <span data-lang="mar">इन्शुरन्स क्लेम फॅसिलिटेशन, मेडिकल ऑडिट व फिल्ड इन्व्हेस्टिगेशन सेवा.</span>
           </h1>
           <p class="hero-lead">
-            <span data-lang="eng">Bridging policyholders with carriers/TPAs, and delivering 24–48hr field investigations, medical audits, and regional associate networks across North Maharashtra.</span>
-            <span data-lang="mar">पॉलिसीधारकांसाठी ऑनलाइन क्लेम रिकव्हरी आणि उत्तर महाराष्ट्रात कॉर्पोरेट/टीपीएसाठी २४-४८ तासांत फिल्ड इन्व्हेस्टिगेशन व ऑडिट सेवा.</span>
+            <span data-lang="eng">Supporting policyholders with online claim recovery and delivering rapid 24–48hr ground field verification, hospital/pharmacy bill forensic checks, and FCU services for Insurance Companies & TPAs across North Maharashtra.</span>
+            <span data-lang="mar">पॉलिसीधारकांसाठी ऑनलाइन क्लेम रिकव्हरी आणि उत्तर महाराष्ट्रात कॉर्पोरेट/टीपीएसाठी २४-४८ तासांत फिल्ड इन्व्हेस्टिगेशन व बोगस भरती/बिल पडताळणी.</span>
           </p>
 
           <div class="trust-row">
             <div class="trust-pill">✓ <b>15+ Years</b> <span data-lang="eng">Experience</span><span data-lang="mar">वर्षांचा अनुभव</span></div>
-            <div class="trust-pill">✓ <b>24-48 hr TAT</b> <span data-lang="eng">Investigation</span><span data-lang="mar">जलद तपासणी</span></div>
-            <div class="trust-pill">★ Direct Founder Desk Oversight</div>
+            <div class="trust-pill">✓ <b>24-48 hr TAT</b> <span data-lang="eng">Field Verification</span><span data-lang="mar">जलद तपासणी</span></div>
+            <div class="trust-pill">✓ Udyam Registered B2B Agency</div>
           </div>
         </div>
 
@@ -404,160 +411,171 @@
             <span data-lang="mar">नेतृत्व आणि पार्श्वभूमी</span>
           </div>
           <h2 style="color: #fff; font-size: 22px; margin: 8px 0 10px;">
-            <span data-lang="eng">Executive Desk Guidance</span>
-            <span data-lang="mar">मुख्य कार्यकारी डेस्क</span>
+            <span data-lang="eng">Principal Consultancy Desk</span>
+            <span data-lang="mar">मुख्य सल्लागार डेस्क</span>
           </h2>
           <p>
-            <span data-lang="eng">15+ years experience in healthcare & pharmacy admin, managing lean scalable FCU/audit operations and policyholder advocacy.</span>
+            <span data-lang="eng">Headed with 15+ years experience in healthcare & pharmacy admin, managing lean scalable FCU/audit operations and policyholder advocacy.</span>
             <span data-lang="mar">१५+ वर्षे आरोग्य व फार्मसी प्रशासनाचा अनुभव, कॉर्पोरेट ऑडिट व पॉलिसीधारक रिकव्हरी विशेषज्ञ.</span>
           </p>
         </div>
       </div>
     </section>
 
-    <!-- STANDALONE DEDICATED SECTION: B2B Empanelment & Regional Field Franchisee Expansion -->
+    <!-- DEDICATED B2B FIELD INVESTIGATION SECTION FOR TPAS/INSURERS -->
     <section class="section section-light" id="b2b-section">
       <div class="wrap">
         <div class="section-head left">
           <div class="eyebrow">
-            <span data-lang="eng">Institutional & Franchisee Expansion</span>
-            <span data-lang="mar">कॉर्पोरेट पॅनेल आणि फ्रँचायझी जाळे</span>
+            <span data-lang="eng">B2B Insurance & TPA Services</span>
+            <span data-lang="mar">बी२बी इन्शुरन्स व टीपीए सेवा</span>
           </div>
           <h2>
-            <span data-lang="eng">B2B Field Investigation & Insurance Claim Verification Desk</span>
-            <span data-lang="mar">बी२बी फील्ड इन्व्हेस्टिगेशन आणि इन्शुरन्स क्लेम पडताळणी डेस्क</span>
+            <span data-lang="eng">Ground Field Investigation & Claim Audit Services for TPAs / Insurers</span>
+            <span data-lang="mar">टीपीए आणि इन्शुरन्स कंपन्यांसाठी फिल्ड इन्व्हेस्टिगेशन व क्लेम ऑडिट सेवा</span>
           </h2>
           <p>
-            <span data-lang="eng">Clear scope for TPA and Insurance Company reviewers seeking local execution partners for pre/post-claim ground verification.</span>
-            <span data-lang="mar">टीपीए आणि इन्शुरन्स कंपन्यांसाठी प्रत्यक्ष जमीनस्तरीय क्लेम पडताळणी व फ्रॉड कंटेनमेंट सेवा.</span>
+            <span data-lang="eng">Dedicated local ground execution and claim verification partner for Private Health & General Insurance Companies and Third-Party Administrators (TPAs) handling claims in North Maharashtra.</span>
+            <span data-lang="mar">उत्तर महाराष्ट्रात क्लेम पडताळणी व फ्रॉड कंट्रोल (FCU) साठी खाजगी इन्शुरन्स कंपन्या व टीपीएसाठी ऑन-ग्राउंड तपास पार्टनर.</span>
           </p>
         </div>
 
         <div class="b2b-master-container">
           <div class="b2b-intro-block">
-            <h3>Direct Field Investigation Scope for Insurers & TPAs</h3>
-            <p>We deploy on-ground field investigators to execute hospital admission checks, attending doctor/nurse statement validation, indoor case paper (ICP) audits, and pharmacy/surgical bill cross-verification within 24–48 hours across North Maharashtra. Ideal for spotting bogus/proxy admissions and inflated medical bills.</p>
+            <h3>What We Do for TPA / Insurer Claim Processing Teams:</h3>
+            <p>When an insurance company or TPA receives a cashless authorization or reimbursement claim, our field desk conducts direct physical verification and document forensics to confirm genuine treatment, check proxy admissions, and flag inflated medical/surgical invoicing.</p>
           </div>
 
           <div class="track-grid">
-            <!-- TRACK 1: INSURERS / TPAS EMPANELMENT -->
             <div class="track-section-card">
-              <div>
-                <h3>
-                  <span data-lang="eng">Track A: Insurers, TPAs & Corporate FCU</span>
-                  <span data-lang="mar">ट्रॅक अ: इन्शुरन्स, टीपीए आणि कॉर्पोरेट FCU</span>
-                </h3>
-                <div class="track-sub">
-                  <span data-lang="eng">Direct Panel Empanelment | 24–48h TAT</span>
-                  <span data-lang="mar">थेट पॅनेल नियुक्ती | २४-४८ तासांत अहवाल</span>
-                </div>
-
-                <details class="site-accordion">
-                  <summary>
-                    <span data-lang="eng">Claim Investigation & Verification Deliverables</span>
-                    <span data-lang="mar">क्लेम इन्व्हेस्टिगेशन व पडताळणी डिलीव्हरेबल्स</span>
-                  </summary>
-                  <div class="accordion-body">
-                    Physical bed-side patient confirmation, verification of discharge summary genuineness, hospital registration check, doctor signature/statement authentication, and itemized bill vs. pharmacy stock ledger audit.
-                  </div>
-                </details>
-
-                <details class="site-accordion">
-                  <summary>
-                    <span data-lang="eng">Why TPAs Choose Our Field Desk</span>
-                    <span data-lang="mar">टीपीए आमची निवड का करतात?</span>
-                  </summary>
-                  <div class="accordion-body">
-                    Single-point accountability, 15+ years clinical/pharmacy background catching medical discrepancies missed by general agents, standardized digital PDF reports with geotagged/timestamped proof.
-                  </div>
-                </details>
-
-                <details class="site-accordion">
-                  <summary>
-                    <span data-lang="eng">Compliance & Facilitator Boundary Stance</span>
-                    <span data-lang="mar">कायदेशीर भूमिका व फॅसिलिटेटर मर्यादा</span>
-                  </summary>
-                  <div class="accordion-body">
-                    Strict IRDAI PPHI compliance adherence. Independent audit neutrality with document authenticity liabilities retained by issuing authorities/clients as per facilitator terms.
-                  </div>
-                </details>
+              <h3>
+                <span data-lang="eng">Core Ground Investigation & Forensic Audit Scope</span>
+                <span data-lang="mar">मुख्य फिल्ड तपास व फॉरेन्सिक ऑडिट व्याप्ती</span>
+              </h3>
+              <div class="track-sub">
+                <span data-lang="eng">Standard 24–48 Hour TAT | Direct Escrow/Portal Integration Ready</span>
+                <span data-lang="mar">२४ ते ४८ तासांत अचूक अहवाल</span>
               </div>
 
-              <div style="margin-top: 24px;">
-                <a class="btn btn-dark" href="mailto:rbconsultancyjalgaon@gmail.com?subject=B2B%20Vendor%20Empanelment%20Inquiry" style="width: 100%; justify-content: center;">
-                  <span data-lang="eng">Request Empanelment Proposal</span>
+              <details class="site-accordion">
+                <summary>
+                  <span data-lang="eng">1. Bed-Bound Patient & Hospital Admission Validity Check</span>
+                  <span data-lang="mar">१. रुग्ण प्रत्यक्षात हॉस्पिटलमध्ये भरती असल्याची पडताळणी</span>
+                </summary>
+                <div class="accordion-body">
+                  Physical hospital visit during admission/treatment window to verify patient presence in bed, matching nurse duty charts, ICU logs, and attending doctor progressive notes.
+                </div>
+              </details>
+
+              <details class="site-accordion">
+                <summary>
+                  <span data-lang="eng">2. Attending Doctor & Hospital Staff Statement Recording</span>
+                  <span data-lang="mar">२. डॉक्टर व स्टाफ यांचे जबाब / स्टेटमेंट नोंदणी</span>
+                </summary>
+                <div class="accordion-body">
+                  Recording verified statements from treating physicians regarding pre-existing disease history, emergency nature of trauma/diagnosis, and clinical correlation.
+                </div>
+              </details>
+
+              <details class="site-accordion">
+                <summary>
+                  <span data-lang="eng">3. Pharmacy, Implant & Surgical Bill Forensic Reconciliation</span>
+                  <span data-lang="mar">३. फार्मसी, इम्प्लांट व सर्जिकल बिलांची फॉरेन्सिक तपासणी</span>
+                </summary>
+                <div class="accordion-body">
+                  Cross-matching billed surgical consumables, high-cost implants, and pharmacy invoice serials against hospital store stock records and distributor wholesale rates.
+                </div>
+              </details>
+
+              <details class="site-accordion">
+                <summary>
+                  <span data-lang="eng">4. Proxy / Bogus / Impersonation Admission Interception</span>
+                  <span data-lang="mar">४. बोगस / प्रॉक्सी भरती व बनावट कागदपत्र ओळखणे</span>
+                </summary>
+                <div class="accordion-body">
+                  Detecting identity substitution, day-care turned inpatient inflation, and duplicate/recycled diagnostic test reports submitted across multiple insurance policies.
+                </div>
+              </details>
+
+              <div style="margin-top: 24px; display: flex; gap: 15px; flex-wrap: wrap;">
+                <a class="btn btn-dark" href="mailto:rbconsultancyjalgaon@gmail.com?subject=TPA%20Field%20Investigation%20Empannelment%20Inquiry" style="flex: 1; justify-content: center;">
+                  <span data-lang="eng">Request Panel Empannelment</span>
                   <span data-lang="mar">पॅनेल नियुक्ती प्रस्ताव मागवा</span>
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <!-- TRACK 2: REGIONAL FIELD ASSOCIATES / FRANCHISEE NETWORK -->
-            <div class="track-section-card">
-              <div>
-                <h3>
-                  <span data-lang="eng">Track B: Regional Associate & Franchisee Network</span>
-                  <span data-lang="mar">ट्रॅक ब: प्रादेशिक असोसिएट व फ्रँचायझी नेटवर्क</span>
-                </h3>
-                <div class="track-sub">
-                  <span data-lang="eng">Taluka-Level Field Franchisee Operations</span>
-                  <span data-lang="mar">तालुकास्तरीय ऑन-ग्राउंड नेटवर्क</span>
-                </div>
+    <!-- PARTNER REWARDS & REGIONAL FIELD ASSOCIATE SECTION -->
+    <section class="section section-alt" id="partners">
+      <div class="wrap">
+        <div class="section-head center">
+          <div class="eyebrow" style="justify-content: center;">
+            <span data-lang="eng">Collaboration & Expansion</span>
+            <span data-lang="mar">सहकार्य आणि विस्तार</span>
+          </div>
+          <h2>
+            <span data-lang="eng">Referral Partner Program & Regional Field Associates</span>
+            <span data-lang="mar">रेफरल पार्टनर प्रोग्राम आणि प्रादेशिक फील्ड असोसिएट</span>
+          </h2>
+          <p>
+            <span data-lang="eng">Partner with RB Consultancy to monetize referrals or represent us on-ground as a taluka-level field investigator.</span>
+            <span data-lang="mar">रेफरल कमिशन मिळवा किंवा तालुकास्तरीय असोसिएट म्हणून आमच्यासोबत ऑन-ग्राउंड काम करा.</span>
+          </p>
+        </div>
 
-                <details class="site-accordion">
-                  <summary>
-                    <span data-lang="eng">Associate Engagement Model</span>
-                    <span data-lang="mar">असोसिएट सहकार्य मॉडेल</span>
-                  </summary>
-                  <div class="accordion-body">
-                    Structured collaboration for registered pharmacists, experienced claims investigators, and local verifiers operating under centralized QA reporting and prompt task dispatch.
-                  </div>
-                </details>
-
-                <details class="site-accordion">
-                  <summary>
-                    <span data-lang="eng">Coverage Footprint (16 Talukas & Hubs)</span>
-                    <span data-lang="mar">प्रादेशिक कव्हरेज (१६ तालुके व केंद्रे)</span>
-                  </summary>
-                  <div class="accordion-body">
-                    Active local tactical deployment coverage footprint across core districts and talukas:
-                    <div class="tag-list">
-                      <span class="tag">Jalgaon</span>
-                      <span class="tag">Bhusawal</span>
-                      <span class="tag">Amalner</span>
-                      <span class="tag">Chopda</span>
-                      <span class="tag">Pachora</span>
-                      <span class="tag">Chalisgaon</span>
-                      <span class="tag">Dhule</span>
-                      <span class="tag">Jamner</span>
-                      <span class="tag">Raver</span>
-                      <span class="tag">Yawal</span>
-                      <span class="tag">Bhadgaon</span>
-                      <span class="tag">Dharangaon</span>
-                      <span class="tag">Muktainagar</span>
-                      <span class="tag">Savda</span>
-                      <span class="tag">Faizpur</span>
-                      <span class="tag">Bodwad</span>
-                    </div>
-                  </div>
-                </details>
-
-                <details class="site-accordion">
-                  <summary>
-                    <span data-lang="eng">Onboarding & Commercial Terms for Partners</span>
-                    <span data-lang="mar">पार्टनर अटी व कमिशन स्ट्रक्चर</span>
-                  </summary>
-                  <div class="accordion-body">
-                    Transparent task-based SLA payouts, digital briefing workflow via Oken/secure channel, and structured escalation protocols under central oversight.
-                  </div>
-                </details>
+        <div class="partner-grid">
+          <!-- CARD 1: REFER & EARN -->
+          <div class="highlight-partner-card">
+            <div>
+              <div class="eyebrow" style="color: var(--navy);">
+                <span data-lang="eng">Partner Reward Program</span>
+                <span data-lang="mar">पार्टनर रिवार्ड प्रोग्राम</span>
               </div>
+              <h3 style="font-size: clamp(20px, 2.5vw, 26px); margin-bottom: 12px; color: var(--navy);">RB Consultancy "Refer & Earn" Program</h3>
+              <p style="font-size: 14px; color: #334455; margin-bottom: 20px;">
+                <span data-lang="eng">Know someone facing an insurance claim rejection, delay, or commercial payment dispute? Refer them to RB Consultancy! Earn rewarding referral commissions upon successful onboarding and resolution.</span>
+                <span data-lang="mar">इन्शुरन्स क्लेम नाकारला गेल्यास किंवा अडकल्यास आमच्याकडे संदर्भ द्या. फॉर्ममध्ये तुमचे नाव नमूद करून यशस्वी सहकार्यावर आकर्षक कमिशन मिळवा.</span>
+              </p>
+            </div>
+            <div>
+              <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20Altaf,%20I%20want%20to%20register%20as%20a%20Refer%20and%20Earn%20Partner." target="_blank" style="background: var(--navy); color: var(--white); width: 100%; justify-content: center;">
+                <span data-lang="eng">Register as Referral Partner Now</span>
+                <span data-lang="mar">आत्ताच रेफरल पार्टनर म्हणून नोंदणी करा</span>
+              </a>
+            </div>
+          </div>
 
-              <div style="margin-top: 24px;">
-                <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20Altaf,%20I%20want%20to%20apply%20as%20a%20Regional%20Associate%20Field%20Partner." target="_blank" style="width: 100%; justify-content: center;">
-                  <span data-lang="eng">Apply as Regional Field Associate</span>
-                  <span data-lang="mar">प्रादेशिक असोसिएट अर्ज करा</span>
-                </a>
+          <!-- CARD 2: BE OUR REGIONAL FIELD ASSOCIATE -->
+          <div class="highlight-partner-card alternate">
+            <div>
+              <div class="eyebrow" style="color: var(--navy);">
+                <span data-lang="eng">On-Ground Field Representation</span>
+                <span data-lang="mar">प्रादेशिक ऑन-ग्राउंड सहकार्य</span>
               </div>
+              <h3 style="font-size: clamp(20px, 2.5vw, 26px); margin-bottom: 12px; color: var(--navy);">Be Our Regional Field Associate / Franchisee</h3>
+              <p style="font-size: 14px; color: #334455; margin-bottom: 15px;">
+                <span data-lang="eng">Are you a registered pharmacist, claim coordinator, or field investigator in North Maharashtra? Join our pre-vetted 4–5 associate network handling localized hospital verifications across 16 talukas.</span>
+                <span data-lang="mar">उत्तर महाराष्ट्रातील तालुक्यांमध्ये (भुसावल, अमलनेर, चालीसगाव इ.) फिल्ड पडताळणी व ऑडिट करण्यासाठी प्रादेशिक असोसिएट म्हणून जोडा.</span>
+              </p>
+              <div class="tag-list" style="margin-bottom: 20px;">
+                <span class="tag">Jalgaon</span>
+                <span class="tag">Bhusawal</span>
+                <span class="tag">Amalner</span>
+                <span class="tag">Chopda</span>
+                <span class="tag">Pachora</span>
+                <span class="tag">Chalisgaon</span>
+                <span class="tag">Dhule & more</span>
+              </div>
+            </div>
+            <div>
+              <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20Altaf,%20I%20want%20to%20apply%20as%20a%20Regional%20Field%20Associate." target="_blank" style="background: var(--accent-blue); color: var(--white); width: 100%; justify-content: center;">
+                <span data-lang="eng">Apply as Regional Field Associate</span>
+                <span data-lang="mar">प्रादेशिक असोसिएट अर्ज करा</span>
+              </a>
             </div>
           </div>
         </div>
@@ -805,6 +823,7 @@
       </div>
     </section>
 
+    <!-- FLUID PAGE-WIDTH DIGITAL INTAKE PORTAL -->
     <section class="section section-light" id="portal">
       <div class="wrap">
         <div class="section-head center">
@@ -817,7 +836,7 @@
             <span data-lang="mar">सर्वसाधारण चौकशी आणि केस नोंदणी पोर्टल</span>
           </h2>
           <p>
-            <span data-lang="eng">Submit your case details or general consultancy inquiries instantly in English or Marathi for a complimentary Free First Gate Audit.</span>
+            <span data-lang="eng">Submit your case details, TPA investigation query, or general consultancy inquiries for a complimentary Free First Gate Audit.</span>
             <span data-lang="mar">मोफत फर्स्ट गेट ऑडिटसाठी आपली माहिती भरा.</span>
           </p>
         </div>
@@ -834,16 +853,16 @@
             </span>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div>
-              <label style="font-size: 12px; font-weight: 700; color: var(--navy);">
-                <span data-lang="eng">Your Full Name</span>
-                <span data-lang="mar">पूर्ण नाव</span>:
+              <label style="font-size: 13px; font-weight: 700; color: var(--navy);">
+                <span data-lang="eng">Your Full Name / Organization</span>
+                <span data-lang="mar">पूर्ण नाव / संस्था नाव</span>:
               </label>
-              <input class="field" id="intakeName" type="text" placeholder="Enter your full name">
+              <input class="field" id="intakeName" type="text" placeholder="Enter name or organization">
             </div>
             <div>
-              <label style="font-size: 12px; font-weight: 700; color: var(--navy);">
+              <label style="font-size: 13px; font-weight: 700; color: var(--navy);">
                 <span data-lang="eng">Mobile Number</span>
                 <span data-lang="mar">मोबाईल नंबर</span>:
               </label>
@@ -852,7 +871,7 @@
           </div>
 
           <div class="form-group-full">
-            <label style="font-size: 12px; font-weight: 700; color: var(--navy);">
+            <label style="font-size: 13px; font-weight: 700; color: var(--navy);">
               <span data-lang="eng">Select Required Service / Purpose</span>
               <span data-lang="mar">आवश्यक सेवा किंवा उद्देश निवडा</span>:
             </label>
@@ -861,7 +880,7 @@
           </div>
 
           <div class="form-group-full">
-            <label style="font-size: 12px; font-weight: 700; color: var(--navy);">
+            <label style="font-size: 13px; font-weight: 700; color: var(--navy);">
               <span data-lang="eng">Referred By (Advisor/Partner Name & Phone) [Optional]</span>
               <span data-lang="mar">कोणी संदर्भ दिला असल्यास त्यांचे नाव व नंबर [पर्यायी]</span>:
             </label>
@@ -869,45 +888,23 @@
           </div>
 
           <div class="form-group-full">
-            <label style="font-size: 12px; font-weight: 700; color: var(--navy);">
+            <label style="font-size: 13px; font-weight: 700; color: var(--navy);">
               <span data-lang="eng">Inquiry Details / Case Summary</span>
               <span data-lang="mar">चौकशी तपशील किंवा केसचा सारांश</span>:
             </label>
-            <textarea class="field" id="intakeDetails" placeholder="Describe your general question, policy details, rejection reason, or dispute summary..."></textarea>
+            <textarea class="field" id="intakeDetails" placeholder="Describe your question, policy details, rejection reason, or TPA field investigation brief..."></textarea>
           </div>
 
-          <div style="background: #F8FAFC; border: 1px dashed var(--line); border-radius: 10px; padding: 15px; margin-top: 15px; font-size: 12.5px; color: var(--muted);">
+          <div style="background: #F8FAFC; border: 1px dashed var(--line); border-radius: 10px; padding: 15px; margin-top: 18px; font-size: 13px; color: var(--muted);">
             <span data-lang="eng"><b>File Sharing Note:</b> After sending this inquiry via WhatsApp, our team will review your details during the free audit and share a secure link to upload your files, bills, or invoices.</span>
             <span data-lang="mar"><b>टीप:</b> व्हॉट्सॲपवर चौकशी पाठवल्यानंतर आमची टीम ऑडिट करेल आणि कागदपत्रे अपलोड करण्यासाठी लिंक पाठवेल.</span>
           </div>
 
-          <div style="margin-top: 20px; text-align: center;">
-            <button class="btn btn-whatsapp" onclick="submitIntakeWhatsApp()" style="width: 100%; justify-content: center; padding: 14px;">
+          <div style="margin-top: 24px; text-align: center;">
+            <button class="btn btn-whatsapp" onclick="submitIntakeWhatsApp()" style="width: 100%; justify-content: center; padding: 16px; font-size: 15px;">
               <span data-lang="eng">Submit Inquiry via WhatsApp</span>
               <span data-lang="mar">व्हॉट्सॲप द्वारे चौकशी पाठवा</span>
             </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="referral">
-      <div class="wrap">
-        <div class="highlight-referral-card">
-          <div class="eyebrow" style="color: var(--navy);">
-            <span data-lang="eng">Partner Reward Program</span>
-            <span data-lang="mar">पार्टनर रिवार्ड प्रोग्राम</span>
-          </div>
-          <h2 style="font-size: clamp(22px, 3vw, 32px); margin-bottom: 15px; color: var(--navy);">RB Consultancy "Refer & Earn" Program</h2>
-          <p style="font-size: 15px; color: #334455; max-width: 800px; margin-bottom: 20px;">
-            <span data-lang="eng">Know someone facing an insurance claim rejection, delay, or commercial payment dispute? Refer them to RB Consultancy! When they submit their case through our form and mention your name, you earn rewarding referral commissions upon successful onboarding and resolution.</span>
-            <span data-lang="mar">इन्शुरन्स क्लेम नाकारला गेल्यास किंवा अडकल्यास आमच्याकडे संदर्भ द्या. फॉर्ममध्ये तुमचे नाव नमूद करून यशस्वी सहकार्यावर आकर्षक कमिशन मिळवा.</span>
-          </p>
-          <div>
-            <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20Altaf,%20I%20want%20to%20register%20as%20a%20Refer%20and%20Earn%20Partner." target="_blank" style="background: var(--navy); color: var(--white);">
-              <span data-lang="eng">Register as Referral Partner Now</span>
-              <span data-lang="mar">आत्ताच पार्टनर म्हणून नोंदणी करा</span>
-            </a>
           </div>
         </div>
       </div>
@@ -1030,7 +1027,7 @@
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; font-size: 13.5px;">
             <div style="background: #F8FAFC; padding: 15px; border-radius: 10px; border: 1px solid var(--line);">
               <strong>Account Name:</strong> RB Consultancy<br>
-              <strong>Principal Consultant:</strong> Executive Desk<br>
+              <strong>Principal Consultant:</strong> Altaf Rangrej<br>
               <strong>Udyam Registration:</strong> UDYAM-MH-14-0183662
             </div>
             <div style="background: #F8FAFC; padding: 15px; border-radius: 10px; border: 1px solid var(--line);">
@@ -1160,7 +1157,7 @@
 
           <details class="site-accordion faq-item">
             <summary style="font-size:16px; font-weight:700; color:var(--navy);">Are you an insurance company or a TPA?</summary>
-            <div class="accordion-body">No. We are an independent consultancy firm. We are not an insurance carrier or Third-Party Administrator; we represent you (the policyholder) independently, or act as an independent field verification/audit vendor for carriers/TPAs.</div>
+            <div class="accordion-body">No. We are an independent consultancy firm led by Founder Altaf Rangrej. We are not an insurance carrier or Third-Party Administrator; we represent you (the policyholder) independently.</div>
           </details>
 
           <details class="site-accordion faq-item">
@@ -1175,7 +1172,7 @@
 
           <details class="site-accordion faq-item">
             <summary style="font-size:16px; font-weight:700; color:var(--navy);">Do I need to travel to your office in Jalgaon to get my claim processed?</summary>
-            <div class="accordion-body">Not at all! We operate entirely online and remotely for policyholders. You can submit all documents, forms, and queries digitally via WhatsApp or email from anywhere in Maharashtra or India.</div>
+            <div class="accordion-body">Not at all! We operate entirely online and remotely. You can submit all documents, forms, and queries digitally via WhatsApp or email from anywhere in Maharashtra or India.</div>
           </details>
 
           <details class="site-accordion faq-item">
@@ -1292,11 +1289,11 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#b2b-section">B2B & Franchisee</a></li>
+            <li><a href="#b2b-section">B2B Field Investigation</a></li>
+            <li><a href="#partners">Partners & Associates</a></li>
             <li><a href="#workflow">Case Workflow</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portal">Inquiry Portal</a></li>
-            <li><a href="#referral">Refer & Earn</a></li>
           </ul>
         </div>
         <div class="footer-links">
@@ -1309,7 +1306,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 RB Consultancy | Principal Consultant Desk | Udyam: UDYAM-MH-14-0183662</p>
+        <p>© 2026 RB Consultancy | Founder & Principal Consultant: Altaf Rangrej | Udyam: UDYAM-MH-14-0183662</p>
       </div>
     </div>
   </footer>
@@ -1318,8 +1315,9 @@
     const dropdownOptions = {
       en: [
         { value: "General Consultancy Inquiry", text: "General Consultancy Inquiry" },
-        { value: "B2B Vendor Empanelment Inquiry", text: "B2B Vendor Empanelment Inquiry (Insurers/TPAs)" },
+        { value: "TPA/Insurer Field Investigation Mandate", text: "TPA/Insurer Field Investigation Mandate" },
         { value: "Regional Field Associate Application", text: "Regional Field Associate / Franchisee Application" },
+        { value: "Refer & Earn Partner Registration", text: "Refer & Earn Partner Registration" },
         { value: "1. Fresh Claim Submissions (₹3,000)", text: "1. Fresh Claim Submissions (₹3,000)" },
         { value: "2. Rejected Claims Recovery (₹3,000 + 10%)", text: "2. Rejected Claims Recovery (₹3,000 + 10% Success Fee)" },
         { value: "3. Queries Management", text: "3. Queries Management" },
@@ -1328,13 +1326,13 @@
         { value: "6. TPA/IC Issues Resolutions", text: "6. TPA/IC Issues Resolutions" },
         { value: "7. Deadlock Recoveries & Claims Audits", text: "7. Deadlock Recoveries & Claims Audits" },
         { value: "8. End-To-End Cashless Management", text: "8. End-To-End Cashless Management (₹2,000)" },
-        { value: "9. MSME Samadhan Filings", text: "9. MSME Samadhan Filings" },
-        { value: "Refer & Earn Partner Registration", text: "Refer & Earn Partner Registration" }
+        { value: "9. MSME Samadhan Filings", text: "9. MSME Samadhan Filings" }
       ],
       mar: [
         { value: "सामान्य सल्लामसलत चौकशी", text: "सामान्य सल्लामसलत चौकशी" },
-        { value: "बी२बी पॅनेल नियुक्ती चौकशी (इन्शुरन्स/टीपीए)", text: "बी२बी पॅनेल नियुक्ती चौकशी (इन्शुरन्स/टीपीए)" },
+        { value: "टीपीए/इन्शुरन्स फिल्ड इन्व्हेस्टिगेशन असाइनमेंट", text: "टीपीए/इन्शुरन्स फिल्ड इन्व्हेस्टिगेशन असाइनमेंट" },
         { value: "प्रादेशिक फील्ड असोसिएट / फ्रँचायझी अर्ज", text: "प्रादेशिक फील्ड असोसिएट / फ्रँचायझी अर्ज" },
+        { value: "रेफरल पार्टनर म्हणून नोंदणी", text: "रेफरल पार्टनर म्हणून नोंदणी" },
         { value: "१. नवीन क्लेम दाखल करणे (₹३,०००)", text: "१. नवीन क्लेम दाखल करणे (₹३,०००)" },
         { value: "२. नाकारलेल्या क्लेमची वसुली (₹३,००० + १०% यश फी)", text: "२. नाकारलेल्या क्लेमची वसुली (₹३,००० + १०% यश फी)" },
         { value: "३. शंका आणि प्रश्न निवारण", text: "३. शंका आणि प्रश्न निवारण" },
@@ -1343,8 +1341,7 @@
         { value: "६. टीपीए आणि कंपनी वाद निवारण", text: "६. टीपीए आणि कंपनी वाद निवारण" },
         { value: "७. रखडलेले क्लेम आणि तांत्रिक ऑडिट", text: "७. रखडलेले क्लेम आणि तांत्रिक ऑडिट" },
         { value: "८. कॅशलेस व्यवस्थापन (₹२,०००)", text: "८. कॅशलेस व्यवस्थापन (₹२,०००)" },
-        { value: "९. एमएसएमई समाधान फायलिंग", text: "९. एमएसएमई समाधान फायलिंग" },
-        { value: "पार्टनर म्हणून नोंदणी (Refer & Earn)", text: "पार्टनर म्हणून नोंदणी (Refer & Earn)" }
+        { value: "९. एमएसएमई समाधान फायलिंग", text: "९. एमएसएमई समाधान फायलिंग" }
       ]
     };
 
@@ -1406,7 +1403,7 @@
       
       let text = "Hi RB Consultancy,\n\n" +
                  "Purpose/Service: " + service + "\n" +
-                 "Name: " + (name || "[Not Provided]") + "\n" +
+                 "Name / Organization: " + (name || "[Not Provided]") + "\n" +
                  "Phone: " + (phone || "[Not Provided]") + "\n";
       
       if (referral) {
