@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RB Consultancy | Claim Facilitation, Fraud Control Unit & Dispute Resolution | आरबी कन्सल्टन्सी जळगाव</title>
-  <meta name="description" content="Independent insurance claim facilitation, rejected claims recovery, IRDAI appeals, MSME resolution, Fraud Control Unit field investigations, and regional B2B associate networks led by Altaf Rangrej in Jalgaon, Maharashtra.">
+  <title>RB Consultancy | Claim Facilitation, Fraud Control Unit & Motor Investigation | आरबी कन्सल्टन्सी जळगाव</title>
+  <meta name="description" content="Independent insurance claim facilitation, Motor OD/TP/PA field investigations, rejected claims recovery, IRDAI appeals, MSME resolution, Fraud Control Unit audits, and regional B2B associate networks led by Altaf Rangrej in Jalgaon, Maharashtra.">
   <meta name="theme-color" content="#0B2F4A">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,7 +111,7 @@
     }
 
     /* Streamlined Minimalist Professional Nav Links */
-    .nav-links { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .nav-links { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
     .nav-links a { font-size: 12px; font-weight: 700; color: #425466; transition: 0.2s; }
     .nav-links a:hover { color: var(--accent-blue); }
 
@@ -233,6 +233,16 @@
     .service-num { font-size: 12px; font-weight: 900; color: var(--accent-blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
     .service-card h3 { font-size: 17px; margin-bottom: 8px; }
     .service-fee-tag { font-size: 11.5px; font-weight: 800; color: var(--navy); background: var(--accent-blue-light); padding: 5px 9px; border-radius: 6px; margin-bottom: 12px; display: inline-block; }
+
+    /* Motor Claims Investigation Grid */
+    .motor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .motor-card {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px;
+      box-shadow: var(--shadow); transition: transform 0.25s, box-shadow 0.25s; display: flex; flex-direction: column; justify-content: space-between;
+      border-top: 4px solid var(--accent-blue);
+    }
+    .motor-card:hover { transform: translateY(-5px); box-shadow: 0 20px 45px rgba(11,47,74,0.12); }
+    .motor-card h3 { font-size: 18px; margin-bottom: 10px; color: var(--navy); }
 
     /* Partner & Associate Cards */
     .partner-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
@@ -370,7 +380,7 @@
 
     @media(max-width: 900px) {
       .wrap { width: min(calc(100% - 32px), var(--max)); }
-      .services-grid, .workflow-grid, .b2b-feature-grid, .info-grid, .success-grid, .pricing-grid, .download-grid, .hero-grid, .footer-grid, .partner-grid { grid-template-columns: 1fr; }
+      .services-grid, .motor-grid, .workflow-grid, .b2b-feature-grid, .info-grid, .success-grid, .pricing-grid, .download-grid, .hero-grid, .footer-grid, .partner-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
     }
   </style>
@@ -396,13 +406,11 @@
       </a>
       <nav class="nav-links">
         <a href="#home"><span data-lang="eng">Home</span><span data-lang="mar">मुख्यपृष्ठ</span></a>
+        <a href="#motor-investigation"><span data-lang="eng">Motor Claims</span><span data-lang="mar">मोटर क्लेम्स</span></a>
         <a href="#b2b-section"><span data-lang="eng">B2B Investigations</span><span data-lang="mar">बी२बी तपास</span></a>
         <a href="#fcu-track"><span data-lang="eng">Fraud Control Unit</span><span data-lang="mar">फ्रॉड कंट्रोल युनिट</span></a>
         <a href="#partners"><span data-lang="eng">Partners & Associates</span><span data-lang="mar">पार्टनर / असोसिएट</span></a>
-        <a href="#workflow"><span data-lang="eng">Workflow</span><span data-lang="mar">कार्यपद्धती</span></a>
         <a href="#services"><span data-lang="eng">Services</span><span data-lang="mar">सेवा</span></a>
-        <a href="#checklists"><span data-lang="eng">Checklists</span><span data-lang="mar">कागदपत्रे</span></a>
-        <a href="#pricing"><span data-lang="eng">Fees</span><span data-lang="mar">फी</span></a>
         <a href="#contact"><span data-lang="eng">Contact</span><span data-lang="mar">संपर्क</span></a>
       </nav>
       <div style="display: flex; align-items: center; gap: 10px;">
@@ -421,12 +429,12 @@
             <span data-lang="mar">व्यावसायिक स्वतंत्र फॅसिलिटेटर</span>
           </div>
           <h1>
-            <span data-lang="eng">Insurance Claim Facilitation, Medical Audits & Fraud Control Unit Investigations.</span>
-            <span data-lang="mar">इन्शुरन्स क्लेम फॅसिलिटेशन, मेडिकल ऑडिट व फ्रॉड कंट्रोल युनिट तपास सेवा.</span>
+            <span data-lang="eng">Insurance Claim Facilitation, Motor Investigations & Fraud Control Unit Audits.</span>
+            <span data-lang="mar">इन्शुरन्स क्लेम फॅसिलिटेशन, मोटर तपास व फ्रॉड कंट्रोल युनिट ऑडिट सेवा.</span>
           </h1>
           <p class="hero-lead">
-            <span data-lang="eng">Supporting policyholders with online claim recovery and delivering rapid ground field verification, hospital/pharmacy bill forensic checks, and Fraud Control Unit audit mandates for Insurance Companies & TPAs across North Maharashtra including referral partner referral loops and regional field associate networks.</span>
-            <span data-lang="mar">पॉलिसीधारकांसाठी ऑनलाइन क्लेम रिकव्हरी आणि उत्तर महाराष्ट्रात कॉर्पोरेट/टीपीएसाठी २४-४८ तासांत फिल्ड इन्व्हेस्टिगेशन व फ्रॉड कंट्रोल युनिट पडताळणी.</span>
+            <span data-lang="eng">Supporting policyholders with online claim recovery and delivering rapid ground field verification, Motor OD/TP/PA forensic checks, and Fraud Control Unit audit mandates for Insurance Companies & TPAs across North Maharashtra including Khandesh sector field networks.</span>
+            <span data-lang="mar">पॉलिसीधारकांसाठी ऑनलाइन क्लेम रिकव्हरी आणि उत्तर महाराष्ट्रात कॉर्पोरेट/टीपीएसाठी २४-४८ तासांत मोटर आणि फिल्ड इन्व्हेस्टिगेशन व फ्रॉड कंट्रोल युनिट पडताळणी.</span>
           </p>
           <div class="trust-row">
             <div class="trust-pill">✓ <b>15+ Years</b> <span data-lang="eng">Experience</span><span data-lang="mar">वर्षांचा अनुभव</span></div>
@@ -445,15 +453,61 @@
             <span data-lang="mar">मुख्य सल्लागार डेस्क</span>
           </h2>
           <p>
-            <span data-lang="eng">Headed with 15+ years experience in healthcare & pharmacy admin, managing lean scalable Fraud Control Unit/audit operations, referral partner programs, regional associate networks, and policyholder advocacy.</span>
-            <span data-lang="mar">१५+ वर्षे आरोग्य व फार्मसी प्रशासनाचा अनुभव, कॉर्पोरेट ऑडिट, रेफरल पार्टनर प्रोग्राम, प्रादेशिक असोसिएट नेटवर्क व पॉलिसीधारक रिकव्हरी विशेषज्ञ.</span>
+            <span data-lang="eng">Headed with 15+ years experience in healthcare, insurance administration, and claim investigations, managing lean scalable Fraud Control Unit/audit operations and regional field associate networks.</span>
+            <span data-lang="mar">१५+ वर्षे आरोग्य, विमा प्रशासन व क्लेम इन्व्हेस्टिगेशनचा अनुभव, कॉर्पोरेट ऑडिट, प्रादेशिक असोसिएट नेटवर्क व पॉलिसीधारक रिकव्हरी विशेषज्ञ.</span>
           </p>
         </div>
       </div>
     </section>
 
+    <!-- MOTOR INSURANCE CLAIM INVESTIGATION SERVICES SECTION -->
+    <section class="section section-light" id="motor-investigation">
+      <div class="wrap">
+        <div class="section-head left">
+          <div class="eyebrow">
+            <span data-lang="eng">Specialized Motor Investigation Portfolio</span>
+            <span data-lang="mar">विशेष मोटर तपास सेवा</span>
+          </div>
+          <h2>
+            <span data-lang="eng">Motor Insurance Claim Investigation Services</span>
+            <span data-lang="mar">मोटर इन्शुरन्स क्लेम इन्व्हेस्टिगेशन सेवा</span>
+          </h2>
+          <p>
+            <span data-lang="eng">Rigorous, evidence-backed field checks, accident reconstruction, and discrepancy analysis designed for insurers and TPA partners across North Maharashtra & Khandesh.</span>
+            <span data-lang="mar">उत्तर महाराष्ट्र व खानदेशातील इन्शुरन्स कंपन्या व टीपीएसाठी पुरावा-आधारित मोटर क्लेम पडताळणी व तपास सेवा.</span>
+          </p>
+        </div>
+        <div class="motor-grid">
+          <div class="motor-card">
+            <div>
+              <div class="service-num"><span data-lang="eng">Module 01</span><span data-lang="mar">मॉड्यूल ०१</span></div>
+              <h3><span data-lang="eng">Motor OD (Own Damage)</span><span data-lang="mar">मोटर ओन डॅमेज (OD)</span></h3>
+              <p style="font-size: 13.5px; color: var(--muted); margin-bottom: 15px;"><span data-lang="eng">Detailed spot inspections, collision kinematics and skid mark evaluations, dashcam/CCTV metadata verification, policyholder/witness statement recording, and repair bill cross-audits.</span><span data-lang="mar">तपशीलवार स्पॉट इन्स्पेक्शन, अपघात गतीविज्ञान व स्किड मार्क मूल्यांकन, सीसीटीव्ही/डॅशकॅम मेटाडेटा पडताळणी, जबाब नोंदणी आणि रिपेअर बिल क्रॉस-ऑडिट.</span></p>
+            </div>
+            <div class="tag-list"><span class="tag">Spot Survey</span><span class="tag">Kinematics</span><span class="tag">Repair Audit</span></div>
+          </div>
+          <div class="motor-card">
+            <div>
+              <div class="service-num"><span data-lang="eng">Module 02</span><span data-lang="mar">मॉड्यूल ०२</span></div>
+              <h3><span data-lang="eng">Third Party (TP) & Tribunal Audits</span><span data-lang="mar">थर्ड पार्टी (TP) व ट्रिब्युनल ऑडिट</span></h3>
+              <p style="font-size: 13.5px; color: var(--muted); margin-bottom: 15px;"><span data-lang="eng">Thorough investigation of MACT claims, staged accident ring detection, verification of police panchanamas and FIR timelines, medical record authentication, and collusion checks.</span><span data-lang="mar">MACT दावे तपासणी, बनावट अपघात रॅकेट शोध, पोलीस पंचानामा व एफआयआर टाइमलाईन पडताळणी, आणि वैद्यकीय कागदपत्रे प्रमाणीकरण.</span></p>
+            </div>
+            <div class="tag-list"><span class="tag">MACT Audit</span><span class="tag">FIR Verification</span><span class="tag">Collusion Checks</span></div>
+          </div>
+          <div class="motor-card">
+            <div>
+              <div class="service-num"><span data-lang="eng">Module 03</span><span data-lang="mar">मॉड्यूल ०३</span></div>
+              <h3><span data-lang="eng">Personal Accident (PA) Claims</span><span data-lang="mar">पर्सनल ॲक्सीडेंट (PA) दावे</span></h3>
+              <p style="font-size: 13.5px; color: var(--muted); margin-bottom: 15px;"><span data-lang="eng">Investigation of fatal or disability claims, hospital admission chart audits, MLC cross-examinations, post-mortem report evaluations, and real physical/occupational status confirmation.</span><span data-lang="mar">मृत्यू किंवा अपंगत्व दाव्यांची तपासणी, हॉस्पिटल ॲडमिशन चार्ट ऑडिट, एमएलसी क्रॉस-एक्झामिनेशन व पोस्ट-मॉर्टम रिपोर्ट मूल्यांकन.</span></p>
+            </div>
+            <div class="tag-list"><span class="tag">Fatal Claims</span><span class="tag">Disability Audit</span><span class="tag">PM Evaluation</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- B2B FIELD INVESTIGATION SECTION -->
-    <section class="section section-light" id="b2b-section">
+    <section class="section section-alt" id="b2b-section">
       <div class="wrap">
         <div class="section-head left">
           <div class="eyebrow">
@@ -525,7 +579,7 @@
     </section>
 
     <!-- FRAUD CONTROL UNIT (FCU) SECTION -->
-    <section class="section section-alt" id="fcu-track">
+    <section class="section section-light" id="fcu-track">
       <div class="wrap">
         <div class="section-head left">
           <div class="eyebrow">
@@ -589,7 +643,7 @@
     </section>
 
     <!-- PARTNER REWARDS & REGIONAL FIELD ASSOCIATE SECTION -->
-    <section class="section section-light" id="partners">
+    <section class="section section-alt" id="partners">
       <div class="wrap">
         <div class="section-head center">
           <div class="eyebrow" style="justify-content: center;">
@@ -601,8 +655,8 @@
             <span data-lang="mar">रेफरल पार्टनर प्रोग्राम आणि प्रादेशिक फील्ड असोसिएट</span>
           </h2>
           <p>
-            <span data-lang="eng">Partner with RB Consultancy to monetize referrals or represent us on-ground as a taluka-level field investigator.</span>
-            <span data-lang="mar">रेफरल कमिशन मिळवा किंवा तालुकास्तरीय असोसिएट म्हणून ऑन-ग्राउंड काम करा.</span>
+            <span data-lang="eng">Partner with RB Consultancy to monetize referrals or represent us on-ground as a taluka-level field investigator or surveyor.</span>
+            <span data-lang="mar">रेफरल कमिशन मिळवा किंवा तालुकास्तरीय असोसिएट/सर्वेक्षक म्हणून ऑन-ग्राउंड काम करा.</span>
           </p>
         </div>
         <div class="partner-grid">
@@ -628,25 +682,25 @@
           </div>
           <div class="highlight-partner-card">
             <div>
-              <div class="partner-top-badge" style="background: var(--navy);">★ Field Franchisee</div>
+              <div class="partner-top-badge" style="background: var(--navy);">★ Field Network</div>
               <div class="eyebrow" style="color: var(--navy);">
                 <span data-lang="eng">On-Ground Field Representation</span>
                 <span data-lang="mar">प्रादेशिक ऑन-ग्राउंड सहकार्य</span>
               </div>
               <h3 style="font-size: clamp(20px, 2.5vw, 26px); margin-bottom: 12px; color: var(--navy);">
-                <span data-lang="eng">Be Our Regional Field Associate / Franchisee</span>
-                <span data-lang="mar">प्रादेशिक फील्ड असोसिएट / फ्रँचायझी व्हा</span>
+                <span data-lang="eng">Apply as Field Officer / Freelance Surveyor</span>
+                <span data-lang="mar">फिल्ड ऑफिसर किंवा फ्रीलान्स सर्वेक्षक म्हणून अर्ज करा</span>
               </h3>
-              <p style="font-size: 14px; color: #334455; margin-bottom: 12px;">Are you a registered pharmacist, claim coordinator, or field investigator in North Maharashtra? Join our pre-vetted associate network handling localized hospital verifications across 16 talukas including referral-linked task tracking.</p>
+              <p style="font-size: 14px; color: #334455; margin-bottom: 12px;">Are you a qualified surveyor, freelance investigator, or part-time professional in North Maharashtra & Khandesh? Partner with RB Consultancy for localized motor and insurance claim assignments.</p>
               <div style="background: #eef4fc; border: 1px dashed var(--accent-blue); padding: 10px 12px; border-radius: 8px; font-size: 12.5px; color: var(--navy); margin-bottom: 15px;">
-                <b><span data-lang="eng">Mandatory Onboarding Document:</span><span data-lang="mar">अनिवार्य कागदपत्रे:</span></b> <span data-lang="eng">Verified Resume / CV + All Academic Certificates + Experience/Pharmacy Council Registration Proofs.</span><span data-lang="mar">सत्यापित बायोडाटा / CV + सर्व शैक्षणिक प्रमाणपत्रे + अनुभव / फार्मसी कौन्सिल नोंदणी पुरावे.</span>
+                <b><span data-lang="eng">Mandatory Onboarding Document:</span><span data-lang="mar">अनिवार्य कागदपत्रे:</span></b> <span data-lang="eng">Verified Resume / CV + All Academic Certificates + Experience/Pharmacy Council Registration Proofs.</span><span data-lang="mar">सत्यापित बायोडाटा / CV + सर्व शैक्षणिक प्रमाणपत्रे + अनुभव / कौन्सिल नोंदणी पुरावे.</span>
               </div>
-              <div class="tag-list" style="margin-bottom: 15px;"><span class="tag">Jalgaon</span><span class="tag">Bhusawal</span><span class="tag">Amalner</span><span class="tag">Chopda</span><span class="tag">Pachora</span><span class="tag">Chalisgaon</span><span class="tag">Dhule & more</span></div>
+              <div class="tag-list" style="margin-bottom: 15px;"><span class="tag">Jalgaon</span><span class="tag">Dhule</span><span class="tag">Malegaon</span><span class="tag">Raver</span><span class="tag">MP Border</span></div>
             </div>
             <div>
-              <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hi%20Altaf,%20I%20want%20to%20apply%20as%20a%20Regional%20Field%20Associate%20with%20my%20documents." target="_blank" style="background: var(--accent-blue); color: var(--white); width: 100%; justify-content: center;">
-                <span data-lang="eng">Apply as Regional Field Associate</span>
-                <span data-lang="mar">प्रादेशिक असोसिएट अर्ज करा</span>
+              <a class="btn btn-whatsapp" href="https://wa.me/919325564770?text=Hello%20RB%20Consultancy,%20I%20am%20interested%20in%20applying%20as%20a%20Freelance%20Field%20Officer%20/%20Surveyor%20for%20my%20location." target="_blank" style="background: var(--green); color: #063b1c; width: 100%; justify-content: center; font-weight: 800;">
+                <span data-lang="eng">Apply as Field Officer / Freelance Surveyor</span>
+                <span data-lang="mar">फिल्ड ऑफिसर / सर्वेक्षक म्हणून अर्ज करा</span>
               </a>
             </div>
           </div>
@@ -689,7 +743,6 @@
           <article class="service-card"><div><div class="service-num">Service 07</div><h3><span data-lang="eng">TPA/IC Issues Resolutions</span><span data-lang="mar">टीपीए/कंपनी वाद निवारण</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: As per Case Profile</span><span data-lang="mar">फी: केस प्रोफाइलनुसार</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Direct follow-up and digital portal registration enforcement.</span><span data-lang="mar">थेट पाठपुरावा व डिजिटल पोर्टल नोंदणी अंमलबजावणी.</span></div></details></div></article>
           <article class="service-card"><div><div class="service-num">Service 08</div><h3><span data-lang="eng">End-To-End Cashless Management</span><span data-lang="mar">कॅशलेस व्यवस्थापन</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: ₹2,000</span><span data-lang="mar">फी: ₹२,०००</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Pre-authorization, treatment tracking, and discharge clearance.</span><span data-lang="mar">प्री-ऑथोरायझेशन, उपचाराTracking व डिस्चार्ज क्लिरन्स समन्वय.</span></div></details></div></article>
           <article class="service-card"><div><div class="service-num">Service 09</div><h3><span data-lang="eng">MSME Samadhan Filings</span><span data-lang="mar">एमएसएमई समाधान फायलिंग</span></h3><div class="service-fee-tag"><span data-lang="eng">Fee: 12% Received Funds</span><span data-lang="mar">फी: प्राप्त निधीचे १२%</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Statutory recovery under MSMED Act Section 15 & 16.</span><span data-lang="mar">MSMED कायदा कलम १५ व १६ अन्वये वैधानिक वसुली.</span></div></details></div></article>
-          <article class="service-card"><div><div class="service-num">Service 10</div><h3><span data-lang="eng">Referral Partner & Associate Coordination</span><span data-lang="mar">रेफरल पार्टनर व असोसिएट समन्वय</span></h3><div class="service-fee-tag"><span data-lang="eng">Included / Commission Loop</span><span data-lang="mar">समाविष्ट / कमिशन लूप</span></div><details class="site-accordion" style="margin-top:10px;"><summary><span data-lang="eng">Scope Details</span><span data-lang="mar">व्याप्ती तपशील</span></summary><div class="accordion-body"><span data-lang="eng">Attribution logging for Referral Partners and regional task dispatch for Field Associates.</span><span data-lang="mar">रेफरल पार्टनरसाठी अट्रिब्युशन लॉंगिंग व प्रादेशिक असोसिएटसाठी टास्क डिस्पॅच.</span></div></details></div></article>
         </div>
       </div>
     </section>
@@ -703,8 +756,8 @@
             <span data-lang="mar">यशस्वी केसेस व यश रेकॉर्ड</span>
           </div>
           <h2>
-            <span data-lang="eng">Proven Success in Claim Recovery, Referral Loops & Fraud Control Units</span>
-            <span data-lang="mar">क्लेम रिकव्हरी, रेफरल व फ्रॉड कंट्रोल युनिटमधील सिद्ध यश</span>
+            <span data-lang="eng">Proven Success in Claim Recovery, Motor Audits & Fraud Control Units</span>
+            <span data-lang="mar">क्लेम रिकव्हरी, मोटर तपास व फ्रॉड कंट्रोल युनिटमधील सिद्ध यश</span>
           </h2>
         </div>
         <div class="success-grid">
@@ -731,9 +784,9 @@
         </div>
         <div class="checklist-container">
           <details class="site-accordion checklist-section-box" open><summary style="font-size:17px; font-weight:700;"><span data-lang="eng">SECTION 1: ADMINISTRATIVE & IDENTITY</span><span data-lang="mar">विभाग १: प्रशासकीय व ओळखपत्र</span></summary><div class="accordion-body"><ul><li>1. <span data-lang="eng">Cover Letter</span><span data-lang="mar">कव्हर लेटर</span></li><li>2. <span data-lang="eng">Claim Form (Part A & B) / Referral Attribution Note</span><span data-lang="mar">क्लेम फॉर्म (भाग अ व ब) / रेफरल टिप</span></li><li>3. <span data-lang="eng">Policy Schedule</span><span data-lang="mar">पॉलिसी शेड्युल</span></li><li>4. <span data-lang="eng">KYC – Patient [ID Omitted]</span><span data-lang="mar">केवायसी - रुग्ण [आयडी वगळले]</span></li><li>5. <span data-lang="eng">KYC – Policyholder [ID Omitted]</span><span data-lang="mar">केवायसी - पॉलिसीधारक [आयडी वगळले]</span></li><li>6. <span data-lang="eng">Cancelled Cheque / Passbook</span><span data-lang="mar">कॅन्सल चेक / पासबुक</span></li></ul></div></details>
-          <details class="site-accordion checklist-section-box"><summary style="font-size:17px; font-weight:700;"><span data-lang="eng">SECTION 2: HOSPITAL FORMALITIES</span><span data-lang="mar">विभाग २: हॉस्पिटल औपचारिकता</span></summary><div class="accordion-body"><ul><li>7. <span data-lang="eng">Hospital Registration License</span><span data-lang="mar">हॉस्पिटल नोंदणी परवाना</span></li><li>8. <span data-lang="eng">Hospital Declaration Form</span><span data-lang="mar">हॉस्पिटल घोषणापत्र</span></li><li>9. <span data-lang="eng">Discharge Summary Card</span><span data-lang="mar">डिस्चार्ज समरी कार्ड</span></li></ul></div></details>
-          <details class="site-accordion checklist-section-box"><summary style="font-size:17px; font-weight:700;"><span data-lang="eng">SECTION 3: PAYMENT PAID & REFERRAL PAYOUT RECORDS</span><span data-lang="mar">विभाग ३: पेमेंट व रेफरल पेआउट रेकॉर्ड</span></summary><div class="accordion-body"><ul><li>10. <span data-lang="eng">Final Itemized Bill</span><span data-lang="mar">अंतिम आयटमईझ्ड बिल</span></li><li>11. <span data-lang="eng">Paid Receipts</span><span data-lang="mar">पेड पावती</span></li><li>12. <span data-lang="eng">Pharmacy Bills</span><span data-lang="mar">फार्मसी बिल</span></li><li>13. <span data-lang="eng">Diagnostic Bills</span><span data-lang="mar">डायग्नोस्टिक बिल</span></li><li>14. <span data-lang="eng">Referral Partner UPI/Bank Mandate Proof</span><span data-lang="mar">रेफरल पार्टनर युपीआय/बँक पुरावा</span></li></ul></div></details>
-          <details class="site-accordion checklist-section-box"><summary style="font-size:17px; font-weight:700;"><span data-lang="eng">SECTION 4: ASSOCIATE ONBOARDING & CLINICAL RECORDS</span><span data-lang="mar">विभाग ४: असोसिएट ऑनबोर्डिंग व क्लिनिकल रेकॉर्ड्स</span></summary><div class="accordion-body"><ul><li>15. <span data-lang="eng">Mandatory Verified CV / Resume + Academic Certificates</span><span data-lang="mar">अनिवार्य सत्यापित बायोडाटा/CV + शैक्षणिक प्रमाणपत्रे</span></li><li>16. <span data-lang="eng">Pharmacy Council / Investigator Registration Proofs</span><span data-lang="mar">फार्मसी कौन्सिल / इन्व्हेस्टिगेटर नोंदणी पुरावे</span></li><li>17. <span data-lang="eng">Initial Assessment / ICP / Prescriptions / Lab Reports</span><span data-lang="mar">प्रारंभिक मूल्यांकन / ICP / प्रिस्क्रिप्शन / लॅब रिपोर्ट</span></li></ul></div></details>
+          <details class="site-accordion checklist-section-box"><summary style="font-size:17px; font-weight:700;"><span data-lang="eng">SECTION 2: HOSPITAL & MOTOR FORMALITIES</span><span data-lang="mar">विभाग २: हॉस्पिटल व मोटर औपचारिकता</span></summary><div class="accordion-body"><ul><li>7. <span data-lang="eng">Hospital Registration License / Spot Inspection Panchanama</span><span data-lang="mar">हॉस्पिटल परवाना / स्पॉट इन्स्पेक्शन पंचानामा</span></li><li>8. <span data-lang="eng">Hospital/Driver Declaration Form</span><span data-lang="mar">हॉस्पिटल/चालक घोषणापत्र</span></li><li>9. <span data-lang="eng">Discharge Summary / Police FIR & Final Report</span><span data-lang="mar">डिस्चार्ज समरी / पोलीस एफआयआर व अंतिम अहवाल</span></li></ul></div></details>
+          <details class="site-accordion checklist-section-box"><summary style="font-size:17px; font-weight:700;"><span data-lang="eng">SECTION 3: PAYMENT PAID & REFERRAL PAYOUT RECORDS</span><span data-lang="mar">विभाग ३: पेमेंट व रेफरल पेआउट रेकॉर्ड</span></summary><div class="accordion-body"><ul><li>10. <span data-lang="eng">Final Itemized Bill / Repair Estimate & Invoice</span><span data-lang="mar">अंतिम आयटमईझ्ड बिल / रिपेअर एस्टिमेट व बीजक</span></li><li>11. <span data-lang="eng">Paid Receipts</span><span data-lang="mar">पेड पावती</span></li><li>12. <span data-lang="eng">Pharmacy & Diagnostic Bills</span><span data-lang="mar">फार्मसी व डायग्नोस्टिक बिल</span></li><li>13. <span data-lang="eng">Referral Partner UPI/Bank Mandate Proof</span><span data-lang="mar">रेफरल पार्टनर युपीआय/बँक पुरावा</span></li></ul></div></details>
+          <details class="site-accordion checklist-section-box"><summary style="font-size:17px; font-weight:700;"><span data-lang="eng">SECTION 4: ASSOCIATE ONBOARDING & CLINICAL RECORDS</span><span data-lang="mar">विभाग ४: असोसिएट ऑनबोर्डिंग व क्लिनिकल रेकॉर्ड्स</span></summary><div class="accordion-body"><ul><li>14. <span data-lang="eng">Mandatory Verified CV / Resume + Academic Certificates</span><span data-lang="mar">अनिवार्य सत्यापित बायोडाटा/CV + शैक्षणिक प्रमाणपत्रे</span></li><li>15. <span data-lang="eng">Council / Surveyor / Investigator Registration Proofs</span><span data-lang="mar">कौन्सिल / सर्वेक्षक / इन्व्हेस्टिगेटर नोंदणी पुरावे</span></li></ul></div></details>
         </div>
       </div>
     </section>
@@ -754,9 +807,9 @@
             <p><span data-lang="eng">Baseline fee plus 10%-12% success fee upon realization; rewarding commission payout for verified Referral Partners.</span><span data-lang="mar">बेसलाईन फी अधिक १०%-१२% यश फी; सत्यापित रेफरल पार्टनरसाठी आकर्षक कमिशन.</span></p>
           </div>
           <div class="pricing-card" style="border-top-color: var(--navy);">
-            <h3><span data-lang="eng">Fraud Control Unit (FCU) & Associate Network</span><span data-lang="mar">फ्रॉड कंट्रोल युनिट (FCU) व असोसिएट नेटवर्क</span></h3>
-            <div class="pricing-fee">As per internal MoU with TPA / IC | Taluka Task Rate</div>
-            <p><span data-lang="eng">Per-assignment audit rate card governed via bilateral MoU execution and task-linked field associate payouts.</span><span data-lang="mar">द्विपक्षीय MoU व तालुका टास्क दरानुसार ऑडिट व असोसिएट पेआउट.</span></p>
+            <h3><span data-lang="eng">Motor Claims, FCU & Associate Network</span><span data-lang="mar">मोटर क्लेम्स, FCU व असोसिएट नेटवर्क</span></h3>
+            <div class="pricing-fee">₹1,500/case + ₹3/km Travel | As per MoU with TPA / IC</div>
+            <p><span data-lang="eng">Per-assignment audit rate card governed via bilateral MoU execution and task-linked field associate payouts.</span><span data-lang="mar">प्रति केस ₹१,५०० + ₹३/किमी प्रवास भत्ता व द्विपक्षीय MoU नुसार ऑडिट पेआउट.</span></p>
           </div>
         </div>
         <div style="background:#fff; border:1px solid var(--line); border-radius:14px; padding:24px;">
@@ -788,10 +841,10 @@
           </div>
           <div class="download-card fcu-dl">
             <div>
-              <h3><span data-lang="eng">FCU Investigation Mandate Brief</span><span data-lang="mar">FCU इन्व्हेस्टिगेशन मँडेट ब्रीफ</span></h3>
+              <h3><span data-lang="eng">FCU & Motor Mandate Brief</span><span data-lang="mar">FCU व मोटर मँडेट ब्रीफ</span></h3>
               <p><span data-lang="eng">Trigger verification & bill audit scopes.</span><span data-lang="mar">पडताळणी व बिल ऑडिट व्याप्ती सुरू करा.</span></p>
             </div>
-            <a class="btn btn-dark" href="https://wa.me/919325564770?text=Request%20FCU%20Mandate%20Form" target="_blank" style="font-size:12.5px;padding:10px;">
+            <a class="btn btn-dark" href="https://wa.me/919325564770?text=Request%20Mandate%20Form" target="_blank" style="font-size:12.5px;padding:10px;">
               <span data-lang="eng">Request via WhatsApp</span>
               <span data-lang="mar">व्हॉट्सॲपद्वारे मागवा</span>
             </a>
@@ -837,8 +890,8 @@
             <span data-lang="mar"><b>२. IRDAI नियमन फ्रेमवर्क:</b> पॉलिसीधारक संरक्षण व तक्रार निवारण मार्गदर्शक तत्त्वे IRDAI नियमांनुसार जुळवली जातात. तथापि, क्लेम मंजुरी, नाकारणे किंवा लोकपाल (Ombudsman) पुरस्कारांचे अंतिम निर्णय विमा कंपनी किंवा लोकपाल यांच्याकडेच सुरक्षित असतात.</span>
           </p>
           <p>
-            <span data-lang="eng"><b>3. Statutory Liablity Limitations & Document Veracity:</b> All legal, financial, and clinical document authenticity liabilities rest solely with the client and document-issuing authorities/providers under applicable Indian penal, contract, and consumer protection statutes. Referral partners warrant accurate initial attribution declaration. For B2B Fraud Control Unit (FCU) and ground field verification assignments, observation reports reflect objective physical and provider conditions observed strictly at the date and time of physical inspection, constituting advisory risk-containment opinions without binding carriers to override contractual policy warranties or adjudicate clinical medical malpractice.</span>
-            <span data-lang="mar"><b>३. कायदेशीर व कागदपत्र सत्यता जबाबदारी:</b> कागदपत्रांची वैधता व सत्यता ही क्लायंट व जारी करणाऱ्या प्राधिकरणाची एकमेव जबाबदारी आहे. B2B FCU तपास अहवाल हे केवळ पडताळणीचे व्यावसायिक मत दर्शवतात.</span>
+            <span data-lang="eng"><b>3. Statutory Liablity Limitations & Document Veracity:</b> All legal, financial, and clinical document authenticity liabilities rest solely with the client and document-issuing authorities/providers under applicable Indian penal, contract, and consumer protection statutes. Referral partners warrant accurate initial attribution declaration. For B2B Fraud Control Unit (FCU), motor claims, and ground field verification assignments, observation reports reflect objective physical and provider conditions observed strictly at the date and time of physical inspection, constituting advisory risk-containment opinions without binding carriers to override contractual policy warranties or adjudicate clinical medical malpractice.</span>
+            <span data-lang="mar"><b>३. कायदेशीर व कागदपत्र सत्यता जबाबदारी:</b> कागदपत्रांची वैधता व सत्यता ही क्लायंट व जारी करणाऱ्या प्राधिकरणाची एकमेव जबाबदारी आहे. B2B FCU व मोटर तपास अहवाल हे केवळ पडताळणीचे व्यावसायिक मत दर्शवतात.</span>
           </p>
         </div>
       </div>
@@ -910,7 +963,7 @@
         </div>
         <div class="footer-links">
           <h4>Quick Links</h4>
-          <ul><li><a href="#home">Home</a></li><li><a href="#b2b-section">B2B</a></li><li><a href="#fcu-track">FCU</a></li><li><a href="#partners">Partners & Associates</a></li></ul>
+          <ul><li><a href="#home">Home</a></li><li><a href="#motor-investigation">Motor Claims</a></li><li><a href="#b2b-section">B2B</a></li><li><a href="#fcu-track">FCU</a></li><li><a href="#partners">Partners & Associates</a></li></ul>
         </div>
         <div class="footer-links">
           <h4>Direct Connect</h4>
@@ -977,7 +1030,7 @@
   <div id="mouModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(11,47,74,0.85); z-index:3000; overflow-y:auto; padding:20px;">
     <div style="background:#fff; max-width:850px; margin:30px auto; border-radius:14px; padding:35px; box-shadow:0 25px 60px rgba(0,0,0,0.4);">
       <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #d0dce6; padding-bottom:15px; margin-bottom:20px;">
-        <h3 style="color:#0b2f4a; margin:0; font-size:20px;">Institutional FCU MoU & Rate Agreement Generator</h3>
+        <h3 style="color:#0b2f4a; margin:0; font-size:20px;">Institutional FCU & Motor MoU Rate Agreement Generator</h3>
         <button onclick="closeMoUModal()" style="border:none; background:none; font-size:28px; cursor:pointer; color:#556677;">&times;</button>
       </div>
       <div id="mouFormView">
@@ -992,7 +1045,7 @@
       <div id="mouPrintView" style="display:none; font-size:13px; line-height:1.6; color:#1a365d;">
         <h3>MEMORANDUM OF UNDERSTANDING</h3>
         <p>Between <b>RB Consultancy</b> (Office: 201, Taimur Height, Mehrun, Jalgaon; Udyam: UDYAM-MH-14-0183662) and <b id="pInstName">[Entity]</b> (<b id="pInstAddress">[Address]</b>, rep by <b id="pInstOfficer">[Officer]</b>, <b id="pInstEmail">[Email]</b>).</p>
-        <p>Field verification & forensic audit terms apply.</p>
+        <p>Motor investigation, field verification & forensic audit terms apply.</p>
         <div style="display:grid; grid-template-columns:1fr 1fr; margin-top:30px; gap:30px;">
           <div><b>RB Consultancy</b><br>Altaf Rangrej (201, Taimur Height, Jalgaon)</div>
           <div><b>Institutional Partner</b><br>Stamp & Signature</div>
